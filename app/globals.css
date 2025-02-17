@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,7 +62,58 @@ body {
   * {
     @apply border-border;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply overscroll-none bg-background text-foreground;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    [data-wrapper] {
+      @apply min-[1800px]:border-t;
+    }
+  }
+
+  /* Custom scrollbar styling. Thanks @pranathiperii. */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .border-grid {
+    @apply border-dashed border-border/30 dark:border-border;
+  }
+
+  .container-wrapper {
+    @apply mx-auto w-full max-w-[1400px] border-dashed border-border/70 dark:border-border min-[1400px]:border-x min-[1800px]:max-w-screen-2xl;
+  }
+
+  .container {
+    @apply mx-auto max-w-screen-2xl px-4 xl:px-6;
   }
 }
