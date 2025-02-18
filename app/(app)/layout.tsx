@@ -1,11 +1,11 @@
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
-interface AppLayoutProps {
+export default function AppLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}
-
-export default function AppLayout({ children }: AppLayoutProps) {
+}>) {
   return (
     <div data-wrapper="" className="border-grid flex flex-1 flex-col">
       <SiteHeader />

@@ -64,11 +64,11 @@ export const viewport: Viewport = {
   themeColor: META_THEME_COLORS.light,
 };
 
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}>) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>

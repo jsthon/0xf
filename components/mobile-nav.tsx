@@ -4,7 +4,7 @@ import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 
-import { toolsConfig } from "@/config/tools";
+import { navConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
 import { useMetaColor } from "@/hooks/use-meta-color";
 import { Button } from "@/components/ui/button";
@@ -49,7 +49,7 @@ export function MobileNav() {
       <DrawerContent className="max-h-[60svh] p-0">
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
-            {toolsConfig.mainNav?.map(
+            {navConfig.mainNav?.map(
               (item) =>
                 item.href && (
                   <MobileLink
@@ -63,7 +63,7 @@ export function MobileNav() {
             )}
           </div>
           <div className="flex flex-col space-y-2">
-            {toolsConfig.sidebarNav.map((item, index) => (
+            {navConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&

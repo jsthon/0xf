@@ -1,11 +1,11 @@
 import { MainNavItem, SidebarNavItem } from "@/types/nav";
 
-export interface ToolsConfig {
+export interface NavConfig {
   mainNav: MainNavItem[];
   sidebarNav: SidebarNavItem[];
 }
 
-export const toolsConfig: ToolsConfig = {
+export const navConfig: NavConfig = {
   mainNav: [
     {
       title: "Home",

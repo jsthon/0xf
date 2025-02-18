@@ -6,7 +6,7 @@ import { type DialogProps } from "@radix-ui/react-dialog";
 import { Circle, File, Laptop, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-import { toolsConfig } from "@/config/tools";
+import { navConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -71,7 +71,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Links">
-            {toolsConfig.mainNav
+            {navConfig.mainNav
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -86,7 +86,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {toolsConfig.sidebarNav.map((group) => (
+          {navConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
