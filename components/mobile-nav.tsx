@@ -6,21 +6,15 @@ import { useRouter } from "next/navigation";
 
 import { navConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
-import { useMetaColor } from "@/hooks/use-meta-color";
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
-  const { setMetaColor, metaColor } = useMetaColor();
 
-  const onOpenChange = React.useCallback(
-    (open: boolean) => {
-      setOpen(open);
-      setMetaColor(open ? "#09090b" : metaColor);
-    },
-    [setMetaColor, metaColor]
-  );
+  const onOpenChange = React.useCallback((open: boolean) => {
+    setOpen(open);
+  }, []);
 
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
