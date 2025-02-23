@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,8 +10,43 @@ import { cn } from "@/lib/utils";
 
 export function SidebarNav({ config }: { config: NavConfig }) {
   const pathname = usePathname();
+  const shouldScrollNav = useRef(true);
+  const navRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
 
   const items = config.sidebarNav;
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      // only scroll on initial page load, not on route change
+      if (!shouldScrollNav.current) return;
+
+      // check if active nav item exists
+      const activeNav = navRefs.current.get(pathname || "");
+      if (!activeNav) return;
+
+      // check if sidebar exists and is visible
+      const sidebar = activeNav.closest(".overflow-auto");
+      if (!sidebar || window.getComputedStyle(sidebar).display === "none")
+        return;
+
+      // check if active nav item is fully visible in sidebar
+      const { top: navTop, height: navHeight } =
+        activeNav.getBoundingClientRect();
+      const { top: sidebarTop, height: sidebarHeight } =
+        sidebar.getBoundingClientRect();
+      const isVisible =
+        navTop >= sidebarTop &&
+        navTop + navHeight <= sidebarTop + sidebarHeight;
+
+      // scroll to the center of the active nav item
+      if (!isVisible) {
+        const offset = navTop - sidebarTop - (sidebarHeight - navHeight) / 2;
+        sidebar.scrollTop += offset;
+      }
+
+      shouldScrollNav.current = false;
+    });
+  }, [pathname]);
 
   return items.length ? (
     <div className="flex flex-col gap-6">
@@ -25,7 +61,11 @@ export function SidebarNav({ config }: { config: NavConfig }) {
             )}
           </h4>
           {item?.items?.length && (
-            <SidebarNavItems items={item.items} pathname={pathname} />
+            <SidebarNavItems
+              items={item.items}
+              pathname={pathname}
+              navRefs={navRefs}
+            />
           )}
         </div>
       ))}
@@ -36,9 +76,11 @@ export function SidebarNav({ config }: { config: NavConfig }) {
 function SidebarNavItems({
   items,
   pathname,
+  navRefs,
 }: {
   items: SidebarNavItem[];
   pathname: string | null;
+  navRefs: React.RefObject<Map<string, HTMLAnchorElement>>;
 }) {
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
@@ -47,6 +89,11 @@ function SidebarNavItems({
           <Link
             key={index}
             href={item.href}
+            ref={(el) => {
+              if (el && navRefs.current && item.href) {
+                navRefs.current.set(item.href, el);
+              }
+            }}
             className={cn(
               "group flex h-8 w-full items-center rounded-lg px-2 font-normal text-foreground underline-offset-2 hover:bg-accent hover:text-accent-foreground",
               item.disabled && "cursor-not-allowed opacity-60",
