@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { SidebarNavItem } from "@/types/nav";
+import { NavItem } from "@/types/nav";
 import { type NavConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
 
@@ -78,7 +78,7 @@ function SidebarNavItems({
   pathname,
   navRefs,
 }: {
-  items: SidebarNavItem[];
+  items: NavItem[];
   pathname: string | null;
   navRefs: React.RefObject<Map<string, HTMLAnchorElement>>;
 }) {

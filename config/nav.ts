@@ -10,440 +10,341 @@ export const navConfig: NavConfig = {
     {
       title: "Home",
       href: "/",
-    },
-    {
-      title: "Documentation",
-      href: "/docs",
-    },
-    {
-      title: "Components",
-      href: "/docs/components/accordion",
-    },
-    {
-      title: "Blocks",
-      href: "/blocks",
-    },
-    {
-      title: "Charts",
-      href: "/charts",
-    },
-    {
-      title: "Themes",
-      href: "/themes",
-    },
-    {
-      title: "Colors",
-      href: "/colors",
+      keywords: ["home", "index", "main"],
     },
   ],
+
   sidebarNav: [
     {
-      title: "Getting Started",
+      title: "Debug & Testing",
       items: [
         {
-          title: "Introduction",
-          href: "/docs",
-          items: [],
+          title: "HTTP Request",
+          href: "/http-request",
+          keywords: ["HTTP Request", "API Client", "API Tester", "REST Client"],
         },
         {
-          title: "Installation",
-          href: "/docs/installation",
-          items: [],
-        },
-        {
-          title: "components.json",
-          href: "/docs/components-json",
-          items: [],
-        },
-        {
-          title: "Theming",
-          href: "/docs/theming",
-          items: [],
-        },
-        {
-          title: "Dark mode",
-          href: "/docs/dark-mode",
-          items: [],
-        },
-        {
-          title: "CLI",
-          href: "/docs/cli",
-          items: [],
-        },
-        {
-          title: "Monorepo",
-          href: "/docs/monorepo",
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Tailwind v4",
-          href: "/docs/tailwind-v4",
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Typography",
-          href: "/docs/components/typography",
-          items: [],
-        },
-        {
-          title: "Open in v0",
-          href: "/docs/v0",
-          items: [],
-        },
-        {
-          title: "Blocks",
-          href: "/docs/blocks",
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Figma",
-          href: "/docs/figma",
-          items: [],
-        },
-        {
-          title: "Changelog",
-          href: "/docs/changelog",
-          items: [],
+          title: "Regex Tester",
+          href: "/regex-tester",
+          keywords: ["Regular Expression", "RegExp", "Pattern Testing"],
         },
       ],
     },
     {
-      title: "Installation",
+      title: "Text & Characters",
       items: [
         {
-          title: "Next.js",
-          href: "/docs/installation/next",
-          items: [],
+          title: "Text Diff",
+          href: "/text-diff",
+          keywords: ["Compare Text", "Diff Checker", "Text Comparison"],
         },
         {
-          title: "Vite",
-          href: "/docs/installation/vite",
-          items: [],
+          title: "Text Count",
+          href: "/text-count",
+          keywords: ["Word Count", "Character Count", "Letter Count"],
         },
         {
-          title: "Remix",
-          href: "/docs/installation/remix",
-          items: [],
+          title: "Unicode Text",
+          href: "/unicode-text",
+          keywords: [
+            "Unicode Characters",
+            "Special Characters",
+            "Text Symbols",
+          ],
         },
         {
-          title: "Astro",
-          href: "/docs/installation/astro",
-          items: [],
-        },
-        {
-          title: "Laravel",
-          href: "/docs/installation/laravel",
-          items: [],
-        },
-        {
-          title: "Tanstack Start",
-          href: "/docs/installation/tanstack",
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Gatsby",
-          href: "/docs/installation/gatsby",
-          items: [],
-        },
-        {
-          title: "Manual",
-          href: "/docs/installation/manual",
-          items: [],
+          title: "Emoji Picker",
+          href: "/emoji-picker",
+          keywords: ["Emoji Selector", "Emoticons", "Unicode Emoji"],
         },
       ],
     },
     {
-      title: "Components",
+      title: "Generators",
       items: [
         {
-          title: "Accordion",
-          href: "/docs/components/accordion",
-          items: [],
+          title: "Random Password",
+          href: "/random-password",
+          keywords: [
+            "Password Generator",
+            "Strong Password",
+            "Secure Password",
+          ],
         },
         {
-          title: "Alert",
-          href: "/docs/components/alert",
-          items: [],
+          title: "QR Code",
+          href: "/qr-code",
+          keywords: ["QR Generator", "QR Code Creator", "Barcode"],
         },
         {
-          title: "Alert Dialog",
-          href: "/docs/components/alert-dialog",
-          items: [],
+          title: "Fake Data",
+          href: "/fake-data",
+          keywords: ["Mock Data", "Test Data", "Dummy Data"],
         },
         {
-          title: "Aspect Ratio",
-          href: "/docs/components/aspect-ratio",
-          items: [],
+          title: "Hash Generator",
+          href: "/hash-generator",
+          keywords: ["MD5", "SHA1", "SHA256", "Checksum"],
         },
         {
-          title: "Avatar",
-          href: "/docs/components/avatar",
-          items: [],
+          title: "UUID Generator",
+          href: "/uuid-generator",
+          keywords: ["GUID", "Unique ID", "UUID v4"],
         },
         {
-          title: "Badge",
-          href: "/docs/components/badge",
-          items: [],
-        },
-        {
-          title: "Breadcrumb",
-          href: "/docs/components/breadcrumb",
-          items: [],
-        },
-        {
-          title: "Button",
-          href: "/docs/components/button",
-          items: [],
-        },
-        {
-          title: "Calendar",
-          href: "/docs/components/calendar",
-          items: [],
-        },
-        {
-          title: "Card",
-          href: "/docs/components/card",
-          items: [],
-        },
-        {
-          title: "Carousel",
-          href: "/docs/components/carousel",
-          items: [],
-        },
-        {
-          title: "Chart",
-          href: "/docs/components/chart",
-          items: [],
-        },
-        {
-          title: "Checkbox",
-          href: "/docs/components/checkbox",
-          items: [],
-        },
-        {
-          title: "Collapsible",
-          href: "/docs/components/collapsible",
-          items: [],
-        },
-        {
-          title: "Combobox",
-          href: "/docs/components/combobox",
-          items: [],
-        },
-        {
-          title: "Command",
-          href: "/docs/components/command",
-          items: [],
-        },
-        {
-          title: "Context Menu",
-          href: "/docs/components/context-menu",
-          items: [],
-        },
-        {
-          title: "Data Table",
-          href: "/docs/components/data-table",
-          items: [],
-        },
-        {
-          title: "Date Picker",
-          href: "/docs/components/date-picker",
-          items: [],
-        },
-        {
-          title: "Dialog",
-          href: "/docs/components/dialog",
-          items: [],
-        },
-        {
-          title: "Drawer",
-          href: "/docs/components/drawer",
-          items: [],
-        },
-        {
-          title: "Dropdown Menu",
-          href: "/docs/components/dropdown-menu",
-          items: [],
-        },
-        {
-          title: "Form",
-          href: "/docs/components/form",
-          items: [],
-        },
-        {
-          title: "Hover Card",
-          href: "/docs/components/hover-card",
-          items: [],
-        },
-        {
-          title: "Input",
-          href: "/docs/components/input",
-          items: [],
-        },
-        {
-          title: "Input OTP",
-          href: "/docs/components/input-otp",
-          items: [],
-        },
-        {
-          title: "Label",
-          href: "/docs/components/label",
-          items: [],
-        },
-        {
-          title: "Menubar",
-          href: "/docs/components/menubar",
-          items: [],
-        },
-        {
-          title: "Navigation Menu",
-          href: "/docs/components/navigation-menu",
-          items: [],
-        },
-        {
-          title: "Pagination",
-          href: "/docs/components/pagination",
-          items: [],
-        },
-        {
-          title: "Popover",
-          href: "/docs/components/popover",
-          items: [],
-        },
-        {
-          title: "Progress",
-          href: "/docs/components/progress",
-          items: [],
-        },
-        {
-          title: "Radio Group",
-          href: "/docs/components/radio-group",
-          items: [],
-        },
-        {
-          title: "Resizable",
-          href: "/docs/components/resizable",
-          items: [],
-        },
-        {
-          title: "Scroll Area",
-          href: "/docs/components/scroll-area",
-          items: [],
-        },
-        {
-          title: "Select",
-          href: "/docs/components/select",
-          items: [],
-        },
-        {
-          title: "Separator",
-          href: "/docs/components/separator",
-          items: [],
-        },
-        {
-          title: "Sheet",
-          href: "/docs/components/sheet",
-          items: [],
-        },
-        {
-          title: "Sidebar",
-          href: "/docs/components/sidebar",
-          items: [],
-        },
-        {
-          title: "Skeleton",
-          href: "/docs/components/skeleton",
-          items: [],
-        },
-        {
-          title: "Slider",
-          href: "/docs/components/slider",
-          items: [],
-        },
-        {
-          title: "Sonner",
-          href: "/docs/components/sonner",
-          items: [],
-        },
-        {
-          title: "Switch",
-          href: "/docs/components/switch",
-          items: [],
-        },
-        {
-          title: "Table",
-          href: "/docs/components/table",
-          items: [],
-        },
-        {
-          title: "Tabs",
-          href: "/docs/components/tabs",
-          items: [],
-        },
-        {
-          title: "Textarea",
-          href: "/docs/components/textarea",
-          items: [],
-        },
-        {
-          title: "Toast",
-          href: "/docs/components/toast",
-          items: [],
-        },
-        {
-          title: "Toggle",
-          href: "/docs/components/toggle",
-          items: [],
-        },
-        {
-          title: "Toggle Group",
-          href: "/docs/components/toggle-group",
-          items: [],
-        },
-        {
-          title: "Tooltip",
-          href: "/docs/components/tooltip",
-          items: [],
+          title: "ASCII Art Text",
+          href: "/ascii-art",
+          keywords: ["Text to ASCII", "ASCII Banner", "Text Art"],
         },
       ],
     },
     {
-      title: "Registry",
-      label: "New",
+      title: "Encode & Decode",
       items: [
         {
-          title: "Introduction",
-          href: "/docs/registry",
-          items: [],
+          title: "Base64 Code",
+          href: "/base64",
+          keywords: ["Base64 Encode", "Base64 Decode", "Base64 Converter"],
         },
         {
-          title: "Getting Started",
-          href: "/docs/registry/getting-started",
-          items: [],
+          title: "URL Encoding",
+          href: "/url-encoding",
+          keywords: ["URL Encode", "URL Decode", "Percent Encoding"],
         },
         {
-          title: "Open in v0",
-          href: "/docs/registry/open-in-v0",
-          items: [],
+          title: "JWT Encoding",
+          href: "/jwt-encoding",
+          keywords: ["JWT", "JSON Web Token", "Token Decoder"],
+        },
+      ],
+    },
+    {
+      title: "Converters",
+      items: [
+        {
+          title: "Color Converter",
+          href: "/color-converter",
+          keywords: ["Color Picker", "HEX to RGB", "RGB Converter"],
         },
         {
-          title: "FAQ",
-          href: "/docs/registry/faq",
-          items: [],
+          title: "Date Time Converter",
+          href: "/date-time-converter",
+          keywords: ["Timestamp Converter", "Unix Time", "Date Format"],
         },
         {
-          title: "registry.json",
-          href: "/docs/registry/registry-json",
-          items: [],
+          title: "JSON/YAML/CSV Converter",
+          href: "/json-yaml-csv",
+          keywords: ["Format Converter", "JSON to YAML", "Data Format"],
         },
         {
-          title: "registry-item.json",
-          href: "/docs/registry/registry-item-json",
-          items: [],
+          title: "Text Case Converter",
+          href: "/text-case-converter",
+          keywords: ["Uppercase", "Lowercase", "Camel Case", "Snake Case"],
+        },
+      ],
+    },
+    {
+      title: "Editor & Viewer",
+      items: [
+        {
+          title: "Markdown Editor",
+          href: "/markdown-editor",
+          keywords: ["MD Editor", "Markdown Preview", "Text Editor"],
+        },
+        {
+          title: "CSV Editor",
+          href: "/csv-editor",
+          keywords: ["CSV Viewer", "Spreadsheet Editor", "Table Editor"],
+        },
+        {
+          title: "CSS Preprocessor",
+          href: "/css-preprocessor",
+          keywords: ["SASS", "LESS", "Stylus", "CSS Compiler"],
+        },
+      ],
+    },
+    {
+      title: "Formatter & Minifier",
+      items: [
+        {
+          title: "JSON Formatter",
+          href: "/json-formatter",
+          keywords: ["JSON Beautifier", "JSON Minify", "JSON Validator"],
+        },
+        {
+          title: "HTML Formatter",
+          href: "/html-formatter",
+          keywords: ["HTML Beautifier", "HTML Minify", "HTML Validator"],
+        },
+        {
+          title: "JavaScript Formatter",
+          href: "/js-formatter",
+          keywords: ["JS Beautifier", "JS Minify", "JS Validator"],
+        },
+        {
+          title: "CSS Formatter",
+          href: "/css-formatter",
+          keywords: ["CSS Beautifier", "CSS Minify", "CSS Validator"],
+        },
+        {
+          title: "XML Formatter",
+          href: "/xml-formatter",
+          keywords: ["XML Beautifier", "XML Minify", "XML Validator"],
+        },
+        {
+          title: "SQL Formatter",
+          href: "/sql-formatter",
+          keywords: ["SQL Beautifier", "SQL Pretty", "Format SQL"],
+        },
+        {
+          title: "GraphQL Formatter",
+          href: "/graphql-formatter",
+          keywords: ["GraphQL Beautifier", "GraphQL Pretty", "Format GraphQL"],
+        },
+      ],
+    },
+    {
+      title: "Web Development",
+      items: [
+        {
+          title: "SVG Optimizer",
+          href: "/svg-optimizer",
+          keywords: ["SVG Minifier", "SVG Cleanup", "SVG Compression"],
+        },
+        {
+          title: "Image Base64",
+          href: "/image-base64",
+          keywords: ["Image to Base64", "Data URI", "Inline Image"],
+        },
+        {
+          title: "HTML Symbols",
+          href: "/html-symbols",
+          keywords: ["HTML Entities", "Character Codes", "HTML Characters"],
+        },
+        {
+          title: "Keycode Info",
+          href: "/keycode-info",
+          keywords: ["Keyboard Code", "Key Events", "JavaScript Keycode"],
+        },
+        {
+          title: "CSS Shapes",
+          href: "/css-shapes",
+          keywords: ["CSS Geometry", "Shape Generator", "CSS Patterns"],
+        },
+        {
+          title: "CSS Color Filter",
+          href: "/css-color-filter",
+          keywords: ["CSS Filters", "Image Filter", "Color Effects"],
+        },
+        {
+          title: "URL Parser",
+          href: "/url-parser",
+          keywords: ["URL Components", "Query String", "URL Parameters"],
+        },
+        {
+          title: "User-Agent Parser",
+          href: "/user-agent-parser",
+          keywords: ["Browser Detection", "User-Agent String", "Device Info"],
+        },
+        {
+          title: "CSS Cursors",
+          href: "/css-cursors",
+          keywords: ["Mouse Cursors", "Pointer Types", "Cursor Styles"],
+        },
+        {
+          title: "HTTP Codes",
+          href: "/http-codes",
+          keywords: ["Status Codes", "HTTP Status", "Error Codes"],
+        },
+        {
+          title: "MIME Types",
+          href: "/mime-types",
+          keywords: ["Media Types", "Content Types", "File Types"],
+        },
+      ],
+    },
+    {
+      title: "Math & Calculation",
+      items: [
+        {
+          title: "Scientific Calculator",
+          href: "/scientific-calculator",
+          keywords: ["Advanced Calculator", "Math Functions", "Complex Math"],
+        },
+        {
+          title: "Hex Converter",
+          href: "/hex-converter",
+          keywords: ["Hex to Decimal", "Binary Converter", "Number Base"],
+        },
+        {
+          title: "Angle Calculator",
+          href: "/angle-calculator",
+          keywords: ["Degrees", "Radians", "Trigonometry"],
+        },
+        {
+          title: "ETA Calculator",
+          href: "/eta-calculator",
+          keywords: ["Estimated Time", "Arrival Time", "Time Prediction"],
+        },
+      ],
+    },
+    {
+      title: "Networking",
+      items: [
+        {
+          title: "IP Address Info",
+          href: "/ip-info",
+          keywords: ["IP Lookup", "Geolocation", "My IP"],
+        },
+        {
+          title: "WHOIS Lookup",
+          href: "/whois",
+          keywords: ["Domain Info", "Domain Registration", "DNS Info"],
+        },
+        {
+          title: "IP Address Calculator",
+          href: "/ip-calculator",
+          keywords: ["Subnet Calculator", "CIDR", "IP Range"],
+        },
+        {
+          title: "MAC Address Calculator",
+          href: "/mac-calculator",
+          keywords: ["MAC Format", "MAC Validation", "Network Address"],
+        },
+        {
+          title: "MAC Address Lookup",
+          href: "/mac-lookup",
+          keywords: ["MAC Vendor", "OUI Lookup", "Hardware Address"],
+        },
+      ],
+    },
+    {
+      title: "DevOps & Security",
+      items: [
+        {
+          title: "Nginx Config",
+          href: "/nginx-config",
+          keywords: ["Nginx Server", "Web Server Config", "HTTP Server"],
+        },
+        {
+          title: "SSH Key Generator",
+          href: "/ssh-key-generator",
+          keywords: ["RSA Key", "Public Key", "Private Key"],
+        },
+        {
+          title: "Chmod Calculator",
+          href: "/chmod-calculator",
+          keywords: ["File Permissions", "Unix Permissions", "Permission Bits"],
+        },
+        {
+          title: "Crontab Generator",
+          href: "/crontab-generator",
+          keywords: ["Job Scheduler", "Cron Jobs", "Scheduled Tasks"],
+        },
+        {
+          title: "Basic Auth Generator",
+          href: "/basic-auth-generator",
+          keywords: ["HTTP Authentication", "Password Protection", "htpasswd"],
         },
       ],
     },

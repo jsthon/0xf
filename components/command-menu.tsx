@@ -21,6 +21,10 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 
+function getSearchValue(item: { title: string; keywords?: string[] }) {
+  return [item.title, ...(item.keywords || [])].join(" ");
+}
+
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
@@ -70,8 +74,8 @@ export function CommandMenu({ ...props }: DialogProps) {
         <span className="hidden lg:inline-flex">Search everything...</span>
         <span className="inline-flex lg:hidden">Search...</span>
         {isMounted && (
-          <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-            {isAppleDevice ? <span className="text-xs">⌘</span> : "Ctrl "}K
+          <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-sans text-[10px] font-medium opacity-100 sm:flex">
+            {isAppleDevice ? "⌘" : "Ctrl"} K
           </kbd>
         )}
       </Button>
@@ -85,7 +89,7 @@ export function CommandMenu({ ...props }: DialogProps) {
               .map((navItem) => (
                 <CommandItem
                   key={navItem.href}
-                  value={navItem.title}
+                  value={getSearchValue(navItem)}
                   onSelect={() => {
                     runCommand(() => router.push(navItem.href as string));
                   }}
@@ -100,7 +104,7 @@ export function CommandMenu({ ...props }: DialogProps) {
               {group.items.map((navItem) => (
                 <CommandItem
                   key={navItem.href}
-                  value={navItem.title}
+                  value={getSearchValue(navItem)}
                   onSelect={() => {
                     runCommand(() => router.push(navItem.href as string));
                   }}
@@ -117,15 +121,15 @@ export function CommandMenu({ ...props }: DialogProps) {
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
               <Sun />
-              Light
+              Light Theme
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
               <Moon />
-              Dark
+              Dark Theme
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
               <Laptop />
-              System
+              System Theme
             </CommandItem>
           </CommandGroup>
         </CommandList>
