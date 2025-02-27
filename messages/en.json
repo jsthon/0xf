@@ -1,0 +1,21 @@
+{
+  "Error": {
+    "Title": "Error",
+    "Reset": "Reset"
+  },
+  "NotFound": {
+    "Title": "Not Found"
+  },
+  "LocaleLayout": {
+    "Meta": {
+      "Description": "description"
+    }
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "Home",
+      "Description": "Homepage description"
+    },
+    "Welcome": "Welcome"
+  }
+}

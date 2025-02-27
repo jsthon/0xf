@@ -1,11 +1,10 @@
 "use client";
 
 import * as React from "react";
-import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/navigation";
 
 import { navConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
+import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
@@ -91,7 +90,8 @@ export function MobileNav() {
   );
 }
 
-interface MobileLinkProps extends LinkProps {
+interface MobileLinkProps {
+  href: string;
   onOpenChange?: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;

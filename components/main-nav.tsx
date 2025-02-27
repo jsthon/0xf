@@ -1,10 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Icons } from "@/components/icons";
 
 export function MainNav() {

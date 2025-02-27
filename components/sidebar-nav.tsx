@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { NavItem } from "@/types/nav";
 import { type NavConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export function SidebarNav({ config }: { config: NavConfig }) {
   const pathname = usePathname();

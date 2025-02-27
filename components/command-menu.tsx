@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { type DialogProps } from "@radix-ui/react-dialog";
 import { Circle, File, Laptop, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -10,6 +9,7 @@ import { useTheme } from "next-themes";
 import { navConfig } from "@/config/nav";
 import { isAppleDevice } from "@/lib/platform";
 import { cn } from "@/lib/utils";
+import { useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
