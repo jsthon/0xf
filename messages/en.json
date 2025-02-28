@@ -11,6 +11,12 @@
       "Description": "description"
     }
   },
+  "Header": {
+    "LocaleSwitcher": {
+      "Label": "Change language",
+      "Locale": "{locale, select, en {English} zh {中文} other {Unknown}}"
+    }
+  },
   "HomePage": {
     "Meta": {
       "Title": "Home",

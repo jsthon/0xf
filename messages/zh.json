@@ -11,6 +11,12 @@
       "Description": "描述"
     }
   },
+  "Header": {
+    "LocaleSwitcher": {
+      "Label": "切换语言",
+      "Locale": "{locale, select, en {English} zh {中文} other {未知}}"
+    }
+  },
   "HomePage": {
     "Meta": {
       "Title": "首页",
