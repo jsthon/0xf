@@ -4,11 +4,12 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import { type DialogProps } from "@radix-ui/react-dialog";
 import { Circle, File, Laptop, Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
-import { navConfig } from "@/config/nav";
 import { isAppleDevice } from "@/lib/platform";
 import { cn } from "@/lib/utils";
+import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
 import { useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,6 +31,8 @@ export function CommandMenu({ ...props }: DialogProps) {
   const [open, setOpen] = React.useState(false);
   const { setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
+  const { mainNav, sidebarNav } = useNavigationTranslations();
+  const t = useTranslations("Header.CommandMenu");
 
   useEffect(() => {
     setIsMounted(true);
@@ -71,8 +74,8 @@ export function CommandMenu({ ...props }: DialogProps) {
         onClick={() => setOpen(true)}
         {...props}
       >
-        <span className="hidden lg:inline-flex">Search everything...</span>
-        <span className="inline-flex lg:hidden">Search...</span>
+        <span className="hidden lg:inline-flex">{t("SearchText")}</span>
+        <span className="inline-flex lg:hidden">{t("SearchTextShort")}</span>
         {isMounted && (
           <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-sans text-[10px] font-medium opacity-100 sm:flex">
             {isAppleDevice ? "⌘" : "Ctrl"} K
@@ -80,11 +83,11 @@ export function CommandMenu({ ...props }: DialogProps) {
         )}
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder={t("CommandPlaceholder")} />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Links">
-            {navConfig.mainNav
+          <CommandEmpty>{t("NoResults")}</CommandEmpty>
+          <CommandGroup heading={t("MainNavHeading")}>
+            {mainNav
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -99,7 +102,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {navConfig.sidebarNav.map((group) => (
+          {sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
@@ -118,18 +121,18 @@ export function CommandMenu({ ...props }: DialogProps) {
             </CommandGroup>
           ))}
           <CommandSeparator />
-          <CommandGroup heading="Theme">
+          <CommandGroup heading={t("Theme")}>
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
               <Sun />
-              Light Theme
+              {t("LightTheme")}
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
               <Moon />
-              Dark Theme
+              {t("DarkTheme")}
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
               <Laptop />
-              System Theme
+              {t("SystemTheme")}
             </CommandItem>
           </CommandGroup>
         </CommandList>

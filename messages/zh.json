@@ -15,7 +15,354 @@
     "LocaleSwitcher": {
       "Label": "切换语言",
       "Locale": "{locale, select, en {English} zh {中文} other {未知}}"
+    },
+    "CommandMenu": {
+      "SearchText": "搜索所有内容...",
+      "SearchTextShort": "搜索...",
+      "CommandPlaceholder": "输入命令或搜索...",
+      "NoResults": "未找到结果。",
+      "MainNavHeading": "链接",
+      "Theme": "主题",
+      "LightTheme": "浅色主题",
+      "DarkTheme": "深色主题",
+      "SystemTheme": "系统主题"
     }
+  },
+  "Navigation": {
+    "main": [
+      {
+        "title": "首页",
+        "href": "/",
+        "keywords": ["首页", "主页", "索引"]
+      }
+    ],
+    "sidebar": [
+      {
+        "title": "调试与测试",
+        "items": [
+          {
+            "title": "HTTP请求",
+            "href": "/http-request",
+            "keywords": ["HTTP请求", "API客户端", "API测试器", "REST客户端"]
+          },
+          {
+            "title": "正则表达式测试",
+            "href": "/regex-tester",
+            "keywords": ["正则表达式", "RegExp", "模式测试"]
+          }
+        ]
+      },
+      {
+        "title": "文本与字符",
+        "items": [
+          {
+            "title": "文本对比",
+            "href": "/text-diff",
+            "keywords": ["比较文本", "差异检查", "文本比较"]
+          },
+          {
+            "title": "文本计数",
+            "href": "/text-count",
+            "keywords": ["字数统计", "字符计数", "文字计数"]
+          },
+          {
+            "title": "Unicode文本",
+            "href": "/unicode-text",
+            "keywords": ["Unicode字符", "特殊字符", "文本符号"]
+          },
+          {
+            "title": "表情选择器",
+            "href": "/emoji-picker",
+            "keywords": ["表情选择", "表情符号", "Unicode表情"]
+          }
+        ]
+      },
+      {
+        "title": "生成器",
+        "items": [
+          {
+            "title": "随机密码",
+            "href": "/random-password",
+            "keywords": ["密码生成器", "强密码", "安全密码"]
+          },
+          {
+            "title": "二维码",
+            "href": "/qr-code",
+            "keywords": ["二维码生成器", "二维码创建", "条形码"]
+          },
+          {
+            "title": "模拟数据",
+            "href": "/fake-data",
+            "keywords": ["模拟数据", "测试数据", "虚拟数据"]
+          },
+          {
+            "title": "哈希生成器",
+            "href": "/hash-generator",
+            "keywords": ["MD5", "SHA1", "SHA256", "校验和"]
+          },
+          {
+            "title": "UUID生成器",
+            "href": "/uuid-generator",
+            "keywords": ["GUID", "唯一ID", "UUID v4"]
+          },
+          {
+            "title": "ASCII艺术文本",
+            "href": "/ascii-art",
+            "keywords": ["文本转ASCII", "ASCII横幅", "文本艺术"]
+          }
+        ]
+      },
+      {
+        "title": "编码与解码",
+        "items": [
+          {
+            "title": "Base64编码",
+            "href": "/base64",
+            "keywords": ["Base64编码", "Base64解码", "Base64转换器"]
+          },
+          {
+            "title": "URL编码",
+            "href": "/url-encoding",
+            "keywords": ["URL编码", "URL解码", "百分比编码"]
+          },
+          {
+            "title": "JWT编码",
+            "href": "/jwt-encoding",
+            "keywords": ["JWT", "JSON Web令牌", "令牌解码器"]
+          }
+        ]
+      },
+      {
+        "title": "转换器",
+        "items": [
+          {
+            "title": "颜色转换器",
+            "href": "/color-converter",
+            "keywords": ["颜色选择器", "HEX转RGB", "RGB转换器"]
+          },
+          {
+            "title": "日期时间转换器",
+            "href": "/date-time-converter",
+            "keywords": ["时间戳转换器", "Unix时间", "日期格式"]
+          },
+          {
+            "title": "JSON/YAML/CSV转换器",
+            "href": "/json-yaml-csv",
+            "keywords": ["格式转换器", "JSON转YAML", "数据格式"]
+          },
+          {
+            "title": "文本大小写转换器",
+            "href": "/text-case-converter",
+            "keywords": ["大写", "小写", "驼峰命名", "蛇形命名"]
+          }
+        ]
+      },
+      {
+        "title": "编辑器与查看器",
+        "items": [
+          {
+            "title": "Markdown编辑器",
+            "href": "/markdown-editor",
+            "keywords": ["MD编辑器", "Markdown预览", "文本编辑器"]
+          },
+          {
+            "title": "CSV编辑器",
+            "href": "/csv-editor",
+            "keywords": ["CSV查看器", "电子表格编辑器", "表格编辑器"]
+          },
+          {
+            "title": "CSS预处理器",
+            "href": "/css-preprocessor",
+            "keywords": ["SASS", "LESS", "Stylus", "CSS编译器"]
+          }
+        ]
+      },
+      {
+        "title": "格式化与压缩",
+        "items": [
+          {
+            "title": "JSON格式化",
+            "href": "/json-formatter",
+            "keywords": ["JSON美化", "JSON压缩", "JSON验证器"]
+          },
+          {
+            "title": "HTML格式化",
+            "href": "/html-formatter",
+            "keywords": ["HTML美化", "HTML压缩", "HTML验证器"]
+          },
+          {
+            "title": "JavaScript格式化",
+            "href": "/js-formatter",
+            "keywords": ["JS美化", "JS压缩", "JS验证器"]
+          },
+          {
+            "title": "CSS格式化",
+            "href": "/css-formatter",
+            "keywords": ["CSS美化", "CSS压缩", "CSS验证器"]
+          },
+          {
+            "title": "XML格式化",
+            "href": "/xml-formatter",
+            "keywords": ["XML美化", "XML压缩", "XML验证器"]
+          },
+          {
+            "title": "SQL格式化",
+            "href": "/sql-formatter",
+            "keywords": ["SQL美化", "SQL美化", "格式化SQL"]
+          },
+          {
+            "title": "GraphQL格式化",
+            "href": "/graphql-formatter",
+            "keywords": ["GraphQL美化", "GraphQL美化", "格式化GraphQL"]
+          }
+        ]
+      },
+      {
+        "title": "Web开发",
+        "items": [
+          {
+            "title": "SVG优化器",
+            "href": "/svg-optimizer",
+            "keywords": ["SVG压缩", "SVG清理", "SVG压缩"]
+          },
+          {
+            "title": "图片Base64",
+            "href": "/image-base64",
+            "keywords": ["图片转Base64", "数据URI", "内联图片"]
+          },
+          {
+            "title": "HTML符号",
+            "href": "/html-symbols",
+            "keywords": ["HTML实体", "字符代码", "HTML字符"]
+          },
+          {
+            "title": "按键码信息",
+            "href": "/keycode-info",
+            "keywords": ["键盘代码", "按键事件", "JavaScript按键码"]
+          },
+          {
+            "title": "CSS形状",
+            "href": "/css-shapes",
+            "keywords": ["CSS几何", "形状生成器", "CSS图案"]
+          },
+          {
+            "title": "CSS颜色滤镜",
+            "href": "/css-color-filter",
+            "keywords": ["CSS滤镜", "图像滤镜", "颜色效果"]
+          },
+          {
+            "title": "URL解析器",
+            "href": "/url-parser",
+            "keywords": ["URL组件", "查询字符串", "URL参数"]
+          },
+          {
+            "title": "User-Agent解析器",
+            "href": "/user-agent-parser",
+            "keywords": ["浏览器检测", "User-Agent字符串", "设备信息"]
+          },
+          {
+            "title": "CSS光标",
+            "href": "/css-cursors",
+            "keywords": ["鼠标光标", "指针类型", "光标样式"]
+          },
+          {
+            "title": "HTTP状态码",
+            "href": "/http-codes",
+            "keywords": ["状态码", "HTTP状态", "错误代码"]
+          },
+          {
+            "title": "MIME类型",
+            "href": "/mime-types",
+            "keywords": ["媒体类型", "内容类型", "文件类型"]
+          }
+        ]
+      },
+      {
+        "title": "数学与计算",
+        "items": [
+          {
+            "title": "科学计算器",
+            "href": "/scientific-calculator",
+            "keywords": ["高级计算器", "数学函数", "复杂数学"]
+          },
+          {
+            "title": "十六进制转换器",
+            "href": "/hex-converter",
+            "keywords": ["十六进制转十进制", "二进制转换器", "数字进制"]
+          },
+          {
+            "title": "角度计算器",
+            "href": "/angle-calculator",
+            "keywords": ["度", "弧度", "三角函数"]
+          },
+          {
+            "title": "预计到达时间计算器",
+            "href": "/eta-calculator",
+            "keywords": ["预计时间", "到达时间", "时间预测"]
+          }
+        ]
+      },
+      {
+        "title": "网络",
+        "items": [
+          {
+            "title": "IP地址信息",
+            "href": "/ip-info",
+            "keywords": ["IP查询", "地理位置", "我的IP"]
+          },
+          {
+            "title": "WHOIS查询",
+            "href": "/whois",
+            "keywords": ["域名信息", "域名注册", "DNS信息"]
+          },
+          {
+            "title": "IP地址计算器",
+            "href": "/ip-calculator",
+            "keywords": ["子网计算器", "CIDR", "IP范围"]
+          },
+          {
+            "title": "MAC地址计算器",
+            "href": "/mac-calculator",
+            "keywords": ["MAC格式", "MAC验证", "网络地址"]
+          },
+          {
+            "title": "MAC地址查询",
+            "href": "/mac-lookup",
+            "keywords": ["MAC厂商", "OUI查询", "硬件地址"]
+          }
+        ]
+      },
+      {
+        "title": "DevOps与安全",
+        "items": [
+          {
+            "title": "Nginx配置",
+            "href": "/nginx-config",
+            "keywords": ["Nginx服务器", "Web服务器配置", "HTTP服务器"]
+          },
+          {
+            "title": "SSH密钥生成器",
+            "href": "/ssh-key-generator",
+            "keywords": ["RSA密钥", "公钥", "私钥"]
+          },
+          {
+            "title": "Chmod计算器",
+            "href": "/chmod-calculator",
+            "keywords": ["文件权限", "Unix权限", "权限计算器"]
+          },
+          {
+            "title": "Crontab生成器",
+            "href": "/crontab-generator",
+            "keywords": ["定时任务", "Cron表达式", "调度器"]
+          },
+          {
+            "title": "Basic Auth生成器",
+            "href": "/basic-auth-generator",
+            "keywords": ["HTTP认证", "基本认证", "密码保护"]
+          }
+        ]
+      }
+    ]
   },
   "HomePage": {
     "Meta": {

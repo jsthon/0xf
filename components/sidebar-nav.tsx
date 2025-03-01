@@ -3,16 +3,15 @@
 import { useEffect, useRef } from "react";
 
 import { NavItem } from "@/types/nav";
-import { type NavConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
+import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
 import { Link, usePathname } from "@/i18n/navigation";
 
-export function SidebarNav({ config }: { config: NavConfig }) {
+export function SidebarNav() {
   const pathname = usePathname();
   const shouldScrollNav = useRef(true);
   const navRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
-
-  const items = config.sidebarNav;
+  const { sidebarNav } = useNavigationTranslations();
 
   useEffect(() => {
     requestAnimationFrame(() => {
@@ -47,9 +46,9 @@ export function SidebarNav({ config }: { config: NavConfig }) {
     });
   }, [pathname]);
 
-  return items.length ? (
+  return sidebarNav.length ? (
     <div className="flex flex-col gap-6">
-      {items.map((item, index) => (
+      {sidebarNav.map((item, index) => (
         <div key={index} className="flex flex-col gap-1">
           <h4 className="rounded-md px-2 py-1 text-sm font-semibold">
             {item.title}{" "}

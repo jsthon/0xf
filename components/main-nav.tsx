@@ -2,11 +2,16 @@
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Icons } from "@/components/icons";
 
 export function MainNav() {
   const pathname = usePathname();
+  const { mainNav } = useNavigationTranslations();
+
+  // Filter out homepage link as it's already in the logo
+  const filteredNav = mainNav.filter((item) => item.href !== "/");
 
   return (
     <div className="mr-4 hidden md:flex">
@@ -17,72 +22,23 @@ export function MainNav() {
         </span>
       </Link>
       <nav className="flex items-center gap-4 text-sm xl:gap-6">
-        <Link
-          href="/docs"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/80"
-          )}
-        >
-          Docs
-        </Link>
-        <Link
-          href="/docs/components"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/components") &&
-              !pathname?.startsWith("/docs/component/chart")
-              ? "text-foreground"
-              : "text-foreground/80"
-          )}
-        >
-          Components
-        </Link>
-        <Link
-          href="/blocks"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blocks")
-              ? "text-foreground"
-              : "text-foreground/80"
-          )}
-        >
-          Blocks
-        </Link>
-        <Link
-          href="/charts"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/component/chart") ||
-              pathname?.startsWith("/charts")
-              ? "text-foreground"
-              : "text-foreground/80"
-          )}
-        >
-          Charts
-        </Link>
-        <Link
-          href="/themes"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/themes")
-              ? "text-foreground"
-              : "text-foreground/80"
-          )}
-        >
-          Themes
-        </Link>
-        <Link
-          href="/colors"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/colors")
-              ? "text-foreground"
-              : "text-foreground/80"
-          )}
-        >
-          Colors
-        </Link>
+        {filteredNav.map((item) => {
+          const href = item.href || "/";
+          return (
+            <Link
+              key={item.title}
+              href={href}
+              className={cn(
+                "transition-colors hover:text-foreground/80",
+                pathname && pathname.startsWith(href)
+                  ? "text-foreground"
+                  : "text-foreground/80"
+              )}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
       </nav>
     </div>
   );

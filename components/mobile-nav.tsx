@@ -2,14 +2,15 @@
 
 import * as React from "react";
 
-import { navConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
+import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
+  const { mainNav, sidebarNav } = useNavigationTranslations();
 
   const onOpenChange = React.useCallback((open: boolean) => {
     setOpen(open);
@@ -42,7 +43,7 @@ export function MobileNav() {
       <DrawerContent className="max-h-[60svh] p-0">
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
-            {navConfig.mainNav?.map(
+            {mainNav?.map(
               (item) =>
                 item.href && (
                   <MobileLink
@@ -56,7 +57,7 @@ export function MobileNav() {
             )}
           </div>
           <div className="flex flex-col space-y-2">
-            {navConfig.sidebarNav.map((item, index) => (
+            {sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
