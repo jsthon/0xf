@@ -364,11 +364,56 @@
       }
     ]
   },
+  "CopyButton": {
+    "Error": "复制失败"
+  },
   "HomePage": {
     "Meta": {
       "Title": "首页",
       "Description": "首页描述"
     },
     "Welcome": "欢迎"
+  },
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 编码 解码",
+      "Description": "Base64 编码和解码工具，支持自动检测输入格式和 URL Safe 模式。"
+    },
+    "Controls": {
+      "AutoDetect": "自动检测",
+      "Decode": "解码",
+      "Encode": "编码",
+      "UrlSafe": "URL Safe"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "Base64": "Base64",
+      "UrlSafe": "URL Safe"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "自动检测输入的纯文本还是 Base64",
+        "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充以便在 URL 中安全使用"
+      },
+      "Decode": {
+        "StandardChars": "需关闭 URL Safe 才能解码 '+' 或 '/' 字符",
+        "UrlSafeChars": "需开启 URL Safe 才能解码 '-' 或 '_' 字符",
+        "InvalidBase64": "无效的 Base64 内容"
+      },
+      "Encode": {
+        "Failed": "编码失败"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "输入要编码的文本",
+        "Decode": "输入要解码的 Base64"
+      },
+      "Output": {
+        "Encode": "编码后的 Base64 内容",
+        "Decode": "解码后的文本内容"
+      }
+    }
   }
 }

@@ -397,11 +397,56 @@
       }
     ]
   },
+  "CopyButton": {
+    "Error": "Failed to copy to clipboard"
+  },
   "HomePage": {
     "Meta": {
       "Title": "Home",
       "Description": "Homepage description"
     },
     "Welcome": "Welcome"
+  },
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 Encode Decode",
+      "Description": "Encode text to Base64 or decode Base64 to plain text. Auto-detects input format and supports URL-safe characters."
+    },
+    "Controls": {
+      "AutoDetect": "Auto Detect",
+      "Decode": "Decode",
+      "Encode": "Encode",
+      "UrlSafe": "URL Safe"
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "Base64": "Base64",
+      "UrlSafe": "URL Safe"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "Automatically detect if input is Base64 or plain text",
+        "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
+      },
+      "Decode": {
+        "StandardChars": "Disable URL Safe to decode '+' or '/' characters",
+        "UrlSafeChars": "Enable URL Safe to decode '-' or '_' characters",
+        "InvalidBase64": "Invalid Base64 string"
+      },
+      "Encode": {
+        "Failed": "Failed to encode text"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "Enter text to encode...",
+        "Decode": "Enter Base64 to decode..."
+      },
+      "Output": {
+        "Encode": "Encoded Base64 output...",
+        "Decode": "Decoded text output..."
+      }
+    }
   }
 }

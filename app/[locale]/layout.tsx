@@ -10,6 +10,8 @@ import {
 import { fontMono, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Locale, routing } from "@/i18n/routing";
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/providers";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 
@@ -67,8 +69,11 @@ export default async function LocaleLayout({
             disableTransitionOnChange
             enableColorScheme
           >
-            {children}
-            <TailwindIndicator />
+            <TooltipProvider>
+              {children}
+              <Toaster />
+              <TailwindIndicator />
+            </TooltipProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
