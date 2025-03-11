@@ -415,5 +415,42 @@
         "Decode": "解码后的文本内容"
       }
     }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL 编码 解码",
+      "Description": "URL 编码和解码工具，支持自动检测输入格式，便于快速转换。"
+    },
+    "Controls": {
+      "AutoDetect": "自动检测",
+      "Decode": "解码",
+      "Encode": "编码"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "URLEncoded": "URL 编码"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "自动检测输入的纯文本还是 URL 编码"
+      },
+      "Decode": {
+        "Invalid": "无效的 URL 编码内容"
+      },
+      "Encode": {
+        "Failed": "编码失败"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "输入要编码的文本",
+        "Decode": "输入要解码的 URL 编码文本"
+      },
+      "Output": {
+        "Encode": "编码后的 URL 编码文本",
+        "Decode": "解码后的文本内容"
+      }
+    }
   }
 }
