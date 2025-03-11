@@ -448,5 +448,42 @@
         "Decode": "Decoded text output..."
       }
     }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL Encode Decode",
+      "Description": "Encode text to URL format or decode URL encoded text. Auto-detects input format for easy conversion."
+    },
+    "Controls": {
+      "AutoDetect": "Auto Detect",
+      "Decode": "Decode",
+      "Encode": "Encode"
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "URLEncoded": "URL Encoded"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "Automatically detect if input is URL encoded or plain text"
+      },
+      "Decode": {
+        "Invalid": "Invalid URL encoded string"
+      },
+      "Encode": {
+        "Failed": "Failed to encode text"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "Enter text to encode...",
+        "Decode": "Enter encoded text..."
+      },
+      "Output": {
+        "Encode": "Encoded URL output...",
+        "Decode": "Decoded text output..."
+      }
+    }
   }
 }
