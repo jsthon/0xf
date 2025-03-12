@@ -71,15 +71,6 @@
             "keywords": ["Word Count", "Character Count", "Letter Count"]
           },
           {
-            "title": "Unicode Text",
-            "href": "/unicode-text",
-            "keywords": [
-              "Unicode Characters",
-              "Special Characters",
-              "Text Symbols"
-            ]
-          },
-          {
             "title": "Emoji Picker",
             "href": "/emoji-picker",
             "keywords": ["Emoji Selector", "Emoticons", "Unicode Emoji"]
@@ -137,6 +128,17 @@
             "title": "URL Encoding",
             "href": "/url-encoding",
             "keywords": ["URL Encode", "URL Decode", "Percent Encoding"]
+          },
+          {
+            "title": "Character Encoding",
+            "href": "/character-encoding",
+            "keywords": [
+              "Unicode Code Point",
+              "Unicode Escape Sequence",
+              "HTML Entity",
+              "HTML Numeric Character Reference",
+              "Text Symbols"
+            ]
           },
           {
             "title": "JWT Encoding",
@@ -246,11 +248,6 @@
             "title": "Image Base64",
             "href": "/image-base64",
             "keywords": ["Image to Base64", "Data URI", "Inline Image"]
-          },
-          {
-            "title": "HTML Symbols",
-            "href": "/html-symbols",
-            "keywords": ["HTML Entities", "Character Codes", "HTML Characters"]
           },
           {
             "title": "Keycode Info",
@@ -482,6 +479,51 @@
       },
       "Output": {
         "Encode": "Encoded URL output...",
+        "Decode": "Decoded text output..."
+      }
+    }
+  },
+  "CharacterEncodingPage": {
+    "Meta": {
+      "Title": "Character Encoding",
+      "Description": "Convert text to Unicode formats (Code Point, Unicode Escape) or HTML entities, and decode them back to plain text."
+    },
+    "Controls": {
+      "AutoDetect": "Auto Detect",
+      "Decode": "Decode",
+      "Encode": "Encode",
+      "CodePoint": "Code Point U+XXXX",
+      "EscapeSequence": "Unicode Escape \\uXXXX",
+      "HtmlEntity": "HTML Entity &#XXXX;"
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "CodePoint": "Code Point",
+      "EscapeSequence": "Unicode Escape",
+      "HtmlEntity": "HTML Entity"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "Automatically detect if input is encoded or plain text"
+      },
+      "Decode": {
+        "InvalidEncoding": "Invalid encoding format",
+        "InvalidCodePoint": "Invalid Code Point format",
+        "InvalidEscapeSequence": "Invalid Unicode Escape format",
+        "InvalidHtmlEntity": "Invalid HTML Entity format"
+      },
+      "Encode": {
+        "Failed": "Failed to encode text"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "Enter text to encode...",
+        "Decode": "Enter encoded text..."
+      },
+      "Output": {
+        "Encode": "Encoded result output...",
         "Decode": "Decoded text output..."
       }
     }

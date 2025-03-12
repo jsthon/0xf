@@ -66,11 +66,6 @@
             "keywords": ["字数统计", "字符计数", "文字计数"]
           },
           {
-            "title": "Unicode文本",
-            "href": "/unicode-text",
-            "keywords": ["Unicode字符", "特殊字符", "文本符号"]
-          },
-          {
             "title": "表情选择器",
             "href": "/emoji-picker",
             "keywords": ["表情选择", "表情符号", "Unicode表情"]
@@ -124,6 +119,11 @@
             "title": "URL编码",
             "href": "/url-encoding",
             "keywords": ["URL编码", "URL解码", "百分比编码"]
+          },
+          {
+            "title": "字符编码",
+            "href": "/character-encoding",
+            "keywords": ["Unicode码点", "Unicode转义", "HTML实体", "文本符号"]
           },
           {
             "title": "JWT编码",
@@ -229,11 +229,6 @@
             "title": "图片Base64",
             "href": "/image-base64",
             "keywords": ["图片转Base64", "数据URI", "内联图片"]
-          },
-          {
-            "title": "HTML符号",
-            "href": "/html-symbols",
-            "keywords": ["HTML实体", "字符代码", "HTML字符"]
           },
           {
             "title": "按键码信息",
@@ -450,6 +445,51 @@
       "Output": {
         "Encode": "编码后的 URL 编码文本",
         "Decode": "解码后的文本内容"
+      }
+    }
+  },
+  "CharacterEncodingPage": {
+    "Meta": {
+      "Title": "字符编码解码",
+      "Description": "将文本转换为 Unicode 编码（Unicode 码点、Unicode 转义）或 HTML 实体，并支持解码至普通文本。"
+    },
+    "Controls": {
+      "AutoDetect": "自动检测",
+      "Decode": "解码",
+      "Encode": "编码",
+      "CodePoint": "Unicode 码点 U+XXXX",
+      "EscapeSequence": "Unicode 转义 \\uXXXX",
+      "HtmlEntity": "HTML 实体 &#XXXX;"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "CodePoint": "Unicode 码点",
+      "EscapeSequence": "Unicode 转义",
+      "HtmlEntity": "HTML 实体"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "自动检测输入内容是否已编码"
+      },
+      "Decode": {
+        "InvalidEncoding": "无效的编码格式",
+        "InvalidCodePoint": "无效的 Unicode 码点格式",
+        "InvalidEscapeSequence": "无效的 Unicode 转义格式",
+        "InvalidHtmlEntity": "无效的 HTML 实体格式"
+      },
+      "Encode": {
+        "Failed": "编码失败"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "输入要编码的文本",
+        "Decode": "输入要解码的内容"
+      },
+      "Output": {
+        "Encode": "编码后的内容",
+        "Decode": "解码后的文本"
       }
     }
   }
