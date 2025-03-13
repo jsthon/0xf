@@ -3,5 +3,9 @@ export default function ToolsLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="relative py-6 lg:py-8">{children}</main>;
+  return (
+    <main className="relative flex min-h-full flex-col py-6 lg:py-8">
+      {children}
+    </main>
+  );
 }

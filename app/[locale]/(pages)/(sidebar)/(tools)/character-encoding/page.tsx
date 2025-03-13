@@ -232,7 +232,7 @@ export default function CharacterEncodingPage() {
           <Label htmlFor="format-htmlentity">{t("Controls.HtmlEntity")}</Label>
         </div>
       </RadioGroup>
-      <div className="grid gap-6 pt-6 md:gap-8 md:pt-8 lg:grid-cols-2">
+      <div className="grid flex-1 gap-6 pt-6 md:gap-8 md:pt-8 lg:grid-cols-2">
         <div className="flex h-full flex-col space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
@@ -257,7 +257,7 @@ export default function CharacterEncodingPage() {
                 ? t("Placeholders.Input.Decode")
                 : t("Placeholders.Input.Encode")
             }
-            className="h-[300px] lg:h-[500px]"
+            className="h-full max-h-[500px] min-h-[100px]"
           />
         </div>
         <div className="flex h-full flex-col space-y-4">
@@ -276,17 +276,16 @@ export default function CharacterEncodingPage() {
               className="h-8 w-8 rounded-md border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground [&_svg]:h-4 [&_svg]:w-4"
             />
           </div>
-          <div className="h-[300px] overflow-y-auto rounded-md border border-input bg-muted/50 px-3 py-2 text-base shadow-sm md:text-sm lg:h-[500px]">
-            {outputText ? (
-              <pre className="whitespace-pre-wrap break-all">{outputText}</pre>
-            ) : (
-              <p className="text-muted-foreground">
-                {isDecodeMode
-                  ? t("Placeholders.Output.Decode")
-                  : t("Placeholders.Output.Encode")}
-              </p>
-            )}
-          </div>
+          <Textarea
+            value={outputText}
+            readOnly
+            placeholder={
+              isDecodeMode
+                ? t("Placeholders.Output.Decode")
+                : t("Placeholders.Output.Encode")
+            }
+            className="h-full max-h-[500px] min-h-[100px] bg-muted/50 focus-visible:ring-0"
+          />
         </div>
       </div>
     </>
