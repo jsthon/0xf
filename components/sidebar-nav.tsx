@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { memo, useCallback, useEffect, useRef } from "react";
 
 import { NavItem } from "@/types/nav";
 import { cn } from "@/lib/utils";
@@ -14,37 +14,45 @@ export function SidebarNav() {
   const { sidebarNav } = useNavigationTranslations();
 
   useEffect(() => {
+    // only execute on initial page load once
+    if (!shouldScrollNav.current || !pathname) return;
+
+    // wait for refs to be populated
     requestAnimationFrame(() => {
-      // only scroll on initial page load, not on route change
-      if (!shouldScrollNav.current) return;
+      try {
+        // check if active nav item exists
+        const activeNav = navRefs.current.get(pathname);
+        if (!activeNav) return;
 
-      // check if active nav item exists
-      const activeNav = navRefs.current.get(pathname || "");
-      if (!activeNav) return;
+        // check if sidebar exists and is visible (hidden on mobile)
+        const aside = activeNav.closest("aside.hidden");
+        if (!aside || window.getComputedStyle(aside).display === "none") return;
 
-      // check if sidebar exists and is visible
-      const sidebar = activeNav.closest(".overflow-auto");
-      if (!sidebar || window.getComputedStyle(sidebar).display === "none")
-        return;
+        // find the scrollable container within the sidebar
+        const sidebar = aside.querySelector(".overflow-auto");
+        if (!sidebar) return;
 
-      // check if active nav item is fully visible in sidebar
-      const { top: navTop, height: navHeight } =
-        activeNav.getBoundingClientRect();
-      const { top: sidebarTop, height: sidebarHeight } =
-        sidebar.getBoundingClientRect();
-      const isVisible =
-        navTop >= sidebarTop &&
-        navTop + navHeight <= sidebarTop + sidebarHeight;
+        // check if active nav item is fully visible in sidebar
+        const { top: navTop, height: navHeight } =
+          activeNav.getBoundingClientRect();
+        const { top: sidebarTop, height: sidebarHeight } =
+          sidebar.getBoundingClientRect();
+        const isVisible =
+          navTop >= sidebarTop &&
+          navTop + navHeight <= sidebarTop + sidebarHeight;
 
-      // scroll to the center of the active nav item
-      if (!isVisible) {
-        const offset = navTop - sidebarTop - (sidebarHeight - navHeight) / 2;
-        sidebar.scrollTop += offset;
+        // scroll to the center of the active nav item
+        if (!isVisible) {
+          const offset = navTop - sidebarTop - (sidebarHeight - navHeight) / 2;
+          sidebar.scrollTop += offset;
+        }
+      } finally {
+        // always set to false after attempt
+        shouldScrollNav.current = false;
       }
-
-      shouldScrollNav.current = false;
     });
-  }, [pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return sidebarNav.length ? (
     <div className="flex flex-col gap-6">
@@ -59,7 +67,7 @@ export function SidebarNav() {
             )}
           </h4>
           {item?.items?.length && (
-            <SidebarNavItems
+            <MemoSidebarNavItems
               items={item.items}
               pathname={pathname}
               navRefs={navRefs}
@@ -71,6 +79,9 @@ export function SidebarNav() {
   ) : null;
 }
 
+// prevent unnecessary re-renders
+const MemoSidebarNavItems = memo(SidebarNavItems);
+
 function SidebarNavItems({
   items,
   pathname,
@@ -80,6 +91,16 @@ function SidebarNavItems({
   pathname: string | null;
   navRefs: React.RefObject<Map<string, HTMLAnchorElement>>;
 }) {
+  // optimized ref callback
+  const setNavRef = useCallback(
+    (el: HTMLAnchorElement | null, href: string | undefined) => {
+      if (el && navRefs.current && href) {
+        navRefs.current.set(href, el);
+      }
+    },
+    [navRefs]
+  );
+
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
       {items.map((item, index) =>
@@ -87,11 +108,7 @@ function SidebarNavItems({
           <Link
             key={index}
             href={item.href}
-            ref={(el) => {
-              if (el && navRefs.current && item.href) {
-                navRefs.current.set(item.href, el);
-              }
-            }}
+            ref={(el) => setNavRef(el, item.href)}
             className={cn(
               "group flex h-8 w-full items-center rounded-lg px-2 font-normal text-foreground underline-offset-2 hover:bg-accent hover:text-accent-foreground",
               item.disabled && "cursor-not-allowed opacity-60",
