@@ -199,7 +199,7 @@ export default function Base64Page() {
                 ? t("Placeholders.Input.Decode")
                 : t("Placeholders.Input.Encode")
             }
-            className="h-full max-h-[500px] min-h-[100px]"
+            className="h-full max-h-[400px] min-h-[100px]"
           />
         </div>
         <div className="flex h-full flex-col space-y-4">
@@ -229,7 +229,7 @@ export default function Base64Page() {
                 ? t("Placeholders.Output.Decode")
                 : t("Placeholders.Output.Encode")
             }
-            className="h-full max-h-[500px] min-h-[100px] bg-muted/50 focus-visible:ring-0"
+            className="h-full max-h-[400px] min-h-[100px] bg-muted/50 focus-visible:ring-0"
           />
         </div>
       </div>

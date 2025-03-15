@@ -15,10 +15,10 @@ export function SiteHeader() {
             <div className="w-full flex-1 md:w-auto md:flex-none">
               <CommandMenu />
             </div>
-            <nav className="flex items-center gap-0.5">
+            <div className="flex items-center gap-0.5">
               <LocaleSwitcher />
               <ModeSwitcher />
-            </nav>
+            </div>
           </div>
         </div>
       </div>
