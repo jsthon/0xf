@@ -12,6 +12,12 @@
     }
   },
   "Header": {
+    "MobileNav": {
+      "ToggleMenu": "切换菜单"
+    },
+    "ModeSwitcher": {
+      "ToggleTheme": "切换主题"
+    },
     "LocaleSwitcher": {
       "Label": "切换语言",
       "Locale": "{locale, select, en {English} zh {中文} other {未知}}"
@@ -360,6 +366,7 @@
     ]
   },
   "CopyButton": {
+    "Copy": "复制",
     "Error": "复制失败"
   },
   "HomePage": {
