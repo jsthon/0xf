@@ -81,8 +81,8 @@
         "title": "Generators",
         "items": [
           {
-            "title": "Random Password",
-            "href": "/random-password",
+            "title": "Password Generator",
+            "href": "/password-generator",
             "keywords": [
               "Password Generator",
               "Strong Password",
@@ -526,6 +526,22 @@
         "Encode": "Encoded result output...",
         "Decode": "Decoded text output..."
       }
+    }
+  },
+  "PasswordGeneratorPage": {
+    "Meta": {
+      "Title": "Password Generator",
+      "Description": "Generate secure random passwords with customizable options for length and character types."
+    },
+    "Labels": {
+      "Password": "Password",
+      "Generate": "Generate",
+      "CharacterLength": "Character Length",
+      "CharacterTypes": "Character Types"
+    },
+    "Messages": {
+      "GenerateError": "Failed to generate password",
+      "SelectCharType": "At least one character type must be selected"
     }
   }
 }

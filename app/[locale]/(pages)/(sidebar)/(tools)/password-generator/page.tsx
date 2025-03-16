@@ -1,0 +1,285 @@
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+import { RefreshCw } from "lucide-react";
+import { customAlphabet } from "nanoid";
+import { useTranslations } from "next-intl";
+
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Textarea } from "@/components/ui/textarea";
+import { CopyButton } from "@/components/copy-button";
+
+// Character sets for password generation
+const UPPERCASE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LOWERCASE_CHARS = "abcdefghijklmnopqrstuvwxyz";
+const NUMBER_CHARS = "0123456789";
+const SYMBOL_CHARS = "-!#$%&()*,.:?@[]^_{}~+<=>";
+
+// Interface for password generation options
+interface PasswordOptions {
+  length: number;
+  includeUppercase: boolean;
+  includeLowercase: boolean;
+  includeNumbers: boolean;
+  includeSymbols: boolean;
+}
+
+// Default password options
+const DEFAULT_PASSWORD_OPTIONS: PasswordOptions = {
+  length: 16,
+  includeUppercase: true,
+  includeLowercase: true,
+  includeNumbers: true,
+  includeSymbols: false,
+};
+
+export default function PasswordGeneratorPage() {
+  const [password, setPassword] = useState<string>("");
+  const [options, setOptions] = useState<PasswordOptions>(
+    DEFAULT_PASSWORD_OPTIONS
+  );
+
+  const t = useTranslations("PasswordGeneratorPage");
+
+  // Generate a random password based on provided options
+  const generatePassword = useCallback(
+    (options: PasswordOptions): string => {
+      // validate that at least one character type is selected
+      if (
+        !options.includeUppercase &&
+        !options.includeLowercase &&
+        !options.includeNumbers &&
+        !options.includeSymbols
+      ) {
+        return t("Messages.SelectCharType");
+      }
+
+      // build character set based on options
+      let chars = "";
+      if (options.includeUppercase) chars += UPPERCASE_CHARS;
+      if (options.includeLowercase) chars += LOWERCASE_CHARS;
+      if (options.includeNumbers) chars += NUMBER_CHARS;
+      if (options.includeSymbols) chars += SYMBOL_CHARS;
+
+      // create a nanoid generator with our custom alphabet
+      const generateNanoId = customAlphabet(chars, options.length);
+
+      // generate password
+      const password = generateNanoId();
+
+      // ensure at least one character from each selected type is included
+      if (options.length >= 4) {
+        const types = [];
+        if (options.includeUppercase) types.push(UPPERCASE_CHARS);
+        if (options.includeLowercase) types.push(LOWERCASE_CHARS);
+        if (options.includeNumbers) types.push(NUMBER_CHARS);
+        if (options.includeSymbols) types.push(SYMBOL_CHARS);
+
+        // check if all required character types are present
+        const missingTypes = types.filter(
+          (type) => !password.split("").some((char) => type.includes(char))
+        );
+
+        // if any types are missing, regenerate the password
+        if (missingTypes.length > 0) {
+          return generatePassword(options);
+        }
+      }
+
+      return password;
+    },
+    [t]
+  );
+
+  // Update options and generate new password
+  const updateOptionsAndGeneratePassword = useCallback(
+    (newOptions: PasswordOptions) => {
+      setOptions(newOptions);
+
+      try {
+        const newPassword = generatePassword(newOptions);
+        setPassword(newPassword);
+      } catch (error) {
+        setPassword(t("Messages.GenerateError"));
+        console.error("Password generation error:", error);
+      }
+    },
+    [generatePassword, t]
+  );
+
+  // Generate a new password with current options
+  const handleGeneratePassword = useCallback(() => {
+    try {
+      const newPassword = generatePassword(options);
+      setPassword(newPassword);
+    } catch (error) {
+      setPassword(t("Messages.GenerateError"));
+      console.error("Password generation error:", error);
+    }
+  }, [options, generatePassword, t]);
+
+  // Handle manual password edit
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setPassword(e.target.value);
+  };
+
+  // Update character length
+  const handleLengthChange = (values: number[]) => {
+    if (values.length > 0) {
+      updateOptionsAndGeneratePassword({
+        ...options,
+        length: values[0],
+      });
+    }
+  };
+
+  // Toggle character type options
+  const handleToggleUppercase = (checked: boolean) => {
+    updateOptionsAndGeneratePassword({
+      ...options,
+      includeUppercase: checked,
+    });
+  };
+
+  const handleToggleLowercase = (checked: boolean) => {
+    updateOptionsAndGeneratePassword({
+      ...options,
+      includeLowercase: checked,
+    });
+  };
+
+  const handleToggleNumbers = (checked: boolean) => {
+    updateOptionsAndGeneratePassword({
+      ...options,
+      includeNumbers: checked,
+    });
+  };
+
+  const handleToggleSymbols = (checked: boolean) => {
+    updateOptionsAndGeneratePassword({
+      ...options,
+      includeSymbols: checked,
+    });
+  };
+
+  // Generate password only on initial load
+  useEffect(() => {
+    handleGeneratePassword();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <>
+      <div className="space-y-2 pb-8">
+        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
+          {t("Meta.Title")}
+        </h1>
+        {t.has("Meta.Description") && (
+          <p className="text-base text-muted-foreground">
+            {t("Meta.Description")}
+          </p>
+        )}
+      </div>
+
+      <div className="space-y-8">
+        <div className="space-y-2">
+          <div className="flex items-center justify-between">
+            <Label htmlFor="password" className="text-lg">
+              {t("Labels.Password")}
+            </Label>
+            <div className="flex space-x-2">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={handleGeneratePassword}
+                className="h-8 w-8"
+              >
+                <RefreshCw className="h-4 w-4" />
+                <span className="sr-only">{t("Labels.Generate")}</span>
+              </Button>
+              <CopyButton
+                value={password}
+                variant="outline"
+                className="h-8 w-8 rounded-md border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground [&_svg]:h-4 [&_svg]:w-4"
+              />
+            </div>
+          </div>
+          <Textarea
+            id="password"
+            value={password}
+            onChange={handlePasswordChange}
+            className="h-24 break-all font-mono md:text-xl"
+          />
+        </div>
+
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <Label htmlFor="character-length" className="text-base">
+              {t("Labels.CharacterLength")}
+            </Label>
+            <span className="font-mono text-base font-medium">
+              {options.length}
+            </span>
+          </div>
+          <Slider
+            id="character-length"
+            min={8}
+            max={100}
+            step={1}
+            value={[options.length]}
+            onValueChange={handleLengthChange}
+          />
+        </div>
+
+        <div className="space-y-4">
+          <Label className="text-base">{t("Labels.CharacterTypes")}</Label>
+          <div className="flex flex-wrap items-center gap-4 md:gap-6">
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="uppercase"
+                checked={options.includeUppercase}
+                onCheckedChange={handleToggleUppercase}
+              />
+              <Label htmlFor="uppercase" className="text-base">
+                ABC
+              </Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="lowercase"
+                checked={options.includeLowercase}
+                onCheckedChange={handleToggleLowercase}
+              />
+              <Label htmlFor="lowercase" className="text-base">
+                abc
+              </Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="numbers"
+                checked={options.includeNumbers}
+                onCheckedChange={handleToggleNumbers}
+              />
+              <Label htmlFor="numbers" className="text-base">
+                123
+              </Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="symbols"
+                checked={options.includeSymbols}
+                onCheckedChange={handleToggleSymbols}
+              />
+              <Label htmlFor="symbols" className="text-base">
+                !@#
+              </Label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
