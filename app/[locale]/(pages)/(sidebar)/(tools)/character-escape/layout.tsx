@@ -9,7 +9,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: "CharacterEncodingPage.Meta",
+    namespace: "CharacterEscapePage.Meta",
   });
 
   return {
@@ -18,7 +18,7 @@ export async function generateMetadata({
   };
 }
 
-export default function CharacterEncodingLayout({
+export default function CharacterEscapeLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

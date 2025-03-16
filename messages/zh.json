@@ -127,9 +127,15 @@
             "keywords": ["URL编码", "URL解码", "百分比编码"]
           },
           {
-            "title": "字符编码",
-            "href": "/character-encoding",
-            "keywords": ["Unicode码点", "Unicode转义", "HTML实体", "文本符号"]
+            "title": "字符转义",
+            "href": "/character-escape",
+            "keywords": [
+              "Unicode码点",
+              "Unicode转义",
+              "HTML实体",
+              "CSS转义",
+              "文本符号"
+            ]
           },
           {
             "title": "JWT编码",
@@ -455,24 +461,28 @@
       }
     }
   },
-  "CharacterEncodingPage": {
+  "CharacterEscapePage": {
     "Meta": {
-      "Title": "字符编码解码",
-      "Description": "将文本转换为 Unicode 编码（Unicode 码点、Unicode 转义）或 HTML 实体，并支持解码至普通文本。"
+      "Title": "字符转义",
+      "Description": "将文本转换为 Unicode 编码（Unicode 码点、Unicode 转义）、CSS 转义或 HTML 实体，并解码回普通文本。"
     },
     "Controls": {
       "AutoDetect": "自动检测",
       "Decode": "解码",
       "Encode": "编码",
-      "CodePoint": "Unicode 码点 U+XXXX",
-      "EscapeSequence": "Unicode 转义 \\uXXXX",
-      "HtmlEntity": "HTML 实体 &#XXXX;"
+      "CodePoint": "Unicode 码点 U+0000",
+      "EscapeSequence": "Unicode 转义 \\u0000",
+      "CssEscape": "CSS 转义 \\0000",
+      "HtmlCode": "HTML 转义 &#00;",
+      "HtmlEntity": "HTML 实体 &name;"
     },
     "Labels": {
       "Input": "输入",
       "Output": "结果",
       "CodePoint": "Unicode 码点",
       "EscapeSequence": "Unicode 转义",
+      "CssEscape": "CSS 转义",
+      "HtmlCode": "HTML 转义",
       "HtmlEntity": "HTML 实体"
     },
     "Messages": {
@@ -483,6 +493,8 @@
         "InvalidEncoding": "无效的编码格式",
         "InvalidCodePoint": "无效的 Unicode 码点格式",
         "InvalidEscapeSequence": "无效的 Unicode 转义格式",
+        "InvalidCssEscape": "无效的 CSS 转义格式",
+        "InvalidHtmlCode": "无效的 HTML 转义格式",
         "InvalidHtmlEntity": "无效的 HTML 实体格式"
       },
       "Encode": {
