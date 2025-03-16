@@ -12,6 +12,12 @@
     }
   },
   "Header": {
+    "MobileNav": {
+      "ToggleMenu": "Toggle menu"
+    },
+    "ModeSwitcher": {
+      "ToggleTheme": "Toggle theme"
+    },
     "LocaleSwitcher": {
       "Label": "Change language",
       "Locale": "{locale, select, en {English} zh {中文} other {Unknown}}"
@@ -395,7 +401,8 @@
     ]
   },
   "CopyButton": {
-    "Error": "Failed to copy to clipboard"
+    "Copy": "Copy",
+    "Error": "Copy failed"
   },
   "HomePage": {
     "Meta": {

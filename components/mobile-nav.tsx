@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useTranslations } from "next-intl";
 
 import { cn } from "@/lib/utils";
 import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
@@ -11,6 +12,8 @@ import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
   const { mainNav, sidebarNav } = useNavigationTranslations();
+
+  const t = useTranslations("Header.MobileNav");
 
   const onOpenChange = React.useCallback((open: boolean) => {
     setOpen(open);
@@ -37,7 +40,7 @@ export function MobileNav() {
               d="M3.75 9h16.5m-16.5 6.75h16.5"
             />
           </svg>
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">{t("ToggleMenu")}</span>
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
