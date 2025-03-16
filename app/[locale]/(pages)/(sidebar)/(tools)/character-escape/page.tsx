@@ -4,10 +4,10 @@ import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import {
-  CharEncoding,
   decodeCharacters,
-  detectCharEncoding,
+  detectEscapeType,
   encodeCharacters,
+  EscapeType,
 } from "@/lib/character";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
@@ -21,16 +21,16 @@ import {
 } from "@/components/ui/tooltip";
 import { CopyButton } from "@/components/copy-button";
 
-export default function CharacterEncodingPage() {
+export default function CharacterEscapePage() {
   const [inputText, setInputText] = useState<string>("");
   const [outputText, setOutputText] = useState<string>("");
   const [isAutoDetect, setIsAutoDetect] = useState(true);
   const [isDecodeMode, setIsDecodeMode] = useState(false);
-  const [charEncoding, setCharEncoding] = useState<CharEncoding>(
-    CharEncoding.CodePoint
+  const [charEncoding, setCharEncoding] = useState<EscapeType>(
+    EscapeType.CodePoint
   );
 
-  const t = useTranslations("CharacterEncodingPage");
+  const t = useTranslations("CharacterEscapePage");
 
   // process text based on current state
   const processText = useCallback(
@@ -54,13 +54,19 @@ export default function CharacterEncodingPage() {
           // show specific error message based on the selected format
           if (!decoded) {
             switch (charEncoding) {
-              case CharEncoding.CodePoint:
+              case EscapeType.CodePoint:
                 setOutputText(t("Messages.Decode.InvalidCodePoint"));
                 break;
-              case CharEncoding.EscapeSequence:
+              case EscapeType.EscapeSequence:
                 setOutputText(t("Messages.Decode.InvalidEscapeSequence"));
                 break;
-              case CharEncoding.HtmlEntity:
+              case EscapeType.CssEscape:
+                setOutputText(t("Messages.Decode.InvalidCssEscape"));
+                break;
+              case EscapeType.HtmlCode:
+                setOutputText(t("Messages.Decode.InvalidHtmlCode"));
+                break;
+              case EscapeType.HtmlEntity:
                 setOutputText(t("Messages.Decode.InvalidHtmlEntity"));
                 break;
               default:
@@ -82,7 +88,7 @@ export default function CharacterEncodingPage() {
   const detectAndProcessInput = useCallback(
     (text: string) => {
       if (isAutoDetect) {
-        const detectedFormat = detectCharEncoding(text);
+        const detectedFormat = detectEscapeType(text);
         const isEncodedFormat = detectedFormat !== null;
 
         setIsDecodeMode(isEncodedFormat);
@@ -122,7 +128,7 @@ export default function CharacterEncodingPage() {
   // handle encoding change
   const handleEncodingChange = (value: string) => {
     setIsAutoDetect(false);
-    setCharEncoding(value as CharEncoding);
+    setCharEncoding(value as EscapeType);
     if (inputText) {
       processText(inputText, isDecodeMode);
     }
@@ -136,22 +142,36 @@ export default function CharacterEncodingPage() {
   }, [inputText, detectAndProcessInput]);
 
   // get encoding badges for display
-  const getEncodingBadges = (encoding: CharEncoding) => {
-    let labelKey: "CodePoint" | "EscapeSequence" | "HtmlEntity" | null = null;
+  const getEncodingBadges = (encoding: EscapeType) => {
+    let labelKey:
+      | "CodePoint"
+      | "EscapeSequence"
+      | "CssEscape"
+      | "HtmlCode"
+      | "HtmlEntity"
+      | null = null;
     let formatExample: string = "";
 
     switch (encoding) {
-      case CharEncoding.CodePoint:
+      case EscapeType.CodePoint:
         labelKey = "CodePoint";
-        formatExample = "U+XXXX";
+        formatExample = "U+0000";
         break;
-      case CharEncoding.EscapeSequence:
+      case EscapeType.EscapeSequence:
         labelKey = "EscapeSequence";
-        formatExample = "\\uXXXX";
+        formatExample = "\\u0000";
         break;
-      case CharEncoding.HtmlEntity:
+      case EscapeType.CssEscape:
+        labelKey = "CssEscape";
+        formatExample = "\\0000";
+        break;
+      case EscapeType.HtmlCode:
+        labelKey = "HtmlCode";
+        formatExample = "&#00;";
+        break;
+      case EscapeType.HtmlEntity:
         labelKey = "HtmlEntity";
-        formatExample = "&#XXXX;";
+        formatExample = "&name;";
         break;
       default:
         return null;
@@ -177,6 +197,7 @@ export default function CharacterEncodingPage() {
           </p>
         )}
       </div>
+
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
         <Tooltip>
           <div className="flex items-center space-x-2">
@@ -213,21 +234,19 @@ export default function CharacterEncodingPage() {
           </Label>
         </div>
       </div>
+
       <RadioGroup
         value={charEncoding}
         onValueChange={handleEncodingChange}
-        className="flex flex-col flex-wrap gap-4 pt-6 md:flex-row md:pt-8"
+        className="grid grid-cols-1 gap-4 pt-6 md:grid-cols-2 md:pt-8 lg:grid-cols-3"
       >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem
-            value={CharEncoding.CodePoint}
-            id="format-codepoint"
-          />
+          <RadioGroupItem value={EscapeType.CodePoint} id="format-codepoint" />
           <Label htmlFor="format-codepoint">{t("Controls.CodePoint")}</Label>
         </div>
         <div className="flex items-center space-x-2">
           <RadioGroupItem
-            value={CharEncoding.EscapeSequence}
+            value={EscapeType.EscapeSequence}
             id="format-escapesequence"
           />
           <Label htmlFor="format-escapesequence">
@@ -235,13 +254,22 @@ export default function CharacterEncodingPage() {
           </Label>
         </div>
         <div className="flex items-center space-x-2">
+          <RadioGroupItem value={EscapeType.CssEscape} id="format-cssescape" />
+          <Label htmlFor="format-cssescape">{t("Controls.CssEscape")}</Label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value={EscapeType.HtmlCode} id="format-htmlcode" />
+          <Label htmlFor="format-htmlcode">{t("Controls.HtmlCode")}</Label>
+        </div>
+        <div className="flex items-center space-x-2">
           <RadioGroupItem
-            value={CharEncoding.HtmlEntity}
+            value={EscapeType.HtmlEntity}
             id="format-htmlentity"
           />
           <Label htmlFor="format-htmlentity">{t("Controls.HtmlEntity")}</Label>
         </div>
       </RadioGroup>
+
       <div className="grid flex-1 gap-6 pt-6 md:gap-8 md:pt-8 lg:grid-cols-2">
         <div className="flex h-full flex-col space-y-4">
           <div className="flex items-center justify-between">

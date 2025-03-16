@@ -136,13 +136,14 @@
             "keywords": ["URL Encode", "URL Decode", "Percent Encoding"]
           },
           {
-            "title": "Character Encoding",
-            "href": "/character-encoding",
+            "title": "Character Escape",
+            "href": "/character-escape",
             "keywords": [
               "Unicode Code Point",
               "Unicode Escape Sequence",
               "HTML Entity",
               "HTML Numeric Character Reference",
+              "CSS Unicode Escape",
               "Text Symbols"
             ]
           },
@@ -490,24 +491,28 @@
       }
     }
   },
-  "CharacterEncodingPage": {
+  "CharacterEscapePage": {
     "Meta": {
-      "Title": "Character Encoding",
-      "Description": "Convert text to Unicode formats (Code Point, Unicode Escape) or HTML entities, and decode them back to plain text."
+      "Title": "Character Escape",
+      "Description": "Convert text to Unicode format (Code Point, Unicode Escape, CSS Escape, HTML Entity) and decode it back to plain text."
     },
     "Controls": {
       "AutoDetect": "Auto Detect",
       "Decode": "Decode",
       "Encode": "Encode",
-      "CodePoint": "Code Point U+XXXX",
-      "EscapeSequence": "Unicode Escape \\uXXXX",
-      "HtmlEntity": "HTML Entity &#XXXX;"
+      "CodePoint": "Code Point U+0000",
+      "EscapeSequence": "Unicode Escape \\u0000",
+      "CssEscape": "CSS Escape \\0000",
+      "HtmlCode": "HTML Code &#00;",
+      "HtmlEntity": "HTML Entity &name;"
     },
     "Labels": {
       "Input": "Input",
       "Output": "Output",
       "CodePoint": "Code Point",
       "EscapeSequence": "Unicode Escape",
+      "CssEscape": "CSS Escape",
+      "HtmlCode": "HTML Code",
       "HtmlEntity": "HTML Entity"
     },
     "Messages": {
@@ -518,6 +523,8 @@
         "InvalidEncoding": "Invalid encoding format",
         "InvalidCodePoint": "Invalid Code Point format",
         "InvalidEscapeSequence": "Invalid Unicode Escape format",
+        "InvalidCssEscape": "Invalid CSS Escape format",
+        "InvalidHtmlCode": "Invalid HTML Code format",
         "InvalidHtmlEntity": "Invalid HTML Entity format"
       },
       "Encode": {
