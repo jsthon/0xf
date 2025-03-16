@@ -194,13 +194,23 @@ export default function CharacterEncodingPage() {
           </div>
         </Tooltip>
         <div className="flex items-center space-x-2">
-          <Label htmlFor="decode-mode">{t("Controls.Encode")}</Label>
+          <Label
+            htmlFor="decode-mode"
+            className={!isDecodeMode ? "" : "text-muted-foreground opacity-70"}
+          >
+            {t("Controls.Encode")}
+          </Label>
           <Switch
             id="decode-mode"
             checked={isDecodeMode}
             onCheckedChange={handleDecodeModeToggle}
           />
-          <Label htmlFor="decode-mode">{t("Controls.Decode")}</Label>
+          <Label
+            htmlFor="decode-mode"
+            className={isDecodeMode ? "" : "text-muted-foreground opacity-70"}
+          >
+            {t("Controls.Decode")}
+          </Label>
         </div>
       </div>
       <RadioGroup

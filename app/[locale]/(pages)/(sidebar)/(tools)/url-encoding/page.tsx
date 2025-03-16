@@ -120,13 +120,23 @@ export default function URLEncodingPage() {
           </div>
         </Tooltip>
         <div className="flex items-center space-x-2">
-          <Label htmlFor="decode-mode">{t("Controls.Encode")}</Label>
+          <Label
+            htmlFor="decode-mode"
+            className={!isDecodeMode ? "" : "text-muted-foreground opacity-70"}
+          >
+            {t("Controls.Encode")}
+          </Label>
           <Switch
             id="decode-mode"
             checked={isDecodeMode}
             onCheckedChange={handleDecodeModeToggle}
           />
-          <Label htmlFor="decode-mode">{t("Controls.Decode")}</Label>
+          <Label
+            htmlFor="decode-mode"
+            className={isDecodeMode ? "" : "text-muted-foreground opacity-70"}
+          >
+            {t("Controls.Decode")}
+          </Label>
         </div>
       </div>
       <div className="grid flex-1 gap-6 pt-6 md:gap-8 md:pt-8 lg:grid-cols-2">
