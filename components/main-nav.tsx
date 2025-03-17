@@ -29,7 +29,7 @@ export function MainNav() {
               key={item.title}
               href={href}
               className={cn(
-                "transition-colors hover:text-foreground/80",
+                "hover:text-foreground/80 transition-colors",
                 pathname && pathname.startsWith(href)
                   ? "text-foreground"
                   : "text-foreground/80"

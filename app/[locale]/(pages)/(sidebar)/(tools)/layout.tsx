@@ -5,7 +5,7 @@ export default function ToolsLayout({
 }>) {
   return (
     <div className="relative h-full py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
-      <article className="mx-auto flex h-full w-full min-w-0 max-w-3xl flex-col">
+      <article className="mx-auto flex h-full w-full max-w-3xl min-w-0 flex-col">
         {children}
       </article>
       <aside className="hidden text-sm xl:block">

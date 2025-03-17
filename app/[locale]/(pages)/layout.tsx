@@ -7,13 +7,11 @@ export default function PageLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div data-vaul-drawer-wrapper="">
-      <div className="relative flex min-h-svh flex-col bg-background">
-        <div data-wrapper="" className="border-grid flex flex-1 flex-col">
-          <SiteHeader />
-          <main className="flex flex-1 flex-col">{children}</main>
-          <SiteFooter />
-        </div>
+    <div className="bg-background relative flex min-h-svh flex-col">
+      <div data-wrapper="" className="border-grid flex flex-1 flex-col">
+        <SiteHeader />
+        <main className="flex flex-1 flex-col">{children}</main>
+        <SiteFooter />
       </div>
     </div>
   );

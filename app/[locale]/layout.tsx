@@ -11,7 +11,6 @@ import { fontMono, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Locale, routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/providers";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 
@@ -56,7 +55,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-svh bg-background font-sans antialiased",
+          "bg-background min-h-svh font-sans antialiased",
           fontSans.variable,
           fontMono.variable
         )}
@@ -69,11 +68,9 @@ export default async function LocaleLayout({
             disableTransitionOnChange
             enableColorScheme
           >
-            <TooltipProvider>
-              {children}
-              <Toaster />
-              <TailwindIndicator />
-            </TooltipProvider>
+            {children}
+            <Toaster />
+            <TailwindIndicator />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
