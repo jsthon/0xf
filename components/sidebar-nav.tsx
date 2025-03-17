@@ -61,7 +61,7 @@ export function SidebarNav() {
           <h4 className="rounded-md px-2 py-1 text-sm font-semibold">
             {item.title}{" "}
             {item.label && (
-              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none font-normal text-[#000000] no-underline group-hover:no-underline">
                 {item.label}
               </span>
             )}
@@ -110,10 +110,10 @@ function SidebarNavItems({
             href={item.href}
             ref={(el) => setNavRef(el, item.href)}
             className={cn(
-              "group flex h-8 w-full items-center rounded-lg px-2 font-normal text-foreground underline-offset-2 hover:bg-accent hover:text-accent-foreground",
+              "group text-foreground hover:bg-accent hover:text-accent-foreground flex h-8 w-full items-center rounded-lg px-2 font-normal underline-offset-2",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href &&
-                "bg-accent font-medium text-accent-foreground"
+                "bg-accent text-accent-foreground font-medium"
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
@@ -129,13 +129,13 @@ function SidebarNavItems({
           <span
             key={index}
             className={cn(
-              "flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground hover:underline",
+              "text-muted-foreground flex w-full cursor-not-allowed items-center rounded-md p-2 hover:underline",
               item.disabled && "cursor-not-allowed opacity-60"
             )}
           >
             {item.title}
             {item.label && (
-              <span className="ml-2 rounded-md bg-muted px-1.5 py-0.5 text-xs leading-none text-muted-foreground no-underline group-hover:no-underline">
+              <span className="bg-muted text-muted-foreground ml-2 rounded-md px-1.5 py-0.5 text-xs leading-none no-underline group-hover:no-underline">
                 {item.label}
               </span>
             )}

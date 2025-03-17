@@ -98,7 +98,7 @@ export default function URLEncodingPage() {
           {t("Meta.Title")}
         </h1>
         {t.has("Meta.Description") && (
-          <p className="text-base text-muted-foreground">
+          <p className="text-muted-foreground text-base">
             {t("Meta.Description")}
           </p>
         )}
@@ -151,7 +151,7 @@ export default function URLEncodingPage() {
             <CopyButton
               value={inputText}
               variant="outline"
-              className="h-8 w-8 rounded-md border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground [&_svg]:h-4 [&_svg]:w-4"
+              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-md border [&_svg]:h-4 [&_svg]:w-4"
             />
           </div>
           <Textarea
@@ -176,7 +176,7 @@ export default function URLEncodingPage() {
             <CopyButton
               value={outputText}
               variant="outline"
-              className="h-8 w-8 rounded-md border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground [&_svg]:h-4 [&_svg]:w-4"
+              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-md border [&_svg]:h-4 [&_svg]:w-4"
             />
           </div>
           <Textarea
@@ -187,7 +187,7 @@ export default function URLEncodingPage() {
                 ? t("Placeholders.Output.Decode")
                 : t("Placeholders.Output.Encode")
             }
-            className="h-full max-h-[400px] min-h-[100px] bg-muted/50 focus-visible:ring-0"
+            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] focus-visible:ring-0"
           />
         </div>
       </div>

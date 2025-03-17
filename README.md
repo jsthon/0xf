@@ -15,7 +15,7 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view the
 ## Documentation
 
 - [shadcn/ui](https://ui.shadcn.com/docs) - Learn about shadcn/ui components and usage.
-- [Tailwind CSS](https://v3.tailwindcss.com) - Explore Tailwind CSS features and utilities.
+- [Tailwind CSS](https://tailwindcss.com) - Explore Tailwind CSS features and utilities.
 - [Next.js](https://nextjs.org/docs) - Discover Next.js features and API.
 
 For more information, visit the project website at [0xf.com](https://0xf.com).

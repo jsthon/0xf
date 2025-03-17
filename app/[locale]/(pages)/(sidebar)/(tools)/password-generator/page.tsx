@@ -178,7 +178,7 @@ export default function PasswordGeneratorPage() {
           {t("Meta.Title")}
         </h1>
         {t.has("Meta.Description") && (
-          <p className="text-base text-muted-foreground">
+          <p className="text-muted-foreground text-base">
             {t("Meta.Description")}
           </p>
         )}
@@ -203,7 +203,7 @@ export default function PasswordGeneratorPage() {
               <CopyButton
                 value={password}
                 variant="outline"
-                className="h-8 w-8 rounded-md border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground [&_svg]:h-4 [&_svg]:w-4"
+                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-md border [&_svg]:h-4 [&_svg]:w-4"
               />
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function PasswordGeneratorPage() {
             id="password"
             value={password}
             onChange={handlePasswordChange}
-            className="h-24 break-all font-mono md:text-xl"
+            className="h-24 font-mono break-all md:text-xl"
           />
         </div>
 
