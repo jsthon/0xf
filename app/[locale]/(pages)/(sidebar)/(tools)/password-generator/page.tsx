@@ -173,7 +173,7 @@ export default function PasswordGeneratorPage() {
 
   return (
     <>
-      <div className="space-y-2 pb-8">
+      <div className="flex flex-col gap-2 pb-8">
         <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
           {t("Meta.Title")}
         </h1>
@@ -184,26 +184,26 @@ export default function PasswordGeneratorPage() {
         )}
       </div>
 
-      <div className="space-y-8">
-        <div className="space-y-2">
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label htmlFor="password" className="text-lg">
               {t("Labels.Password")}
             </Label>
-            <div className="flex space-x-2">
+            <div className="flex gap-2">
               <Button
                 variant="outline"
                 size="icon"
                 onClick={handleGeneratePassword}
-                className="h-8 w-8"
+                className="size-8"
               >
-                <RefreshCw className="h-4 w-4" />
+                <RefreshCw className="size-4" />
                 <span className="sr-only">{t("Labels.Generate")}</span>
               </Button>
               <CopyButton
                 value={password}
                 variant="outline"
-                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-md border [&_svg]:h-4 [&_svg]:w-4"
+                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
               />
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function PasswordGeneratorPage() {
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <Label htmlFor="character-length" className="text-base">
               {t("Labels.CharacterLength")}
@@ -234,10 +234,10 @@ export default function PasswordGeneratorPage() {
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4">
           <Label className="text-base">{t("Labels.CharacterTypes")}</Label>
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               <Checkbox
                 id="uppercase"
                 checked={options.includeUppercase}
@@ -247,7 +247,7 @@ export default function PasswordGeneratorPage() {
                 ABC
               </Label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               <Checkbox
                 id="lowercase"
                 checked={options.includeLowercase}
@@ -257,7 +257,7 @@ export default function PasswordGeneratorPage() {
                 abc
               </Label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               <Checkbox
                 id="numbers"
                 checked={options.includeNumbers}
@@ -267,7 +267,7 @@ export default function PasswordGeneratorPage() {
                 123
               </Label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               <Checkbox
                 id="symbols"
                 checked={options.includeSymbols}
