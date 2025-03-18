@@ -77,7 +77,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <span className="hidden lg:inline-flex">{t("SearchText")}</span>
         <span className="inline-flex lg:hidden">{t("SearchTextShort")}</span>
         {isMounted && (
-          <kbd className="bg-muted pointer-events-none absolute top-[0.3rem] right-[0.3rem] hidden h-5 items-center gap-1 rounded border px-1.5 font-sans text-[10px] font-medium opacity-100 select-none sm:flex">
+          <kbd className="bg-muted pointer-events-none absolute top-[0.3rem] right-[0.3rem] hidden h-5 items-center gap-1 rounded-sm border px-1.5 font-sans text-[10px] font-medium opacity-100 select-none sm:flex">
             {isAppleDevice ? "⌘" : "Ctrl"} K
           </kbd>
         )}
@@ -112,8 +112,8 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(navItem.href as string));
                   }}
                 >
-                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
-                    <Circle className="h-3 w-3" />
+                  <div className="mr-2 flex size-4 items-center justify-center">
+                    <Circle className="size-3" />
                   </div>
                   {navItem.title}
                 </CommandItem>

@@ -93,7 +93,7 @@ export default function URLEncodingPage() {
 
   return (
     <>
-      <div className="space-y-2 pb-8">
+      <div className="flex flex-col gap-2 pb-8">
         <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
           {t("Meta.Title")}
         </h1>
@@ -105,7 +105,7 @@ export default function URLEncodingPage() {
       </div>
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
         <Tooltip>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <Switch
               id="auto-detect"
               checked={isAutoDetect}
@@ -119,7 +119,7 @@ export default function URLEncodingPage() {
             </TooltipContent>
           </div>
         </Tooltip>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center gap-2">
           <Label
             htmlFor="decode-mode"
             className={!isDecodeMode ? "" : "text-muted-foreground opacity-70"}
@@ -140,7 +140,7 @@ export default function URLEncodingPage() {
         </div>
       </div>
       <div className="grid flex-1 gap-6 pt-6 md:gap-8 md:pt-8 lg:grid-cols-2">
-        <div className="flex h-full flex-col space-y-4">
+        <div className="flex h-full flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <h2 className="text-lg font-medium">{t("Labels.Input")}</h2>
@@ -151,7 +151,7 @@ export default function URLEncodingPage() {
             <CopyButton
               value={inputText}
               variant="outline"
-              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-md border [&_svg]:h-4 [&_svg]:w-4"
+              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
             />
           </div>
           <Textarea
@@ -165,7 +165,7 @@ export default function URLEncodingPage() {
             className="h-full max-h-[400px] min-h-[100px]"
           />
         </div>
-        <div className="flex h-full flex-col space-y-4">
+        <div className="flex h-full flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <h2 className="text-lg font-medium">{t("Labels.Output")}</h2>
@@ -176,7 +176,7 @@ export default function URLEncodingPage() {
             <CopyButton
               value={outputText}
               variant="outline"
-              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-md border [&_svg]:h-4 [&_svg]:w-4"
+              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
             />
           </div>
           <Textarea
@@ -187,7 +187,7 @@ export default function URLEncodingPage() {
                 ? t("Placeholders.Output.Decode")
                 : t("Placeholders.Output.Encode")
             }
-            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] focus-visible:ring-0"
+            className="bg-muted/50 h-full max-h-[400px] min-h-[100px]"
           />
         </div>
       </div>

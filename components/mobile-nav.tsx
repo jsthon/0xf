@@ -24,7 +24,7 @@ export function MobileNav() {
       <DrawerTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 -ml-2 h-8 w-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="mr-2 -ml-2 size-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export function MobileNav() {
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
         <div className="overflow-auto p-6">
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col gap-3">
             {mainNav?.map(
               (item) =>
                 item.href && (
@@ -59,9 +59,9 @@ export function MobileNav() {
                 )
             )}
           </div>
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col gap-2">
             {sidebarNav.map((item, index) => (
-              <div key={index} className="flex flex-col space-y-3 pt-6">
+              <div key={index} className="flex flex-col gap-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
                   item.items.map((item) => (
