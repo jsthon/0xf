@@ -92,9 +92,9 @@
             "keywords": ["二维码生成器", "二维码创建", "条形码"]
           },
           {
-            "title": "模拟数据",
-            "href": "/fake-data",
-            "keywords": ["模拟数据", "测试数据", "虚拟数据"]
+            "title": "Lorem Ipsum",
+            "href": "/lorem-ipsum",
+            "keywords": ["Lorem Ipsum", "模拟数据", "测试文本", "随机文章"]
           },
           {
             "title": "哈希生成器",
@@ -526,6 +526,25 @@
     "Messages": {
       "GenerateError": "生成密码失败",
       "SelectCharType": "至少需要选择一种字符类型"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "Lorem Ipsum 文本生成器",
+      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本"
+    },
+    "Labels": {
+      "Text": "生成文本",
+      "Generate": "生成",
+      "StartWithLorem": "以 'Lorem ipsum' 开头",
+      "RandomRange": "随机范围",
+      "DisplayPTags": "显示 '<p>' 标签",
+      "Paragraphs": "段落数",
+      "Sentences": "每段句子数",
+      "Words": "每句词数"
+    },
+    "Messages": {
+      "GenerateError": "生成 Lorem Ipsum 文本时出错"
     }
   }
 }

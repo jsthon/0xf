@@ -101,9 +101,9 @@
             "keywords": ["QR Generator", "QR Code Creator", "Barcode"]
           },
           {
-            "title": "Fake Data",
-            "href": "/fake-data",
-            "keywords": ["Mock Data", "Test Data", "Dummy Data"]
+            "title": "Lorem Ipsum",
+            "href": "/lorem-ipsum",
+            "keywords": ["Lorem Ipsum", "Fake Text", "Mock Data", "Dummy Data"]
           },
           {
             "title": "Hash Generator",
@@ -556,6 +556,25 @@
     "Messages": {
       "GenerateError": "Failed to generate password",
       "SelectCharType": "At least one character type must be selected"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "Lorem Ipsum Generator",
+      "Description": "Generate Lorem Ipsum dummy text with customizable options"
+    },
+    "Labels": {
+      "Text": "Generated Text",
+      "Generate": "Generate",
+      "StartWithLorem": "Start with 'Lorem ipsum'",
+      "RandomRange": "Random Range",
+      "DisplayPTags": "Display '<p>' tags",
+      "Paragraphs": "Paragraphs",
+      "Sentences": "Sentences per Paragraph",
+      "Words": "Words per Sentence"
+    },
+    "Messages": {
+      "GenerateError": "Error generating Lorem Ipsum text"
     }
   }
 }
