@@ -97,7 +97,7 @@
             "keywords": ["Lorem Ipsum", "模拟数据", "测试文本", "随机文章"]
           },
           {
-            "title": "哈希生成器",
+            "title": "哈希计算",
             "href": "/hash-generator",
             "keywords": ["MD5", "SHA1", "SHA256", "校验和"]
           },
@@ -375,6 +375,14 @@
     "Copy": "复制",
     "Error": "复制失败"
   },
+  "FileUpload": {
+    "PrimaryText": "选择或拖放文件",
+    "SecondaryText": "不限文件类型",
+    "Remove": "移除",
+    "Messages": {
+      "InvalidFiles": "未选择有效文件"
+    }
+  },
   "HomePage": {
     "Meta": {
       "Title": "首页",
@@ -545,6 +553,34 @@
     },
     "Messages": {
       "GenerateError": "生成 Lorem Ipsum 文本时出错"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "哈希计算",
+      "Description": "支持 MD5、SHA1、SHA256、SHA512、SHA3 等多种 Hash 算法。可处理文本和文件输入，提供多种摘要编码格式。"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "Algorithm": "哈希算法",
+      "DigestEncoding": "摘要编码"
+    },
+    "Placeholders": {
+      "Input": "输入要哈希的文本"
+    },
+    "Messages": {
+      "LocalProcessing": "文件仅在本地处理",
+      "GenerationFailed": "生成哈希失败"
+    },
+    "InputType": {
+      "Text": "文本",
+      "File": "文件"
+    },
+    "DigestEncoding": {
+      "HexLower": "十六进制（小写）",
+      "HexUpper": "十六进制（大写）",
+      "Base64": "Base64"
     }
   }
 }

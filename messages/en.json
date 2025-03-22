@@ -405,6 +405,14 @@
     "Copy": "Copy",
     "Error": "Copy failed"
   },
+  "FileUpload": {
+    "PrimaryText": "Select or drag and drop your files here",
+    "SecondaryText": "Any file type",
+    "Remove": "Remove",
+    "Messages": {
+      "InvalidFiles": "No valid files were selected"
+    }
+  },
   "HomePage": {
     "Meta": {
       "Title": "Home",
@@ -575,6 +583,34 @@
     },
     "Messages": {
       "GenerateError": "Error generating Lorem Ipsum text"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "Hash Generator",
+      "Description": "Generate hash values using MD5, SHA1, SHA256, SHA512, SHA3 and more algorithms. Support both text and file input with various digest encoding formats."
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "Algorithm": "Hash Algorithms",
+      "DigestEncoding": "Digest Encoding"
+    },
+    "Placeholders": {
+      "Input": "Enter text to hash..."
+    },
+    "Messages": {
+      "LocalProcessing": "Files processed locally only",
+      "GenerationFailed": "Failed to generate hash"
+    },
+    "InputType": {
+      "Text": "Text",
+      "File": "File"
+    },
+    "DigestEncoding": {
+      "HexLower": "Hex (lower case)",
+      "HexUpper": "Hex (upper case)",
+      "Base64": "Base64"
     }
   }
 }
