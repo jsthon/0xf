@@ -1,15 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server";
+import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { fontMono, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { Locale, routing } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/providers";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
@@ -17,7 +13,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator";
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "LocaleLayout.Meta" });
@@ -36,20 +32,17 @@ export default async function LocaleLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }>) {
   const { locale } = await params;
 
-  // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as Locale)) {
+  // ensure that the incoming `locale` is valid
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  // Enable static rendering
+  // enable static rendering
   setRequestLocale(locale);
-
-  // Provide all messages to client side
-  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -60,7 +53,7 @@ export default async function LocaleLayout({
           fontMono.variable
         )}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

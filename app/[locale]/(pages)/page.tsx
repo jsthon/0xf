@@ -1,11 +1,12 @@
+import { use } from "react";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { Locale, useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage.Meta" });
@@ -16,7 +17,16 @@ export async function generateMetadata({
   };
 }
 
-export default function HomePage() {
+export default function HomePage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = use(params);
+
+  // enable static rendering
+  setRequestLocale(locale);
+
   const t = useTranslations("HomePage");
 
   return (

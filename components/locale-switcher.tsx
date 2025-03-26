@@ -4,7 +4,7 @@ import { Languages } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Link, usePathname } from "@/i18n/navigation";
-import { Locale, routing } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -28,7 +28,7 @@ export function LocaleSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
         {routing.locales.map((lang) => (
-          <Link key={lang} href={pathname} locale={lang as Locale}>
+          <Link key={lang} href={pathname} locale={lang}>
             <DropdownMenuCheckboxItem checked={lang === locale}>
               {t("Locale", { locale: lang })}
             </DropdownMenuCheckboxItem>
