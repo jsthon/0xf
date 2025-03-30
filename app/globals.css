@@ -167,7 +167,7 @@
   }
 
   .container-wrapper {
-    @apply border-border/70 dark:border-border mx-auto w-full max-w-[1400px] border-dashed min-[1400px]:border-x min-[1800px]:max-w-screen-2xl;
+    @apply border-border/70 dark:border-border mx-auto w-full max-w-[1400px] border-dashed min-[1400px]:border-x min-[1700px]:max-w-screen-2xl;
   }
 
   .container {

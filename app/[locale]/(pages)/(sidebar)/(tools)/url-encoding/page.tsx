@@ -103,6 +103,7 @@ export default function URLEncodingPage() {
           </p>
         )}
       </div>
+
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
         <Tooltip>
           <div className="flex items-center gap-2">
@@ -139,11 +140,14 @@ export default function URLEncodingPage() {
           </Label>
         </div>
       </div>
+
       <div className="grid flex-1 gap-6 pt-6 md:gap-8 md:pt-8 lg:grid-cols-2">
-        <div className="flex h-full flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
-              <h2 className="text-lg font-medium">{t("Labels.Input")}</h2>
+              <Label htmlFor="input" className="text-lg">
+                {t("Labels.Input")}
+              </Label>
               {(!isAutoDetect || inputText) && isDecodeMode && (
                 <Badge>{t("Labels.URLEncoded")}</Badge>
               )}
@@ -155,6 +159,8 @@ export default function URLEncodingPage() {
             />
           </div>
           <Textarea
+            id="input"
+            className="h-full max-h-[400px] min-h-[100px] font-mono"
             value={inputText}
             onChange={handleInputChange}
             placeholder={
@@ -162,13 +168,15 @@ export default function URLEncodingPage() {
                 ? t("Placeholders.Input.Decode")
                 : t("Placeholders.Input.Encode")
             }
-            className="h-full max-h-[400px] min-h-[100px]"
           />
         </div>
-        <div className="flex h-full flex-col gap-4">
+
+        <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
-              <h2 className="text-lg font-medium">{t("Labels.Output")}</h2>
+              <Label htmlFor="output" className="text-lg">
+                {t("Labels.Output")}
+              </Label>
               {(!isAutoDetect || inputText) && !isDecodeMode && (
                 <Badge>{t("Labels.URLEncoded")}</Badge>
               )}
@@ -180,6 +188,8 @@ export default function URLEncodingPage() {
             />
           </div>
           <Textarea
+            id="output"
+            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] font-mono"
             value={outputText}
             readOnly
             placeholder={
@@ -187,7 +197,6 @@ export default function URLEncodingPage() {
                 ? t("Placeholders.Output.Decode")
                 : t("Placeholders.Output.Encode")
             }
-            className="bg-muted/50 h-full max-h-[400px] min-h-[100px]"
           />
         </div>
       </div>
