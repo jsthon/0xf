@@ -49,6 +49,7 @@
           {
             "title": "HTTP Request",
             "href": "/http-request",
+            "disabled": true,
             "keywords": [
               "HTTP Request",
               "API Client",
@@ -59,6 +60,7 @@
           {
             "title": "Regex Tester",
             "href": "/regex-tester",
+            "disabled": true,
             "keywords": ["Regular Expression", "RegExp", "Pattern Testing"]
           }
         ]
@@ -74,11 +76,13 @@
           {
             "title": "Text Count",
             "href": "/text-count",
+            "disabled": true,
             "keywords": ["Word Count", "Character Count", "Letter Count"]
           },
           {
             "title": "Emoji Picker",
             "href": "/emoji-picker",
+            "disabled": true,
             "keywords": ["Emoji Selector", "Emoticons", "Unicode Emoji"]
           }
         ]
@@ -98,6 +102,7 @@
           {
             "title": "QR Code",
             "href": "/qr-code",
+            "disabled": true,
             "keywords": ["QR Generator", "QR Code Creator", "Barcode"]
           },
           {
@@ -113,11 +118,13 @@
           {
             "title": "UUID Generator",
             "href": "/uuid-generator",
+            "disabled": true,
             "keywords": ["GUID", "Unique ID", "UUID v4"]
           },
           {
             "title": "ASCII Art Text",
             "href": "/ascii-art",
+            "disabled": true,
             "keywords": ["Text to ASCII", "ASCII Banner", "Text Art"]
           }
         ]
@@ -150,6 +157,7 @@
           {
             "title": "JWT Encoding",
             "href": "/jwt-encoding",
+            "disabled": true,
             "keywords": ["JWT", "JSON Web Token", "Token Decoder"]
           }
         ]
@@ -160,21 +168,25 @@
           {
             "title": "Color Converter",
             "href": "/color-converter",
+            "disabled": true,
             "keywords": ["Color Picker", "HEX to RGB", "RGB Converter"]
           },
           {
             "title": "Date Time Converter",
             "href": "/date-time-converter",
+            "disabled": true,
             "keywords": ["Timestamp Converter", "Unix Time", "Date Format"]
           },
           {
             "title": "JSON/YAML/CSV Converter",
             "href": "/json-yaml-csv",
+            "disabled": true,
             "keywords": ["Format Converter", "JSON to YAML", "Data Format"]
           },
           {
             "title": "Text Case Converter",
             "href": "/text-case-converter",
+            "disabled": true,
             "keywords": ["Uppercase", "Lowercase", "Camel Case", "Snake Case"]
           }
         ]
@@ -185,16 +197,19 @@
           {
             "title": "Markdown Editor",
             "href": "/markdown-editor",
+            "disabled": true,
             "keywords": ["MD Editor", "Markdown Preview", "Text Editor"]
           },
           {
             "title": "CSV Editor",
             "href": "/csv-editor",
+            "disabled": true,
             "keywords": ["CSV Viewer", "Spreadsheet Editor", "Table Editor"]
           },
           {
             "title": "CSS Preprocessor",
             "href": "/css-preprocessor",
+            "disabled": true,
             "keywords": ["SASS", "LESS", "Stylus", "CSS Compiler"]
           }
         ]
@@ -205,36 +220,43 @@
           {
             "title": "JSON Formatter",
             "href": "/json-formatter",
+            "disabled": true,
             "keywords": ["JSON Beautifier", "JSON Minify", "JSON Validator"]
           },
           {
             "title": "HTML Formatter",
             "href": "/html-formatter",
+            "disabled": true,
             "keywords": ["HTML Beautifier", "HTML Minify", "HTML Validator"]
           },
           {
             "title": "JavaScript Formatter",
             "href": "/js-formatter",
+            "disabled": true,
             "keywords": ["JS Beautifier", "JS Minify", "JS Validator"]
           },
           {
             "title": "CSS Formatter",
             "href": "/css-formatter",
+            "disabled": true,
             "keywords": ["CSS Beautifier", "CSS Minify", "CSS Validator"]
           },
           {
             "title": "XML Formatter",
             "href": "/xml-formatter",
+            "disabled": true,
             "keywords": ["XML Beautifier", "XML Minify", "XML Validator"]
           },
           {
             "title": "SQL Formatter",
             "href": "/sql-formatter",
+            "disabled": true,
             "keywords": ["SQL Beautifier", "SQL Pretty", "Format SQL"]
           },
           {
             "title": "GraphQL Formatter",
             "href": "/graphql-formatter",
+            "disabled": true,
             "keywords": [
               "GraphQL Beautifier",
               "GraphQL Pretty",
@@ -249,36 +271,43 @@
           {
             "title": "SVG Optimizer",
             "href": "/svg-optimizer",
+            "disabled": true,
             "keywords": ["SVG Minifier", "SVG Cleanup", "SVG Compression"]
           },
           {
             "title": "Image Base64",
             "href": "/image-base64",
+            "disabled": true,
             "keywords": ["Image to Base64", "Data URI", "Inline Image"]
           },
           {
             "title": "Keycode Info",
             "href": "/keycode-info",
+            "disabled": true,
             "keywords": ["Keyboard Code", "Key Events", "JavaScript Keycode"]
           },
           {
             "title": "CSS Shapes",
             "href": "/css-shapes",
+            "disabled": true,
             "keywords": ["CSS Geometry", "Shape Generator", "CSS Patterns"]
           },
           {
             "title": "CSS Color Filter",
             "href": "/css-color-filter",
+            "disabled": true,
             "keywords": ["CSS Filters", "Image Filter", "Color Effects"]
           },
           {
             "title": "URL Parser",
             "href": "/url-parser",
+            "disabled": true,
             "keywords": ["URL Components", "Query String", "URL Parameters"]
           },
           {
             "title": "User-Agent Parser",
             "href": "/user-agent-parser",
+            "disabled": true,
             "keywords": [
               "Browser Detection",
               "User-Agent String",
@@ -288,16 +317,19 @@
           {
             "title": "CSS Cursors",
             "href": "/css-cursors",
+            "disabled": true,
             "keywords": ["Mouse Cursors", "Pointer Types", "Cursor Styles"]
           },
           {
             "title": "HTTP Codes",
             "href": "/http-codes",
+            "disabled": true,
             "keywords": ["Status Codes", "HTTP Status", "Error Codes"]
           },
           {
             "title": "MIME Types",
             "href": "/mime-types",
+            "disabled": true,
             "keywords": ["Media Types", "Content Types", "File Types"]
           }
         ]
@@ -308,6 +340,7 @@
           {
             "title": "Scientific Calculator",
             "href": "/scientific-calculator",
+            "disabled": true,
             "keywords": [
               "Advanced Calculator",
               "Math Functions",
@@ -317,16 +350,19 @@
           {
             "title": "Hex Converter",
             "href": "/hex-converter",
+            "disabled": true,
             "keywords": ["Hex to Decimal", "Binary Converter", "Number Base"]
           },
           {
             "title": "Angle Calculator",
             "href": "/angle-calculator",
+            "disabled": true,
             "keywords": ["Degrees", "Radians", "Trigonometry"]
           },
           {
             "title": "ETA Calculator",
             "href": "/eta-calculator",
+            "disabled": true,
             "keywords": ["Estimated Time", "Arrival Time", "Time Prediction"]
           }
         ]
@@ -337,26 +373,31 @@
           {
             "title": "IP Address Info",
             "href": "/ip-info",
+            "disabled": true,
             "keywords": ["IP Lookup", "Geolocation", "My IP"]
           },
           {
             "title": "WHOIS Lookup",
             "href": "/whois",
+            "disabled": true,
             "keywords": ["Domain Info", "Domain Registration", "DNS Info"]
           },
           {
             "title": "IP Address Calculator",
             "href": "/ip-calculator",
+            "disabled": true,
             "keywords": ["Subnet Calculator", "CIDR", "IP Range"]
           },
           {
             "title": "MAC Address Calculator",
             "href": "/mac-calculator",
+            "disabled": true,
             "keywords": ["MAC Format", "MAC Validation", "Network Address"]
           },
           {
             "title": "MAC Address Lookup",
             "href": "/mac-lookup",
+            "disabled": true,
             "keywords": ["MAC Vendor", "OUI Lookup", "Hardware Address"]
           }
         ]
@@ -367,16 +408,19 @@
           {
             "title": "Nginx Config",
             "href": "/nginx-config",
+            "disabled": true,
             "keywords": ["Nginx Server", "Web Server Config", "HTTP Server"]
           },
           {
             "title": "SSH Key Generator",
             "href": "/ssh-key-generator",
+            "disabled": true,
             "keywords": ["RSA Key", "Public Key", "Private Key"]
           },
           {
             "title": "Chmod Calculator",
             "href": "/chmod-calculator",
+            "disabled": true,
             "keywords": [
               "File Permissions",
               "Unix Permissions",
@@ -386,11 +430,13 @@
           {
             "title": "Crontab Generator",
             "href": "/crontab-generator",
+            "disabled": true,
             "keywords": ["Scheduled Tasks", "Cron Expression", "Scheduler"]
           },
           {
             "title": "Basic Auth Generator",
             "href": "/basic-auth-generator",
+            "disabled": true,
             "keywords": [
               "HTTP Authentication",
               "Basic Authentication",

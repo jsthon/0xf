@@ -58,7 +58,7 @@ export function SidebarNav() {
     <div className="flex flex-col gap-6">
       {sidebarNav.map((item, index) => (
         <div key={index} className="flex flex-col gap-1">
-          <h4 className="rounded-md px-2 py-1 text-sm font-semibold">
+          <h4 className="rounded-md px-2 py-1 text-sm font-medium">
             {item.title}{" "}
             {item.label && (
               <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none font-normal text-[#000000] no-underline group-hover:no-underline">
@@ -110,10 +110,11 @@ function SidebarNavItems({
             href={item.href}
             ref={(el) => setNavRef(el, item.href)}
             className={cn(
-              "group text-foreground hover:bg-accent hover:text-accent-foreground flex h-8 w-full items-center rounded-lg px-2 font-normal underline-offset-2",
+              "group hover:bg-accent hover:text-accent-foreground flex h-8 w-full items-center rounded-lg px-2",
               item.disabled && "cursor-not-allowed opacity-60",
-              pathname === item.href &&
-                "bg-accent text-accent-foreground font-medium"
+              pathname === item.href
+                ? "bg-accent text-accent-foreground font-medium"
+                : "text-foreground font-normal"
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
