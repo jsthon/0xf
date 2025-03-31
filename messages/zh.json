@@ -65,8 +65,8 @@
         "items": [
           {
             "title": "文本对比",
-            "href": "/text-diff",
-            "keywords": ["比较文本", "差异检查", "文本比较"]
+            "href": "/text-compare",
+            "keywords": ["文本对比", "文本比较", "文本差异"]
           },
           {
             "title": "文本计数",
@@ -429,6 +429,11 @@
       "InvalidFiles": "未选择有效文件"
     }
   },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ 行未更改"
+    }
+  },
   "HomePage": {
     "Meta": {
       "Title": "首页",
@@ -627,6 +632,16 @@
       "HexLower": "十六进制（小写）",
       "HexUpper": "十六进制（大写）",
       "Base64": "Base64"
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "文本对比",
+      "Description": "比较和分析文本差异"
+    },
+    "Controls": {
+      "UnifiedView": "合并视图",
+      "CollapseUnchanged": "折叠相同"
     }
   }
 }
