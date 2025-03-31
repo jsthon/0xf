@@ -69,9 +69,9 @@
         "title": "Text & Characters",
         "items": [
           {
-            "title": "Text Diff",
-            "href": "/text-diff",
-            "keywords": ["Compare Text", "Diff Checker", "Text Comparison"]
+            "title": "Text Compare",
+            "href": "/text-compare",
+            "keywords": ["Diff Checker", "Text Comparison", "Text Diff"]
           },
           {
             "title": "Text Count",
@@ -459,6 +459,11 @@
       "InvalidFiles": "No valid files were selected"
     }
   },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ unchanged lines"
+    }
+  },
   "HomePage": {
     "Meta": {
       "Title": "Home",
@@ -657,6 +662,16 @@
       "HexLower": "Hex (lower case)",
       "HexUpper": "Hex (upper case)",
       "Base64": "Base64"
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "Text Compare",
+      "Description": "Compare and analyze text differences"
+    },
+    "Controls": {
+      "UnifiedView": "Unified View",
+      "CollapseUnchanged": "Collapse Unchanged"
     }
   }
 }
