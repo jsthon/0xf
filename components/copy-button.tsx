@@ -10,16 +10,20 @@ import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 interface CopyButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends Omit<React.ComponentProps<"button">, "children">,
     VariantProps<typeof buttonVariants> {
   value: string;
   className?: string;
+  size?: VariantProps<typeof buttonVariants>["size"];
+  children?: (hasCopied?: boolean) => React.ReactNode;
 }
 
 export function CopyButton({
   value,
   className,
   variant = "ghost",
+  size = "icon",
+  children,
   ...props
 }: CopyButtonProps) {
   const [hasCopied, setHasCopied] = useState(false);
@@ -33,12 +37,20 @@ export function CopyButton({
     return () => clearTimeout(timer);
   }, [hasCopied]);
 
+  const defaultChildren = (hasCopied: boolean) => (
+    <>
+      {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
+      <span className="sr-only">{t("Copy")}</span>
+    </>
+  );
+
   return (
     <Button
-      size="icon"
       variant={variant}
+      size={size}
       className={cn(
-        "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3",
+        !children &&
+          "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3",
         className
       )}
       onClick={async () => {
@@ -51,8 +63,7 @@ export function CopyButton({
       }}
       {...props}
     >
-      <span className="sr-only">{t("Copy")}</span>
-      {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
+      {children ? children(hasCopied) : defaultChildren(hasCopied)}
     </Button>
   );
 }

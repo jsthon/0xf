@@ -1,12 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { RefreshCw } from "lucide-react";
+import { CheckIcon, ClipboardIcon, RefreshCw } from "lucide-react";
 import { customAlphabet } from "nanoid";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,6 +18,10 @@ const UPPERCASE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const LOWERCASE_CHARS = "abcdefghijklmnopqrstuvwxyz";
 const NUMBER_CHARS = "0123456789";
 const SYMBOL_CHARS = "-!#$%&()*,.:?@[]^_{}~+<=>";
+
+// Password length constraints
+const MIN_CHARACTER_LENGTH = 8;
+const MAX_CHARACTER_LENGTH = 100;
 
 // Interface for password generation options
 interface PasswordOptions {
@@ -43,6 +48,7 @@ export default function PasswordGeneratorPage() {
   );
 
   const t = useTranslations("PasswordGeneratorPage");
+  const tCopy = useTranslations("CopyButton");
 
   // Generate a random password based on provided options
   const generatePassword = useCallback(
@@ -136,6 +142,23 @@ export default function PasswordGeneratorPage() {
     }
   };
 
+  // Handle character length input
+  const handleLengthInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value, 10);
+
+    if (isNaN(value)) return;
+
+    const newLength = Math.max(
+      MIN_CHARACTER_LENGTH,
+      Math.min(MAX_CHARACTER_LENGTH, value)
+    );
+
+    updateOptionsAndGeneratePassword({
+      ...options,
+      length: newLength,
+    });
+  };
+
   // Toggle character type options
   const handleToggleUppercase = (checked: boolean) => {
     updateOptionsAndGeneratePassword({
@@ -185,34 +208,43 @@ export default function PasswordGeneratorPage() {
       </div>
 
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             <Label htmlFor="password" className="text-lg">
               {t("Labels.Password")}
             </Label>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={handleGeneratePassword}
-                className="size-8"
-              >
-                <RefreshCw className="size-4" />
-                <span className="sr-only">{t("Labels.Generate")}</span>
-              </Button>
-              <CopyButton
-                value={password}
-                variant="outline"
-                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
-              />
-            </div>
+            <Textarea
+              id="password"
+              value={password}
+              onChange={handlePasswordChange}
+              className="h-24 font-mono break-all md:text-xl"
+            />
           </div>
-          <Textarea
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-            className="h-24 font-mono break-all md:text-xl"
-          />
+
+          <div className="flex gap-4">
+            <CopyButton
+              variant="default"
+              size="default"
+              className="flex-1"
+              value={password}
+            >
+              {(hasCopied) => (
+                <>
+                  {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
+                  {tCopy("Copy")}
+                </>
+              )}
+            </CopyButton>
+            <Button
+              variant="outline"
+              className="flex-1"
+              onClick={handleGeneratePassword}
+              title={t("Labels.Refresh")}
+            >
+              <RefreshCw className="size-4" />
+              {t("Labels.Refresh")}
+            </Button>
+          </div>
         </div>
 
         <div className="flex flex-col gap-4">
@@ -220,14 +252,16 @@ export default function PasswordGeneratorPage() {
             <Label htmlFor="character-length" className="text-base">
               {t("Labels.CharacterLength")}
             </Label>
-            <span className="font-mono text-base font-medium">
-              {options.length}
-            </span>
+            <Input
+              id="character-length"
+              value={options.length}
+              onChange={handleLengthInputChange}
+              className="h-8 w-16 text-center text-base font-medium"
+            />
           </div>
           <Slider
-            id="character-length"
-            min={8}
-            max={100}
+            min={MIN_CHARACTER_LENGTH}
+            max={MAX_CHARACTER_LENGTH}
             step={1}
             value={[options.length]}
             onValueChange={handleLengthChange}
