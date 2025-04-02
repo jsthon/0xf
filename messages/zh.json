@@ -578,7 +578,7 @@
     },
     "Labels": {
       "Password": "密码",
-      "Generate": "生成",
+      "Refresh": "刷新",
       "CharacterLength": "字符长度",
       "CharacterTypes": "字符类型"
     },

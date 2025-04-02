@@ -608,7 +608,7 @@
     },
     "Labels": {
       "Password": "Password",
-      "Generate": "Generate",
+      "Refresh": "Refresh",
       "CharacterLength": "Character Length",
       "CharacterTypes": "Character Types"
     },
