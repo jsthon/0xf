@@ -109,7 +109,6 @@
           {
             "title": "UUID生成器",
             "href": "/uuid-generator",
-            "disabled": true,
             "keywords": ["GUID", "唯一ID", "UUID v4"]
           },
           {
@@ -642,6 +641,46 @@
     "Controls": {
       "UnifiedView": "合并视图",
       "CollapseUnchanged": "折叠相同"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID 生成器",
+      "Description": "生成各种版本的通用唯一识别码 (UUID)"
+    },
+    "Labels": {
+      "Generated": "UUID 结果",
+      "Generate": "生成",
+      "Version": "UUID 版本",
+      "Quantity": "数量",
+      "Format": "格式",
+      "Uppercase": "大写",
+      "Hyphens": "连字符",
+      "Braces": "花括号",
+      "Quotes": "引号",
+      "Commas": "逗号",
+      "Namespace": "命名空间",
+      "Name": "名称"
+    },
+    "Versions": {
+      "v1": "V1 (时间戳)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (随机)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Messages": {
+      "GenerateError": "UUID 生成出错",
+      "NamespaceRequired": "需要提供命名空间和名称",
+      "NamespaceHint": "选择预设命名空间或输入自定义 UUID",
+      "InvalidNamespace": "命名空间必须是有效的 UUID",
+      "Tooltips": {
+        "Hyphens": "在 UUID 各部分之间添加标准分隔符",
+        "Uppercase": "将十六进制值转换为大写",
+        "Braces": "用花括号包裹 UUID",
+        "Quotes": "用双引号包裹 UUID",
+        "Commas": "在每个 UUID 末尾添加逗号"
+      }
     }
   }
 }
