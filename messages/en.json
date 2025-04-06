@@ -118,7 +118,6 @@
           {
             "title": "UUID Generator",
             "href": "/uuid-generator",
-            "disabled": true,
             "keywords": ["GUID", "Unique ID", "UUID v4"]
           },
           {
@@ -672,6 +671,46 @@
     "Controls": {
       "UnifiedView": "Unified View",
       "CollapseUnchanged": "Collapse Unchanged"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID Generator",
+      "Description": "Generate Universal Unique Identifiers (UUID) of various versions"
+    },
+    "Labels": {
+      "Generated": "Generated UUIDs",
+      "Generate": "Generate",
+      "Version": "UUID Version",
+      "Quantity": "Quantity",
+      "Format": "Format",
+      "Uppercase": "Uppercase",
+      "Hyphens": "Hyphens",
+      "Braces": "Braces",
+      "Quotes": "Quotes",
+      "Commas": "Commas",
+      "Namespace": "Namespace",
+      "Name": "Name"
+    },
+    "Versions": {
+      "v1": "V1 (Timestamp)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (Random)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Messages": {
+      "GenerateError": "Error generating UUID",
+      "NamespaceRequired": "Namespace and name are required",
+      "NamespaceHint": "Select a predefined namespace or enter your custom UUID",
+      "InvalidNamespace": "The namespace must be a valid UUID",
+      "Tooltips": {
+        "Hyphens": "Add standard separators between UUID parts",
+        "Uppercase": "Convert hex values to uppercase",
+        "Braces": "Wrap UUID in curly braces",
+        "Quotes": "Wrap UUID in double quotes",
+        "Commas": "Add comma at the end of each UUID"
+      }
     }
   }
 }
