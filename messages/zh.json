@@ -69,10 +69,9 @@
             "keywords": ["文本对比", "文本比较", "文本差异"]
           },
           {
-            "title": "文本计数",
-            "href": "/text-count",
-            "disabled": true,
-            "keywords": ["字数统计", "字符计数", "文字计数"]
+            "title": "字符统计",
+            "href": "/character-count",
+            "keywords": ["字数统计", "字符计数", "文字计数", "文本统计"]
           },
           {
             "title": "表情选择器",
@@ -631,6 +630,26 @@
       "HexLower": "十六进制（小写）",
       "HexUpper": "十六进制（大写）",
       "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "字符统计",
+      "Description": "分析并统计文本中不同类型字符的数量"
+    },
+    "Labels": {
+      "Text": "输入文本",
+      "Total": "总字符",
+      "Words": "单词",
+      "Lines": "行数",
+      "Whitespace": "空白字符",
+      "LatinScript": "拉丁文字",
+      "NonLatinScript": "非拉丁文字",
+      "Digits": "数字",
+      "Symbols": "符号"
+    },
+    "Placeholders": {
+      "Input": "输入要统计的文本"
     }
   },
   "TextComparePage": {
