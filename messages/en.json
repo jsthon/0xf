@@ -74,10 +74,9 @@
             "keywords": ["Diff Checker", "Text Comparison", "Text Diff"]
           },
           {
-            "title": "Text Count",
-            "href": "/text-count",
-            "disabled": true,
-            "keywords": ["Word Count", "Character Count", "Letter Count"]
+            "title": "Character Count",
+            "href": "/character-count",
+            "keywords": ["Word Counter", "Letter Count", "Text Count"]
           },
           {
             "title": "Emoji Picker",
@@ -661,6 +660,26 @@
       "HexLower": "Hex (lower case)",
       "HexUpper": "Hex (upper case)",
       "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "Character Count",
+      "Description": "Analyze and count different types of characters in your text"
+    },
+    "Labels": {
+      "Text": "Input Text",
+      "Total": "Total Characters",
+      "Words": "Words",
+      "Lines": "Lines",
+      "Whitespace": "Whitespace",
+      "LatinScript": "Latin Script",
+      "NonLatinScript": "Non-Latin Scripts",
+      "Digits": "Digits",
+      "Symbols": "Symbols"
+    },
+    "Placeholders": {
+      "Input": "Enter text to analyze..."
     }
   },
   "TextComparePage": {
