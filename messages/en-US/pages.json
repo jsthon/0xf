@@ -1,0 +1,16 @@
+{
+  "ErrorPage": {
+    "Title": "Error",
+    "Reset": "Reset"
+  },
+  "NotFoundPage": {
+    "Title": "Not Found"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "Home",
+      "Description": "Homepage description"
+    },
+    "Welcome": "Welcome"
+  }
+}

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 // is necessary for this page to render.
 
 export default function LocaleNotFound() {
-  const t = useTranslations("NotFound");
+  const t = useTranslations("NotFoundPage");
 
   return (
     <>

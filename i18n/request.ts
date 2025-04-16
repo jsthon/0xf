@@ -10,8 +10,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? requested
     : routing.defaultLocale;
 
+  // Don't forget to update the `global.d.ts` file
   return {
     locale,
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages: {
+      ...(await import(`../messages/${locale}/layouts.json`)).default,
+      ...(await import(`../messages/${locale}/components.json`)).default,
+      ...(await import(`../messages/${locale}/navigations.json`)).default,
+      ...(await import(`../messages/${locale}/pages.json`)).default,
+      ...(await import(`../messages/${locale}/tools.json`)).default,
+    },
   };
 });

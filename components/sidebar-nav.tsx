@@ -4,14 +4,15 @@ import { memo, useCallback, useEffect, useRef } from "react";
 
 import { NavItem } from "@/types/nav";
 import { cn } from "@/lib/utils";
-import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
+import { useActiveNavigationSection } from "@/hooks/use-navigation-messages";
 import { Link, usePathname } from "@/i18n/navigation";
+import { Icon } from "@/components/icons";
 
 export function SidebarNav() {
   const pathname = usePathname();
   const shouldScrollNav = useRef(true);
   const navRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
-  const { sidebarNav } = useNavigationTranslations();
+  const section = useActiveNavigationSection();
 
   useEffect(() => {
     // only execute on initial page load once
@@ -29,7 +30,9 @@ export function SidebarNav() {
         if (!aside || window.getComputedStyle(aside).display === "none") return;
 
         // find the scrollable container within the sidebar
-        const sidebar = aside.querySelector(".overflow-auto");
+        const sidebar = aside.querySelector(
+          "[data-radix-scroll-area-viewport]"
+        );
         if (!sidebar) return;
 
         // check if active nav item is fully visible in sidebar
@@ -54,17 +57,14 @@ export function SidebarNav() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return sidebarNav.length ? (
-    <div className="flex flex-col gap-6">
-      {sidebarNav.map((item, index) => (
-        <div key={index} className="flex flex-col gap-1">
-          <h4 className="rounded-md px-2 py-1 text-sm font-medium">
-            {item.title}{" "}
-            {item.label && (
-              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none font-normal text-[#000000] no-underline group-hover:no-underline">
-                {item.label}
-              </span>
-            )}
+  const sidebar = section?.categories || [];
+
+  return sidebar.length ? (
+    <nav className="flex flex-col gap-4">
+      {sidebar.map((item) => (
+        <div key={item.title} className="flex flex-col gap-2">
+          <h4 className="flex h-9 w-full items-center px-2 text-sm font-medium">
+            {item.title}
           </h4>
           {item?.items?.length && (
             <MemoSidebarNavItems
@@ -75,7 +75,7 @@ export function SidebarNav() {
           )}
         </div>
       ))}
-    </div>
+    </nav>
   ) : null;
 }
 
@@ -103,43 +103,37 @@ function SidebarNavItems({
 
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
-      {items.map((item, index) =>
+      {items.map((item) =>
         item.href && !item.disabled ? (
           <Link
-            key={index}
+            key={item.title}
             href={item.href}
             ref={(el) => setNavRef(el, item.href)}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noreferrer" : undefined}
             className={cn(
-              "group hover:bg-accent hover:text-accent-foreground flex h-8 w-full items-center rounded-lg px-2",
-              item.disabled && "cursor-not-allowed opacity-60",
+              "flex h-9 w-full items-center rounded-lg px-2 transition-colors",
               pathname === item.href
-                ? "bg-accent text-accent-foreground font-medium"
-                : "text-foreground font-normal"
+                ? "bg-ring/20 font-medium"
+                : "hover:bg-accent dark:hover:bg-accent/60 font-normal"
             )}
-            target={item.external ? "_blank" : ""}
-            rel={item.external ? "noreferrer" : ""}
           >
+            <div className="mr-2 flex size-4 items-center justify-center">
+              <Icon name={item.icon || "circle"} className="size-4" />
+            </div>
             {item.title}
-            {item.label && (
-              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
-                {item.label}
-              </span>
-            )}
           </Link>
         ) : (
           <span
-            key={index}
+            key={item.title}
             className={cn(
-              "text-muted-foreground flex w-full cursor-not-allowed items-center rounded-md p-2 hover:underline",
-              item.disabled && "cursor-not-allowed opacity-60"
+              "text-muted-foreground flex h-9 w-full cursor-not-allowed items-center rounded-md px-2 opacity-60 hover:underline"
             )}
           >
+            <div className="mr-2 flex size-4 items-center justify-center">
+              <Icon name={item.icon || "circle"} className="size-4" />
+            </div>
             {item.title}
-            {item.label && (
-              <span className="bg-muted text-muted-foreground ml-2 rounded-md px-1.5 py-0.5 text-xs leading-none no-underline group-hover:no-underline">
-                {item.label}
-              </span>
-            )}
           </span>
         )
       )}

@@ -10,7 +10,7 @@ export default function LocaleError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const t = useTranslations("Error");
+  const t = useTranslations("ErrorPage");
 
   useEffect(() => {
     console.error(error);

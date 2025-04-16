@@ -1,0 +1,265 @@
+{
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 编码 解码",
+      "Description": "Base64 编码和解码工具，支持自动检测输入格式和 URL Safe 模式。"
+    },
+    "Controls": {
+      "AutoDetect": "自动检测",
+      "Decode": "解码",
+      "Encode": "编码",
+      "UrlSafe": "URL Safe"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "Base64": "Base64",
+      "UrlSafe": "URL Safe"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "自动检测输入的纯文本还是 Base64",
+        "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充以便在 URL 中安全使用"
+      },
+      "Decode": {
+        "StandardChars": "需关闭 URL Safe 才能解码 '+' 或 '/' 字符",
+        "UrlSafeChars": "需开启 URL Safe 才能解码 '-' 或 '_' 字符",
+        "InvalidBase64": "无效的 Base64 内容"
+      },
+      "Encode": {
+        "Failed": "编码失败"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "输入要编码的文本",
+        "Decode": "输入要解码的 Base64"
+      },
+      "Output": {
+        "Encode": "编码后的 Base64 内容",
+        "Decode": "解码后的文本内容"
+      }
+    }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL 编码 解码",
+      "Description": "URL 编码和解码工具，支持自动检测输入格式，便于快速转换。"
+    },
+    "Controls": {
+      "AutoDetect": "自动检测",
+      "Decode": "解码",
+      "Encode": "编码"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "URLEncoded": "URL 编码"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "自动检测输入的纯文本还是 URL 编码"
+      },
+      "Decode": {
+        "Invalid": "无效的 URL 编码内容"
+      },
+      "Encode": {
+        "Failed": "编码失败"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "输入要编码的文本",
+        "Decode": "输入要解码的 URL 编码文本"
+      },
+      "Output": {
+        "Encode": "编码后的 URL 编码文本",
+        "Decode": "解码后的文本内容"
+      }
+    }
+  },
+  "CharacterEscapePage": {
+    "Meta": {
+      "Title": "字符转义",
+      "Description": "将文本转换为 Unicode 编码（Unicode 码点、Unicode 转义）、CSS 转义或 HTML 实体，并解码回普通文本。"
+    },
+    "Controls": {
+      "AutoDetect": "自动检测",
+      "Decode": "解码",
+      "Encode": "编码",
+      "CodePoint": "Unicode 码点 U+0000",
+      "EscapeSequence": "Unicode 转义 \\u0000",
+      "CssEscape": "CSS 转义 \\0000",
+      "HtmlCode": "HTML 转义 &#00;",
+      "HtmlEntity": "HTML 实体 &name;"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "CodePoint": "Unicode 码点",
+      "EscapeSequence": "Unicode 转义",
+      "CssEscape": "CSS 转义",
+      "HtmlCode": "HTML 转义",
+      "HtmlEntity": "HTML 实体"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "自动检测输入内容是否已编码"
+      },
+      "Decode": {
+        "InvalidEncoding": "无效的编码格式",
+        "InvalidCodePoint": "无效的 Unicode 码点格式",
+        "InvalidEscapeSequence": "无效的 Unicode 转义格式",
+        "InvalidCssEscape": "无效的 CSS 转义格式",
+        "InvalidHtmlCode": "无效的 HTML 转义格式",
+        "InvalidHtmlEntity": "无效的 HTML 实体格式"
+      },
+      "Encode": {
+        "Failed": "编码失败"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "输入要编码的文本",
+        "Decode": "输入要解码的内容"
+      },
+      "Output": {
+        "Encode": "编码后的内容",
+        "Decode": "解码后的文本"
+      }
+    }
+  },
+  "PasswordGeneratorPage": {
+    "Meta": {
+      "Title": "密码生成器",
+      "Description": "生成安全的随机密码，可自定义长度和字符类型。"
+    },
+    "Labels": {
+      "Password": "密码",
+      "Refresh": "刷新",
+      "CharacterLength": "字符长度",
+      "CharacterTypes": "字符类型"
+    },
+    "Messages": {
+      "GenerateError": "生成密码失败",
+      "SelectCharType": "至少需要选择一种字符类型"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "Lorem Ipsum 文本生成器",
+      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本"
+    },
+    "Labels": {
+      "Text": "生成文本",
+      "Generate": "生成",
+      "StartWithLorem": "以 'Lorem ipsum' 开头",
+      "RandomRange": "随机范围",
+      "DisplayPTags": "显示 '<p>' 标签",
+      "Paragraphs": "段落数",
+      "Sentences": "每段句子数",
+      "Words": "每句词数"
+    },
+    "Messages": {
+      "GenerateError": "生成 Lorem Ipsum 文本时出错"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "哈希计算",
+      "Description": "支持 MD5、SHA1、SHA256、SHA512、SHA3 等多种 Hash 算法。可处理文本和文件输入，提供多种摘要编码格式。"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "结果",
+      "Algorithm": "哈希算法",
+      "DigestEncoding": "摘要编码"
+    },
+    "Placeholders": {
+      "Input": "输入要哈希的文本"
+    },
+    "Messages": {
+      "LocalProcessing": "文件仅在本地处理",
+      "GenerationFailed": "生成哈希失败"
+    },
+    "InputType": {
+      "Text": "文本",
+      "File": "文件"
+    },
+    "DigestEncoding": {
+      "HexLower": "十六进制（小写）",
+      "HexUpper": "十六进制（大写）",
+      "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "字符统计",
+      "Description": "分析并统计文本中不同类型字符的数量"
+    },
+    "Labels": {
+      "Text": "输入文本",
+      "Total": "总字符",
+      "Words": "单词",
+      "Lines": "行数",
+      "Whitespace": "空白字符",
+      "LatinScript": "拉丁文字",
+      "NonLatinScript": "非拉丁文字",
+      "Digits": "数字",
+      "Symbols": "符号"
+    },
+    "Placeholders": {
+      "Input": "输入要统计的文本"
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "文本对比",
+      "Description": "比较和分析文本差异"
+    },
+    "Controls": {
+      "UnifiedView": "合并视图",
+      "CollapseUnchanged": "折叠相同"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID 生成器",
+      "Description": "生成各种版本的通用唯一识别码 (UUID)"
+    },
+    "Labels": {
+      "Generated": "UUID 结果",
+      "Generate": "生成",
+      "Version": "UUID 版本",
+      "Quantity": "数量",
+      "Format": "格式",
+      "Uppercase": "大写",
+      "Hyphens": "连字符",
+      "Braces": "花括号",
+      "Quotes": "引号",
+      "Commas": "逗号",
+      "Namespace": "命名空间",
+      "Name": "名称"
+    },
+    "Versions": {
+      "v1": "V1 (时间戳)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (随机)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Messages": {
+      "GenerateError": "UUID 生成出错",
+      "NamespaceRequired": "需要提供命名空间和名称",
+      "NamespaceHint": "选择预设命名空间或输入自定义 UUID",
+      "InvalidNamespace": "命名空间必须是有效的 UUID",
+      "Tooltips": {
+        "Hyphens": "在 UUID 各部分之间添加标准分隔符",
+        "Uppercase": "将十六进制值转换为大写",
+        "Braces": "用花括号包裹 UUID",
+        "Quotes": "用双引号包裹 UUID",
+        "Commas": "在每个 UUID 末尾添加逗号"
+      }
+    }
+  }
+}

@@ -1,6 +1,35 @@
-type IconProps = React.HTMLAttributes<SVGElement>;
+import {
+  Ampersand,
+  Circle,
+  FileDiff,
+  KeyRound,
+  LetterText,
+  Link2,
+  LucideIcon,
+  ShieldUser,
+  SquareAsterisk,
+  SquareCode,
+  SquareSigma,
+} from "lucide-react";
+import { DynamicIcon, type IconName } from "lucide-react/dynamic";
 
-export const Icons = {
+export type IconProps = React.SVGAttributes<SVGElement>;
+export type IconKey = keyof typeof CustomIcons | IconName;
+
+const LucideIcons: Record<string, LucideIcon> = {
+  circle: Circle,
+  "file-diff": FileDiff,
+  "square-sigma": SquareSigma,
+  "key-round": KeyRound,
+  "letter-text": LetterText,
+  "square-asterisk": SquareAsterisk,
+  "shield-user": ShieldUser,
+  "square-code": SquareCode,
+  "link-2": Link2,
+  ampersand: Ampersand,
+};
+
+export const CustomIcons = {
   logo: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
       <rect width="256" height="256" fill="none" />
@@ -37,3 +66,34 @@ export const Icons = {
     </svg>
   ),
 };
+
+export function Icon({
+  name,
+  className,
+  ...props
+}: {
+  name: IconKey;
+  className?: string;
+} & IconProps): React.ReactNode {
+  // load custom icon
+  if (typeof CustomIcons[name as keyof typeof CustomIcons] === "function") {
+    const CustomIcon = CustomIcons[name as keyof typeof CustomIcons];
+    return <CustomIcon className={className} {...props} />;
+  }
+
+  // load pre-imported lucide icon
+  if (LucideIcons[name]) {
+    const LucideIcon = LucideIcons[name];
+    return <LucideIcon className={className} {...props} />;
+  }
+
+  // load dynamic lucide icon
+  try {
+    return (
+      <DynamicIcon name={name as IconName} className={className} {...props} />
+    );
+  } catch {
+    console.warn(`Icon not found: ${name}`);
+    return null;
+  }
+}

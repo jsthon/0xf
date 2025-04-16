@@ -1,0 +1,265 @@
+{
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 Encode Decode",
+      "Description": "Encode text to Base64 or decode Base64 to plain text. Auto-detects input format and supports URL-safe characters."
+    },
+    "Controls": {
+      "AutoDetect": "Auto Detect",
+      "Decode": "Decode",
+      "Encode": "Encode",
+      "UrlSafe": "URL Safe"
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "Base64": "Base64",
+      "UrlSafe": "URL Safe"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "Automatically detect if input is Base64 or plain text",
+        "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
+      },
+      "Decode": {
+        "StandardChars": "Disable URL Safe to decode '+' or '/' characters",
+        "UrlSafeChars": "Enable URL Safe to decode '-' or '_' characters",
+        "InvalidBase64": "Invalid Base64 string"
+      },
+      "Encode": {
+        "Failed": "Failed to encode text"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "Enter text to encode...",
+        "Decode": "Enter Base64 to decode..."
+      },
+      "Output": {
+        "Encode": "Encoded Base64 output...",
+        "Decode": "Decoded text output..."
+      }
+    }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL Encode Decode",
+      "Description": "Encode text to URL format or decode URL encoded text. Auto-detects input format for easy conversion."
+    },
+    "Controls": {
+      "AutoDetect": "Auto Detect",
+      "Decode": "Decode",
+      "Encode": "Encode"
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "URLEncoded": "URL Encoded"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "Automatically detect if input is URL encoded or plain text"
+      },
+      "Decode": {
+        "Invalid": "Invalid URL encoded string"
+      },
+      "Encode": {
+        "Failed": "Failed to encode text"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "Enter text to encode...",
+        "Decode": "Enter encoded text..."
+      },
+      "Output": {
+        "Encode": "Encoded URL output...",
+        "Decode": "Decoded text output..."
+      }
+    }
+  },
+  "CharacterEscapePage": {
+    "Meta": {
+      "Title": "Character Escape",
+      "Description": "Convert text to Unicode format (Code Point, Unicode Escape, CSS Escape, HTML Entity) and decode it back to plain text."
+    },
+    "Controls": {
+      "AutoDetect": "Auto Detect",
+      "Decode": "Decode",
+      "Encode": "Encode",
+      "CodePoint": "Code Point U+0000",
+      "EscapeSequence": "Unicode Escape \\u0000",
+      "CssEscape": "CSS Escape \\0000",
+      "HtmlCode": "HTML Code &#00;",
+      "HtmlEntity": "HTML Entity &name;"
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "CodePoint": "Code Point",
+      "EscapeSequence": "Unicode Escape",
+      "CssEscape": "CSS Escape",
+      "HtmlCode": "HTML Code",
+      "HtmlEntity": "HTML Entity"
+    },
+    "Messages": {
+      "Tooltips": {
+        "AutoDetect": "Automatically detect if input is encoded or plain text"
+      },
+      "Decode": {
+        "InvalidEncoding": "Invalid encoding format",
+        "InvalidCodePoint": "Invalid Code Point format",
+        "InvalidEscapeSequence": "Invalid Unicode Escape format",
+        "InvalidCssEscape": "Invalid CSS Escape format",
+        "InvalidHtmlCode": "Invalid HTML Code format",
+        "InvalidHtmlEntity": "Invalid HTML Entity format"
+      },
+      "Encode": {
+        "Failed": "Failed to encode text"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "Encode": "Enter text to encode...",
+        "Decode": "Enter encoded text..."
+      },
+      "Output": {
+        "Encode": "Encoded result output...",
+        "Decode": "Decoded text output..."
+      }
+    }
+  },
+  "PasswordGeneratorPage": {
+    "Meta": {
+      "Title": "Password Generator",
+      "Description": "Generate secure random passwords with customizable options for length and character types."
+    },
+    "Labels": {
+      "Password": "Password",
+      "Refresh": "Refresh",
+      "CharacterLength": "Character Length",
+      "CharacterTypes": "Character Types"
+    },
+    "Messages": {
+      "GenerateError": "Failed to generate password",
+      "SelectCharType": "At least one character type must be selected"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "Lorem Ipsum Generator",
+      "Description": "Generate Lorem Ipsum dummy text with customizable options"
+    },
+    "Labels": {
+      "Text": "Generated Text",
+      "Generate": "Generate",
+      "StartWithLorem": "Start with 'Lorem ipsum'",
+      "RandomRange": "Random Range",
+      "DisplayPTags": "Display '<p>' tags",
+      "Paragraphs": "Paragraphs",
+      "Sentences": "Sentences per Paragraph",
+      "Words": "Words per Sentence"
+    },
+    "Messages": {
+      "GenerateError": "Error generating Lorem Ipsum text"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "Hash Generator",
+      "Description": "Generate hash values using MD5, SHA1, SHA256, SHA512, SHA3 and more algorithms. Support both text and file input with various digest encoding formats."
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "Algorithm": "Hash Algorithms",
+      "DigestEncoding": "Digest Encoding"
+    },
+    "Placeholders": {
+      "Input": "Enter text to hash..."
+    },
+    "Messages": {
+      "LocalProcessing": "Files processed locally only",
+      "GenerationFailed": "Failed to generate hash"
+    },
+    "InputType": {
+      "Text": "Text",
+      "File": "File"
+    },
+    "DigestEncoding": {
+      "HexLower": "Hex (lower case)",
+      "HexUpper": "Hex (upper case)",
+      "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "Character Count",
+      "Description": "Analyze and count different types of characters in your text"
+    },
+    "Labels": {
+      "Text": "Input Text",
+      "Total": "Total Characters",
+      "Words": "Words",
+      "Lines": "Lines",
+      "Whitespace": "Whitespace",
+      "LatinScript": "Latin Script",
+      "NonLatinScript": "Non-Latin Scripts",
+      "Digits": "Digits",
+      "Symbols": "Symbols"
+    },
+    "Placeholders": {
+      "Input": "Enter text to analyze..."
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "Text Compare",
+      "Description": "Compare and analyze text differences"
+    },
+    "Controls": {
+      "UnifiedView": "Unified View",
+      "CollapseUnchanged": "Collapse Unchanged"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID Generator",
+      "Description": "Generate Universal Unique Identifiers (UUID) of various versions"
+    },
+    "Labels": {
+      "Generated": "Generated UUIDs",
+      "Generate": "Generate",
+      "Version": "UUID Version",
+      "Quantity": "Quantity",
+      "Format": "Format",
+      "Uppercase": "Uppercase",
+      "Hyphens": "Hyphens",
+      "Braces": "Braces",
+      "Quotes": "Quotes",
+      "Commas": "Commas",
+      "Namespace": "Namespace",
+      "Name": "Name"
+    },
+    "Versions": {
+      "v1": "V1 (Timestamp)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (Random)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Messages": {
+      "GenerateError": "Error generating UUID",
+      "NamespaceRequired": "Namespace and name are required",
+      "NamespaceHint": "Select a predefined namespace or enter your custom UUID",
+      "InvalidNamespace": "The namespace must be a valid UUID",
+      "Tooltips": {
+        "Hyphens": "Add standard separators between UUID parts",
+        "Uppercase": "Convert hex values to uppercase",
+        "Braces": "Wrap UUID in curly braces",
+        "Quotes": "Wrap UUID in double quotes",
+        "Commas": "Add comma at the end of each UUID"
+      }
+    }
+  }
+}

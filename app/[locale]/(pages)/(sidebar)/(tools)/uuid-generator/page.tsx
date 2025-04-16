@@ -146,9 +146,11 @@ export default function UUIDGeneratorPage() {
         <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
           {t("Meta.Title")}
         </h1>
-        <p className="text-muted-foreground text-base">
-          {t("Meta.Description")}
-        </p>
+        {t.has("Meta.Description") && (
+          <p className="text-muted-foreground text-base">
+            {t("Meta.Description")}
+          </p>
+        )}
       </div>
 
       <div className="flex flex-col gap-8">

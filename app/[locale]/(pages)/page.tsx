@@ -30,12 +30,8 @@ export default function HomePage({
   const t = useTranslations("HomePage");
 
   return (
-    <>
-      <div className="container-wrapper">
-        <div className="container py-6">
-          <h1>{t("Welcome")}</h1>
-        </div>
-      </div>
-    </>
+    <div className="px-4 py-6 xl:px-6">
+      <h1>{t("Welcome")}</h1>
+    </div>
   );
 }
