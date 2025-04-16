@@ -1,30 +1,32 @@
 "use client";
 
-import * as React from "react";
+import { useCallback } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-export function ModeSwitcher() {
+export function ThemeSelector({ className }: { className?: string }) {
   const { setTheme, resolvedTheme } = useTheme();
 
-  const t = useTranslations("Header.ModeSwitcher");
+  const t = useTranslations("ThemeSwitcher");
 
-  const toggleTheme = React.useCallback(() => {
+  const toggleTheme = useCallback(() => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
   }, [resolvedTheme, setTheme]);
 
   return (
     <Button
       variant="ghost"
-      className="group/toggle size-8 px-0"
+      size="icon"
+      className={cn("group/toggle size-8 px-0", className)}
       onClick={toggleTheme}
     >
       <SunIcon className="hidden [html.dark_&]:block" />
       <MoonIcon className="hidden [html.light_&]:block" />
-      <span className="sr-only">{t("ToggleTheme")}</span>
+      <span className="sr-only">{t("Theme")}</span>
     </Button>
   );
 }

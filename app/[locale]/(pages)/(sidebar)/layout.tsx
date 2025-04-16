@@ -1,3 +1,4 @@
+import { ScrollArea } from "@/components/scroll-area";
 import { SidebarNav } from "@/components/sidebar-nav";
 
 export default function SidebarLayout({
@@ -6,15 +7,13 @@ export default function SidebarLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="container-wrapper">
-      <div className="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
-        <nav className="border-grid fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 border-r md:sticky md:block">
-          <div className="no-scrollbar h-full overflow-auto py-6 pr-4 lg:py-8">
-            <SidebarNav />
-          </div>
-        </nav>
-        {children}
-      </div>
+    <div className="flex-1 items-start px-4 md:grid md:grid-cols-[240px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-10 xl:px-6">
+      <aside className="border-grid fixed top-24 z-30 hidden h-[calc(100vh-6rem)] w-full shrink-0 border-r md:sticky md:block">
+        <ScrollArea className="h-full">
+          <SidebarNav />
+        </ScrollArea>
+      </aside>
+      {children}
     </div>
   );
 }

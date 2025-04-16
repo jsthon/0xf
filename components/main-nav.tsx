@@ -1,45 +1,51 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { useNavigationTranslations } from "@/hooks/use-navigation-translations";
+import {
+  useActiveNavigationSection,
+  useNavigationMessages,
+} from "@/hooks/use-navigation-messages";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Icons } from "@/components/icons";
+import { LocaleSwitcher } from "@/components/locale-switcher";
+import { MobileNav } from "@/components/mobile-nav";
+import { ThemeSelector } from "@/components/theme-selector";
 
 export function MainNav() {
   const pathname = usePathname();
-  const { mainNav } = useNavigationTranslations();
-
-  // Filter out homepage link as it's already in the logo
-  const filteredNav = mainNav.filter((item) => item.href !== "/");
+  const { header } = useNavigationMessages();
+  const section = useActiveNavigationSection();
 
   return (
-    <div className="mr-4 hidden md:flex">
-      <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
-        <Icons.logo className="size-6" />
-        <span className="hidden font-bold lg:inline-block">
-          {siteConfig.name}
-        </span>
-      </Link>
-      <nav className="flex items-center gap-4 text-sm xl:gap-6">
-        {filteredNav.map((item) => {
-          const href = item.href || "/";
+    <div className="flex h-10 items-center justify-between md:w-full md:gap-2 md:border-b md:px-4 xl:px-6">
+      <nav className="no-scrollbar hidden h-full gap-6 overflow-x-auto md:flex">
+        {header.map((item) => {
+          const isActive =
+            pathname === item.href || item.slug === section?.slug;
+
           return (
-            <Link
-              key={item.title}
-              href={href}
-              className={cn(
-                "hover:text-foreground/80 transition-colors",
-                pathname && pathname.startsWith(href)
-                  ? "text-foreground"
-                  : "text-foreground/80"
-              )}
-            >
-              {item.title}
-            </Link>
+            !item.disabled &&
+            item.href && (
+              <Link
+                key={item.title}
+                href={item.href}
+                target={item?.external ? "_blank" : undefined}
+                rel={item?.external ? "noreferrer" : undefined}
+                className={cn(
+                  "inline-flex items-center gap-2 border-b-2 px-1 text-sm text-nowrap transition-colors",
+                  isActive
+                    ? "text-foreground border-primary font-semibold"
+                    : "hover:text-foreground text-muted-foreground border-transparent font-medium"
+                )}
+              >
+                {item.title}
+              </Link>
+            )
           );
         })}
       </nav>
+      <LocaleSwitcher />
+      <ThemeSelector className="md:hidden" />
+      <MobileNav />
     </div>
   );
 }

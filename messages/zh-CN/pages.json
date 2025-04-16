@@ -1,0 +1,16 @@
+{
+  "ErrorPage": {
+    "Title": "错误",
+    "Reset": "重置"
+  },
+  "NotFoundPage": {
+    "Title": "未找到"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "首页",
+      "Description": "首页描述"
+    },
+    "Welcome": "欢迎"
+  }
+}

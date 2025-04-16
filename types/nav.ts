@@ -1,17 +1,24 @@
-import { Icons } from "@/components/icons";
+import { IconKey } from "@/components/icons";
 
 export interface NavItem {
   title: string;
   href?: string;
-  keywords?: string[];
+  slug?: string;
   disabled?: boolean;
   external?: boolean;
-  icon?: keyof typeof Icons;
-  label?: string;
+  icon?: IconKey;
+  keywords?: string[];
 }
 
-export interface MainNavItem extends NavItem {}
-
-export interface SidebarNavItem extends NavItem {
+export interface NavCategory extends NavItem {
   items: NavItem[];
+}
+
+export interface NavSection extends NavItem {
+  categories: NavCategory[];
+}
+
+export interface Navigations {
+  header: NavItem[];
+  sections: NavSection[];
 }
