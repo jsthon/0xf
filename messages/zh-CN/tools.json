@@ -222,6 +222,60 @@
       "CollapseUnchanged": "折叠相同"
     }
   },
+  "CodeFormatterPage": {
+    "Meta": {
+      "Title": "代码格式化",
+      "Description": "格式化代码，支持多种代码语言，并提供多种格式化选项。"
+    },
+    "Controls": {
+      "Language": "选择语言",
+      "FormatCode": "格式化代码",
+      "PrintWidth": "最大行宽:",
+      "TabWidth": "缩进宽度:",
+      "UseTabs": {
+        "Label": "缩进:",
+        "Space": "空格",
+        "Tab": "制表符"
+      },
+      "SingleQuote": {
+        "Label": "引号:",
+        "Double": "双引号",
+        "Single": "单引号"
+      },
+      "Semi": {
+        "Label": "分号:",
+        "On": "开启",
+        "Off": "关闭"
+      }
+    },
+    "Messages": {
+      "LanguageRequired": "请选择代码语言",
+      "FormatSuccess": "格式化成功",
+      "FormatFailed": "格式化失败，请检查语法",
+      "Tooltips": {
+        "PrintWidth": "每行最多字符数，超出自动换行",
+        "TabWidth": "每级缩进的空白字符数量",
+        "UseTabs": "使用制表符或空格进行缩进",
+        "SingleQuote": "选择使用单引号或双引号",
+        "Semicolons": "是否在语句末尾添加分号"
+      }
+    }
+  },
+  "CodeMinifierPage": {
+    "Meta": {
+      "Title": "代码压缩",
+      "Description": "通过移除不必要的字符、空白和冗余格式化，减小代码体积。"
+    },
+    "Controls": {
+      "Language": "选择语言",
+      "MinifyCode": "压缩代码"
+    },
+    "Messages": {
+      "LanguageRequired": "请选择代码语言",
+      "MinifySuccess": "压缩成功",
+      "MinifyFailed": "压缩失败，请检查语法"
+    }
+  },
   "UUIDGeneratorPage": {
     "Meta": {
       "Title": "UUID 生成器",

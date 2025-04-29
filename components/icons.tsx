@@ -2,6 +2,8 @@ import {
   Ampersand,
   Circle,
   FileDiff,
+  FileMinus,
+  FileSpreadsheet,
   KeyRound,
   LetterText,
   Link2,
@@ -27,6 +29,8 @@ const LucideIcons: Record<string, LucideIcon> = {
   "square-code": SquareCode,
   "link-2": Link2,
   ampersand: Ampersand,
+  "file-spreadsheet": FileSpreadsheet,
+  "file-minus": FileMinus,
 };
 
 export const CustomIcons = {

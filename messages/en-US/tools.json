@@ -222,6 +222,60 @@
       "CollapseUnchanged": "Collapse Unchanged"
     }
   },
+  "CodeFormatterPage": {
+    "Meta": {
+      "Title": "Code Formatter",
+      "Description": "Format code, support multiple code languages, and provide multiple formatting options."
+    },
+    "Controls": {
+      "Language": "Select language",
+      "FormatCode": "Format Code",
+      "PrintWidth": "Print Width:",
+      "TabWidth": "Tab Width:",
+      "UseTabs": {
+        "Label": "Indent:",
+        "Space": "Space",
+        "Tab": "Tab"
+      },
+      "SingleQuote": {
+        "Label": "Quotes:",
+        "Double": "Double",
+        "Single": "Single"
+      },
+      "Semi": {
+        "Label": "Semicolons:",
+        "On": "On",
+        "Off": "Off"
+      }
+    },
+    "Messages": {
+      "LanguageRequired": "Please select code language",
+      "FormatSuccess": "Format successful",
+      "FormatFailed": "Format failed. Check syntax.",
+      "Tooltips": {
+        "PrintWidth": "Specify the line length that the printer will wrap on",
+        "TabWidth": "Specify the number of spaces per indentation level",
+        "UseTabs": "Indent lines with tabs or spaces",
+        "SingleQuote": "Use single quotes or double quotes",
+        "Semicolons": "Print semicolons at the ends of statements"
+      }
+    }
+  },
+  "CodeMinifierPage": {
+    "Meta": {
+      "Title": "Code Minifier",
+      "Description": "Reduce code size by removing unnecessary characters and redundant formatting."
+    },
+    "Controls": {
+      "Language": "Select language",
+      "MinifyCode": "Minify Code"
+    },
+    "Messages": {
+      "LanguageRequired": "Please select code language",
+      "MinifySuccess": "Minify successful",
+      "MinifyFailed": "Minify failed. Check syntax."
+    }
+  },
   "UUIDGeneratorPage": {
     "Meta": {
       "Title": "UUID Generator",

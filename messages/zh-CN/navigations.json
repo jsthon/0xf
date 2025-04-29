@@ -47,6 +47,18 @@
             "title": "文本与字符",
             "items": [
               {
+                "title": "代码格式化",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "keywords": ["代码格式化", "代码美化"]
+              },
+              {
+                "title": "代码压缩",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "keywords": ["代码压缩", "代码精简"]
+              },
+              {
                 "title": "文本对比",
                 "href": "/text-compare",
                 "icon": "file-diff",
@@ -172,7 +184,7 @@
             ]
           },
           {
-            "title": "编辑器与查看器",
+            "title": "代码编辑",
             "items": [
               {
                 "title": "Markdown编辑器",
@@ -191,53 +203,6 @@
                 "href": "/css-preprocessor",
                 "disabled": true,
                 "keywords": ["SASS", "LESS", "Stylus", "CSS编译器"]
-              }
-            ]
-          },
-          {
-            "title": "格式化与压缩",
-            "items": [
-              {
-                "title": "JSON格式化",
-                "href": "/json-formatter",
-                "disabled": true,
-                "keywords": ["JSON美化", "JSON压缩", "JSON验证器"]
-              },
-              {
-                "title": "HTML格式化",
-                "href": "/html-formatter",
-                "disabled": true,
-                "keywords": ["HTML美化", "HTML压缩", "HTML验证器"]
-              },
-              {
-                "title": "JavaScript格式化",
-                "href": "/js-formatter",
-                "disabled": true,
-                "keywords": ["JS美化", "JS压缩", "JS验证器"]
-              },
-              {
-                "title": "CSS格式化",
-                "href": "/css-formatter",
-                "disabled": true,
-                "keywords": ["CSS美化", "CSS压缩", "CSS验证器"]
-              },
-              {
-                "title": "XML格式化",
-                "href": "/xml-formatter",
-                "disabled": true,
-                "keywords": ["XML美化", "XML压缩", "XML验证器"]
-              },
-              {
-                "title": "SQL格式化",
-                "href": "/sql-formatter",
-                "disabled": true,
-                "keywords": ["SQL美化", "SQL美化", "格式化SQL"]
-              },
-              {
-                "title": "GraphQL格式化",
-                "href": "/graphql-formatter",
-                "disabled": true,
-                "keywords": ["GraphQL美化", "GraphQL美化", "格式化GraphQL"]
               }
             ]
           },

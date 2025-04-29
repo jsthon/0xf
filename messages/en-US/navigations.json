@@ -52,6 +52,18 @@
             "title": "Text & Characters",
             "items": [
               {
+                "title": "Code Formatter",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "keywords": ["Code Beautifier", "Code Prettifier"]
+              },
+              {
+                "title": "Code Minifier",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "keywords": ["Code Compressor", "Code Compress"]
+              },
+              {
                 "title": "Text Compare",
                 "href": "/text-compare",
                 "icon": "file-diff",
@@ -215,57 +227,6 @@
                 "href": "/css-preprocessor",
                 "disabled": true,
                 "keywords": ["SASS", "LESS", "Stylus", "CSS Compiler"]
-              }
-            ]
-          },
-          {
-            "title": "Formatter & Minifier",
-            "items": [
-              {
-                "title": "JSON Formatter",
-                "href": "/json-formatter",
-                "disabled": true,
-                "keywords": ["JSON Beautifier", "JSON Minify", "JSON Validator"]
-              },
-              {
-                "title": "HTML Formatter",
-                "href": "/html-formatter",
-                "disabled": true,
-                "keywords": ["HTML Beautifier", "HTML Minify", "HTML Validator"]
-              },
-              {
-                "title": "JavaScript Formatter",
-                "href": "/js-formatter",
-                "disabled": true,
-                "keywords": ["JS Beautifier", "JS Minify", "JS Validator"]
-              },
-              {
-                "title": "CSS Formatter",
-                "href": "/css-formatter",
-                "disabled": true,
-                "keywords": ["CSS Beautifier", "CSS Minify", "CSS Validator"]
-              },
-              {
-                "title": "XML Formatter",
-                "href": "/xml-formatter",
-                "disabled": true,
-                "keywords": ["XML Beautifier", "XML Minify", "XML Validator"]
-              },
-              {
-                "title": "SQL Formatter",
-                "href": "/sql-formatter",
-                "disabled": true,
-                "keywords": ["SQL Beautifier", "SQL Pretty", "Format SQL"]
-              },
-              {
-                "title": "GraphQL Formatter",
-                "href": "/graphql-formatter",
-                "disabled": true,
-                "keywords": [
-                  "GraphQL Beautifier",
-                  "GraphQL Pretty",
-                  "Format GraphQL"
-                ]
               }
             ]
           },
