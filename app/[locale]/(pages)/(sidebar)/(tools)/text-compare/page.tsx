@@ -10,11 +10,13 @@ import {
   lineNumbers,
 } from "@codemirror/view";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 import {
-  useCodeMirrorTheme,
-  useCodeMirrorTranslations,
-} from "@/hooks/use-codemirror";
+  codeMirrorDark,
+  codeMirrorLight,
+  CodeMirrorTranslations,
+} from "@/lib/codemirror";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 
@@ -25,13 +27,13 @@ export default function TextComparePage() {
   const contentA = useRef<string>("");
   const contentB = useRef<string>("");
 
+  const { resolvedTheme } = useTheme();
   const t = useTranslations("TextComparePage");
-  const theme = useCodeMirrorTheme();
-  const phrases = useCodeMirrorTranslations();
+  const phrases = CodeMirrorTranslations();
 
   const extensions = useMemo(
     () => [
-      theme,
+      resolvedTheme === "dark" ? codeMirrorDark : codeMirrorLight,
       phrases,
       history(),
       drawSelection(),
@@ -39,7 +41,7 @@ export default function TextComparePage() {
       keymap.of([...defaultKeymap, ...historyKeymap]),
       EditorView.lineWrapping,
     ],
-    [theme, phrases]
+    [resolvedTheme, phrases]
   );
 
   useEffect(() => {
@@ -125,7 +127,7 @@ export default function TextComparePage() {
 
       <div
         ref={editorRef}
-        className="border-input dark:bg-input/30 h-100 min-h-40 overflow-hidden rounded-md border shadow-xs md:h-[calc(100vh-19.4rem)] [&_.cm-mergeView]:h-full [&_.cm-mergeViewEditors]:h-full"
+        className="border-input h-100 min-h-40 overflow-hidden rounded-md border shadow-xs md:h-[calc(100vh-19.4rem)] [&_.cm-mergeView]:h-full [&_.cm-mergeViewEditors]:h-full"
       />
     </>
   );

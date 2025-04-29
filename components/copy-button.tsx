@@ -12,7 +12,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 interface CopyButtonProps
   extends Omit<React.ComponentProps<"button">, "children">,
     VariantProps<typeof buttonVariants> {
-  value: string;
+  value?: string;
+  getValue?: () => string;
   className?: string;
   size?: VariantProps<typeof buttonVariants>["size"];
   children?: (hasCopied?: boolean) => React.ReactNode;
@@ -20,6 +21,7 @@ interface CopyButtonProps
 
 export function CopyButton({
   value,
+  getValue,
   className,
   variant = "ghost",
   size = "icon",
@@ -53,9 +55,11 @@ export function CopyButton({
           "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3",
         className
       )}
+      title={t("Copy")}
       onClick={async () => {
         try {
-          await navigator.clipboard.writeText(value);
+          const text = getValue ? getValue() : value || "";
+          await navigator.clipboard.writeText(text);
           setHasCopied(true);
         } catch {
           toast.error(t("Error"));
