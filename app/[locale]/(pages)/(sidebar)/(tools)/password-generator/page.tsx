@@ -216,6 +216,7 @@ export default function PasswordGeneratorPage() {
             <Textarea
               id="password"
               value={password}
+              spellCheck={false}
               onChange={handlePasswordChange}
               className="h-24 font-mono break-all md:text-xl"
             />
