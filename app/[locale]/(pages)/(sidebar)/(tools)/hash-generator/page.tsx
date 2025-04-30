@@ -232,6 +232,7 @@ export default function HashGeneratorPage() {
             <Textarea
               placeholder={t("Placeholders.Input")}
               value={inputText}
+              spellCheck={false}
               onChange={handleInputChange}
               className="min-h-32"
             />

@@ -180,6 +180,7 @@ export default function UUIDGeneratorPage() {
           <Textarea
             id="uuids"
             value={uuids.join("\n")}
+            spellCheck={false}
             className="h-32 font-mono"
             readOnly
           />

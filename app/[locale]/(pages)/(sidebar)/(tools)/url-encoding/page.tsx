@@ -162,6 +162,7 @@ export default function URLEncodingPage() {
             id="input"
             className="h-full max-h-[400px] min-h-[100px] font-mono"
             value={inputText}
+            spellCheck={false}
             onChange={handleInputChange}
             placeholder={
               isDecodeMode
@@ -191,6 +192,7 @@ export default function URLEncodingPage() {
             id="output"
             className="bg-muted/50 h-full max-h-[400px] min-h-[100px] font-mono"
             value={outputText}
+            spellCheck={false}
             readOnly
             placeholder={
               isDecodeMode
