@@ -99,7 +99,7 @@
               {
                 "title": "QR Code",
                 "href": "/qr-code",
-                "disabled": true,
+                "icon": "qr-code",
                 "keywords": ["QR Generator", "QR Code Creator", "Barcode"]
               },
               {

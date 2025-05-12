@@ -13,7 +13,7 @@ interface CopyButtonProps
   extends Omit<React.ComponentProps<"button">, "children">,
     VariantProps<typeof buttonVariants> {
   value?: string;
-  getValue?: () => string;
+  getValue?: () => string | Blob | Promise<string | Blob>;
   className?: string;
   size?: VariantProps<typeof buttonVariants>["size"];
   children?: (hasCopied?: boolean) => React.ReactNode;
@@ -32,10 +32,7 @@ export function CopyButton({
   const t = useTranslations("CopyButton");
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-
+    const timer = setTimeout(() => setHasCopied(false), 2000);
     return () => clearTimeout(timer);
   }, [hasCopied]);
 
@@ -45,6 +42,26 @@ export function CopyButton({
       <span className="sr-only">{t("Copy")}</span>
     </>
   );
+
+  const handleCopy = async () => {
+    try {
+      const content = getValue
+        ? await Promise.resolve(getValue())
+        : value || "";
+
+      if (content instanceof Blob) {
+        await navigator.clipboard.write([
+          new ClipboardItem({ [content.type]: content }),
+        ]);
+      } else {
+        await navigator.clipboard.writeText(content);
+      }
+
+      setHasCopied(true);
+    } catch {
+      toast.error(t("Error"));
+    }
+  };
 
   return (
     <Button
@@ -56,15 +73,7 @@ export function CopyButton({
         className
       )}
       title={t("Copy")}
-      onClick={async () => {
-        try {
-          const text = getValue ? getValue() : value || "";
-          await navigator.clipboard.writeText(text);
-          setHasCopied(true);
-        } catch {
-          toast.error(t("Error"));
-        }
-      }}
+      onClick={handleCopy}
       {...props}
     >
       {children ? children(hasCopied) : defaultChildren(hasCopied)}

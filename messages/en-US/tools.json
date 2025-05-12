@@ -315,5 +315,42 @@
         "Commas": "Add comma at the end of each UUID"
       }
     }
+  },
+  "QRCodePage": {
+    "Meta": {
+      "Title": "QR Code Generator",
+      "Description": "Generate QR codes for text or WiFi connections."
+    },
+    "Labels": {
+      "Generated": "Generated Image",
+      "Download": "Download",
+      "ForegroundColor": "Foreground Color",
+      "BackgroundColor": "Background Color",
+      "InputText": "Input Text"
+    },
+    "Tabs": {
+      "Text": "Text",
+      "WiFi": "WiFi"
+    },
+    "WiFi": {
+      "Title": "WiFi Information",
+      "SSID": "Network Name",
+      "Type": "Authentication Type",
+      "Password": "Password",
+      "Hidden": "Hidden SSID",
+      "EAPMethod": "EAP Method",
+      "Identity": "Identity",
+      "AnonymousIdentity": "Anonymous Identity",
+      "Phase2Method": "Phase 2 Method",
+      "AuthenticationType": {
+        "WPA": "WPA/WPA2",
+        "WEP": "WEP",
+        "WPA2-EAP": "WPA2-EAP",
+        "nopass": "No Password"
+      }
+    },
+    "Placeholders": {
+      "InputText": "Enter text to encode in QR code..."
+    }
   }
 }

@@ -90,7 +90,7 @@
               {
                 "title": "二维码",
                 "href": "/qr-code",
-                "disabled": true,
+                "icon": "qr-code",
                 "keywords": ["二维码生成器", "二维码创建", "条形码"]
               },
               {
