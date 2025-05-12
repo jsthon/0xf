@@ -130,6 +130,10 @@
     scrollbar-width: none;
   }
 
+  .no-password-reveal::-ms-reveal {
+    display: none;
+  }
+
   .border-grid {
     @apply border-border/80 dark:border-border;
   }

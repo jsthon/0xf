@@ -315,5 +315,42 @@
         "Commas": "在每个 UUID 末尾添加逗号"
       }
     }
+  },
+  "QRCodePage": {
+    "Meta": {
+      "Title": "二维码生成器",
+      "Description": "生成文本或 WiFi 连接信息的二维码。"
+    },
+    "Labels": {
+      "Generated": "生成图像",
+      "Download": "下载",
+      "ForegroundColor": "前景色",
+      "BackgroundColor": "背景色",
+      "InputText": "输入文本"
+    },
+    "Tabs": {
+      "Text": "文本",
+      "WiFi": "WiFi"
+    },
+    "WiFi": {
+      "Title": "WiFi 信息",
+      "SSID": "网络名称",
+      "Type": "认证类型",
+      "Password": "密码",
+      "Hidden": "隐藏网络名称",
+      "EAPMethod": "EAP方法",
+      "Identity": "身份或用户名",
+      "AnonymousIdentity": "匿名身份",
+      "Phase2Method": "阶段2认证方法",
+      "AuthenticationType": {
+        "WPA": "WPA/WPA2",
+        "WEP": "WEP",
+        "WPA2-EAP": "WPA2-EAP",
+        "nopass": "无密码"
+      }
+    },
+    "Placeholders": {
+      "InputText": "输入要转为二维码的内容"
+    }
   }
 }
