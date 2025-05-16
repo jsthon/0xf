@@ -179,7 +179,7 @@
               {
                 "title": "Color Converter",
                 "href": "/color-converter",
-                "disabled": true,
+                "icon": "palette",
                 "keywords": ["Color Picker", "HEX to RGB", "RGB Converter"]
               },
               {

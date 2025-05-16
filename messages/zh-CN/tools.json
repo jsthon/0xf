@@ -352,5 +352,18 @@
     "Placeholders": {
       "InputText": "输入要转为二维码的内容"
     }
+  },
+  "ColorConverterPage": {
+    "Meta": {
+      "Title": "颜色转换",
+      "Description": "支持多种颜色格式转换，包括 HEX、RGB、HSL、HWB、LCH、CMYK。"
+    },
+    "Labels": {
+      "Input": "输入颜色",
+      "Output": "转换结果"
+    },
+    "Placeholders": {
+      "Input": "输入颜色值"
+    }
   }
 }

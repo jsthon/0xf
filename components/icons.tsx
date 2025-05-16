@@ -8,6 +8,7 @@ import {
   LetterText,
   Link2,
   LucideIcon,
+  Palette,
   QrCode,
   ShieldUser,
   SquareAsterisk,
@@ -33,6 +34,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   "file-spreadsheet": FileSpreadsheet,
   "file-minus": FileMinus,
   "qr-code": QrCode,
+  palette: Palette,
 };
 
 export const CustomIcons = {
