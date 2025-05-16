@@ -352,5 +352,18 @@
     "Placeholders": {
       "InputText": "Enter text to encode in QR code..."
     }
+  },
+  "ColorConverterPage": {
+    "Meta": {
+      "Title": "Color Converter",
+      "Description": "Convert colors between HEX, RGB, HSL, HWB, LCH and CMYK formats."
+    },
+    "Labels": {
+      "Input": "Input Color",
+      "Output": "Converted Colors"
+    },
+    "Placeholders": {
+      "Input": "Enter color value..."
+    }
   }
 }

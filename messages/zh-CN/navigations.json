@@ -160,7 +160,7 @@
               {
                 "title": "颜色转换器",
                 "href": "/color-converter",
-                "disabled": true,
+                "icon": "palette",
                 "keywords": ["颜色选择器", "HEX转RGB", "RGB转换器"]
               },
               {
