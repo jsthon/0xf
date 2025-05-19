@@ -47,7 +47,7 @@ export function TimezoneSelect({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          className={cn("justify-between", className)}
+          className={cn("justify-between font-normal", className)}
           variant="outline"
           role="combobox"
           aria-expanded={open}
@@ -64,7 +64,7 @@ export function TimezoneSelect({
         <Command>
           <CommandInput placeholder={t("Placeholder")} className="h-9" />
           <CommandList>
-            <CommandEmpty>{t("NoResults")}</CommandEmpty>
+            <CommandEmpty>{t("Empty")}</CommandEmpty>
             <CommandGroup>
               {timezones.map((timezone) => (
                 <CommandItem

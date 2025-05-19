@@ -31,7 +31,7 @@
   },
   "TimezoneSelect": {
     "Placeholder": "选择时区",
-    "NoResults": "未找到时区"
+    "Empty": "未找到时区"
   },
   "FileUpload": {
     "PrimaryText": "选择或拖放文件",

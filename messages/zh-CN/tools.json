@@ -32,10 +32,12 @@
     },
     "Placeholders": {
       "Input": {
+        "AutoDetect": "输入文本将自动识别",
         "Encode": "输入要编码的文本",
         "Decode": "输入要解码的 Base64"
       },
       "Output": {
+        "AutoDetect": "Base64 编码或解码内容",
         "Encode": "编码后的 Base64 内容",
         "Decode": "解码后的文本内容"
       }
@@ -69,10 +71,12 @@
     },
     "Placeholders": {
       "Input": {
+        "AutoDetect": "输入文本将自动识别",
         "Encode": "输入要编码的文本",
         "Decode": "输入要解码的 URL 编码文本"
       },
       "Output": {
+        "AutoDetect": "URL 编码或解码文本",
         "Encode": "编码后的 URL 编码文本",
         "Decode": "解码后的文本内容"
       }
@@ -120,10 +124,12 @@
     },
     "Placeholders": {
       "Input": {
+        "AutoDetect": "输入文本将自动识别",
         "Encode": "输入要编码的文本",
         "Decode": "输入要解码的内容"
       },
       "Output": {
+        "AutoDetect": "编码或解码内容",
         "Encode": "编码后的内容",
         "Decode": "解码后的文本"
       }

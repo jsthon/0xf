@@ -32,10 +32,12 @@
     },
     "Placeholders": {
       "Input": {
+        "AutoDetect": "Enter text to auto detect...",
         "Encode": "Enter text to encode...",
         "Decode": "Enter Base64 to decode..."
       },
       "Output": {
+        "AutoDetect": "Base64 encoded or decoded...",
         "Encode": "Encoded Base64 output...",
         "Decode": "Decoded text output..."
       }
@@ -69,10 +71,12 @@
     },
     "Placeholders": {
       "Input": {
+        "AutoDetect": "Enter text to auto detect...",
         "Encode": "Enter text to encode...",
         "Decode": "Enter encoded text..."
       },
       "Output": {
+        "AutoDetect": "URL encoded or decoded...",
         "Encode": "Encoded URL output...",
         "Decode": "Decoded text output..."
       }
@@ -120,10 +124,12 @@
     },
     "Placeholders": {
       "Input": {
+        "AutoDetect": "Enter text to auto detect...",
         "Encode": "Enter text to encode...",
         "Decode": "Enter encoded text..."
       },
       "Output": {
+        "AutoDetect": "Encoded or decoded result...",
         "Encode": "Encoded result output...",
         "Decode": "Decoded text output..."
       }
