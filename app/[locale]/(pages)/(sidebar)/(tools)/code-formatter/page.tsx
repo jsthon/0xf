@@ -285,7 +285,7 @@ export default function CodeFormatterPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Messages.Tooltips.PrintWidth")}</p>
+                    <p>{t("Tooltips.PrintWidth")}</p>
                   </TooltipContent>
                   <Input
                     id="print-width"
@@ -309,7 +309,7 @@ export default function CodeFormatterPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Messages.Tooltips.TabWidth")}</p>
+                    <p>{t("Tooltips.TabWidth")}</p>
                   </TooltipContent>
                   <Input
                     id="tab-width"
@@ -339,7 +339,7 @@ export default function CodeFormatterPage() {
                     <SelectValue />
                   </SelectTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Messages.Tooltips.UseTabs")}</p>
+                    <p>{t("Tooltips.UseTabs")}</p>
                   </TooltipContent>
                   <SelectContent>
                     <SelectGroup>
@@ -370,7 +370,7 @@ export default function CodeFormatterPage() {
                     <SelectValue />
                   </SelectTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Messages.Tooltips.SingleQuote")}</p>
+                    <p>{t("Tooltips.SingleQuote")}</p>
                   </TooltipContent>
                   <SelectContent>
                     <SelectGroup>
@@ -401,7 +401,7 @@ export default function CodeFormatterPage() {
                     <SelectValue />
                   </SelectTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Messages.Tooltips.Semicolons")}</p>
+                    <p>{t("Tooltips.Semicolons")}</p>
                   </TooltipContent>
                   <SelectContent>
                     <SelectGroup>

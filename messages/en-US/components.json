@@ -15,7 +15,7 @@
     "SearchText": "Search everything...",
     "SearchTextShort": "Search...",
     "CommandPlaceholder": "Type a command or search...",
-    "NoResults": "No results found.",
+    "Empty": "No results found.",
     "HeaderHeading": "Links"
   },
   "CopyButton": {

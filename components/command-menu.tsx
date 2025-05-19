@@ -87,7 +87,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder={t("CommandPlaceholder")} />
         <CommandList>
-          <CommandEmpty>{t("NoResults")}</CommandEmpty>
+          <CommandEmpty>{t("Empty")}</CommandEmpty>
 
           <CommandGroup heading={t("HeaderHeading")}>
             {header

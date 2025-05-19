@@ -16,11 +16,11 @@
       "Base64": "Base64",
       "UrlSafe": "URL Safe"
     },
+    "Tooltips": {
+      "AutoDetect": "Automatically detect if input is Base64 or plain text",
+      "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
+    },
     "Messages": {
-      "Tooltips": {
-        "AutoDetect": "Automatically detect if input is Base64 or plain text",
-        "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
-      },
       "Decode": {
         "StandardChars": "Disable URL Safe to decode '+' or '/' characters",
         "UrlSafeChars": "Enable URL Safe to decode '-' or '_' characters",
@@ -58,10 +58,10 @@
       "Output": "Output",
       "URLEncoded": "URL Encoded"
     },
+    "Tooltips": {
+      "AutoDetect": "Automatically detect if input is URL encoded or plain text"
+    },
     "Messages": {
-      "Tooltips": {
-        "AutoDetect": "Automatically detect if input is URL encoded or plain text"
-      },
       "Decode": {
         "Invalid": "Invalid URL encoded string"
       },
@@ -106,10 +106,10 @@
       "HtmlCode": "HTML Code",
       "HtmlEntity": "HTML Entity"
     },
+    "Tooltips": {
+      "AutoDetect": "Automatically detect if input is encoded or plain text"
+    },
     "Messages": {
-      "Tooltips": {
-        "AutoDetect": "Automatically detect if input is encoded or plain text"
-      },
       "Decode": {
         "InvalidEncoding": "Invalid encoding format",
         "InvalidCodePoint": "Invalid Code Point format",
@@ -254,17 +254,17 @@
         "Off": "Off"
       }
     },
+    "Tooltips": {
+      "PrintWidth": "Specify the line length that the printer will wrap on",
+      "TabWidth": "Specify the number of spaces per indentation level",
+      "UseTabs": "Indent lines with tabs or spaces",
+      "SingleQuote": "Use single quotes or double quotes",
+      "Semicolons": "Print semicolons at the ends of statements"
+    },
     "Messages": {
       "LanguageRequired": "Please select code language",
       "FormatSuccess": "Format successful",
-      "FormatFailed": "Format failed. Check syntax.",
-      "Tooltips": {
-        "PrintWidth": "Specify the line length that the printer will wrap on",
-        "TabWidth": "Specify the number of spaces per indentation level",
-        "UseTabs": "Indent lines with tabs or spaces",
-        "SingleQuote": "Use single quotes or double quotes",
-        "Semicolons": "Print semicolons at the ends of statements"
-      }
+      "FormatFailed": "Format failed. Check syntax."
     }
   },
   "CodeMinifierPage": {
@@ -308,18 +308,18 @@
       "v5": "V5 (SHA-1)",
       "nil": "NIL"
     },
+    "Tooltips": {
+      "Hyphens": "Add standard separators between UUID parts",
+      "Uppercase": "Convert hex values to uppercase",
+      "Braces": "Wrap UUID in curly braces",
+      "Quotes": "Wrap UUID in double quotes",
+      "Commas": "Add comma at the end of each UUID"
+    },
     "Messages": {
       "GenerateError": "Error generating UUID",
       "NamespaceRequired": "Namespace and name are required",
       "NamespaceHint": "Select a predefined namespace or enter your custom UUID",
-      "InvalidNamespace": "The namespace must be a valid UUID",
-      "Tooltips": {
-        "Hyphens": "Add standard separators between UUID parts",
-        "Uppercase": "Convert hex values to uppercase",
-        "Braces": "Wrap UUID in curly braces",
-        "Quotes": "Wrap UUID in double quotes",
-        "Commas": "Add comma at the end of each UUID"
-      }
+      "InvalidNamespace": "The namespace must be a valid UUID"
     }
   },
   "QRCodePage": {
