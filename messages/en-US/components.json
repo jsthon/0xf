@@ -31,7 +31,7 @@
   },
   "TimezoneSelect": {
     "Placeholder": "Select timezone",
-    "NoResults": "No timezone found"
+    "Empty": "No timezone found."
   },
   "FileUpload": {
     "PrimaryText": "Select or drag and drop your files here",

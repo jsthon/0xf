@@ -165,9 +165,11 @@ export default function URLEncodingPage() {
             spellCheck={false}
             onChange={handleInputChange}
             placeholder={
-              isDecodeMode
-                ? t("Placeholders.Input.Decode")
-                : t("Placeholders.Input.Encode")
+              isAutoDetect
+                ? t("Placeholders.Input.AutoDetect")
+                : isDecodeMode
+                  ? t("Placeholders.Input.Decode")
+                  : t("Placeholders.Input.Encode")
             }
           />
         </div>
@@ -195,9 +197,11 @@ export default function URLEncodingPage() {
             spellCheck={false}
             readOnly
             placeholder={
-              isDecodeMode
-                ? t("Placeholders.Output.Decode")
-                : t("Placeholders.Output.Encode")
+              isAutoDetect
+                ? t("Placeholders.Output.AutoDetect")
+                : isDecodeMode
+                  ? t("Placeholders.Output.Decode")
+                  : t("Placeholders.Output.Encode")
             }
           />
         </div>
