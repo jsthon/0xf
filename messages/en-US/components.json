@@ -29,6 +29,10 @@
     "Show": "Show password",
     "Hide": "Hide password"
   },
+  "TimezoneSelect": {
+    "Placeholder": "Select timezone",
+    "NoResults": "No timezone found"
+  },
   "FileUpload": {
     "PrimaryText": "Select or drag and drop your files here",
     "SecondaryText": "Any file type",
