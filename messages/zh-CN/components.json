@@ -29,6 +29,10 @@
     "Show": "显示密码",
     "Hide": "隐藏密码"
   },
+  "TimezoneSelect": {
+    "Placeholder": "选择时区",
+    "NoResults": "未找到时区"
+  },
   "FileUpload": {
     "PrimaryText": "选择或拖放文件",
     "SecondaryText": "不限文件类型",

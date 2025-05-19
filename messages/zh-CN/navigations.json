@@ -166,7 +166,7 @@
               {
                 "title": "日期时间转换器",
                 "href": "/date-time-converter",
-                "disabled": true,
+                "icon": "calendar-clock",
                 "keywords": ["时间戳转换器", "Unix时间", "日期格式"]
               },
               {

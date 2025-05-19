@@ -365,5 +365,32 @@
     "Placeholders": {
       "Input": "Enter color value..."
     }
+  },
+  "DateTimeConverterPage": {
+    "Meta": {
+      "Title": "Date Time Converter",
+      "Description": "Convert between UNIX timestamps, ISO8601, RFC3339, JavaScript Date and other formats with customizable timezone."
+    },
+    "Labels": {
+      "Input": "Input Date",
+      "Output": "Output Date",
+      "InputFormat": "Input Format",
+      "AutoDetect": "Auto Detect",
+      "OutputTimezone": "Output Timezone"
+    },
+    "DateFormats": {
+      "CurrentTime": "Current Time",
+      "Javascript": "JavaScript Date",
+      "ISO8601": "ISO 8601",
+      "ISO9075": "ISO 9075",
+      "RFC3339": "RFC 3339",
+      "RFC7231": "RFC 7231",
+      "TimestampSeconds": "Timestamp (seconds)",
+      "TimestampMilliseconds": "Timestamp (milliseconds)"
+    },
+    "Placeholders": {
+      "Input": "Enter date time text...",
+      "Invalid": "Invalid Format"
+    }
   }
 }

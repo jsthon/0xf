@@ -365,5 +365,32 @@
     "Placeholders": {
       "Input": "输入颜色值"
     }
+  },
+  "DateTimeConverterPage": {
+    "Meta": {
+      "Title": "日期时间转换器",
+      "Description": "转换 UNIX 时间戳、ISO8601、RFC3339、JavaScript 实例等时间日期格式，支持指定时区显示。"
+    },
+    "Labels": {
+      "Input": "输入时间",
+      "Output": "输出时间",
+      "InputFormat": "输入格式",
+      "AutoDetect": "自动检测",
+      "OutputTimezone": "输出时区"
+    },
+    "DateFormats": {
+      "CurrentTime": "当前时间",
+      "Javascript": "JavaScript 实例",
+      "ISO8601": "ISO 8601",
+      "ISO9075": "ISO 9075",
+      "RFC3339": "RFC 3339",
+      "RFC7231": "RFC 7231",
+      "TimestampSeconds": "Timestamp（秒）",
+      "TimestampMilliseconds": "Timestamp（毫秒）"
+    },
+    "Placeholders": {
+      "Input": "输入日期时间文本",
+      "Invalid": "无效格式"
+    }
   }
 }

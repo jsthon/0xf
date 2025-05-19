@@ -185,7 +185,7 @@
               {
                 "title": "Date Time Converter",
                 "href": "/date-time-converter",
-                "disabled": true,
+                "icon": "calendar-clock",
                 "keywords": ["Timestamp Converter", "Unix Time", "Date Format"]
               },
               {
