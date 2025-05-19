@@ -234,7 +234,7 @@ export default function UUIDGeneratorPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Messages.Tooltips.Hyphens")}</p>
+                    <p>{t("Tooltips.Hyphens")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -252,7 +252,7 @@ export default function UUIDGeneratorPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Messages.Tooltips.Uppercase")}</p>
+                    <p>{t("Tooltips.Uppercase")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -270,7 +270,7 @@ export default function UUIDGeneratorPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Messages.Tooltips.Braces")}</p>
+                    <p>{t("Tooltips.Braces")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -288,7 +288,7 @@ export default function UUIDGeneratorPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Messages.Tooltips.Quotes")}</p>
+                    <p>{t("Tooltips.Quotes")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -306,7 +306,7 @@ export default function UUIDGeneratorPage() {
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Messages.Tooltips.Commas")}</p>
+                    <p>{t("Tooltips.Commas")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>

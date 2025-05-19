@@ -15,7 +15,7 @@
     "SearchText": "搜索所有内容...",
     "SearchTextShort": "搜索...",
     "CommandPlaceholder": "输入命令或搜索...",
-    "NoResults": "未找到结果。",
+    "Empty": "未找到结果",
     "HeaderHeading": "链接"
   },
   "CopyButton": {

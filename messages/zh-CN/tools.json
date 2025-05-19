@@ -16,11 +16,11 @@
       "Base64": "Base64",
       "UrlSafe": "URL Safe"
     },
+    "Tooltips": {
+      "AutoDetect": "自动检测输入的纯文本还是 Base64",
+      "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充以便在 URL 中安全使用"
+    },
     "Messages": {
-      "Tooltips": {
-        "AutoDetect": "自动检测输入的纯文本还是 Base64",
-        "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充以便在 URL 中安全使用"
-      },
       "Decode": {
         "StandardChars": "需关闭 URL Safe 才能解码 '+' 或 '/' 字符",
         "UrlSafeChars": "需开启 URL Safe 才能解码 '-' 或 '_' 字符",
@@ -58,10 +58,10 @@
       "Output": "结果",
       "URLEncoded": "URL 编码"
     },
+    "Tooltips": {
+      "AutoDetect": "自动检测输入的纯文本还是 URL 编码"
+    },
     "Messages": {
-      "Tooltips": {
-        "AutoDetect": "自动检测输入的纯文本还是 URL 编码"
-      },
       "Decode": {
         "Invalid": "无效的 URL 编码内容"
       },
@@ -106,10 +106,10 @@
       "HtmlCode": "HTML 转义",
       "HtmlEntity": "HTML 实体"
     },
+    "Tooltips": {
+      "AutoDetect": "自动检测输入内容是否已编码"
+    },
     "Messages": {
-      "Tooltips": {
-        "AutoDetect": "自动检测输入内容是否已编码"
-      },
       "Decode": {
         "InvalidEncoding": "无效的编码格式",
         "InvalidCodePoint": "无效的 Unicode 码点格式",
@@ -254,17 +254,17 @@
         "Off": "关闭"
       }
     },
+    "Tooltips": {
+      "PrintWidth": "每行最多字符数，超出自动换行",
+      "TabWidth": "每级缩进的空白字符数量",
+      "UseTabs": "使用制表符或空格进行缩进",
+      "SingleQuote": "选择使用单引号或双引号",
+      "Semicolons": "是否在语句末尾添加分号"
+    },
     "Messages": {
       "LanguageRequired": "请选择代码语言",
       "FormatSuccess": "格式化成功",
-      "FormatFailed": "格式化失败，请检查语法",
-      "Tooltips": {
-        "PrintWidth": "每行最多字符数，超出自动换行",
-        "TabWidth": "每级缩进的空白字符数量",
-        "UseTabs": "使用制表符或空格进行缩进",
-        "SingleQuote": "选择使用单引号或双引号",
-        "Semicolons": "是否在语句末尾添加分号"
-      }
+      "FormatFailed": "格式化失败，请检查语法"
     }
   },
   "CodeMinifierPage": {
@@ -308,18 +308,18 @@
       "v5": "V5 (SHA-1)",
       "nil": "NIL"
     },
+    "Tooltips": {
+      "Hyphens": "在 UUID 各部分之间添加标准分隔符",
+      "Uppercase": "将十六进制值转换为大写",
+      "Braces": "用花括号包裹 UUID",
+      "Quotes": "用双引号包裹 UUID",
+      "Commas": "在每个 UUID 末尾添加逗号"
+    },
     "Messages": {
       "GenerateError": "UUID 生成出错",
       "NamespaceRequired": "需要提供命名空间和名称",
       "NamespaceHint": "选择预设命名空间或输入自定义 UUID",
-      "InvalidNamespace": "命名空间必须是有效的 UUID",
-      "Tooltips": {
-        "Hyphens": "在 UUID 各部分之间添加标准分隔符",
-        "Uppercase": "将十六进制值转换为大写",
-        "Braces": "用花括号包裹 UUID",
-        "Quotes": "用双引号包裹 UUID",
-        "Commas": "在每个 UUID 末尾添加逗号"
-      }
+      "InvalidNamespace": "命名空间必须是有效的 UUID"
     }
   },
   "QRCodePage": {

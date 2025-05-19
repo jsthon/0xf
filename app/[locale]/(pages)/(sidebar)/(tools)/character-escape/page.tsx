@@ -210,7 +210,7 @@ export default function CharacterEscapePage() {
               <Label htmlFor="auto-detect">{t("Controls.AutoDetect")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Messages.Tooltips.AutoDetect")}</p>
+              <p>{t("Tooltips.AutoDetect")}</p>
             </TooltipContent>
           </div>
         </Tooltip>

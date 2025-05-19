@@ -143,7 +143,7 @@ export default function Base64Page() {
               <Label htmlFor="auto-detect">{t("Controls.AutoDetect")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Messages.Tooltips.AutoDetect")}</p>
+              <p>{t("Tooltips.AutoDetect")}</p>
             </TooltipContent>
           </div>
         </Tooltip>
@@ -177,7 +177,7 @@ export default function Base64Page() {
               <Label htmlFor="url-safe">{t("Controls.UrlSafe")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Messages.Tooltips.UrlSafe")}</p>
+              <p>{t("Tooltips.UrlSafe")}</p>
             </TooltipContent>
           </div>
         </Tooltip>
