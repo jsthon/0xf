@@ -196,8 +196,8 @@
               },
               {
                 "title": "Text Case Converter",
-                "href": "/text-case-converter",
-                "disabled": true,
+                "href": "/case-converter",
+                "icon": "case-sensitive",
                 "keywords": [
                   "Uppercase",
                   "Lowercase",

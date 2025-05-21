@@ -177,8 +177,8 @@
               },
               {
                 "title": "文本大小写转换器",
-                "href": "/text-case-converter",
-                "disabled": true,
+                "href": "/case-converter",
+                "icon": "case-sensitive",
                 "keywords": ["大写", "小写", "驼峰命名", "蛇形命名"]
               }
             ]

@@ -398,5 +398,75 @@
       "Input": "Enter date time text...",
       "Invalid": "Invalid Format"
     }
+  },
+  "CaseConverterPage": {
+    "Meta": {
+      "Title": "Text Case Converter",
+      "Description": "Convert text to camel case, pascal case, snake case, lowercase, uppercase and other naming formats."
+    },
+    "Labels": {
+      "Input": "Input Text",
+      "Output": "Converted Text"
+    },
+    "Formats": {
+      "camel": "Camel Case",
+      "pascal": "Pascal Case",
+      "capital": "Capital Case",
+      "sentence": "Sentence Case",
+      "constant": "Constant Case",
+      "snake": "Snake Case",
+      "no": "Space Case",
+      "kebab": "Kebab Case",
+      "dot": "Dot Case",
+      "path": "Path Case",
+      "title": "Title Case",
+      "train": "Train Case",
+      "lower": "Lower Case",
+      "upper": "Upper Case",
+      "lowerFirst": "Lower First",
+      "upperFirst": "Upper First",
+      "sponge": "Sponge Case"
+    },
+    "Tooltips": {
+      "camel": "First word lowercase, others capitalized, no separators.",
+      "pascal": "All words capitalized, no separators.",
+      "capital": "All words capitalized, space separated.",
+      "sentence": "First word capitalized, rest lowercase, space separated.",
+      "constant": "All uppercase with underscore separators.",
+      "snake": "All lowercase with underscore separators.",
+      "no": "All lowercase with space separators.",
+      "kebab": "All lowercase with hyphen separators.",
+      "dot": "All lowercase with dot separators.",
+      "path": "All lowercase with slash separators.",
+      "title": "All significant words capitalized, preserves separators.",
+      "train": "All words capitalized with hyphen separators.",
+      "lower": "All letters lowercase, preserves separators.",
+      "upper": "All letters uppercase, preserves separators.",
+      "lowerFirst": "First letter lowercase, rest unchanged.",
+      "upperFirst": "First letter uppercase, rest unchanged.",
+      "sponge": "Random mix of uppercase and lowercase, preserves separators."
+    },
+    "Badges": {
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "capital": "Capital Case",
+      "sentence": "Sentence case",
+      "constant": "CONSTANT_CASE",
+      "snake": "snake_case",
+      "no": "space case",
+      "kebab": "kebab-case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "title": "Title Case",
+      "train": "Train-Case",
+      "lower": "lowercase",
+      "upper": "UPPERCASE",
+      "lowerFirst": "lowerFirst",
+      "upperFirst": "UpperFirst",
+      "sponge": "SpOnGe CaSe"
+    },
+    "Placeholders": {
+      "Input": "Enter text to convert..."
+    }
   }
 }
