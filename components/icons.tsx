@@ -1,6 +1,7 @@
 import {
   Ampersand,
   CalendarClock,
+  CaseSensitive,
   Circle,
   FileDiff,
   FileMinus,
@@ -37,6 +38,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   "qr-code": QrCode,
   palette: Palette,
   "calendar-clock": CalendarClock,
+  "case-sensitive": CaseSensitive,
 };
 
 export const CustomIcons = {

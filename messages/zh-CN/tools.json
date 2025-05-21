@@ -398,5 +398,75 @@
       "Input": "输入日期时间文本",
       "Invalid": "无效格式"
     }
+  },
+  "CaseConverterPage": {
+    "Meta": {
+      "Title": "文本大小写转换",
+      "Description": "将文本转换为小驼峰、大驼峰（帕斯卡）、下划线、全大写、全小写等多种命名格式。"
+    },
+    "Labels": {
+      "Input": "输入文本",
+      "Output": "转换结果"
+    },
+    "Formats": {
+      "camel": "小驼峰命名",
+      "pascal": "大驼峰命名",
+      "capital": "首字母大写",
+      "sentence": "句子格式",
+      "constant": "常量命名",
+      "snake": "下划线命名",
+      "no": "空格命名",
+      "kebab": "连字符命名",
+      "dot": "点式命名",
+      "path": "路径命名",
+      "title": "标题格式",
+      "train": "标题连接格式",
+      "lower": "全小写格式",
+      "upper": "全大写格式",
+      "lowerFirst": "首字母小写",
+      "upperFirst": "首字母大写",
+      "sponge": "乱序格式"
+    },
+    "Tooltips": {
+      "camel": "首个单词全小写，其它单词首字母大写，无分隔符。",
+      "pascal": "所有单词首字母大写，无分隔符。",
+      "capital": "所有单词首字母大写，空格分隔单词。",
+      "sentence": "首个单词首字母大写，其余全小写，空格分隔单词。",
+      "constant": "全部大写，下划线分隔单词。",
+      "snake": "全部小写，下划线分隔单词。",
+      "no": "全部小写，空格分隔单词。",
+      "kebab": "全部小写，连字符分隔单词。",
+      "dot": "全部小写，点号分隔单词。",
+      "path": "全部小写，斜杠分隔单词。",
+      "title": "所有单词首字母大写，分隔符不变。",
+      "train": "所有单词首字母大写，连字符分隔单词。",
+      "lower": "所有字母小写，分隔符不变。",
+      "upper": "所有字母大写，分隔符不变。",
+      "lowerFirst": "首字母小写，其余保持不变。",
+      "upperFirst": "首字母大写，其余保持不变。",
+      "sponge": "随机大小写混合，分隔符不变。"
+    },
+    "Badges": {
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "capital": "Capital Case",
+      "sentence": "Sentence case",
+      "constant": "CONSTANT_CASE",
+      "snake": "snake_case",
+      "no": "space case",
+      "kebab": "kebab-case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "title": "Title Case",
+      "train": "Train-Case",
+      "lower": "lowercase",
+      "upper": "UPPERCASE",
+      "lowerFirst": "lowerFirst",
+      "upperFirst": "UpperFirst",
+      "sponge": "SpOnGe CaSe"
+    },
+    "Placeholders": {
+      "Input": "输入要转换的文本"
+    }
   }
 }
