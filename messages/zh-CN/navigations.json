@@ -170,10 +170,17 @@
                 "keywords": ["时间戳转换器", "Unix时间", "日期格式"]
               },
               {
-                "title": "JSON/YAML/CSV转换器",
-                "href": "/json-yaml-csv",
-                "disabled": true,
-                "keywords": ["格式转换器", "JSON转YAML", "数据格式"]
+                "title": "数据格式转换",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "keywords": [
+                  "JSON转YAML",
+                  "YAML转JSON",
+                  "CSV转JSON",
+                  "JSON转CSV",
+                  "数据格式",
+                  "结构化数据"
+                ]
               },
               {
                 "title": "文本大小写转换器",

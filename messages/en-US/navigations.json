@@ -189,10 +189,17 @@
                 "keywords": ["Timestamp Converter", "Unix Time", "Date Format"]
               },
               {
-                "title": "JSON/YAML/CSV Converter",
-                "href": "/json-yaml-csv",
-                "disabled": true,
-                "keywords": ["Format Converter", "JSON to YAML", "Data Format"]
+                "title": "Data Format Converter",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "keywords": [
+                  "JSON to YAML",
+                  "YAML to JSON",
+                  "CSV to JSON",
+                  "JSON to CSV",
+                  "Data Format",
+                  "Structured Data"
+                ]
               },
               {
                 "title": "Text Case Converter",

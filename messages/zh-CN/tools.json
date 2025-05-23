@@ -468,5 +468,23 @@
     "Placeholders": {
       "Input": "输入要转换的文本"
     }
+  },
+  "DataFormatConverterPage": {
+    "Meta": {
+      "Title": "数据格式转换",
+      "Description": "在 JSON、YAML、XML 和 CSV 格式之间转换，支持自动格式检测。"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Output": "输出",
+      "InputFormat": "输入格式",
+      "AutoDetect": "自动检测",
+      "ConvertFormat": "转换格式"
+    },
+    "Messages": {
+      "ConvertSuccess": "转换成功",
+      "ConvertFailed": "转换失败，请检查语法",
+      "UnknownFormat": "无法检测输入格式"
+    }
   }
 }
