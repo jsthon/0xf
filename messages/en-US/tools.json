@@ -468,5 +468,23 @@
     "Placeholders": {
       "Input": "Enter text to convert..."
     }
+  },
+  "DataFormatConverterPage": {
+    "Meta": {
+      "Title": "Data Format Converter",
+      "Description": "Convert between JSON, YAML, XML, and CSV formats with automatic format detection."
+    },
+    "Labels": {
+      "Input": "Input",
+      "Output": "Output",
+      "InputFormat": "Input Format",
+      "AutoDetect": "Auto Detect",
+      "ConvertFormat": "Convert Format"
+    },
+    "Messages": {
+      "ConvertSuccess": "Convert successful",
+      "ConvertFailed": "Convert failed. Check syntax.",
+      "UnknownFormat": "Unable to detect input format."
+    }
   }
 }

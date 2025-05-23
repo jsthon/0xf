@@ -1,5 +1,6 @@
 import {
   Ampersand,
+  Braces,
   CalendarClock,
   CaseSensitive,
   Circle,
@@ -39,6 +40,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   palette: Palette,
   "calendar-clock": CalendarClock,
   "case-sensitive": CaseSensitive,
+  braces: Braces,
 };
 
 export const CustomIcons = {
