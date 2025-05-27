@@ -13,6 +13,10 @@
     "Labels": {
       "Input": "输入",
       "Output": "结果",
+      "Upload": "上传文件",
+      "Download": "下载文件"
+    },
+    "Badges": {
       "Base64": "Base64",
       "UrlSafe": "URL Safe"
     },
@@ -21,13 +25,21 @@
       "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充以便在 URL 中安全使用"
     },
     "Messages": {
-      "Decode": {
-        "StandardChars": "需关闭 URL Safe 才能解码 '+' 或 '/' 字符",
-        "UrlSafeChars": "需开启 URL Safe 才能解码 '-' 或 '_' 字符",
-        "InvalidBase64": "无效的 Base64 内容"
-      },
       "Encode": {
         "Failed": "编码失败"
+      },
+      "Decode": {
+        "Invalid": "无效的 Base64 内容",
+        "StandardChars": "需关闭 URL Safe 才能解码 '+' 或 '/' 字符",
+        "UrlSafeChars": "需开启 URL Safe 才能解码 '-' 或 '_' 字符"
+      },
+      "Upload": {
+        "Failed": "文件加载失败",
+        "Limit": "文件大小不能超过 20MB"
+      },
+      "Download": {
+        "Failed": "文件下载失败",
+        "Empty": "不能下载空文件"
       }
     },
     "Placeholders": {

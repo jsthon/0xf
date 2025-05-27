@@ -13,6 +13,10 @@
     "Labels": {
       "Input": "Input",
       "Output": "Output",
+      "Upload": "Upload File",
+      "Download": "Download File"
+    },
+    "Badges": {
       "Base64": "Base64",
       "UrlSafe": "URL Safe"
     },
@@ -21,13 +25,21 @@
       "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
     },
     "Messages": {
-      "Decode": {
-        "StandardChars": "Disable URL Safe to decode '+' or '/' characters",
-        "UrlSafeChars": "Enable URL Safe to decode '-' or '_' characters",
-        "InvalidBase64": "Invalid Base64 string"
-      },
       "Encode": {
         "Failed": "Failed to encode text"
+      },
+      "Decode": {
+        "Invalid": "Invalid Base64 string",
+        "StandardChars": "Disable URL Safe to decode '+' or '/' characters",
+        "UrlSafeChars": "Enable URL Safe to decode '-' or '_' characters"
+      },
+      "Upload": {
+        "Failed": "Failed to load file",
+        "Limit": "File size must be less than 20MB"
+      },
+      "Download": {
+        "Failed": "Failed to download file",
+        "Empty": "Cannot download empty file"
       }
     },
     "Placeholders": {
