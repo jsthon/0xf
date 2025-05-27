@@ -1,16 +1,25 @@
 "use client";
 
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, useCallback, useRef, useState } from "react";
+import { Download, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { toast } from "sonner";
 
 import {
-  decodeFromBase64,
-  encodeToBase64,
+  base64ToBlob,
+  base64ToText,
+  convertToUrlSafe,
+  detectFileExtension,
+  fileToBase64,
+  fileToText,
   hasStandardChars,
   hasUrlSafeChars,
-  isValidBase64,
+  isProbablyBase64,
+  textToBase64,
 } from "@/lib/base64";
+import { saveBlobAsFile } from "@/lib/file";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
@@ -28,53 +37,57 @@ export default function Base64Page() {
   const [isDecodeMode, setIsDecodeMode] = useState(false);
   const [isUrlSafe, setIsUrlSafe] = useState(false);
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const t = useTranslations("Base64Page");
+
+  const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20MB
 
   // process text based on current state
   const processText = useCallback(
-    (text: string, decode: boolean) => {
+    (text: string, autoDetect: boolean, decode: boolean, urlSafe: boolean) => {
       if (!text) {
         setOutputText("");
         return;
       }
 
       if (decode) {
-        if (!isAutoDetect) {
-          if (isUrlSafe && hasStandardChars(text)) {
+        if (!autoDetect) {
+          if (urlSafe && hasStandardChars(text)) {
             setOutputText(t("Messages.Decode.StandardChars"));
             return;
           }
-          if (!isUrlSafe && hasUrlSafeChars(text)) {
+          if (!urlSafe && hasUrlSafeChars(text)) {
             setOutputText(t("Messages.Decode.UrlSafeChars"));
             return;
           }
         }
 
-        const decoded = decodeFromBase64(text);
-        setOutputText(decoded || t("Messages.Decode.InvalidBase64"));
+        const decoded = base64ToText(text);
+        setOutputText(decoded || t("Messages.Decode.Invalid"));
       } else {
-        const encoded = encodeToBase64(text, isUrlSafe);
+        const encoded = textToBase64(text, urlSafe);
         setOutputText(encoded || t("Messages.Encode.Failed"));
       }
     },
-    [isAutoDetect, isUrlSafe, t]
+    [t]
   );
 
   // detect input type and process text
   const detectAndProcessInput = useCallback(
-    (text: string) => {
+    async (text: string) => {
       if (isAutoDetect) {
-        const isBase64 = isValidBase64(text);
+        const isBase64 = await isProbablyBase64(text);
         const urlSafe = isBase64 && hasUrlSafeChars(text);
 
         setIsDecodeMode(isBase64);
         setIsUrlSafe(urlSafe);
-        processText(text, isBase64);
+
+        processText(text, isAutoDetect, isBase64, urlSafe);
       } else {
-        processText(text, isDecodeMode);
+        processText(text, isAutoDetect, isDecodeMode, isUrlSafe);
       }
     },
-    [isAutoDetect, isDecodeMode, processText]
+    [isAutoDetect, isDecodeMode, isUrlSafe, processText]
   );
 
   // handle text input changes
@@ -82,14 +95,6 @@ export default function Base64Page() {
     const newText = e.target.value;
     setInputText(newText);
     detectAndProcessInput(newText);
-  };
-
-  // toggle decode mode switch
-  const handleDecodeModeToggle = (checked: boolean) => {
-    setIsAutoDetect(false);
-    setIsDecodeMode(checked);
-
-    processText(inputText, checked);
   };
 
   // toggle auto detect switch
@@ -101,22 +106,93 @@ export default function Base64Page() {
     }
   };
 
+  // toggle decode mode switch
+  const handleDecodeModeToggle = (checked: boolean) => {
+    setIsAutoDetect(false);
+    setIsDecodeMode(checked);
+
+    processText(inputText, false, checked, isUrlSafe);
+  };
+
   // toggle url safe switch
   const handleUrlSafeToggle = (checked: boolean) => {
     setIsAutoDetect(false);
     setIsUrlSafe(checked);
 
-    if (inputText) {
-      processText(inputText, isDecodeMode);
+    processText(inputText, false, isDecodeMode, checked);
+  };
+
+  // handle file upload to encode
+  const handleFileUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (file.size > MAX_FILE_SIZE) {
+      toast.error(t("Messages.Upload.Limit"));
+      return;
+    }
+
+    try {
+      // read file to text content
+      const textContent = await fileToText(file);
+      let isBase64 = false;
+
+      // assume the input is base64 or not
+      if (isAutoDetect) {
+        isBase64 = await isProbablyBase64(textContent);
+        setIsDecodeMode(isBase64);
+      } else {
+        isBase64 = isDecodeMode;
+      }
+
+      if (isBase64) {
+        // decode mode: convert base64 to text
+        setInputText(textContent);
+        setOutputText(
+          base64ToText(textContent) || t("Messages.Decode.Invalid")
+        );
+      } else {
+        // encode mode: convert file to base64
+        const base64Content = await fileToBase64(file);
+        setInputText(textContent);
+        setOutputText(
+          isUrlSafe ? convertToUrlSafe(base64Content) : base64Content
+        );
+      }
+    } catch {
+      toast.error(t("Messages.Upload.Failed"));
     }
   };
 
-  // update output when dependencies change
-  useEffect(() => {
-    if (inputText) {
-      detectAndProcessInput(inputText);
+  // handle download in decode mode
+  const handleDownload = async () => {
+    // Verify we have content to download
+    const content = isDecodeMode ? inputText : outputText;
+    if (!content) {
+      toast.error(t("Messages.Download.Empty"));
+      return;
     }
-  }, [inputText, detectAndProcessInput]);
+
+    try {
+      let blob: Blob;
+      let filename: string;
+
+      if (isDecodeMode) {
+        // decode mode: convert base64 to binary file
+        blob = base64ToBlob(inputText);
+        const fileExt = await detectFileExtension(inputText);
+        filename = fileExt ? `decoded.${fileExt}` : "decoded";
+      } else {
+        // encode mode: save base64 as text file
+        blob = new Blob([outputText], { type: "text/plain" });
+        filename = "encoded.txt";
+      }
+
+      saveBlobAsFile(blob, filename);
+    } catch {
+      toast.error(t("Messages.Download.Failed"));
+    }
+  };
 
   return (
     <>
@@ -191,19 +267,38 @@ export default function Base64Page() {
                 {t("Labels.Input")}
               </Label>
               {(!isAutoDetect || inputText) && isDecodeMode && (
-                <>
-                  <Badge>{t("Labels.Base64")}</Badge>
+                <div className="flex items-center gap-2">
+                  <Badge>{t("Badges.Base64")}</Badge>
                   {isUrlSafe && (
-                    <Badge variant="secondary">{t("Labels.UrlSafe")}</Badge>
+                    <Badge variant="secondary">{t("Badges.UrlSafe")}</Badge>
                   )}
-                </>
+                </div>
               )}
             </div>
-            <CopyButton
-              value={inputText}
-              variant="outline"
-              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
-            />
+            <div className="flex items-center gap-2">
+              <input
+                ref={fileInputRef}
+                type="file"
+                className="hidden"
+                onChange={handleFileUpload}
+                accept="*/*"
+              />
+              <Button
+                variant="outline"
+                size="icon"
+                className="size-8"
+                title={t("Labels.Upload")}
+                onClick={() => fileInputRef.current?.click()}
+              >
+                <Upload className="size-4" />
+                <span className="sr-only">{t("Labels.Upload")}</span>
+              </Button>
+              <CopyButton
+                value={inputText}
+                variant="outline"
+                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
+              />
+            </div>
           </div>
           <Textarea
             id="input"
@@ -228,19 +323,31 @@ export default function Base64Page() {
                 {t("Labels.Output")}
               </Label>
               {(!isAutoDetect || inputText) && !isDecodeMode && (
-                <>
-                  <Badge>{t("Labels.Base64")}</Badge>
+                <div className="flex items-center gap-2">
+                  <Badge>{t("Badges.Base64")}</Badge>
                   {isUrlSafe && (
-                    <Badge variant="secondary">{t("Labels.UrlSafe")}</Badge>
+                    <Badge variant="secondary">{t("Badges.UrlSafe")}</Badge>
                   )}
-                </>
+                </div>
               )}
             </div>
-            <CopyButton
-              value={outputText}
-              variant="outline"
-              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
-            />
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="icon"
+                className="size-8"
+                title={t("Labels.Download")}
+                onClick={handleDownload}
+              >
+                <Download className="size-4" />
+                <span className="sr-only">{t("Labels.Download")}</span>
+              </Button>
+              <CopyButton
+                value={outputText}
+                variant="outline"
+                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
+              />
+            </div>
           </div>
           <Textarea
             id="output"
