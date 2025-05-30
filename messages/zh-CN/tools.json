@@ -498,5 +498,31 @@
       "ConvertFailed": "转换失败，请检查语法",
       "UnknownFormat": "无法检测输入格式"
     }
+  },
+  "KeyboardEventPage": {
+    "Meta": {
+      "Title": "键盘事件属性",
+      "Description": "查看 KeyboardEvent 键盘事件的 key、code 等属性，支持实时显示与调试。"
+    },
+    "Placeholders": {
+      "Input": "按任意键或输入文本触发键盘事件"
+    },
+    "Tooltips": {
+      "keydown": "按下任意按键时触发。",
+      "keypress": "[已弃用] 按下会生成字符的按键时触发。",
+      "keyup": "释放任意按键时触发。",
+      "key": "返回按键值，受键盘布局和修饰键影响。",
+      "code": "返回物理按键的编码，不受键盘布局影响。",
+      "location": "返回按键在键盘或输入设备上的位置编号。",
+      "repeat": "按键持续按下并自动重复时为 true。",
+      "isComposing": "事件在输入法组合会话期间触发时为 true。",
+      "shiftKey": "事件触发时 Shift 键处于激活状态则为 true。",
+      "ctrlKey": "事件触发时 Ctrl 键处于激活状态则为 true。",
+      "altKey": "事件触发时 Alt（Option）键处于激活状态则为 true。",
+      "metaKey": "事件触发时 Meta 键（Command 或 Windows 键）处于激活状态则为 true。",
+      "which": "[已弃用] 返回鼠标或键盘按键的数字编码。",
+      "keyCode": "[已弃用] 返回按键的未修改值的系统相关编码。",
+      "charCode": "[已弃用] 返回按键生成字符的 Unicode 编码，仅用于 keypress 事件。"
+    }
   }
 }

@@ -253,13 +253,15 @@
                 "keywords": ["Image to Base64", "Data URI", "Inline Image"]
               },
               {
-                "title": "Keycode Info",
-                "href": "/keycode-info",
-                "disabled": true,
+                "title": "Keyboard Event",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
                 "keywords": [
+                  "KeyboardEvent",
                   "Keyboard Code",
-                  "Key Events",
-                  "JavaScript Keycode"
+                  "keydown",
+                  "keyup",
+                  "keypress"
                 ]
               },
               {
