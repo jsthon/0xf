@@ -209,7 +209,7 @@ export default function QRCodePage() {
                   value={textData}
                   spellCheck={false}
                   onChange={(e) => setTextData(e.target.value)}
-                  className="min-h-40"
+                  className="h-40"
                 />
               </div>
             </TabsContent>
