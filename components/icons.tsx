@@ -7,6 +7,7 @@ import {
   FileDiff,
   FileMinus,
   FileSpreadsheet,
+  Keyboard,
   KeyRound,
   LetterText,
   Link2,
@@ -41,6 +42,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   "calendar-clock": CalendarClock,
   "case-sensitive": CaseSensitive,
   braces: Braces,
+  keyboard: Keyboard,
 };
 
 export const CustomIcons = {
