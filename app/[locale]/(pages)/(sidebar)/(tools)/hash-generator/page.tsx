@@ -234,11 +234,11 @@ export default function HashGeneratorPage() {
               value={inputText}
               spellCheck={false}
               onChange={handleInputChange}
-              className="min-h-32"
+              className="h-32"
             />
           ) : (
             <FileUpload
-              className="min-h-32"
+              className="h-32"
               onFilesUploaded={handleFileUploaded}
               secondaryText={t("Messages.LocalProcessing")}
             />

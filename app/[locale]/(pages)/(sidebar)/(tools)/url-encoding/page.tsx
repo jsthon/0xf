@@ -160,7 +160,7 @@ export default function URLEncodingPage() {
           </div>
           <Textarea
             id="input"
-            className="h-full max-h-[400px] min-h-[100px] font-mono"
+            className="h-full max-h-[400px] min-h-[100px] resize-none font-mono"
             value={inputText}
             spellCheck={false}
             onChange={handleInputChange}
@@ -192,7 +192,7 @@ export default function URLEncodingPage() {
           </div>
           <Textarea
             id="output"
-            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] font-mono"
+            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] resize-none font-mono"
             value={outputText}
             spellCheck={false}
             readOnly
