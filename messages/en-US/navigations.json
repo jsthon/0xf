@@ -284,12 +284,12 @@
               },
               {
                 "title": "User-Agent Parser",
-                "href": "/user-agent-parser",
-                "disabled": true,
+                "href": "/user-agent",
+                "icon": "compass",
                 "keywords": [
                   "Browser Detection",
-                  "User-Agent String",
-                  "Device Info"
+                  "User-Agent Parser",
+                  "UA Information"
                 ]
               },
               {

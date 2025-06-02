@@ -4,6 +4,7 @@ import {
   CalendarClock,
   CaseSensitive,
   Circle,
+  Compass,
   FileDiff,
   FileMinus,
   FileSpreadsheet,
@@ -43,6 +44,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   "case-sensitive": CaseSensitive,
   braces: Braces,
   keyboard: Keyboard,
+  compass: Compass,
 };
 
 export const CustomIcons = {

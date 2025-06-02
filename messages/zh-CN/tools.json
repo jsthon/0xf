@@ -499,6 +499,35 @@
       "UnknownFormat": "无法检测输入格式"
     }
   },
+  "UserAgentPage": {
+    "Meta": {
+      "Title": "User-Agent 解析",
+      "Description": "解析和解码 User-Agent 字符串，分析并显示浏览器、渲染引擎、操作系统、设备型号等详细信息。"
+    },
+    "Labels": {
+      "Input": "输入文本",
+      "Output": "解析结果",
+      "BrowserName": "浏览器名称",
+      "BrowserVersion": "浏览器版本",
+      "EngineName": "渲染引擎名称",
+      "EngineVersion": "渲染引擎版本",
+      "DeviceType": "设备类型",
+      "DeviceVendor": "设备厂商",
+      "DeviceModel": "设备型号",
+      "CPUArchitecture": "CPU 架构",
+      "OSName": "操作系统名称",
+      "OSVersion": "操作系统版本",
+      "IsBot": "检测为机器人",
+      "ChromiumBased": "Chromium 内核"
+    },
+    "Values": {
+      "Yes": "是",
+      "No": "否"
+    },
+    "Placeholders": {
+      "Input": "输入 User-Agent 字符串"
+    }
+  },
   "KeyboardEventPage": {
     "Meta": {
       "Title": "键盘事件属性",
