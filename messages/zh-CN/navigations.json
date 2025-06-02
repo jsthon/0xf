@@ -253,10 +253,10 @@
                 "keywords": ["URL组件", "查询字符串", "URL参数"]
               },
               {
-                "title": "User-Agent解析器",
-                "href": "/user-agent-parser",
-                "disabled": true,
-                "keywords": ["浏览器检测", "User-Agent字符串", "设备信息"]
+                "title": "User-Agent 解析",
+                "href": "/user-agent",
+                "icon": "compass",
+                "keywords": ["浏览器检测", "User-Agent解析", "UA信息"]
               },
               {
                 "title": "CSS光标",

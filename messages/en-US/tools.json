@@ -499,6 +499,35 @@
       "UnknownFormat": "Unable to detect input format."
     }
   },
+  "UserAgentPage": {
+    "Meta": {
+      "Title": "User-Agent Parser",
+      "Description": "Parse and decode User-Agent strings to analyze and display browser, OS, device, and engine details."
+    },
+    "Labels": {
+      "Input": "Input Text",
+      "Output": "Parsed Result",
+      "BrowserName": "Browser Name",
+      "BrowserVersion": "Browser Version",
+      "EngineName": "Rendering Engine",
+      "EngineVersion": "Engine Version",
+      "DeviceType": "Device Type",
+      "DeviceVendor": "Device Vendor",
+      "DeviceModel": "Device Model",
+      "CPUArchitecture": "CPU Architecture",
+      "OSName": "Operating System",
+      "OSVersion": "OS Version",
+      "IsBot": "Bot Detection",
+      "ChromiumBased": "Chromium-based"
+    },
+    "Values": {
+      "Yes": "Yes",
+      "No": "No"
+    },
+    "Placeholders": {
+      "Input": "Enter User-Agent string..."
+    }
+  },
   "KeyboardEventPage": {
     "Meta": {
       "Title": "Keyboard Event Properties",
