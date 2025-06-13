@@ -18,6 +18,7 @@ import {
   textToBase64,
 } from "@/lib/base64";
 import { saveBlobAsFile } from "@/lib/file";
+import { plainTypingProps } from "@/lib/props/typing";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -283,16 +284,22 @@ export default function Base64Page() {
                 onChange={handleFileUpload}
                 accept="*/*"
               />
-              <Button
-                variant="outline"
-                size="icon"
-                className="size-8"
-                title={t("Labels.Upload")}
-                onClick={() => fileInputRef.current?.click()}
-              >
-                <Upload className="size-4" />
-                <span className="sr-only">{t("Labels.Upload")}</span>
-              </Button>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="size-8"
+                    onClick={() => fileInputRef.current?.click()}
+                  >
+                    <Upload className="size-4" />
+                    <span className="sr-only">{t("Labels.Upload")}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("Labels.Upload")}</p>
+                </TooltipContent>
+              </Tooltip>
               <CopyButton
                 value={inputText}
                 variant="outline"
@@ -302,9 +309,8 @@ export default function Base64Page() {
           </div>
           <Textarea
             id="input"
-            className="h-full max-h-[400px] min-h-[100px] resize-none font-mono"
+            className="h-full max-h-[400px] min-h-[100px] resize-none font-mono break-all"
             value={inputText}
-            spellCheck={false}
             onChange={handleInputChange}
             placeholder={
               isAutoDetect
@@ -313,6 +319,7 @@ export default function Base64Page() {
                   ? t("Placeholders.Input.Decode")
                   : t("Placeholders.Input.Encode")
             }
+            {...plainTypingProps}
           />
         </div>
 
@@ -332,16 +339,22 @@ export default function Base64Page() {
               )}
             </div>
             <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                className="size-8"
-                title={t("Labels.Download")}
-                onClick={handleDownload}
-              >
-                <Download className="size-4" />
-                <span className="sr-only">{t("Labels.Download")}</span>
-              </Button>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="size-8"
+                    onClick={handleDownload}
+                  >
+                    <Download className="size-4" />
+                    <span className="sr-only">{t("Labels.Download")}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("Labels.Download")}</p>
+                </TooltipContent>
+              </Tooltip>
               <CopyButton
                 value={outputText}
                 variant="outline"
@@ -351,9 +364,8 @@ export default function Base64Page() {
           </div>
           <Textarea
             id="output"
-            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] resize-none font-mono"
+            className="bg-muted/50 dark:bg-muted/20 h-full max-h-[400px] min-h-[100px] resize-none font-mono break-all"
             value={outputText}
-            spellCheck={false}
             readOnly
             placeholder={
               isAutoDetect

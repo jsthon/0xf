@@ -13,8 +13,8 @@
     "Labels": {
       "Input": "输入",
       "Output": "结果",
-      "Upload": "上传文件",
-      "Download": "下载文件"
+      "Upload": "上传",
+      "Download": "下载"
     },
     "Badges": {
       "Base64": "Base64",
@@ -154,7 +154,7 @@
     },
     "Labels": {
       "Password": "密码",
-      "Refresh": "刷新",
+      "Regenerate": "刷新",
       "CharacterLength": "字符长度",
       "CharacterTypes": "字符类型"
     },
@@ -170,7 +170,7 @@
     },
     "Labels": {
       "Text": "生成文本",
-      "Generate": "生成",
+      "Regenerate": "刷新",
       "StartWithLorem": "以 'Lorem ipsum' 开头",
       "RandomRange": "随机范围",
       "DisplayPTags": "显示 '<p>' 标签",
@@ -301,7 +301,7 @@
     },
     "Labels": {
       "Generated": "UUID 结果",
-      "Generate": "生成",
+      "Regenerate": "刷新",
       "Version": "UUID 版本",
       "Quantity": "数量",
       "Format": "格式",

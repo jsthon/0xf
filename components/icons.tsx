@@ -1,5 +1,6 @@
 import {
   Ampersand,
+  ArrowRight,
   Braces,
   CalendarClock,
   CaseSensitive,
@@ -26,6 +27,7 @@ export type IconProps = React.SVGAttributes<SVGElement>;
 export type IconKey = keyof typeof CustomIcons | IconName;
 
 const LucideIcons: Record<string, LucideIcon> = {
+  "arrow-right": ArrowRight,
   circle: Circle,
   "file-diff": FileDiff,
   "square-sigma": SquareSigma,

@@ -14,6 +14,7 @@ import {
   getColorFormat,
   type ColorFormat,
 } from "@/lib/color-format";
+import { plainTypingProps } from "@/lib/props/typing";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -95,9 +96,8 @@ export default function ColorConverterPage() {
               className="px-9 font-mono"
               value={inputColorText}
               placeholder={t("Placeholders.Input")}
-              spellCheck={false}
-              autoComplete="off"
               onChange={(e) => handleInputChange(e.target.value)}
+              {...plainTypingProps}
             />
             <div className="absolute inset-y-0 right-1 flex items-center">
               <CopyButton
@@ -124,8 +124,6 @@ export default function ColorConverterPage() {
                     id={`color-${format}`}
                     className="pr-9 font-mono"
                     value={outputColors[format] || ""}
-                    spellCheck={false}
-                    autoComplete="off"
                     readOnly
                   />
                   <div className="absolute inset-y-0 right-1 flex items-center">

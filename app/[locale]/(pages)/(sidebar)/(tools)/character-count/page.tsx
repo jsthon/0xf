@@ -55,6 +55,7 @@ export default function CharacterCountPage() {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder={t("Placeholders.Input")}
+            autoComplete="off"
           />
         </div>
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { EyeClosedIcon, EyeIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 
@@ -19,6 +20,7 @@ export function PasswordInput({
       <Input
         type={showPassword ? "text" : "password"}
         className={cn("no-password-reveal pr-10", className)}
+        {...plainTypingProps}
         {...props}
       />
       <button

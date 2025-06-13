@@ -17,10 +17,10 @@ export function ScrollArea({
         {children}
       </ScrollAreaPrimitive.Viewport>
       <ScrollAreaPrimitive.Scrollbar
-        className="bg-muted/80 data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=visible]:fade-in data-[state=hidden]:fade-out flex w-1 touch-none select-none"
+        className="bg-muted data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=visible]:fade-in data-[state=hidden]:fade-out flex w-1 touch-none transition-[width] select-none hover:w-1.5"
         orientation="vertical"
       >
-        <ScrollAreaPrimitive.Thumb className="bg-primary/30 hover:bg-primary/50 relative flex-1 rounded-lg transition-colors duration-100 before:absolute before:top-1/2 before:left-1/2 before:size-full before:min-h-11 before:min-w-11 before:-translate-x-1/2 before:-translate-y-1/2" />
+        <ScrollAreaPrimitive.Thumb className="bg-primary/40 hover:bg-primary/60 relative flex-1 rounded-lg transition-colors before:absolute before:top-1/2 before:left-1/2 before:size-full before:min-h-11 before:min-w-11 before:-translate-x-1/2 before:-translate-y-1/2" />
       </ScrollAreaPrimitive.Scrollbar>
     </ScrollAreaPrimitive.Root>
   );

@@ -106,7 +106,11 @@ export default function KeyboardEventPage() {
       </div>
 
       <div className="flex flex-col gap-8">
-        <Textarea className="h-16" placeholder={t("Placeholders.Input")} />
+        <Textarea
+          className="h-16"
+          placeholder={t("Placeholders.Input")}
+          autoComplete="off"
+        />
 
         <Table className="min-w-150 table-fixed font-mono">
           <TableHeader>

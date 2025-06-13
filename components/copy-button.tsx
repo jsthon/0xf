@@ -8,6 +8,11 @@ import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface CopyButtonProps
   extends Omit<React.ComponentProps<"button">, "children">,
@@ -16,7 +21,10 @@ interface CopyButtonProps
   getValue?: () => string | Blob | Promise<string | Blob>;
   className?: string;
   size?: VariantProps<typeof buttonVariants>["size"];
-  children?: (hasCopied?: boolean) => React.ReactNode;
+  children?: (
+    hasCopied?: boolean,
+    handleCopy?: () => Promise<void>
+  ) => React.ReactNode;
 }
 
 export function CopyButton({
@@ -36,11 +44,27 @@ export function CopyButton({
     return () => clearTimeout(timer);
   }, [hasCopied]);
 
-  const defaultChildren = (hasCopied: boolean) => (
-    <>
-      {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
-      <span className="sr-only">{t("Copy")}</span>
-    </>
+  const renderDefaultButton = (hasCopied: boolean) => (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button
+          variant={variant}
+          size={size}
+          className={cn(
+            "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3",
+            className
+          )}
+          onClick={handleCopy}
+          {...props}
+        >
+          {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
+          <span className="sr-only">{t("Copy")}</span>
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{t("Copy")}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 
   const handleCopy = async () => {
@@ -63,20 +87,7 @@ export function CopyButton({
     }
   };
 
-  return (
-    <Button
-      variant={variant}
-      size={size}
-      className={cn(
-        !children &&
-          "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3",
-        className
-      )}
-      title={t("Copy")}
-      onClick={handleCopy}
-      {...props}
-    >
-      {children ? children(hasCopied) : defaultChildren(hasCopied)}
-    </Button>
-  );
+  return children
+    ? children(hasCopied, handleCopy)
+    : renderDefaultButton(hasCopied);
 }

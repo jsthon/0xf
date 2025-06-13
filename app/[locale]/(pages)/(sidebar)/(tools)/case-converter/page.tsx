@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Case } from "change-case-all";
 import { useTranslations } from "next-intl";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -97,9 +98,8 @@ export default function CaseConverterPage() {
             id="text-input"
             value={inputText}
             placeholder={t("Placeholders.Input")}
-            spellCheck={false}
-            autoComplete="off"
             onChange={handleInputChange}
+            {...plainTypingProps}
           />
         </div>
 
@@ -128,8 +128,6 @@ export default function CaseConverterPage() {
                     id={`format-${format}`}
                     className="pr-9"
                     value={convertedText[format] || ""}
-                    spellCheck={false}
-                    autoComplete="off"
                     readOnly
                   />
                   <div className="absolute inset-y-0 right-1 flex items-center">
