@@ -5,6 +5,7 @@ import { CheckIcon, ClipboardIcon, RefreshCw } from "lucide-react";
 import { customAlphabet } from "nanoid";
 import { useTranslations } from "next-intl";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -216,48 +217,44 @@ export default function PasswordGeneratorPage() {
             <Textarea
               id="password"
               value={password}
-              spellCheck={false}
               onChange={handlePasswordChange}
               className="h-24 font-mono break-all md:text-xl"
+              {...plainTypingProps}
             />
           </div>
 
-          <div className="flex gap-4">
-            <CopyButton
-              variant="default"
-              size="default"
-              className="flex-1"
-              value={password}
-            >
-              {(hasCopied) => (
-                <>
+          <div className="flex items-center gap-4">
+            <CopyButton value={password}>
+              {(hasCopied, handleCopy) => (
+                <Button className="flex-1" onClick={handleCopy}>
                   {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
                   {tCopy("Copy")}
-                </>
+                </Button>
               )}
             </CopyButton>
             <Button
               variant="outline"
               className="flex-1"
               onClick={handleGeneratePassword}
-              title={t("Labels.Refresh")}
             >
               <RefreshCw className="size-4" />
-              {t("Labels.Refresh")}
+              {t("Labels.Regenerate")}
             </Button>
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <Label htmlFor="character-length" className="text-base">
+            <Label htmlFor="character-length" className="text-lg">
               {t("Labels.CharacterLength")}
             </Label>
             <Input
               id="character-length"
+              type="number"
               value={options.length}
               onChange={handleLengthInputChange}
-              className="h-8 w-16 text-center text-base font-medium"
+              className="w-20 text-center font-medium md:text-base"
+              autoComplete="off"
             />
           </div>
           <Slider
@@ -270,7 +267,7 @@ export default function PasswordGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-base">{t("Labels.CharacterTypes")}</Label>
+          <Label className="text-lg">{t("Labels.CharacterTypes")}</Label>
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
             <div className="flex items-center gap-2">
               <Checkbox
@@ -278,7 +275,7 @@ export default function PasswordGeneratorPage() {
                 checked={options.includeUppercase}
                 onCheckedChange={handleToggleUppercase}
               />
-              <Label htmlFor="uppercase" className="text-base">
+              <Label htmlFor="uppercase" className="text-lg">
                 ABC
               </Label>
             </div>
@@ -288,7 +285,7 @@ export default function PasswordGeneratorPage() {
                 checked={options.includeLowercase}
                 onCheckedChange={handleToggleLowercase}
               />
-              <Label htmlFor="lowercase" className="text-base">
+              <Label htmlFor="lowercase" className="text-lg">
                 abc
               </Label>
             </div>
@@ -298,7 +295,7 @@ export default function PasswordGeneratorPage() {
                 checked={options.includeNumbers}
                 onCheckedChange={handleToggleNumbers}
               />
-              <Label htmlFor="numbers" className="text-base">
+              <Label htmlFor="numbers" className="text-lg">
                 123
               </Label>
             </div>
@@ -308,7 +305,7 @@ export default function PasswordGeneratorPage() {
                 checked={options.includeSymbols}
                 onCheckedChange={handleToggleSymbols}
               />
-              <Label htmlFor="symbols" className="text-base">
+              <Label htmlFor="symbols" className="text-lg">
                 !@#
               </Label>
             </div>

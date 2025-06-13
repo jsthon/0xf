@@ -5,11 +5,17 @@ import { loremIpsum } from "lorem-ipsum";
 import { RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { CopyButton } from "@/components/copy-button";
 
 // Options interface for Lorem Ipsum generation
@@ -183,17 +189,23 @@ export default function LoremIpsumPage() {
             <Label htmlFor="text" className="text-lg">
               {t("Labels.Text")}
             </Label>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={handleGenerate}
-                className="size-8"
-                title={t("Labels.Generate")}
-              >
-                <RefreshCw className="size-4" />
-                <span className="sr-only">{t("Labels.Generate")}</span>
-              </Button>
+            <div className="flex items-center gap-2">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={handleGenerate}
+                    className="size-8"
+                  >
+                    <RefreshCw className="size-4" />
+                    <span className="sr-only">{t("Labels.Regenerate")}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("Labels.Regenerate")}</p>
+                </TooltipContent>
+              </Tooltip>
               <CopyButton
                 value={text}
                 variant="outline"
@@ -206,6 +218,7 @@ export default function LoremIpsumPage() {
             value={text}
             onChange={handleTextChange}
             className="h-64"
+            {...plainTypingProps}
           />
         </div>
 

@@ -9,6 +9,7 @@ import {
   encodeCharacters,
   EscapeType,
 } from "@/lib/character";
+import { plainTypingProps } from "@/lib/props/typing";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -291,9 +292,8 @@ export default function CharacterEscapePage() {
           </div>
           <Textarea
             id="input"
-            className="h-full max-h-[400px] min-h-[100px] resize-none font-mono"
+            className="h-full max-h-[400px] min-h-[100px] resize-none font-mono break-all"
             value={inputText}
-            spellCheck={false}
             onChange={handleInputChange}
             placeholder={
               isAutoDetect
@@ -302,6 +302,7 @@ export default function CharacterEscapePage() {
                   ? t("Placeholders.Input.Decode")
                   : t("Placeholders.Input.Encode")
             }
+            {...plainTypingProps}
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -324,9 +325,8 @@ export default function CharacterEscapePage() {
           </div>
           <Textarea
             id="output"
-            className="bg-muted/50 h-full max-h-[400px] min-h-[100px] resize-none font-mono"
+            className="bg-muted/50 dark:bg-muted/20 h-full max-h-[400px] min-h-[100px] resize-none font-mono break-all"
             value={outputText}
-            spellCheck={false}
             readOnly
             placeholder={
               isAutoDetect

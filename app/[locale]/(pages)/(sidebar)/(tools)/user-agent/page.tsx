@@ -6,6 +6,7 @@ import { UAParser, type IResult } from "ua-parser-js";
 import { Bots } from "ua-parser-js/extensions";
 import { isBot, isChromeFamily } from "ua-parser-js/helpers";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CopyButton } from "@/components/copy-button";
@@ -81,9 +82,9 @@ export default function UserAgentPage() {
             id="user-agent"
             className="h-40 font-mono sm:h-24"
             value={userAgent}
-            spellCheck={false}
             onChange={(e) => setUserAgent(e.target.value)}
             placeholder={t("Placeholders.Input")}
+            {...plainTypingProps}
           />
         </div>
 

@@ -100,7 +100,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(item.href as string));
                   }}
                 >
-                  <Icon name={item.icon || "circle"} />
+                  <Icon name={item.icon || "arrow-right"} />
                   {item.title}
                 </CommandItem>
               ))}

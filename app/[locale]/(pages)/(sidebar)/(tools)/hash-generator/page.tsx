@@ -3,6 +3,7 @@
 import { ChangeEvent, useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -232,9 +233,9 @@ export default function HashGeneratorPage() {
             <Textarea
               placeholder={t("Placeholders.Input")}
               value={inputText}
-              spellCheck={false}
               onChange={handleInputChange}
               className="h-32"
+              {...plainTypingProps}
             />
           ) : (
             <FileUpload

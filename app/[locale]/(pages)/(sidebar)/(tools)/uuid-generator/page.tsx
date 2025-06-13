@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -159,17 +160,23 @@ export default function UUIDGeneratorPage() {
             <Label htmlFor="uuids" className="text-lg">
               {t("Labels.Generated")}
             </Label>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={handleGenerate}
-                className="size-8"
-                title={t("Labels.Generate")}
-              >
-                <RefreshCw className="size-4" />
-                <span className="sr-only">{t("Labels.Generate")}</span>
-              </Button>
+            <div className="flex items-center gap-2">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={handleGenerate}
+                    className="size-8"
+                  >
+                    <RefreshCw className="size-4" />
+                    <span className="sr-only">{t("Labels.Regenerate")}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("Labels.Regenerate")}</p>
+                </TooltipContent>
+              </Tooltip>
               <CopyButton
                 value={uuids.join("\n")}
                 variant="outline"
@@ -180,8 +187,7 @@ export default function UUIDGeneratorPage() {
           <Textarea
             id="uuids"
             value={uuids.join("\n")}
-            spellCheck={false}
-            className="h-32 font-mono"
+            className="h-32 font-mono break-all"
             readOnly
           />
         </div>
@@ -215,6 +221,7 @@ export default function UUIDGeneratorPage() {
               value={options.quantity}
               onChange={handleQuantityChange}
               className="h-8 md:w-32"
+              autoComplete="off"
             />
           </div>
 
@@ -321,9 +328,10 @@ export default function UUIDGeneratorPage() {
                 </Label>
                 <Input
                   id="namespace"
+                  className="font-mono"
                   value={options.namespace}
                   onChange={handleNamespaceChange}
-                  className="font-mono"
+                  {...plainTypingProps}
                 />
 
                 <div className="flex flex-wrap gap-4">
@@ -351,6 +359,7 @@ export default function UUIDGeneratorPage() {
                   id="name"
                   value={options.name}
                   onChange={handleNameChange}
+                  {...plainTypingProps}
                 />
               </div>
             </>

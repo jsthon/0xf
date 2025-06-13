@@ -13,8 +13,8 @@
     "Labels": {
       "Input": "Input",
       "Output": "Output",
-      "Upload": "Upload File",
-      "Download": "Download File"
+      "Upload": "Upload",
+      "Download": "Download"
     },
     "Badges": {
       "Base64": "Base64",
@@ -154,7 +154,7 @@
     },
     "Labels": {
       "Password": "Password",
-      "Refresh": "Refresh",
+      "Regenerate": "Regenerate",
       "CharacterLength": "Character Length",
       "CharacterTypes": "Character Types"
     },
@@ -170,7 +170,7 @@
     },
     "Labels": {
       "Text": "Generated Text",
-      "Generate": "Generate",
+      "Regenerate": "Regenerate",
       "StartWithLorem": "Start with 'Lorem ipsum'",
       "RandomRange": "Random Range",
       "DisplayPTags": "Display '<p>' tags",
@@ -301,7 +301,7 @@
     },
     "Labels": {
       "Generated": "Generated UUIDs",
-      "Generate": "Generate",
+      "Regenerate": "Regenerate",
       "Version": "UUID Version",
       "Quantity": "Quantity",
       "Format": "Format",

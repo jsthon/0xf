@@ -5,6 +5,7 @@ import { CheckIcon, ClipboardIcon, Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { QRCodeCanvas } from "qrcode.react";
 
+import { plainTypingProps } from "@/lib/props/typing";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -164,25 +165,23 @@ export default function QRCodePage() {
             />
           </div>
 
-          <div className="flex gap-4">
-            <CopyButton
-              variant="outline"
-              size="default"
-              className="flex-1"
-              getValue={getCanvasBlob}
-            >
-              {(hasCopied) => (
-                <>
+          <div className="flex items-center gap-4">
+            <CopyButton getValue={getCanvasBlob}>
+              {(hasCopied, handleCopy) => (
+                <Button
+                  variant="outline"
+                  className="flex-1"
+                  onClick={handleCopy}
+                >
                   {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
                   {tCopy("Copy")}
-                </>
+                </Button>
               )}
             </CopyButton>
             <Button
               variant="outline"
               className="flex-1"
               onClick={downloadImage}
-              title={t("Labels.Download")}
             >
               <Download className="size-4" />
               {t("Labels.Download")}
@@ -207,9 +206,9 @@ export default function QRCodePage() {
                 <Textarea
                   placeholder={t("Placeholders.InputText")}
                   value={textData}
-                  spellCheck={false}
                   onChange={(e) => setTextData(e.target.value)}
                   className="h-40"
+                  {...plainTypingProps}
                 />
               </div>
             </TabsContent>
@@ -225,6 +224,7 @@ export default function QRCodePage() {
                     placeholder="SSID"
                     value={wifiData.ssid}
                     onChange={(e) => updateWifiData("ssid", e.target.value)}
+                    {...plainTypingProps}
                   />
                 </div>
 
@@ -286,6 +286,7 @@ export default function QRCodePage() {
                             e.target.value.toUpperCase()
                           )
                         }
+                        {...plainTypingProps}
                       />
                     </div>
 
@@ -299,6 +300,7 @@ export default function QRCodePage() {
                         onChange={(e) =>
                           updateWifiData("identity", e.target.value)
                         }
+                        {...plainTypingProps}
                       />
                     </div>
 
@@ -312,6 +314,7 @@ export default function QRCodePage() {
                         onChange={(e) =>
                           updateWifiData("anonymous_identity", e.target.value)
                         }
+                        {...plainTypingProps}
                       />
                     </div>
 
@@ -328,6 +331,7 @@ export default function QRCodePage() {
                             e.target.value.toUpperCase()
                           )
                         }
+                        {...plainTypingProps}
                       />
                     </div>
                   </>
@@ -336,7 +340,7 @@ export default function QRCodePage() {
             </TabsContent>
           </Tabs>
 
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex flex-1 flex-col gap-2">
               <Label htmlFor="foreground-color">
                 {t("Labels.ForegroundColor")}

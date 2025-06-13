@@ -10,6 +10,7 @@ import {
   getColorFormat,
   type ColorFormat,
 } from "@/lib/color-format";
+import { plainTypingProps } from "@/lib/props/typing";
 import { Input } from "@/components/ui/input";
 
 import { ColorPicker } from "./color-picker";
@@ -76,10 +77,9 @@ export function ColorInput({
       <Input
         className="pl-9 font-mono"
         value={color}
-        spellCheck={false}
-        autoComplete="off"
         onChange={handleInputChange}
         onBlur={handleInputBlur}
+        {...plainTypingProps}
         {...props}
       />
     </div>
