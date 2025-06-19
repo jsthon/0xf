@@ -1,5 +1,6 @@
 {
   "MobileNav": {
+    "Menu": "菜单",
     "ToggleMenu": "切换菜单"
   },
   "LocaleSwitcher": {
@@ -12,11 +13,11 @@
     "DarkTheme": "深色主题"
   },
   "CommandMenu": {
-    "SearchText": "搜索所有内容...",
-    "SearchTextShort": "搜索...",
+    "Search": "搜索",
+    "SearchPlaceholder": "搜索所有内容...",
     "CommandPlaceholder": "输入命令或搜索...",
     "Empty": "未找到结果",
-    "HeaderHeading": "链接"
+    "LinksHeading": "链接"
   },
   "CopyButton": {
     "Copy": "复制",

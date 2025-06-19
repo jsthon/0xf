@@ -76,20 +76,26 @@ export function CommandMenu({ ...props }: DialogProps) {
         {...props}
       >
         <SearchIcon className="size-4 opacity-50" />
-        <span className="hidden md:inline-flex">{t("SearchText")}</span>
-        <span className="inline-flex md:hidden">{t("SearchTextShort")}</span>
+        <span className="hidden md:inline-flex">{t("SearchPlaceholder")}</span>
+        <span className="inline-flex md:hidden">{t("Search")}</span>
         {isMounted && (
           <kbd className="bg-background pointer-events-none absolute top-1.5 right-2 hidden h-5.5 items-center gap-1 rounded-sm border px-1.5 font-sans text-[10px] font-medium select-none md:flex">
             {isAppleDevice ? "⌘" : "Ctrl"} K
           </kbd>
         )}
       </Button>
-      <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandDialog
+        className="top-[15%] translate-y-0"
+        title={t("Search")}
+        description={t("SearchPlaceholder")}
+        open={open}
+        onOpenChange={setOpen}
+      >
         <CommandInput placeholder={t("CommandPlaceholder")} />
-        <CommandList>
+        <CommandList className="max-h-[350px]">
           <CommandEmpty>{t("Empty")}</CommandEmpty>
 
-          <CommandGroup heading={t("HeaderHeading")}>
+          <CommandGroup heading={t("LinksHeading")}>
             {header
               .filter((item) => !item.disabled && !item.external)
               .map((item) => (

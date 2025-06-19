@@ -11,7 +11,14 @@ import {
 } from "@/hooks/use-navigation-messages";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -36,6 +43,10 @@ export function MobileNav() {
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
+        <DrawerHeader className="sr-only">
+          <DrawerTitle>{t("Menu")}</DrawerTitle>
+          <DrawerDescription>{t("ToggleMenu")}</DrawerDescription>
+        </DrawerHeader>
         <div className="overflow-auto p-6">
           <div className="flex flex-col gap-3">
             {header.map((item) => {
