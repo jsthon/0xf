@@ -1,5 +1,6 @@
 {
   "MobileNav": {
+    "Menu": "Menu",
     "ToggleMenu": "Toggle menu"
   },
   "LocaleSwitcher": {
@@ -12,11 +13,11 @@
     "DarkTheme": "Dark Theme"
   },
   "CommandMenu": {
-    "SearchText": "Search everything...",
-    "SearchTextShort": "Search...",
+    "Search": "Search",
+    "SearchPlaceholder": "Search everything...",
     "CommandPlaceholder": "Type a command or search...",
     "Empty": "No results found.",
-    "HeaderHeading": "Links"
+    "LinksHeading": "Links"
   },
   "CopyButton": {
     "Copy": "Copy",
