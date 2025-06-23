@@ -34,6 +34,9 @@
     "Placeholder": "Select timezone",
     "Empty": "No timezone found."
   },
+  "DateTimePicker": {
+    "SelectDate": "Select date"
+  },
   "FileUpload": {
     "PrimaryText": "Select or drag and drop your files here",
     "SecondaryText": "Any file type",

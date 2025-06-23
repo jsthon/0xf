@@ -34,6 +34,9 @@
     "Placeholder": "选择时区",
     "Empty": "未找到时区"
   },
+  "DateTimePicker": {
+    "SelectDate": "选择日期"
+  },
   "FileUpload": {
     "PrimaryText": "选择或拖放文件",
     "SecondaryText": "不限文件类型",

@@ -342,13 +342,15 @@
                 "keywords": ["Degrees", "Radians", "Trigonometry"]
               },
               {
-                "title": "ETA Calculator",
-                "href": "/eta-calculator",
-                "disabled": true,
+                "title": "Time Interval",
+                "href": "/time-interval",
+                "icon": "hourglass",
                 "keywords": [
                   "Estimated Time",
                   "Arrival Time",
-                  "Time Prediction"
+                  "ETA Calculator",
+                  "Time Difference",
+                  "Time Duration"
                 ]
               }
             ]
