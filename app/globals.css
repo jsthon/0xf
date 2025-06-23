@@ -24,8 +24,6 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-selection-foreground: var(--selection-foreground);
-  --color-selection: var(--selection);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -48,8 +46,6 @@
   --muted-foreground: oklch(0.552 0.016 285.938);
   --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
-  --selection: oklch(51.51% 0.2399 257.85);
-  --selection-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
@@ -81,6 +77,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
   html {
     @apply scroll-smooth;
   }
@@ -89,50 +88,20 @@
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
   }
-
-  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
-    [data-wrapper] {
-      @apply min-[1800px]:border-t;
-    }
-  }
-
-  /* selection */
-  ::selection {
-    @apply bg-selection text-selection-foreground;
-  }
-
-  /* scrollbar */
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
-    border-radius: 5px;
-  }
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--border)) transparent;
-  }
 }
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .no-password-reveal::-ms-reveal {
     display: none;
-  }
-
-  .border-grid {
-    @apply border-border/80 dark:border-border;
   }
 
   .container-wrapper {

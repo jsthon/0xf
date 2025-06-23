@@ -123,10 +123,11 @@ const commonThemeStyles = {
   ".cm-activeLine, .cm-activeLineGutter": {
     backgroundColor: "color-mix(in oklab, var(--ring) 20%, transparent)",
   },
+  // selection styles
   "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection":
     {
-      color: "var(--selection-foreground)",
-      backgroundColor: "var(--selection)",
+      color: "var(--primary-foreground)",
+      backgroundColor: "var(--primary)",
     },
   "& .cm-collapsedLines": {
     display: "flex",
