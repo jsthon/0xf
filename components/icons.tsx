@@ -9,6 +9,7 @@ import {
   FileDiff,
   FileMinus,
   FileSpreadsheet,
+  Hourglass,
   Keyboard,
   KeyRound,
   LetterText,
@@ -47,6 +48,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   braces: Braces,
   keyboard: Keyboard,
   compass: Compass,
+  hourglass: Hourglass,
 };
 
 export const CustomIcons = {

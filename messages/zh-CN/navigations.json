@@ -300,9 +300,9 @@
                 "keywords": ["度", "弧度", "三角函数"]
               },
               {
-                "title": "预计到达时间计算器",
-                "href": "/eta-calculator",
-                "disabled": true,
+                "title": "时间间隔计算",
+                "href": "/time-interval",
+                "icon": "hourglass",
                 "keywords": ["预计时间", "到达时间", "时间预测"]
               }
             ]

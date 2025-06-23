@@ -553,5 +553,39 @@
       "keyCode": "[已弃用] 返回按键的未修改值的系统相关编码。",
       "charCode": "[已弃用] 返回按键生成字符的 Unicode 编码，仅用于 keypress 事件。"
     }
+  },
+  "TimeIntervalPage": {
+    "Meta": {
+      "Title": "时间间隔计算",
+      "Description": "计算两个日期时间之间的时间间隔，支持多种显示格式。"
+    },
+    "Labels": {
+      "Format": "显示格式",
+      "Start": "开始时间",
+      "End": "结束时间",
+      "Interval": "时间间隔"
+    },
+    "Placeholders": {
+      "Interval": "请选择开始和结束时间"
+    },
+    "Formats": {
+      "auto": "自动",
+      "years": "年",
+      "months": "月",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒",
+      "milliseconds": "毫秒"
+    },
+    "Units": {
+      "years": "{count, plural, other {#年}}",
+      "months": "{count, plural, other {#月}}",
+      "days": "{count, plural, other {#天}}",
+      "hours": "{count, plural, other {#时}}",
+      "minutes": "{count, plural, other {#分}}",
+      "seconds": "{count, plural, other {#秒}}",
+      "milliseconds": "{count, plural, other {#毫秒}}"
+    }
   }
 }
