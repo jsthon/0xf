@@ -579,13 +579,13 @@
       "milliseconds": "Milliseconds"
     },
     "Units": {
-      "years": "{count, plural, other {#y}}",
-      "months": "{count, plural, other {#mo}}",
-      "days": "{count, plural, other {#d}}",
-      "hours": "{count, plural, other {#h}}",
-      "minutes": "{count, plural, other {#m}}",
-      "seconds": "{count, plural, other {#s}}",
-      "milliseconds": "{count, plural, other {#ms}}"
+      "years": "{count, plural, =1 {1 year} other {{count} years}}",
+      "months": "{count, plural, =1 {1 month} other {{count} months}}",
+      "days": "{count, plural, =1 {1 day} other {{count} days}}",
+      "hours": "{count, plural, =1 {1 hour} other {{count} hours}}",
+      "minutes": "{count, plural, =1 {1 minute} other {{count} minutes}}",
+      "seconds": "{count, plural, =1 {1 second} other {{count} seconds}}",
+      "milliseconds": "{count, plural, =1 {1 millisecond} other {{count} milliseconds}}"
     }
   }
 }

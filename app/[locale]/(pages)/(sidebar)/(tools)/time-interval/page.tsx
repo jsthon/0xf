@@ -5,10 +5,10 @@ import { formatISO9075 } from "date-fns";
 import { useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { DateTimePicker } from "@/components/datetime-picker";
+import { NumberInput } from "@/components/number-input";
 
 // Display formats
 const DISPLAY_FORMATS = [
@@ -46,7 +46,7 @@ const MS_PER_UNIT = {
 const TIME_FIELD_MAX_VALUES = {
   years: undefined,
   months: 11,
-  days: undefined,
+  days: 31,
   hours: 23,
   minutes: 59,
   seconds: 59,
@@ -55,6 +55,9 @@ const TIME_FIELD_MAX_VALUES = {
 const AUTO_FORMAT_FIELDS = Object.keys(TIME_FIELD_MAX_VALUES) as Array<
   keyof typeof TIME_FIELD_MAX_VALUES
 >;
+
+// Number of decimal places for display
+const DECIMAL_PLACES = 4;
 
 // Calculate time interval between two dates
 const calculateTimeInterval = (
@@ -142,7 +145,11 @@ const getIntervalSingleUnitValue = (
   format: DisplayFormat
 ): number => {
   if (format === "auto") return 0;
-  return interval.totalMilliseconds / MS_PER_UNIT[format as UnitFormat];
+  return Number(
+    (interval.totalMilliseconds / MS_PER_UNIT[format as UnitFormat]).toFixed(
+      DECIMAL_PLACES
+    )
+  );
 };
 
 // Create interval from single unit value
@@ -197,40 +204,36 @@ const IntervalEditor = ({
     return (
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         {AUTO_FORMAT_FIELDS.map((field) => (
-          <div key={field} className="flex flex-1 flex-col gap-3">
-            <Label htmlFor={`${field}-input`}>{t(`Formats.${field}`)}</Label>
-            <Input
-              id={`${field}-input`}
-              type="number"
-              min="0"
-              max={TIME_FIELD_MAX_VALUES[field]}
-              step={1}
-              value={interval[field]}
-              onChange={(e) =>
-                updateTimeField(field, parseInt(e.target.value) || 0)
-              }
-            />
-          </div>
+          <NumberInput
+            key={field}
+            id={`${field}-input`}
+            value={interval[field]}
+            min={0}
+            max={TIME_FIELD_MAX_VALUES[field]}
+            suffix={t(`Units.${field}`, { count: interval[field] }).replace(
+              String(interval[field]),
+              ""
+            )}
+            onValueChange={(value) => updateTimeField(field, value ?? 0)}
+          />
         ))}
       </div>
     );
   }
 
   // render single unit format
+  const value = getIntervalSingleUnitValue(interval, format);
   return (
-    <div className="flex flex-col gap-3">
-      <Label htmlFor={`${format}-input`}>{t(`Formats.${format}`)}</Label>
-      <Input
-        id={`${format}-input`}
-        type="number"
-        min="0"
-        step="1"
-        value={getIntervalSingleUnitValue(interval, format)}
-        onChange={(e) =>
-          handleSingleUnitChange(parseFloat(e.target.value) || 0)
-        }
-      />
-    </div>
+    <NumberInput
+      key={format}
+      id={`${format}-input`}
+      className="w-fit"
+      value={value}
+      min={0}
+      suffix={t(`Units.${format}`, { count: value }).replace(String(value), "")}
+      decimalScale={DECIMAL_PLACES}
+      onValueChange={(value) => handleSingleUnitChange(value ?? 0)}
+    />
   );
 };
 
@@ -254,6 +257,7 @@ const formatIntervalBadge = (
 
 // Main time interval calculator page
 export default function TimeIntervalPage() {
+  const [isMounted, setIsMounted] = useState(false);
   const [startDateTime, setStartDateTime] = useState<Date | undefined>();
   const [endDateTime, setEndDateTime] = useState<Date | undefined>();
   const [displayFormat, setDisplayFormat] = useState<DisplayFormat>("auto");
@@ -271,6 +275,7 @@ export default function TimeIntervalPage() {
 
     setStartDateTime(today);
     setEndDateTime(tomorrow);
+    setIsMounted(true);
   }, []);
 
   // calculate current time interval from datetime inputs
@@ -284,12 +289,17 @@ export default function TimeIntervalPage() {
     (
       baseStartDateTime: Date | undefined,
       interval: TimeInterval
-    ): Date | null => {
-      if (!baseStartDateTime) return null;
+    ): Date | undefined => {
+      if (!baseStartDateTime) return;
 
-      return displayFormat === "auto"
-        ? addTimeInterval(baseStartDateTime, interval)
-        : new Date(baseStartDateTime.getTime() + interval.totalMilliseconds);
+      const endDateTime =
+        displayFormat === "auto"
+          ? addTimeInterval(baseStartDateTime, interval)
+          : new Date(baseStartDateTime.getTime() + interval.totalMilliseconds);
+
+      if (isNaN(endDateTime.getTime())) return;
+
+      return endDateTime;
     },
     [displayFormat]
   );
@@ -373,9 +383,11 @@ export default function TimeIntervalPage() {
               t={t}
             />
           ) : (
-            <div className="text-muted-foreground">
-              {t("Placeholders.Interval")}
-            </div>
+            isMounted && (
+              <div className="text-muted-foreground">
+                {t("Placeholders.Interval")}
+              </div>
+            )
           )}
         </div>
       </div>
