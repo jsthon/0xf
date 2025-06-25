@@ -18,6 +18,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { CopyButton } from "@/components/copy-button";
+import { NumberInput } from "@/components/number-input";
 
 import {
   GenerateUUIDs,
@@ -83,11 +84,10 @@ export default function UUIDGeneratorPage() {
   };
 
   // Quantity change handler
-  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
-    if (!isNaN(value)) {
-      updateOptions({ quantity: Math.min(Math.max(1, value), 1000) });
-    }
+  const handleQuantityChange = (value: number | undefined) => {
+    if (value === undefined) return;
+
+    updateOptions({ quantity: value });
   };
 
   // Hyphens toggle handler
@@ -213,15 +213,13 @@ export default function UUIDGeneratorPage() {
             <Label htmlFor="quantity" className="text-lg">
               {t("Labels.Quantity")}
             </Label>
-            <Input
+            <NumberInput
               id="quantity"
-              type="number"
+              className="w-24"
+              value={options.quantity}
               min={1}
               max={1000}
-              value={options.quantity}
-              onChange={handleQuantityChange}
-              className="h-8 md:w-32"
-              autoComplete="off"
+              onValueChange={handleQuantityChange}
             />
           </div>
 

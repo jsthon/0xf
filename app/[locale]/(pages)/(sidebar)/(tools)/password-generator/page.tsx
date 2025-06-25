@@ -8,11 +8,11 @@ import { useTranslations } from "next-intl";
 import { plainTypingProps } from "@/lib/props/typing";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Textarea } from "@/components/ui/textarea";
 import { CopyButton } from "@/components/copy-button";
+import { NumberInput } from "@/components/number-input";
 
 // Character sets for password generation
 const UPPERCASE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -144,19 +144,12 @@ export default function PasswordGeneratorPage() {
   };
 
   // Handle character length input
-  const handleLengthInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
-
-    if (isNaN(value)) return;
-
-    const newLength = Math.max(
-      MIN_CHARACTER_LENGTH,
-      Math.min(MAX_CHARACTER_LENGTH, value)
-    );
+  const handleLengthInputChange = (value: number | undefined) => {
+    if (value === undefined) return;
 
     updateOptionsAndGeneratePassword({
       ...options,
-      length: newLength,
+      length: value,
     });
   };
 
@@ -248,13 +241,14 @@ export default function PasswordGeneratorPage() {
             <Label htmlFor="character-length" className="text-lg">
               {t("Labels.CharacterLength")}
             </Label>
-            <Input
+
+            <NumberInput
               id="character-length"
-              type="number"
+              className="w-20"
               value={options.length}
-              onChange={handleLengthInputChange}
-              className="w-20 text-center font-medium md:text-base"
-              autoComplete="off"
+              min={MIN_CHARACTER_LENGTH}
+              max={MAX_CHARACTER_LENGTH}
+              onValueChange={handleLengthInputChange}
             />
           </div>
           <Slider

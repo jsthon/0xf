@@ -579,13 +579,13 @@
       "milliseconds": "毫秒"
     },
     "Units": {
-      "years": "{count, plural, other {#年}}",
-      "months": "{count, plural, other {#月}}",
-      "days": "{count, plural, other {#天}}",
-      "hours": "{count, plural, other {#时}}",
-      "minutes": "{count, plural, other {#分}}",
-      "seconds": "{count, plural, other {#秒}}",
-      "milliseconds": "{count, plural, other {#毫秒}}"
+      "years": "{count, plural, other {{count} 年}}",
+      "months": "{count, plural, other {{count} 月}}",
+      "days": "{count, plural, other {{count} 天}}",
+      "hours": "{count, plural, other {{count} 小时}}",
+      "minutes": "{count, plural, other {{count} 分钟}}",
+      "seconds": "{count, plural, other {{count} 秒}}",
+      "milliseconds": "{count, plural, other {{count} 毫秒}}"
     }
   }
 }
