@@ -139,17 +139,6 @@ export default function QRCodePage() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 pb-8">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-          {t("Meta.Title")}
-        </h1>
-        {t.has("Meta.Description") && (
-          <p className="text-muted-foreground text-base">
-            {t("Meta.Description")}
-          </p>
-        )}
-      </div>
-
       <div className="grid flex-1 gap-6 md:gap-8 lg:grid-cols-2">
         <div className="flex flex-col gap-6 md:gap-8">
           <Label className="text-lg">{t("Labels.Generated")}</Label>

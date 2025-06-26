@@ -1,6 +1,11 @@
+import { use } from "react";
 import { Metadata } from "next";
-import { Locale } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { Locale, useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
+import { PageIntro } from "@/components/page-intro";
+
+const META_NAMESPACE = "CaseConverterPage.Meta";
 
 export async function generateMetadata({
   params,
@@ -10,7 +15,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: "CaseConverterPage.Meta",
+    namespace: META_NAMESPACE,
   });
 
   return {
@@ -21,8 +26,22 @@ export async function generateMetadata({
 
 export default function CaseConverterLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: Locale }>;
 }>) {
-  return <>{children}</>;
+  const { locale } = use(params);
+
+  // enable static rendering
+  setRequestLocale(locale);
+
+  const t = useTranslations(META_NAMESPACE);
+
+  return (
+    <>
+      <PageIntro title={t("Title")} description={t("Description")} />
+      {children}
+    </>
+  );
 }

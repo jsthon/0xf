@@ -323,17 +323,6 @@ export default function DataFormatConverterPage() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 pb-8">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-          {t("Meta.Title")}
-        </h1>
-        {t.has("Meta.Description") && (
-          <p className="text-muted-foreground text-base">
-            {t("Meta.Description")}
-          </p>
-        )}
-      </div>
-
       <div className="flex items-center gap-4 md:gap-x-6">
         <div className="flex items-center gap-2">
           <Label htmlFor="input-format">{t("Labels.InputFormat")}</Label>

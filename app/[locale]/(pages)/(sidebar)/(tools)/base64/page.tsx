@@ -197,17 +197,6 @@ export default function Base64Page() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 pb-8">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-          {t("Meta.Title")}
-        </h1>
-        {t.has("Meta.Description") && (
-          <p className="text-muted-foreground text-base">
-            {t("Meta.Description")}
-          </p>
-        )}
-      </div>
-
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
         <Tooltip>
           <div className="flex items-center gap-2">

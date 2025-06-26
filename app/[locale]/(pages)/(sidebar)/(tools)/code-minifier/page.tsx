@@ -145,17 +145,6 @@ export default function CodeMinifierPage() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 pb-8">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-          {t("Meta.Title")}
-        </h1>
-        {t.has("Meta.Description") && (
-          <p className="text-muted-foreground text-base">
-            {t("Meta.Description")}
-          </p>
-        )}
-      </div>
-
       <div className="flex flex-wrap justify-between gap-4 pb-6 md:pb-8">
         <div className="flex items-center gap-4 md:gap-x-6">
           <Select value={language} onValueChange={setLanguage}>

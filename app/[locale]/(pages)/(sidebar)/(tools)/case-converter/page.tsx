@@ -77,17 +77,6 @@ export default function CaseConverterPage() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 pb-8">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-          {t("Meta.Title")}
-        </h1>
-        {t.has("Meta.Description") && (
-          <p className="text-muted-foreground text-base">
-            {t("Meta.Description")}
-          </p>
-        )}
-      </div>
-
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <Label htmlFor="text-input" className="text-lg">
