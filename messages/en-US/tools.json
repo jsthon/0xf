@@ -587,5 +587,72 @@
       "seconds": "{count, plural, =1 {1 second} other {{count} seconds}}",
       "milliseconds": "{count, plural, =1 {1 millisecond} other {{count} milliseconds}}"
     }
+  },
+  "SvgOptimizerPage": {
+    "Meta": {
+      "Title": "SVG Optimizer",
+      "Description": "Clean and compress SVG files by removing redundant elements and attributes."
+    },
+    "Labels": {
+      "Input": "Input",
+      "Preview": "Preview",
+      "Code": "Code",
+      "Upload": "Upload",
+      "Download": "Download",
+      "ShowOriginal": "Show original"
+    },
+    "Options": {
+      "floatPrecision": "Number Precision",
+      "pretty": "Prettify markup",
+      "removeXMLNS": "Remove xmlns",
+      "removeRasterImages": "Remove raster images",
+      "removeDimensions": "Remove width and height",
+      "removeViewBox": "Remove viewBox",
+      "convertStyleToAttrs": "Style to attributes",
+      "reusePaths": "Reuse duplicate paths",
+      "removeScripts": "Remove scripts",
+      "removeOffCanvasPaths": "Remove off-canvas paths",
+      "removeDoctype": "Remove doctype",
+      "removeXMLProcInst": "Remove XML instructions",
+      "removeComments": "Remove comments",
+      "removeMetadata": "Remove metadata",
+      "removeEditorsNSData": "Remove editor data",
+      "cleanupAttrs": "Clean up attributes",
+      "mergeStyles": "Merge styles",
+      "inlineStyles": "Inline styles",
+      "minifyStyles": "Minify styles",
+      "cleanupIds": "Clean up IDs",
+      "removeUselessDefs": "Remove unused defs",
+      "cleanupNumericValues": "Clean up numbers",
+      "convertColors": "Minify colors",
+      "removeUnknownsAndDefaults": "Remove unknowns and defaults",
+      "removeNonInheritableGroupAttrs": "Remove unneeded group attrs",
+      "removeUselessStrokeAndFill": "Remove useless stroke and fill",
+      "cleanupEnableBackground": "Remove enable-background",
+      "removeHiddenElems": "Remove hidden elements",
+      "removeEmptyText": "Remove empty text",
+      "convertShapeToPath": "Convert shapes to paths",
+      "convertEllipseToCircle": "Convert ellipse to circle",
+      "moveElemsAttrsToGroup": "Move attrs to group",
+      "moveGroupAttrsToElems": "Move group attrs to elements",
+      "collapseGroups": "Collapse useless groups",
+      "convertPathData": "Convert path data",
+      "convertTransform": "Convert transforms",
+      "removeEmptyAttrs": "Remove empty attrs",
+      "removeEmptyContainers": "Remove empty containers",
+      "mergePaths": "Merge paths",
+      "removeUnusedNS": "Remove unused namespaces",
+      "sortAttrs": "Sort attributes",
+      "sortDefsChildren": "Sort defs children",
+      "removeTitle": "Remove title",
+      "removeDesc": "Remove desc"
+    },
+    "Badges": {
+      "Invalid": "Invalid SVG",
+      "Original": "Original"
+    },
+    "Placeholders": {
+      "Input": "Paste SVG code"
+    }
   }
 }

@@ -12,6 +12,7 @@ import {
   Hourglass,
   Keyboard,
   KeyRound,
+  Layers,
   LetterText,
   Link2,
   LucideIcon,
@@ -49,6 +50,7 @@ const LucideIcons: Record<string, LucideIcon> = {
   keyboard: Keyboard,
   compass: Compass,
   hourglass: Hourglass,
+  layers: Layers,
 };
 
 export const CustomIcons = {

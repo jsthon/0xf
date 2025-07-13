@@ -243,7 +243,7 @@
               {
                 "title": "SVG Optimizer",
                 "href": "/svg-optimizer",
-                "disabled": true,
+                "icon": "layers",
                 "keywords": ["SVG Minifier", "SVG Cleanup", "SVG Compression"]
               },
               {
