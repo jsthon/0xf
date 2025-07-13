@@ -587,5 +587,72 @@
       "seconds": "{count, plural, other {{count} 秒}}",
       "milliseconds": "{count, plural, other {{count} 毫秒}}"
     }
+  },
+  "SvgOptimizerPage": {
+    "Meta": {
+      "Title": "SVG 优化",
+      "Description": "整理和压缩 SVG 文件，移除冗余的元素和属性。"
+    },
+    "Labels": {
+      "Input": "输入",
+      "Preview": "预览",
+      "Code": "代码",
+      "Upload": "上传",
+      "Download": "下载",
+      "ShowOriginal": "显示原始"
+    },
+    "Options": {
+      "floatPrecision": "数值精度",
+      "pretty": "代码格式化",
+      "removeXMLNS": "移除 xmlns",
+      "removeRasterImages": "移除内嵌图片",
+      "removeDimensions": "移除 width 和 height",
+      "removeViewBox": "移除 viewBox",
+      "convertStyleToAttrs": "样式转为属性",
+      "reusePaths": "复用重复路径",
+      "removeScripts": "移除脚本",
+      "removeOffCanvasPaths": "移除画布外路径",
+      "removeDoctype": "移除 doctype",
+      "removeXMLProcInst": "移除 XML 声明",
+      "removeComments": "移除注释",
+      "removeMetadata": "移除 metadata",
+      "removeEditorsNSData": "移除编辑器数据",
+      "cleanupAttrs": "清理属性",
+      "mergeStyles": "合并样式",
+      "inlineStyles": "内联样式",
+      "minifyStyles": "压缩样式",
+      "cleanupIds": "清理 ID",
+      "removeUselessDefs": "移除未使用的 defs",
+      "cleanupNumericValues": "清理数值",
+      "convertColors": "压缩颜色",
+      "removeUnknownsAndDefaults": "移除未知项和默认值",
+      "removeNonInheritableGroupAttrs": "移除无效的组属性",
+      "removeUselessStrokeAndFill": "移除无效的描边和填充",
+      "cleanupEnableBackground": "移除 enable-background",
+      "removeHiddenElems": "移除隐藏元素",
+      "removeEmptyText": "移除空文本",
+      "convertShapeToPath": "将形状转换为路径",
+      "convertEllipseToCircle": "ellipse 转为 circle",
+      "moveElemsAttrsToGroup": "移动元素属性到组",
+      "moveGroupAttrsToElems": "移动组属性到元素",
+      "collapseGroups": "折叠无用的组",
+      "convertPathData": "转换路径数据",
+      "convertTransform": "转换 transform 属性",
+      "removeEmptyAttrs": "移除空属性",
+      "removeEmptyContainers": "移除空容器元素",
+      "mergePaths": "合并路径",
+      "removeUnusedNS": "移除未使用的命名空间",
+      "sortAttrs": "排序属性",
+      "sortDefsChildren": "排序 defs 子元素",
+      "removeTitle": "移除 title",
+      "removeDesc": "移除 desc"
+    },
+    "Badges": {
+      "Invalid": "无效 SVG",
+      "Original": "原始"
+    },
+    "Placeholders": {
+      "Input": "输入 SVG 代码"
+    }
   }
 }

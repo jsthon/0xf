@@ -217,10 +217,10 @@
             "title": "Web开发",
             "items": [
               {
-                "title": "SVG优化器",
+                "title": "SVG 优化",
                 "href": "/svg-optimizer",
-                "disabled": true,
-                "keywords": ["SVG压缩", "SVG清理", "SVG压缩"]
+                "icon": "layers",
+                "keywords": ["SVG压缩", "SVG清理", "SVG格式化"]
               },
               {
                 "title": "图片Base64",
