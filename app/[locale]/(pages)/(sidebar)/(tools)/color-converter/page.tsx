@@ -100,7 +100,7 @@ export default function ColorConverterPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.Output")}</Label>
+          <div className="text-lg font-medium">{t("Labels.Output")}</div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {COLOR_FORMATS.map((format) => (

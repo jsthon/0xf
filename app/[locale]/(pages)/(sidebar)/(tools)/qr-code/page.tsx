@@ -141,10 +141,13 @@ export default function QRCodePage() {
     <>
       <div className="grid flex-1 gap-6 md:gap-8 lg:grid-cols-2">
         <div className="flex flex-col gap-6 md:gap-8">
-          <Label className="text-lg">{t("Labels.Generated")}</Label>
+          <Label htmlFor="qr-code" className="text-lg">
+            {t("Labels.Generated")}
+          </Label>
 
           <div className="flex justify-center">
             <QRCodeCanvas
+              id="qr-code"
               ref={canvasRef}
               value={getQRCodeValue()}
               size={200}
@@ -191,8 +194,11 @@ export default function QRCodePage() {
 
             <TabsContent value="text">
               <div className="flex flex-col gap-4">
-                <Label className="text-lg">{t("Labels.InputText")}</Label>
+                <Label htmlFor="input-text" className="text-lg">
+                  {t("Labels.InputText")}
+                </Label>
                 <Textarea
+                  id="input-text"
                   placeholder={t("Placeholders.InputText")}
                   value={textData}
                   onChange={(e) => setTextData(e.target.value)}
@@ -204,7 +210,7 @@ export default function QRCodePage() {
 
             <TabsContent value="wifi">
               <div className="flex flex-col gap-4">
-                <Label className="text-lg">{t("WiFi.Title")}</Label>
+                <div className="text-lg font-medium">{t("WiFi.Title")}</div>
 
                 <div className="flex flex-col gap-2">
                   <Label htmlFor="wifi-ssid">{t("WiFi.SSID")}</Label>

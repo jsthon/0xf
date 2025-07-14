@@ -250,7 +250,9 @@ export default function PasswordGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.CharacterTypes")}</Label>
+          <div className="text-lg font-medium">
+            {t("Labels.CharacterTypes")}
+          </div>
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
             <div className="flex items-center gap-2">
               <Checkbox

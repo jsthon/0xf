@@ -197,7 +197,7 @@ export default function HashGeneratorPage() {
     <>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.Input")}</Label>
+          <div className="text-lg font-medium">{t("Labels.Input")}</div>
           <RadioGroup
             className="flex flex-wrap gap-6"
             value={inputType}
@@ -236,7 +236,9 @@ export default function HashGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.DigestEncoding")}</Label>
+          <div className="text-lg font-medium">
+            {t("Labels.DigestEncoding")}
+          </div>
           <RadioGroup
             value={encoding}
             onValueChange={handleEncodingChange}
@@ -256,7 +258,7 @@ export default function HashGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.Algorithm")}</Label>
+          <div className="text-lg font-medium">{t("Labels.Algorithm")}</div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {HASH_ALGORITHMS.map((algorithm) => (
               <div key={algorithm} className="flex items-center gap-2">
@@ -277,7 +279,7 @@ export default function HashGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.Output")}</Label>
+          <div className="text-lg font-medium">{t("Labels.Output")}</div>
           {selectedAlgorithms.map((algorithm) => (
             <div key={algorithm} className="flex items-center gap-2">
               <div className="w-24 flex-shrink-0 md:w-32">

@@ -249,7 +249,9 @@ export default function LoremIpsumPage() {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <Label className="text-base">{t("Labels.Paragraphs")}</Label>
+              <div className="text-base font-medium">
+                {t("Labels.Paragraphs")}
+              </div>
               <span className="text-base font-medium">
                 {options.randomRange
                   ? `${options.paragraphsRange[0]} - ${options.paragraphsRange[1]}`
@@ -272,7 +274,9 @@ export default function LoremIpsumPage() {
 
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <Label className="text-base">{t("Labels.Sentences")}</Label>
+              <div className="text-base font-medium">
+                {t("Labels.Sentences")}
+              </div>
               <span className="text-base font-medium">
                 {options.randomRange
                   ? `${options.sentencesPerParagraphRange[0]} - ${options.sentencesPerParagraphRange[1]}`
@@ -295,7 +299,7 @@ export default function LoremIpsumPage() {
 
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <Label className="text-base">{t("Labels.Words")}</Label>
+              <div className="text-base font-medium">{t("Labels.Words")}</div>
               <span className="text-base font-medium">
                 {options.randomRange
                   ? `${options.wordsPerSentenceRange[0]} - ${options.wordsPerSentenceRange[1]}`

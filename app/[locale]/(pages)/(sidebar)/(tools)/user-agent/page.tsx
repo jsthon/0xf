@@ -79,7 +79,7 @@ export default function UserAgentPage() {
 
         {isMounted && (
           <div className="flex flex-col gap-4">
-            <Label className="text-lg">{t("Labels.Output")}</Label>
+            <div className="text-lg font-medium">{t("Labels.Output")}</div>
 
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
               {(

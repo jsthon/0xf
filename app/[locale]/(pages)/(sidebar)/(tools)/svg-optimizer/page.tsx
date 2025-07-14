@@ -279,15 +279,14 @@ export default function SvgOptimizerPage() {
           </TabsContent>
         </Tabs>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <Label htmlFor="float-precision" className="text-sm">
+            <div className="text-base font-medium">
               {t("Options.floatPrecision")}
-            </Label>
-            <span className="text-sm font-medium">{floatPrecision}</span>
+            </div>
+            <span className="text-base font-medium">{floatPrecision}</span>
           </div>
           <Slider
-            id="float-precision"
             min={0}
             max={8}
             step={1}

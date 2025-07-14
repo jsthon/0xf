@@ -163,8 +163,11 @@ export default function DateTimeConverterPage() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label>{t("Labels.OutputTimezone")}</Label>
+              <Label htmlFor="output-timezone">
+                {t("Labels.OutputTimezone")}
+              </Label>
               <TimezoneSelect
+                id="output-timezone"
                 value={outputTimezone}
                 onChange={setOutputTimezone}
               />
@@ -174,7 +177,7 @@ export default function DateTimeConverterPage() {
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 md:gap-4">
-            <Label className="text-lg">{t("Labels.Output")}</Label>
+            <div className="text-lg font-medium">{t("Labels.Output")}</div>
             <Badge variant="outline">{outputTimezone}</Badge>
           </div>
 

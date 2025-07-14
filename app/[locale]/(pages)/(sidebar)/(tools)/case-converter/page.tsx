@@ -93,7 +93,7 @@ export default function CaseConverterPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.Output")}</Label>
+          <div className="text-lg font-medium">{t("Labels.Output")}</div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {(Object.keys(CASE_FORMATS) as CaseFormat[]).map((format) => (

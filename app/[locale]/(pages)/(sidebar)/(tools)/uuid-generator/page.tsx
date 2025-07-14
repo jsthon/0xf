@@ -183,7 +183,7 @@ export default function UUIDGeneratorPage() {
 
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
-            <Label className="text-lg">{t("Labels.Version")}</Label>
+            <div className="text-lg font-medium">{t("Labels.Version")}</div>
             <RadioGroup
               className="flex flex-wrap gap-6"
               value={options.version}
@@ -213,7 +213,7 @@ export default function UUIDGeneratorPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <Label className="text-lg">{t("Labels.Format")}</Label>
+            <div className="text-lg font-medium">{t("Labels.Format")}</div>
             <div className="flex flex-wrap items-center gap-4 md:gap-6">
               <Tooltip>
                 <div className="flex items-center gap-2">

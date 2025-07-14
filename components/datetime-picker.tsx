@@ -18,6 +18,7 @@ import {
 
 // DateTime picker component props
 interface DateTimePickerProps {
+  id?: string;
   className?: string;
   value?: Date;
   disabled?: boolean;
