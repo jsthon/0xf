@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/popover";
 
 interface TimezoneSelectProps {
+  id?: string;
   className?: string;
   value?: string;
   placeholder?: string;
@@ -33,6 +34,7 @@ export function TimezoneSelect({
   value,
   placeholder,
   onChange,
+  ...props
 }: TimezoneSelectProps) {
   const [open, setOpen] = useState(false);
 
@@ -51,6 +53,7 @@ export function TimezoneSelect({
           variant="outline"
           role="combobox"
           aria-expanded={open}
+          {...props}
         >
           <span>
             {value

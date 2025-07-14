@@ -319,7 +319,7 @@ export default function TimeIntervalPage() {
     <>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <Label className="text-lg">{t("Labels.Format")}</Label>
+          <div className="text-lg font-medium">{t("Labels.Format")}</div>
           <RadioGroup
             className="flex flex-wrap gap-6"
             value={displayFormat}
@@ -337,27 +337,39 @@ export default function TimeIntervalPage() {
         <div className="grid flex-1 gap-6 md:gap-8 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 md:gap-4">
-              <Label className="text-lg">{t("Labels.Start")}</Label>
+              <Label htmlFor="start-time" className="text-lg">
+                {t("Labels.Start")}
+              </Label>
               {startDateTime && (
                 <Badge variant="outline">{formatISO9075(startDateTime)}</Badge>
               )}
             </div>
-            <DateTimePicker value={startDateTime} onChange={setStartDateTime} />
+            <DateTimePicker
+              id="start-time"
+              value={startDateTime}
+              onChange={setStartDateTime}
+            />
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 md:gap-4">
-              <Label className="text-lg">{t("Labels.End")}</Label>
+              <Label htmlFor="end-time" className="text-lg">
+                {t("Labels.End")}
+              </Label>
               {endDateTime && (
                 <Badge variant="outline">{formatISO9075(endDateTime)}</Badge>
               )}
             </div>
-            <DateTimePicker value={endDateTime} onChange={setEndDateTime} />
+            <DateTimePicker
+              id="end-time"
+              value={endDateTime}
+              onChange={setEndDateTime}
+            />
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 md:gap-4">
-            <Label className="text-lg">{t("Labels.Interval")}</Label>
+            <div className="text-lg font-medium">{t("Labels.Interval")}</div>
             {currentInterval && (
               <Badge variant="outline">
                 {formatIntervalBadge(currentInterval, displayFormat, t)}

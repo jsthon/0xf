@@ -49,19 +49,23 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
         return (
           <Fragment key={key}>
             <input
+              id={`theme-switch-${key}`}
               className="sr-only"
               type="radio"
+              name="theme-switch"
               value={key}
+              checked={isActive}
+              onChange={(e) => setTheme(e.target.value)}
               aria-label={label}
             />
             <label
+              htmlFor={`theme-switch-${key}`}
               className={cn(
                 "flex size-7.5 items-center justify-center rounded-full",
                 isActive
                   ? "ring-border dark:ring-accent text-foreground ring-1"
                   : "hover:text-foreground text-muted-foreground"
               )}
-              onClick={() => setTheme(key)}
             >
               <span className="sr-only">{label}</span>
               <Icon className="size-4 transition-colors" />

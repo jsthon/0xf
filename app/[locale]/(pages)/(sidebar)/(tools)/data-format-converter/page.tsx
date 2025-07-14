@@ -371,7 +371,7 @@ export default function DataFormatConverterPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
-              <Label className="text-lg">{t("Labels.Input")}</Label>
+              <div className="text-lg font-medium">{t("Labels.Input")}</div>
               {currentInputFormat && (
                 <Badge variant="outline">
                   {currentInputFormat.toUpperCase()}
@@ -393,7 +393,7 @@ export default function DataFormatConverterPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
-              <Label className="text-lg">{t("Labels.Output")}</Label>
+              <div className="text-lg font-medium">{t("Labels.Output")}</div>
               {outputFormat && (
                 <Badge variant="outline">{outputFormat.toUpperCase()}</Badge>
               )}
