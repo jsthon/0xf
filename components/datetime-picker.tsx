@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { format, formatISO9075 } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -15,6 +15,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { TimeInput } from "@/components/time-input";
 
 // DateTime picker component props
 interface DateTimePickerProps {
@@ -25,7 +26,6 @@ interface DateTimePickerProps {
   onChange?: (date: Date | undefined) => void;
 }
 
-// Combined date and time picker component
 export function DateTimePicker({
   className,
   value,
@@ -34,79 +34,53 @@ export function DateTimePicker({
   ...props
 }: DateTimePickerProps) {
   const [open, setOpen] = useState(false);
-  const [dateValue, setDateValue] = useState<Date | undefined>(value);
-  const [inputValue, setInputValue] = useState<string>(
-    value ? formatISO9075(value) : ""
-  );
+  const [inputText, setInputText] = useState("");
 
   const locale = useLocale();
   const t = useTranslations("DateTimePicker");
 
-  // computed time value
-  const timeValue = dateValue ? format(dateValue, "HH:mm:ss") : "00:00:00";
+  // sync input text with value changes
+  useEffect(() => {
+    setInputText(value ? formatISO9075(value) : "");
+  }, [value]);
 
-  // apply time to date object
-  const applyTimeToDate = (date: Date, time: string): Date => {
+  // computed time value for TimeInput
+  const timeValue = useMemo(
+    () => (value ? format(value, "HH:mm:ss") : "00:00:00"),
+    [value]
+  );
+
+  // merge date and time into a new Date object
+  const mergeDateTime = useCallback((date: Date | undefined, time: string) => {
+    if (!date) return undefined;
+
     const newDateTime = new Date(date);
     const [hours = 0, minutes = 0, seconds = 0] = time.split(":").map(Number);
     // clear milliseconds to avoid precision issues
     newDateTime.setHours(hours, minutes, seconds, 0);
     return newDateTime;
-  };
+  }, []);
 
-  // update date value and notify parent
-  const updateDateTime = useCallback(
-    (newDate: Date | undefined) => {
-      setDateValue(newDate);
-      setInputValue(newDate ? formatISO9075(newDate) : "");
-      onChange?.(newDate);
+  // handle date and time change
+  const handleDateTimeChange = useCallback(
+    (date?: Date, time: string = timeValue) => {
+      onChange?.(mergeDateTime(date, time));
     },
-    [onChange]
+    [timeValue, mergeDateTime, onChange]
   );
 
-  // sync with external value changes
-  useEffect(() => {
-    setDateValue(value);
-    setInputValue(value ? formatISO9075(value) : "");
-  }, [value]);
+  // handle input blur (validate and update or restore)
+  const handleInputBlur = useCallback(() => {
+    const date = new Date(inputText);
 
-  // handle date selection from calendar
-  const handleDateSelect = useCallback(
-    (newDate: Date | undefined) => {
-      if (!newDate) {
-        updateDateTime(undefined);
-        return;
-      }
-
-      const newDateTime = applyTimeToDate(newDate, timeValue);
-      updateDateTime(newDateTime);
-    },
-    [timeValue, updateDateTime]
-  );
-
-  // handle time input change
-  const handleTimeChange = useCallback(
-    (newTimeValue: string) => {
-      if (dateValue) {
-        const newDateTime = applyTimeToDate(dateValue, newTimeValue);
-        updateDateTime(newDateTime);
-      }
-    },
-    [dateValue, updateDateTime]
-  );
-
-  // handle input value change
-  const handleInputChange = useCallback(
-    (inputText: string) => {
-      setInputValue(inputText);
-
-      const parsedDate = new Date(inputText);
-      if (!isNaN(parsedDate.getTime())) {
-        updateDateTime(parsedDate);
-      }
-    },
-    [updateDateTime]
-  );
+    // if valid, update value
+    if (!isNaN(date.getTime())) {
+      onChange?.(date);
+    } else {
+      // if invalid, restore to previous valid value
+      setInputText(value ? formatISO9075(value) : "");
+    }
+  }, [inputText, value, onChange]);
 
   return (
     <div className="relative">
@@ -130,12 +104,11 @@ export function DateTimePicker({
           <div className="flex flex-col">
             <Calendar
               mode="single"
-              selected={dateValue}
+              selected={value}
               captionLayout="dropdown"
               startMonth={new Date(1900, 0)}
               endMonth={new Date(2100, 11)}
-              disabled={disabled}
-              onSelect={handleDateSelect}
+              onSelect={(date) => handleDateTimeChange(date)}
               formatters={{
                 formatMonthDropdown: (date) =>
                   date.toLocaleString(locale, { month: "short" }),
@@ -144,13 +117,9 @@ export function DateTimePicker({
               }}
             />
             <div className="flex justify-center border-t p-3">
-              <Input
-                className="h-8 w-auto appearance-none font-medium [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
-                type="time"
-                step="1"
+              <TimeInput
                 value={timeValue}
-                disabled={disabled}
-                onChange={(e) => handleTimeChange(e.target.value)}
+                onChange={(time) => handleDateTimeChange(value, time)}
               />
             </div>
           </div>
@@ -159,9 +128,10 @@ export function DateTimePicker({
 
       <Input
         className={cn("pl-9", className)}
-        value={inputValue}
+        value={inputText}
         disabled={disabled}
-        onChange={(e) => handleInputChange(e.target.value)}
+        onChange={(e) => setInputText(e.target.value)}
+        onBlur={handleInputBlur}
         onKeyDown={(e) => {
           if (e.key === "ArrowDown") {
             e.preventDefault();
