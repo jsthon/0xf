@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { formatISO9075 } from "date-fns";
 import { useTranslations } from "next-intl";
 
@@ -80,7 +80,7 @@ const calculateTimeInterval = (
   }
 
   // calculate remaining time after years/months
-  const tempDate = new Date(earlier);
+  let tempDate = new Date(earlier);
   tempDate.setFullYear(earlier.getFullYear() + years);
   tempDate.setMonth(earlier.getMonth() + months);
 
@@ -92,6 +92,8 @@ const calculateTimeInterval = (
       years--;
       months = 11;
     }
+    // recalculate from original date to avoid month overflow issues
+    tempDate = new Date(earlier);
     tempDate.setFullYear(earlier.getFullYear() + years);
     tempDate.setMonth(earlier.getMonth() + months);
   }
@@ -183,7 +185,9 @@ const IntervalEditor = ({
   // update specific time field
   const updateTimeField = useCallback(
     (field: keyof TimeInterval, value: number) => {
-      onIntervalChange({ ...interval, [field]: value });
+      if (interval[field] !== value) {
+        onIntervalChange({ ...interval, [field]: value });
+      }
     },
     [interval, onIntervalChange]
   );
@@ -255,36 +259,45 @@ const formatIntervalBadge = (
   });
 };
 
-// Main time interval calculator page
 export default function TimeIntervalPage() {
   const [isMounted, setIsMounted] = useState(false);
   const [startDateTime, setStartDateTime] = useState<Date | undefined>();
   const [endDateTime, setEndDateTime] = useState<Date | undefined>();
   const [displayFormat, setDisplayFormat] = useState<DisplayFormat>("auto");
 
+  // flag to prevent an infinite loop when the interval updates the date
+  const isIntervalUpdate = useRef(false);
+
   const t = useTranslations("TimeIntervalPage");
 
   // initialize with default dates (today and tomorrow)
   useEffect(() => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // clear time to midnight
+    today.setHours(0, 0, 0, 0);
 
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0); // clear time to midnight
+    tomorrow.setHours(0, 0, 0, 0);
 
     setStartDateTime(today);
     setEndDateTime(tomorrow);
     setIsMounted(true);
   }, []);
 
-  // calculate current time interval from datetime inputs
+  // calculate interval between start and end dates
   const currentInterval = useMemo(() => {
     if (!startDateTime || !endDateTime) return null;
     return calculateTimeInterval(startDateTime, endDateTime);
   }, [startDateTime, endDateTime]);
 
-  // calculate new end datetime when interval is modified
+  // reset the update flag after the interval recalculates
+  useEffect(() => {
+    if (isIntervalUpdate.current) {
+      isIntervalUpdate.current = false;
+    }
+  }, [currentInterval]);
+
+  // calculate end date from start date and interval
   const calculateEndDateTime = useCallback(
     (
       baseStartDateTime: Date | undefined,
@@ -292,27 +305,30 @@ export default function TimeIntervalPage() {
     ): Date | undefined => {
       if (!baseStartDateTime) return;
 
-      const endDateTime =
+      const result =
         displayFormat === "auto"
           ? addTimeInterval(baseStartDateTime, interval)
           : new Date(baseStartDateTime.getTime() + interval.totalMilliseconds);
 
-      if (isNaN(endDateTime.getTime())) return;
-
-      return endDateTime;
+      return isNaN(result.getTime()) ? undefined : result;
     },
     [displayFormat]
   );
 
-  // handle interval modification (updates end datetime)
+  // update end date when interval changes
   const handleIntervalChange = useCallback(
     (newInterval: TimeInterval) => {
       const result = calculateEndDateTime(startDateTime, newInterval);
-      if (result) {
+
+      if (
+        result &&
+        (!endDateTime || result.getTime() !== endDateTime.getTime())
+      ) {
+        isIntervalUpdate.current = true;
         setEndDateTime(result);
       }
     },
-    [startDateTime, calculateEndDateTime]
+    [startDateTime, endDateTime, calculateEndDateTime]
   );
 
   return (
@@ -378,6 +394,11 @@ export default function TimeIntervalPage() {
           </div>
           {currentInterval ? (
             <IntervalEditor
+              key={
+                isIntervalUpdate.current
+                  ? null
+                  : `${startDateTime?.getTime()}-${endDateTime?.getTime()}`
+              }
               format={displayFormat}
               interval={currentInterval}
               onIntervalChange={handleIntervalChange}
