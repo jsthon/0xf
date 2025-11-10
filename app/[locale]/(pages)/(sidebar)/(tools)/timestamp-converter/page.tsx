@@ -24,7 +24,7 @@ import { dateFormats } from "./date-format";
 // auto detect select value
 const AUTO_DETECT_VALUE = -1;
 
-export default function DateTimeConverterPage() {
+export default function TimestampConverterPage() {
   const [inputText, setInputText] = useState<string>("");
   const [inputFormatIndex, setInputFormatIndex] =
     useState<number>(AUTO_DETECT_VALUE);
@@ -32,7 +32,7 @@ export default function DateTimeConverterPage() {
   const [currentDate, setCurrentDate] = useState<Date>();
   const [outputTimezone, setOutputTimezone] = useState<string>();
 
-  const t = useTranslations("DateTimeConverterPage");
+  const t = useTranslations("TimestampConverterPage");
 
   // Prevent hydration mismatch
   useEffect(() => {

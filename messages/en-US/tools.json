@@ -390,9 +390,9 @@
       "Input": "Enter color value..."
     }
   },
-  "DateTimeConverterPage": {
+  "TimestampConverterPage": {
     "Meta": {
-      "Title": "Date Time Converter",
+      "Title": "Timestamp Converter",
       "Description": "Convert between UNIX timestamps, ISO8601, RFC3339, JavaScript Date and other formats with customizable timezone."
     },
     "Labels": {

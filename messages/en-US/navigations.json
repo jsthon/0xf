@@ -167,10 +167,10 @@
                 ]
               },
               {
-                "title": "Date Time Converter",
-                "href": "/date-time-converter",
+                "title": "Timestamp Converter",
+                "href": "/timestamp-converter",
                 "icon": "calendar-clock",
-                "keywords": ["Timestamp Converter", "Unix Time", "Date Format"]
+                "keywords": ["Date Time Converter", "Unix Time", "Date Format"]
               },
               {
                 "title": "Time Interval",
