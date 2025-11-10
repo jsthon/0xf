@@ -3,22 +3,24 @@ import { IconKey } from "@/components/icons";
 export interface NavItem {
   title: string;
   href?: string;
-  slug?: string;
   disabled?: boolean;
   external?: boolean;
   icon?: IconKey;
   keywords?: string[];
 }
 
-export interface NavCategory extends NavItem {
+export interface NavCategory {
+  title: string;
   items: NavItem[];
 }
 
-export interface NavSection extends NavItem {
+export interface NavSection {
+  title: string;
+  slug: string;
   categories: NavCategory[];
 }
 
 export interface Navigations {
-  header: NavItem[];
+  headers: (NavItem & { slug: string })[];
   sections: NavSection[];
 }

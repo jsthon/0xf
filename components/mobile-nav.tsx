@@ -22,7 +22,7 @@ import {
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
-  const { header } = useNavigationMessages();
+  const { headers } = useNavigationMessages();
   const section = useActiveNavigationSection();
   const t = useTranslations("MobileNav");
 
@@ -49,7 +49,7 @@ export function MobileNav() {
         </DrawerHeader>
         <div className="overflow-auto p-6">
           <div className="flex flex-col gap-3">
-            {header.map((item) => {
+            {headers.map((item) => {
               return (
                 !item.disabled &&
                 item.href && (

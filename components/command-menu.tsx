@@ -31,7 +31,7 @@ export function CommandMenu({ ...props }: DialogProps) {
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
-  const { header, sections } = useNavigationMessages();
+  const { headers, sections } = useNavigationMessages();
   const t = useTranslations("CommandMenu");
   const tTheme = useTranslations("ThemeSwitcher");
 
@@ -96,7 +96,7 @@ export function CommandMenu({ ...props }: DialogProps) {
           <CommandEmpty>{t("Empty")}</CommandEmpty>
 
           <CommandGroup heading={t("LinksHeading")}>
-            {header
+            {headers
               .filter((item) => !item.disabled && !item.external)
               .map((item) => (
                 <CommandItem

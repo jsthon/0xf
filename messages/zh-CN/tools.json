@@ -1,4 +1,10 @@
 {
+  "ToolsPage": {
+    "Meta": {
+      "Title": "开发工具",
+      "Description": "轻量、高效的日常开发工具集。"
+    }
+  },
   "Base64Page": {
     "Meta": {
       "Title": "Base64 编码 解码",
@@ -149,7 +155,7 @@
   },
   "PasswordGeneratorPage": {
     "Meta": {
-      "Title": "密码生成器",
+      "Title": "密码生成",
       "Description": "生成安全的随机密码，可自定义长度和字符类型。"
     },
     "Labels": {
@@ -165,8 +171,8 @@
   },
   "LoremIpsumPage": {
     "Meta": {
-      "Title": "Lorem Ipsum 文本生成器",
-      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本"
+      "Title": "随机文章生成",
+      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本段落"
     },
     "Labels": {
       "Text": "生成文本",
@@ -296,7 +302,7 @@
   },
   "UUIDGeneratorPage": {
     "Meta": {
-      "Title": "UUID 生成器",
+      "Title": "UUID 生成",
       "Description": "生成各种版本的通用唯一识别码 (UUID)"
     },
     "Labels": {
@@ -336,7 +342,7 @@
   },
   "QRCodePage": {
     "Meta": {
-      "Title": "二维码生成器",
+      "Title": "二维码生成",
       "Description": "生成文本或 WiFi 连接信息的二维码。"
     },
     "Labels": {

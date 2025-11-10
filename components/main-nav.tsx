@@ -12,13 +12,13 @@ import { ThemeSelector } from "@/components/theme-selector";
 
 export function MainNav() {
   const pathname = usePathname();
-  const { header } = useNavigationMessages();
+  const { headers } = useNavigationMessages();
   const section = useActiveNavigationSection();
 
   return (
     <div className="flex h-10 items-center justify-between md:w-full md:gap-2 md:border-b md:px-4 xl:px-6">
       <nav className="no-scrollbar hidden h-full gap-6 overflow-x-auto md:flex">
-        {header.map((item) => {
+        {headers.map((item) => {
           const isActive =
             pathname === item.href || item.slug === section?.slug;
 
