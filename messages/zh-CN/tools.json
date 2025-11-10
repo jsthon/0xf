@@ -7,7 +7,7 @@
   },
   "Base64Page": {
     "Meta": {
-      "Title": "Base64 编码 解码",
+      "Title": "Base64 编码解码",
       "Description": "Base64 编码和解码工具，支持自动检测输入格式和 URL Safe 模式。"
     },
     "Controls": {
@@ -63,7 +63,7 @@
   },
   "URLEncodingPage": {
     "Meta": {
-      "Title": "URL 编码 解码",
+      "Title": "URL 编码解码",
       "Description": "URL 编码和解码工具，支持自动检测输入格式，便于快速转换。"
     },
     "Controls": {
@@ -390,9 +390,9 @@
       "Input": "输入颜色值"
     }
   },
-  "DateTimeConverterPage": {
+  "TimestampConverterPage": {
     "Meta": {
-      "Title": "日期时间转换器",
+      "Title": "时间戳转换",
       "Description": "转换 UNIX 时间戳、ISO8601、RFC3339、JavaScript 实例等时间日期格式，支持指定时区显示。"
     },
     "Labels": {

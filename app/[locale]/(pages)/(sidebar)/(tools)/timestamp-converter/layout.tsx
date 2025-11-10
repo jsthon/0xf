@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PageIntro } from "@/components/page-intro";
 
-const META_NAMESPACE = "DateTimeConverterPage.Meta";
+const META_NAMESPACE = "TimestampConverterPage.Meta";
 
 export async function generateMetadata({
   params,
