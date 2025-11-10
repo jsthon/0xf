@@ -1,6 +1,6 @@
 {
   "Navigation": {
-    "header": [
+    "headers": [
       {
         "title": "Home",
         "href": "/",
@@ -8,78 +8,55 @@
         "keywords": ["home", "index"]
       },
       {
-        "title": "Blog",
-        "href": "/blog",
-        "slug": "blog",
-        "external": true,
-        "keywords": ["blog", "article"]
-      },
-      {
         "title": "Tools",
-        "href": "/base64",
+        "href": "/tools",
         "slug": "tools",
-        "keywords": ["tools", "utilities"]
+        "keywords": [
+          "dev tools",
+          "developer tools",
+          "developer toolbox",
+          "development utilities",
+          "devkit",
+          "coding toolkit"
+        ]
       }
     ],
     "sections": [
       {
-        "title": "Tools",
+        "title": "Dev Tools",
         "slug": "tools",
         "categories": [
           {
-            "title": "Debug & Testing",
+            "title": "Encode & Decode",
             "items": [
               {
-                "title": "HTTP Request",
-                "href": "/http-request",
-                "disabled": true,
+                "title": "Base64 Code",
+                "href": "/base64",
+                "icon": "square-code",
                 "keywords": [
-                  "HTTP Request",
-                  "API Client",
-                  "API Tester",
-                  "REST Client"
+                  "Base64 Encode",
+                  "Base64 Decode",
+                  "Base64 Converter"
                 ]
               },
               {
-                "title": "Regex Tester",
-                "href": "/regex-tester",
-                "disabled": true,
-                "keywords": ["Regular Expression", "RegExp", "Pattern Testing"]
-              }
-            ]
-          },
-          {
-            "title": "Text & Characters",
-            "items": [
-              {
-                "title": "Code Formatter",
-                "href": "/code-formatter",
-                "icon": "file-spreadsheet",
-                "keywords": ["Code Beautifier", "Code Prettifier"]
+                "title": "URL Encoding",
+                "href": "/url-encoding",
+                "icon": "link-2",
+                "keywords": ["URL Encode", "URL Decode", "Percent Encoding"]
               },
               {
-                "title": "Code Minifier",
-                "href": "/code-minifier",
-                "icon": "file-minus",
-                "keywords": ["Code Compressor", "Code Compress"]
-              },
-              {
-                "title": "Text Compare",
-                "href": "/text-compare",
-                "icon": "file-diff",
-                "keywords": ["Diff Checker", "Text Comparison", "Text Diff"]
-              },
-              {
-                "title": "Character Count",
-                "href": "/character-count",
-                "icon": "square-sigma",
-                "keywords": ["Word Counter", "Letter Count", "Text Count"]
-              },
-              {
-                "title": "Emoji Picker",
-                "href": "/emoji-picker",
-                "disabled": true,
-                "keywords": ["Emoji Selector", "Emoticons", "Unicode Emoji"]
+                "title": "Character Escape",
+                "href": "/character-escape",
+                "icon": "ampersand",
+                "keywords": [
+                  "Unicode Code Point",
+                  "Unicode Escape Sequence",
+                  "HTML Entity",
+                  "HTML Numeric Character Reference",
+                  "CSS Unicode Escape",
+                  "Text Symbols"
+                ]
               }
             ]
           },
@@ -124,69 +101,46 @@
                 "href": "/uuid-generator",
                 "icon": "shield-user",
                 "keywords": ["GUID", "Unique ID", "UUID v4"]
-              },
-              {
-                "title": "ASCII Art Text",
-                "href": "/ascii-art",
-                "disabled": true,
-                "keywords": ["Text to ASCII", "ASCII Banner", "Text Art"]
               }
             ]
           },
           {
-            "title": "Encode & Decode",
+            "title": "Text & Characters",
             "items": [
               {
-                "title": "Base64 Code",
-                "href": "/base64",
-                "icon": "square-code",
-                "keywords": [
-                  "Base64 Encode",
-                  "Base64 Decode",
-                  "Base64 Converter"
-                ]
+                "title": "Code Formatter",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "keywords": ["Code Beautifier", "Code Prettifier"]
               },
               {
-                "title": "URL Encoding",
-                "href": "/url-encoding",
-                "icon": "link-2",
-                "keywords": ["URL Encode", "URL Decode", "Percent Encoding"]
+                "title": "Code Minifier",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "keywords": ["Code Compressor", "Code Compress"]
               },
               {
-                "title": "Character Escape",
-                "href": "/character-escape",
-                "icon": "ampersand",
-                "keywords": [
-                  "Unicode Code Point",
-                  "Unicode Escape Sequence",
-                  "HTML Entity",
-                  "HTML Numeric Character Reference",
-                  "CSS Unicode Escape",
-                  "Text Symbols"
-                ]
+                "title": "Text Compare",
+                "href": "/text-compare",
+                "icon": "file-diff",
+                "keywords": ["Diff Checker", "Text Comparison", "Text Diff"]
               },
               {
-                "title": "JWT Encoding",
-                "href": "/jwt-encoding",
-                "disabled": true,
-                "keywords": ["JWT", "JSON Web Token", "Token Decoder"]
+                "title": "Character Count",
+                "href": "/character-count",
+                "icon": "square-sigma",
+                "keywords": ["Word Counter", "Letter Count", "Text Count"]
               }
             ]
           },
           {
-            "title": "Converters",
+            "title": "Converters & Calculators",
             "items": [
               {
                 "title": "Color Converter",
                 "href": "/color-converter",
                 "icon": "palette",
                 "keywords": ["Color Picker", "HEX to RGB", "RGB Converter"]
-              },
-              {
-                "title": "Date Time Converter",
-                "href": "/date-time-converter",
-                "icon": "calendar-clock",
-                "keywords": ["Timestamp Converter", "Unix Time", "Date Format"]
               },
               {
                 "title": "Data Format Converter",
@@ -211,135 +165,12 @@
                   "Camel Case",
                   "Snake Case"
                 ]
-              }
-            ]
-          },
-          {
-            "title": "Editor & Viewer",
-            "items": [
-              {
-                "title": "Markdown Editor",
-                "href": "/markdown-editor",
-                "disabled": true,
-                "keywords": ["MD Editor", "Markdown Preview", "Text Editor"]
               },
               {
-                "title": "CSV Editor",
-                "href": "/csv-editor",
-                "disabled": true,
-                "keywords": ["CSV Viewer", "Spreadsheet Editor", "Table Editor"]
-              },
-              {
-                "title": "CSS Preprocessor",
-                "href": "/css-preprocessor",
-                "disabled": true,
-                "keywords": ["SASS", "LESS", "Stylus", "CSS Compiler"]
-              }
-            ]
-          },
-          {
-            "title": "Web Development",
-            "items": [
-              {
-                "title": "SVG Optimizer",
-                "href": "/svg-optimizer",
-                "icon": "layers",
-                "keywords": ["SVG Minifier", "SVG Cleanup", "SVG Compression"]
-              },
-              {
-                "title": "Image Base64",
-                "href": "/image-base64",
-                "disabled": true,
-                "keywords": ["Image to Base64", "Data URI", "Inline Image"]
-              },
-              {
-                "title": "Keyboard Event",
-                "href": "/keyboard-event",
-                "icon": "keyboard",
-                "keywords": [
-                  "KeyboardEvent",
-                  "Keyboard Code",
-                  "keydown",
-                  "keyup",
-                  "keypress"
-                ]
-              },
-              {
-                "title": "CSS Shapes",
-                "href": "/css-shapes",
-                "disabled": true,
-                "keywords": ["CSS Geometry", "Shape Generator", "CSS Patterns"]
-              },
-              {
-                "title": "CSS Color Filter",
-                "href": "/css-color-filter",
-                "disabled": true,
-                "keywords": ["CSS Filters", "Image Filter", "Color Effects"]
-              },
-              {
-                "title": "URL Parser",
-                "href": "/url-parser",
-                "disabled": true,
-                "keywords": ["URL Components", "Query String", "URL Parameters"]
-              },
-              {
-                "title": "User-Agent Parser",
-                "href": "/user-agent",
-                "icon": "compass",
-                "keywords": [
-                  "Browser Detection",
-                  "User-Agent Parser",
-                  "UA Information"
-                ]
-              },
-              {
-                "title": "CSS Cursors",
-                "href": "/css-cursors",
-                "disabled": true,
-                "keywords": ["Mouse Cursors", "Pointer Types", "Cursor Styles"]
-              },
-              {
-                "title": "HTTP Codes",
-                "href": "/http-codes",
-                "disabled": true,
-                "keywords": ["Status Codes", "HTTP Status", "Error Codes"]
-              },
-              {
-                "title": "MIME Types",
-                "href": "/mime-types",
-                "disabled": true,
-                "keywords": ["Media Types", "Content Types", "File Types"]
-              }
-            ]
-          },
-          {
-            "title": "Math & Calculation",
-            "items": [
-              {
-                "title": "Scientific Calculator",
-                "href": "/scientific-calculator",
-                "disabled": true,
-                "keywords": [
-                  "Advanced Calculator",
-                  "Math Functions",
-                  "Complex Math"
-                ]
-              },
-              {
-                "title": "Hex Converter",
-                "href": "/hex-converter",
-                "disabled": true,
-                "keywords": [
-                  "Hex to Decimal",
-                  "Binary Converter",
-                  "Number Base"
-                ]
-              },
-              {
-                "title": "Angle Calculator",
-                "href": "/angle-calculator",
-                "disabled": true,
-                "keywords": ["Degrees", "Radians", "Trigonometry"]
+                "title": "Date Time Converter",
+                "href": "/date-time-converter",
+                "icon": "calendar-clock",
+                "keywords": ["Timestamp Converter", "Unix Time", "Date Format"]
               },
               {
                 "title": "Time Interval",
@@ -356,79 +187,34 @@
             ]
           },
           {
-            "title": "Networking",
+            "title": "Web Development",
             "items": [
               {
-                "title": "IP Address Info",
-                "href": "/ip-info",
-                "disabled": true,
-                "keywords": ["IP Lookup", "Geolocation", "My IP"]
+                "title": "SVG Optimizer",
+                "href": "/svg-optimizer",
+                "icon": "layers",
+                "keywords": ["SVG Minifier", "SVG Cleanup", "SVG Compression"]
               },
               {
-                "title": "WHOIS Lookup",
-                "href": "/whois",
-                "disabled": true,
-                "keywords": ["Domain Info", "Domain Registration", "DNS Info"]
-              },
-              {
-                "title": "IP Address Calculator",
-                "href": "/ip-calculator",
-                "disabled": true,
-                "keywords": ["Subnet Calculator", "CIDR", "IP Range"]
-              },
-              {
-                "title": "MAC Address Calculator",
-                "href": "/mac-calculator",
-                "disabled": true,
-                "keywords": ["MAC Format", "MAC Validation", "Network Address"]
-              },
-              {
-                "title": "MAC Address Lookup",
-                "href": "/mac-lookup",
-                "disabled": true,
-                "keywords": ["MAC Vendor", "OUI Lookup", "Hardware Address"]
-              }
-            ]
-          },
-          {
-            "title": "DevOps & Security",
-            "items": [
-              {
-                "title": "Nginx Config",
-                "href": "/nginx-config",
-                "disabled": true,
-                "keywords": ["Nginx Server", "Web Server Config", "HTTP Server"]
-              },
-              {
-                "title": "SSH Key Generator",
-                "href": "/ssh-key-generator",
-                "disabled": true,
-                "keywords": ["RSA Key", "Public Key", "Private Key"]
-              },
-              {
-                "title": "Chmod Calculator",
-                "href": "/chmod-calculator",
-                "disabled": true,
+                "title": "Keyboard Event",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
                 "keywords": [
-                  "File Permissions",
-                  "Unix Permissions",
-                  "Permission Calculator"
+                  "KeyboardEvent",
+                  "Keyboard Code",
+                  "keydown",
+                  "keyup",
+                  "keypress"
                 ]
               },
               {
-                "title": "Crontab Generator",
-                "href": "/crontab-generator",
-                "disabled": true,
-                "keywords": ["Scheduled Tasks", "Cron Expression", "Scheduler"]
-              },
-              {
-                "title": "Basic Auth Generator",
-                "href": "/basic-auth-generator",
-                "disabled": true,
+                "title": "User-Agent Parser",
+                "href": "/user-agent",
+                "icon": "compass",
                 "keywords": [
-                  "HTTP Authentication",
-                  "Basic Authentication",
-                  "Password Protection"
+                  "Browser Detection",
+                  "User-Agent Parser",
+                  "UA Information"
                 ]
               }
             ]

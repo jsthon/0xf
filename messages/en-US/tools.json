@@ -1,4 +1,10 @@
 {
+  "ToolsPage": {
+    "Meta": {
+      "Title": "Dev Tools",
+      "Description": "A lightweight toolkit for everyday development tasks."
+    }
+  },
   "Base64Page": {
     "Meta": {
       "Title": "Base64 Encode Decode",

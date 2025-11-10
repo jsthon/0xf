@@ -57,18 +57,16 @@ export function SidebarNav() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const sidebar = section?.categories || [];
-
-  return sidebar.length ? (
+  return section?.categories?.length ? (
     <nav className="flex flex-col gap-4">
-      {sidebar.map((item) => (
-        <div key={item.title} className="flex flex-col gap-2">
+      {section?.categories.map((category) => (
+        <div key={category.title} className="flex flex-col gap-2">
           <h4 className="flex h-9 w-full items-center px-2 text-sm font-medium">
-            {item.title}
+            {category.title}
           </h4>
-          {item?.items?.length && (
+          {category?.items?.length && (
             <MemoSidebarNavItems
-              items={item.items}
+              items={category.items}
               pathname={pathname}
               navRefs={navRefs}
             />

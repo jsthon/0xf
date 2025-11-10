@@ -16,14 +16,17 @@ export function useActiveNavigationSection(): NavSection | undefined {
   const section = useMemo(() => {
     if (!pathname) return undefined;
 
-    return navs.sections.find((section) =>
-      section.categories?.some((category) =>
-        category.items?.some((item) => {
-          if (item.href === "/" && pathname !== "/") return false;
+    return navs.sections.find(
+      (section) =>
+        section.slug ===
+          navs.headers.find((item) => pathname === item.href)?.slug ||
+        section.categories?.some((category) =>
+          category.items?.some((item) => {
+            if (item.href === "/" && pathname !== "/") return false;
 
-          return item.href && pathname.startsWith(item.href);
-        })
-      )
+            return item.href && pathname.startsWith(item.href);
+          })
+        )
     );
   }, [navs, pathname]);
 
