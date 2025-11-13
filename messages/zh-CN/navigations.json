@@ -26,18 +26,21 @@
                 "title": "Base64编码",
                 "href": "/base64",
                 "icon": "square-code",
+                "intl": "Base64Page",
                 "keywords": ["Base64编码", "Base64解码", "Base64转换器"]
               },
               {
                 "title": "URL编码",
                 "href": "/url-encoding",
                 "icon": "link-2",
+                "intl": "URLEncodingPage",
                 "keywords": ["URL编码", "URL解码", "百分比编码"]
               },
               {
                 "title": "字符转义",
                 "href": "/character-escape",
                 "icon": "ampersand",
+                "intl": "CharacterEscapePage",
                 "keywords": [
                   "Unicode码点",
                   "Unicode转义",
@@ -55,30 +58,35 @@
                 "title": "密码生成",
                 "href": "/password-generator",
                 "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
                 "keywords": ["密码生成器", "强密码", "安全密码"]
               },
               {
                 "title": "二维码生成",
                 "href": "/qr-code",
                 "icon": "qr-code",
+                "intl": "QRCodePage",
                 "keywords": ["二维码生成器", "二维码创建", "条形码"]
               },
               {
                 "title": "随机文章生成",
                 "href": "/lorem-ipsum",
                 "icon": "letter-text",
+                "intl": "LoremIpsumPage",
                 "keywords": ["Lorem Ipsum", "模拟数据", "测试文本", "随机文章"]
               },
               {
                 "title": "哈希计算",
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
                 "keywords": ["MD5", "SHA1", "SHA256", "校验和"]
               },
               {
                 "title": "UUID生成",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
                 "keywords": ["GUID", "唯一ID", "UUID v4"]
               }
             ]
@@ -90,24 +98,28 @@
                 "title": "代码格式化",
                 "href": "/code-formatter",
                 "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
                 "keywords": ["代码格式化", "代码美化"]
               },
               {
                 "title": "代码压缩",
                 "href": "/code-minifier",
                 "icon": "file-minus",
+                "intl": "CodeMinifierPage",
                 "keywords": ["代码压缩", "代码精简"]
               },
               {
                 "title": "文本对比",
                 "href": "/text-compare",
                 "icon": "file-diff",
+                "intl": "TextComparePage",
                 "keywords": ["文本对比", "文本比较", "文本差异"]
               },
               {
                 "title": "字符统计",
                 "href": "/character-count",
                 "icon": "square-sigma",
+                "intl": "CharacterCountPage",
                 "keywords": ["字数统计", "字符计数", "文字计数", "文本统计"]
               }
             ]
@@ -119,12 +131,14 @@
                 "title": "颜色转换",
                 "href": "/color-converter",
                 "icon": "palette",
+                "intl": "ColorConverterPage",
                 "keywords": ["颜色格式", "HEX转RGB", "RGB转换器"]
               },
               {
                 "title": "数据格式转换",
                 "href": "/data-format-converter",
                 "icon": "braces",
+                "intl": "DataFormatConverterPage",
                 "keywords": [
                   "JSON转YAML",
                   "YAML转JSON",
@@ -138,18 +152,21 @@
                 "title": "文本大小写转换",
                 "href": "/case-converter",
                 "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
                 "keywords": ["大写", "小写", "驼峰命名", "蛇形命名"]
               },
               {
                 "title": "时间戳转换",
                 "href": "/timestamp-converter",
                 "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
                 "keywords": ["日期时间格式", "Timestamp转换", "Unix时间"]
               },
               {
                 "title": "时间间隔计算",
                 "href": "/time-interval",
                 "icon": "hourglass",
+                "intl": "TimeIntervalPage",
                 "keywords": ["预计时间", "到达时间", "时间预测"]
               }
             ]
@@ -161,18 +178,21 @@
                 "title": "SVG 优化",
                 "href": "/svg-optimizer",
                 "icon": "layers",
+                "intl": "SvgOptimizerPage",
                 "keywords": ["SVG压缩", "SVG清理", "SVG格式化"]
               },
               {
                 "title": "键盘事件属性",
                 "href": "/keyboard-event",
                 "icon": "keyboard",
+                "intl": "KeyboardEventPage",
                 "keywords": ["键盘代码", "按键事件", "KeyboardEvent"]
               },
               {
                 "title": "User-Agent 解析",
                 "href": "/user-agent",
                 "icon": "compass",
+                "intl": "UserAgentPage",
                 "keywords": ["浏览器检测", "User-Agent解析", "UA信息"]
               }
             ]
