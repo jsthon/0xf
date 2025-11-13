@@ -33,6 +33,7 @@
                 "title": "Base64 Code",
                 "href": "/base64",
                 "icon": "square-code",
+                "intl": "Base64Page",
                 "keywords": [
                   "Base64 Encode",
                   "Base64 Decode",
@@ -42,6 +43,7 @@
               {
                 "title": "URL Encoding",
                 "href": "/url-encoding",
+                "intl": "URLEncodingPage",
                 "icon": "link-2",
                 "keywords": ["URL Encode", "URL Decode", "Percent Encoding"]
               },
@@ -49,6 +51,7 @@
                 "title": "Character Escape",
                 "href": "/character-escape",
                 "icon": "ampersand",
+                "intl": "CharacterEscapePage",
                 "keywords": [
                   "Unicode Code Point",
                   "Unicode Escape Sequence",
@@ -67,6 +70,7 @@
                 "title": "Password Generator",
                 "href": "/password-generator",
                 "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
                 "keywords": [
                   "Password Generator",
                   "Strong Password",
@@ -77,12 +81,14 @@
                 "title": "QR Code",
                 "href": "/qr-code",
                 "icon": "qr-code",
+                "intl": "QRCodePage",
                 "keywords": ["QR Generator", "QR Code Creator", "Barcode"]
               },
               {
                 "title": "Lorem Ipsum",
                 "href": "/lorem-ipsum",
                 "icon": "letter-text",
+                "intl": "LoremIpsumPage",
                 "keywords": [
                   "Lorem Ipsum",
                   "Fake Text",
@@ -94,12 +100,14 @@
                 "title": "Hash Generator",
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
                 "keywords": ["MD5", "SHA1", "SHA256", "Checksum"]
               },
               {
                 "title": "UUID Generator",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
                 "keywords": ["GUID", "Unique ID", "UUID v4"]
               }
             ]
@@ -111,24 +119,28 @@
                 "title": "Code Formatter",
                 "href": "/code-formatter",
                 "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
                 "keywords": ["Code Beautifier", "Code Prettifier"]
               },
               {
                 "title": "Code Minifier",
                 "href": "/code-minifier",
                 "icon": "file-minus",
+                "intl": "CodeMinifierPage",
                 "keywords": ["Code Compressor", "Code Compress"]
               },
               {
                 "title": "Text Compare",
                 "href": "/text-compare",
                 "icon": "file-diff",
+                "intl": "TextComparePage",
                 "keywords": ["Diff Checker", "Text Comparison", "Text Diff"]
               },
               {
                 "title": "Character Count",
                 "href": "/character-count",
                 "icon": "square-sigma",
+                "intl": "CharacterCountPage",
                 "keywords": ["Word Counter", "Letter Count", "Text Count"]
               }
             ]
@@ -140,12 +152,14 @@
                 "title": "Color Converter",
                 "href": "/color-converter",
                 "icon": "palette",
+                "intl": "ColorConverterPage",
                 "keywords": ["Color Picker", "HEX to RGB", "RGB Converter"]
               },
               {
                 "title": "Data Format Converter",
                 "href": "/data-format-converter",
                 "icon": "braces",
+                "intl": "DataFormatConverterPage",
                 "keywords": [
                   "JSON to YAML",
                   "YAML to JSON",
@@ -159,6 +173,7 @@
                 "title": "Text Case Converter",
                 "href": "/case-converter",
                 "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
                 "keywords": [
                   "Uppercase",
                   "Lowercase",
@@ -170,12 +185,14 @@
                 "title": "Timestamp Converter",
                 "href": "/timestamp-converter",
                 "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
                 "keywords": ["Date Time Converter", "Unix Time", "Date Format"]
               },
               {
                 "title": "Time Interval",
                 "href": "/time-interval",
                 "icon": "hourglass",
+                "intl": "TimeIntervalPage",
                 "keywords": [
                   "Estimated Time",
                   "Arrival Time",
@@ -193,12 +210,14 @@
                 "title": "SVG Optimizer",
                 "href": "/svg-optimizer",
                 "icon": "layers",
+                "intl": "SvgOptimizerPage",
                 "keywords": ["SVG Minifier", "SVG Cleanup", "SVG Compression"]
               },
               {
                 "title": "Keyboard Event",
                 "href": "/keyboard-event",
                 "icon": "keyboard",
+                "intl": "KeyboardEventPage",
                 "keywords": [
                   "KeyboardEvent",
                   "Keyboard Code",
@@ -211,6 +230,7 @@
                 "title": "User-Agent Parser",
                 "href": "/user-agent",
                 "icon": "compass",
+                "intl": "UserAgentPage",
                 "keywords": [
                   "Browser Detection",
                   "User-Agent Parser",

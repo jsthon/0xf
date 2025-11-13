@@ -6,6 +6,7 @@ export interface NavItem {
   disabled?: boolean;
   external?: boolean;
   icon?: IconKey;
+  intl?: string;
   keywords?: string[];
 }
 
