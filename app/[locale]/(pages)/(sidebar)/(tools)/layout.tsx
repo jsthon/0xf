@@ -1,3 +1,5 @@
+import { AsideBlock } from "@/components/aside-block";
+
 export default function ToolsLayout({
   children,
 }: Readonly<{
@@ -11,7 +13,7 @@ export default function ToolsLayout({
       <aside className="hidden text-sm xl:block">
         <div className="sticky top-24 h-[calc(100vh-6rem)] pt-8">
           <div className="no-scrollbar h-full overflow-auto pb-8">
-            <div>Block</div>
+            <AsideBlock className="mt-6 max-w-[90%]" />
           </div>
         </div>
       </aside>
