@@ -277,8 +277,7 @@ export default function Base64Page() {
                 <TooltipTrigger asChild>
                   <Button
                     variant="outline"
-                    size="icon"
-                    className="size-8"
+                    size="icon-sm"
                     onClick={() => fileInputRef.current?.click()}
                   >
                     <Upload className="size-4" />
@@ -332,8 +331,7 @@ export default function Base64Page() {
                 <TooltipTrigger asChild>
                   <Button
                     variant="outline"
-                    size="icon"
-                    className="size-8"
+                    size="icon-sm"
                     onClick={handleDownload}
                   >
                     <Download className="size-4" />
