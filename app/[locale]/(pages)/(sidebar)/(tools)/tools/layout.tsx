@@ -10,11 +10,11 @@ const META_NAMESPACE = "ToolsPage.Meta";
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({
-    locale,
+    locale: locale as Locale,
     namespace: META_NAMESPACE,
   });
 
@@ -29,12 +29,12 @@ export default function ToolsLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = use(params);
 
   // enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale as Locale);
 
   const t = useTranslations(META_NAMESPACE);
 

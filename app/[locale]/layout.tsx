@@ -13,10 +13,13 @@ import { TailwindIndicator } from "@/components/tailwind-indicator";
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "LocaleLayout.Meta" });
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "LocaleLayout.Meta",
+  });
 
   return {
     description: t("Description"),
@@ -32,7 +35,7 @@ export default async function LocaleLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
 
