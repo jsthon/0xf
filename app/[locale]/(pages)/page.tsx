@@ -6,10 +6,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "HomePage.Meta" });
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "HomePage.Meta",
+  });
 
   return {
     title: t("Title"),
@@ -20,12 +23,12 @@ export async function generateMetadata({
 export default function HomePage({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = use(params);
 
   // enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale as Locale);
 
   const t = useTranslations("HomePage");
 

@@ -8,12 +8,12 @@ import { Link } from "@/i18n/navigation";
 export default function ToolsPage({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = use(params);
 
   // enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale as Locale);
 
   const t = useTranslations() as (key: string) => string;
 
