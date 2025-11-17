@@ -35,8 +35,8 @@ export function MobileNav() {
       <DrawerTrigger asChild>
         <Button
           variant="ghost"
-          size="icon"
-          className="size-8 px-0 text-base md:hidden"
+          size="icon-sm"
+          className="px-0 text-base md:hidden"
         >
           <MenuIcon className="size-5" />
           <span className="sr-only">{t("ToggleMenu")}</span>

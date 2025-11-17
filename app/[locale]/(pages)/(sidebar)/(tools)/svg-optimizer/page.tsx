@@ -233,8 +233,7 @@ export default function SvgOptimizerPage() {
                   <TooltipTrigger asChild>
                     <Button
                       variant="outline"
-                      size="icon"
-                      className="size-8"
+                      size="icon-sm"
                       onClick={handleDownload}
                     >
                       <Download className="size-4" />

@@ -186,8 +186,8 @@ const FileUpload: React.FC<FileUploadProps> = ({
 
           <Button
             variant="ghost"
-            size="icon"
-            className="size-8 px-0"
+            size="icon-sm"
+            className="px-0"
             onClick={() => removeFile(file)}
           >
             <Trash2 className="size-4" />

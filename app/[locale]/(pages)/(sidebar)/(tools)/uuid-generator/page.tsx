@@ -154,9 +154,8 @@ export default function UUIDGeneratorPage() {
                 <TooltipTrigger asChild>
                   <Button
                     variant="outline"
-                    size="icon"
+                    size="icon-sm"
                     onClick={handleGenerate}
-                    className="size-8"
                   >
                     <RefreshCw className="size-4" />
                     <span className="sr-only">{t("Labels.Regenerate")}</span>

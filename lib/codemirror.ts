@@ -126,8 +126,8 @@ const commonThemeStyles = {
   // selection styles
   "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection":
     {
-      color: "var(--primary-foreground)",
-      backgroundColor: "var(--primary)",
+      color: "var(--selection-foreground)",
+      backgroundColor: "var(--selection)",
     },
   "& .cm-collapsedLines": {
     display: "flex",

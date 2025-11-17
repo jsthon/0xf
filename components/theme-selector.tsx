@@ -20,8 +20,8 @@ export function ThemeSelector({ className }: { className?: string }) {
   return (
     <Button
       variant="ghost"
-      size="icon"
-      className={cn("group/toggle size-8 px-0", className)}
+      size="icon-sm"
+      className={cn("group/toggle px-0", className)}
       onClick={toggleTheme}
     >
       <SunIcon className="hidden [html.dark_&]:block" />
