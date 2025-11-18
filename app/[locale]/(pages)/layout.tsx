@@ -8,11 +8,9 @@ export default function PageLayout({
 }>) {
   return (
     <div className="bg-background relative flex min-h-svh flex-col">
-      <div className="flex flex-1 flex-col">
-        <SiteHeader />
-        <main className="flex flex-1 flex-col">{children}</main>
-        <SiteFooter />
-      </div>
+      <SiteHeader />
+      <main className="flex flex-1 flex-col">{children}</main>
+      <SiteFooter />
     </div>
   );
 }

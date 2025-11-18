@@ -6,8 +6,8 @@ export default function ToolsLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative h-full lg:gap-10 xl:grid xl:grid-cols-[1fr_280px]">
-      <article className="mx-auto flex h-full w-full max-w-3xl min-w-0 flex-col py-6 lg:py-8 xl:max-w-4xl">
+    <div className="relative xl:grid xl:grid-cols-[1fr_280px] xl:gap-10">
+      <article className="mx-auto flex w-full max-w-3xl min-w-0 flex-col py-6 lg:py-8 xl:max-w-4xl">
         {children}
       </article>
       <aside className="hidden text-sm xl:block">
