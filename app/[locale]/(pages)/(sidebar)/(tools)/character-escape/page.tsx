@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import {
@@ -134,13 +134,6 @@ export default function CharacterEscapePage() {
       processText(inputText, isDecodeMode);
     }
   };
-
-  // update output when dependencies change
-  useEffect(() => {
-    if (inputText) {
-      detectAndProcessInput(inputText);
-    }
-  }, [inputText, detectAndProcessInput]);
 
   // get encoding badges for display
   const getEncodingBadges = (encoding: EscapeType) => {

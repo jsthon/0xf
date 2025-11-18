@@ -35,7 +35,9 @@ export function CommandMenu({ ...props }: DialogProps) {
   const t = useTranslations("CommandMenu");
   const tTheme = useTranslations("ThemeSwitcher");
 
+  // Prevent hydration mismatch
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
   }, []);
 

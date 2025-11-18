@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { formatISO9075 } from "date-fns";
 import { useTranslations } from "next-intl";
 
@@ -266,7 +266,7 @@ export default function TimeIntervalPage() {
   const [displayFormat, setDisplayFormat] = useState<DisplayFormat>("auto");
 
   // flag to prevent an infinite loop when the interval updates the date
-  const isIntervalUpdate = useRef(false);
+  const [isIntervalUpdate, setIsIntervalUpdate] = useState(false);
 
   const t = useTranslations("TimeIntervalPage");
 
@@ -292,9 +292,10 @@ export default function TimeIntervalPage() {
 
   // reset the update flag after the interval recalculates
   useEffect(() => {
-    if (isIntervalUpdate.current) {
-      isIntervalUpdate.current = false;
+    if (isIntervalUpdate) {
+      setIsIntervalUpdate(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentInterval]);
 
   // calculate end date from start date and interval
@@ -324,7 +325,7 @@ export default function TimeIntervalPage() {
         result &&
         (!endDateTime || result.getTime() !== endDateTime.getTime())
       ) {
-        isIntervalUpdate.current = true;
+        setIsIntervalUpdate(true);
         setEndDateTime(result);
       }
     },
@@ -395,7 +396,7 @@ export default function TimeIntervalPage() {
           {currentInterval ? (
             <IntervalEditor
               key={
-                isIntervalUpdate.current
+                isIntervalUpdate
                   ? null
                   : `${startDateTime?.getTime()}-${endDateTime?.getTime()}`
               }

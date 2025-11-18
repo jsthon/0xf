@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { Download, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import {
@@ -79,7 +79,6 @@ type OptionName = (typeof OPTIONS_CONFIG)[number]["name"];
 export default function SvgOptimizerPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [inputSvg, setInputSvg] = useState("");
-  const [outputSvg, setOutputSvg] = useState("");
   const [isOriginal, setIsOriginal] = useState(false);
   const [floatPrecision, setFloatPrecision] = useState(3);
   const [svgoOptions, setSvgoOptions] = useState<Record<OptionName, boolean>>(
@@ -90,13 +89,6 @@ export default function SvgOptimizerPage() {
   );
 
   const t = useTranslations("SvgOptimizerPage");
-
-  const inputSize = useMemo(() => new Blob([inputSvg]).size, [inputSvg]);
-  const outputSize = useMemo(() => new Blob([outputSvg]).size, [outputSvg]);
-  const sizeRatio = useMemo(() => {
-    if (inputSize === 0 || outputSize === 0) return 0;
-    return (outputSize / inputSize) * 100;
-  }, [inputSize, outputSize]);
 
   const svgProcess = useCallback(
     (
@@ -127,10 +119,17 @@ export default function SvgOptimizerPage() {
     []
   );
 
-  useEffect(() => {
+  const outputSvg = useMemo(() => {
     const { data, error } = svgProcess(inputSvg, svgoOptions, floatPrecision);
-    setOutputSvg(error ? "" : data);
+    return error ? "" : data;
   }, [inputSvg, svgoOptions, floatPrecision, svgProcess]);
+
+  const inputSize = useMemo(() => new Blob([inputSvg]).size, [inputSvg]);
+  const outputSize = useMemo(() => new Blob([outputSvg]).size, [outputSvg]);
+  const sizeRatio = useMemo(() => {
+    if (inputSize === 0 || outputSize === 0) return 0;
+    return (outputSize / inputSize) * 100;
+  }, [inputSize, outputSize]);
 
   const handleOptionToggle = (optionName: OptionName) => {
     setSvgoOptions((prev) => ({ ...prev, [optionName]: !prev[optionName] }));
