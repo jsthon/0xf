@@ -112,12 +112,7 @@ export function Icon({
   }
 
   // load dynamic lucide icon
-  try {
-    return (
-      <DynamicIcon name={name as IconName} className={className} {...props} />
-    );
-  } catch {
-    console.warn(`Icon not found: ${name}`);
-    return null;
-  }
+  return (
+    <DynamicIcon name={name as IconName} className={className} {...props} />
+  );
 }

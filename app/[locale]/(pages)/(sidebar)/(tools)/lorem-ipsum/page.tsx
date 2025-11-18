@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useTransition } from "react";
 import { loremIpsum } from "lorem-ipsum";
 import { RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -45,6 +45,7 @@ const TRADITIONAL_START =
 export default function LoremIpsumPage() {
   const [text, setText] = useState<string>("");
   const [options, setOptions] = useState<LoremIpsumOptions>(DEFAULT_OPTIONS);
+  const [, startTransition] = useTransition();
   const t = useTranslations("LoremIpsumPage");
 
   // Generate Lorem Ipsum text based on current options
@@ -167,7 +168,9 @@ export default function LoremIpsumPage() {
 
   // Generate text when options change or on initial load
   useEffect(() => {
-    handleGenerate();
+    startTransition(() => {
+      handleGenerate();
+    });
   }, [options, handleGenerate]);
 
   return (

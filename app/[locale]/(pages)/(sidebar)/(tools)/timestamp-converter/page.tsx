@@ -36,14 +36,13 @@ export default function TimestampConverterPage() {
 
   // Prevent hydration mismatch
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOutputTimezone(getUserTimezone());
   }, []);
 
   // Update current date every second
   useEffect(() => {
     if (inputText) return;
-
-    setCurrentDate(new Date());
 
     const interval = setInterval(() => {
       setCurrentDate(new Date());

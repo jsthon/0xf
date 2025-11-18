@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { format, formatISO9075 } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -34,15 +34,19 @@ export function DateTimePicker({
   ...props
 }: DateTimePickerProps) {
   const [open, setOpen] = useState(false);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState(() =>
+    value ? formatISO9075(value) : ""
+  );
+  const [prevValue, setPrevValue] = useState(value);
 
   const locale = useLocale();
   const t = useTranslations("DateTimePicker");
 
-  // sync input text with value changes
-  useEffect(() => {
+  // sync input text when value prop changes (compare by time value, not reference)
+  if (value?.getTime() !== prevValue?.getTime()) {
+    setPrevValue(value);
     setInputText(value ? formatISO9075(value) : "");
-  }, [value]);
+  }
 
   // computed time value for TimeInput
   const timeValue = useMemo(
@@ -73,9 +77,12 @@ export function DateTimePicker({
   const handleInputBlur = useCallback(() => {
     const date = new Date(inputText);
 
-    // if valid, update value
+    // check if the date is valid
     if (!isNaN(date.getTime())) {
-      onChange?.(date);
+      // check if the date is actually changed
+      if (!value || date.getTime() !== value.getTime()) {
+        onChange?.(date);
+      }
     } else {
       // if invalid, restore to previous valid value
       setInputText(value ? formatISO9075(value) : "");

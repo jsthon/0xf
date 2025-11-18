@@ -63,6 +63,7 @@ export function TimeInput({
   // parse incoming time value
   useEffect(() => {
     const [h = "00", m = "00", s = "00"] = value.split(":");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHours(h.padStart(2, "0"));
     setMinutes(m.padStart(2, "0"));
     setSeconds(s.padStart(2, "0"));

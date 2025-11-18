@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { plainTypingProps } from "@/lib/props/typing";
@@ -84,13 +84,6 @@ export default function URLEncodingPage() {
       detectAndProcessInput(inputText);
     }
   };
-
-  // update output when dependencies change
-  useEffect(() => {
-    if (inputText) {
-      detectAndProcessInput(inputText);
-    }
-  }, [inputText, detectAndProcessInput]);
 
   return (
     <>

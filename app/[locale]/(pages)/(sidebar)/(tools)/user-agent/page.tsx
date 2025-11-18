@@ -27,7 +27,6 @@ const USER_AGENT_FIELDS = {
 } as const;
 
 export default function UserAgentPage() {
-  const [isMounted, setIsMounted] = useState(false);
   const [userAgent, setUserAgent] = useState("");
   const t = useTranslations("UserAgentPage");
 
@@ -45,8 +44,8 @@ export default function UserAgentPage() {
   };
 
   useEffect(() => {
-    setIsMounted(true);
     if (typeof window !== "undefined") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setUserAgent(navigator.userAgent);
     }
   }, []);
@@ -77,28 +76,26 @@ export default function UserAgentPage() {
           />
         </div>
 
-        {isMounted && (
-          <div className="flex flex-col gap-4">
-            <div className="text-lg font-medium">{t("Labels.Output")}</div>
+        <div className="flex flex-col gap-4">
+          <div className="text-lg font-medium">{t("Labels.Output")}</div>
 
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-              {(
-                Object.keys(
-                  USER_AGENT_FIELDS
-                ) as (keyof typeof USER_AGENT_FIELDS)[]
-              ).map((name) => (
-                <div key={name} className="flex flex-col gap-1">
-                  <p className="text-muted-foreground text-sm">
-                    {t(`Labels.${name}`)}
-                  </p>
-                  <p className="font-medium">
-                    {formatFieldValue(USER_AGENT_FIELDS[name](parseResult))}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {(
+              Object.keys(
+                USER_AGENT_FIELDS
+              ) as (keyof typeof USER_AGENT_FIELDS)[]
+            ).map((name) => (
+              <div key={name} className="flex flex-col gap-1">
+                <p className="text-muted-foreground text-sm">
+                  {t(`Labels.${name}`)}
+                </p>
+                <p className="font-medium">
+                  {formatFieldValue(USER_AGENT_FIELDS[name](parseResult))}
+                </p>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </>
   );
