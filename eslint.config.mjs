@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     // Custom ignores:
+    "/public/**",
     "lib/vendor/**",
   ]),
 ]);

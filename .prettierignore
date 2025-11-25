@@ -2,5 +2,6 @@ dist
 node_modules
 .next
 build
+/public/
 components/ui/
 lib/vendor/

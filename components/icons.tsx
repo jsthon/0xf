@@ -55,29 +55,18 @@ const LucideIcons: Record<string, LucideIcon> = {
 
 export const CustomIcons = {
   logo: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
-      <rect width="256" height="256" fill="none" />
-      <line
-        x1="208"
-        y1="128"
-        x2="128"
-        y2="208"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 200" {...props}>
+      <path
+        d="M492 0V44H396V78H462V122H396V200H352V0H492Z"
+        fill="currentColor"
       />
-      <line
-        x1="192"
-        y1="40"
-        x2="40"
-        y2="192"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
+      <path
+        d="M228 116H264V76H308V120H268V156H308V200H264V160H228V200H184V156H224V120H184V76H228V116Z"
+        fill="currentColor"
+      />
+      <path
+        d="M140 156H96V200H0V44H44V0H140V156ZM44 156H96V44H44V156Z"
+        fill="currentColor"
       />
     </svg>
   ),
