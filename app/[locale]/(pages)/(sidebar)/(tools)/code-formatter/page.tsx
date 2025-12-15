@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { closeBrackets, closeBracketsKeymap } from "@codemirror/autocomplete";
 import { defaultKeymap, history, historyKeymap } from "@codemirror/commands";
 import { bracketMatching, foldGutter, foldKeymap } from "@codemirror/language";
@@ -13,6 +20,7 @@ import {
   keymap,
   lineNumbers,
 } from "@codemirror/view";
+import { Download, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { toast } from "sonner";
@@ -24,6 +32,7 @@ import {
   foldGutterConfig,
   getLanguageExtension,
 } from "@/lib/codemirror";
+import { saveBlobAsFile } from "@/lib/file";
 import { FormatOptions, languages } from "@/lib/format-minify";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -44,10 +53,24 @@ import {
 } from "@/components/ui/tooltip";
 import { CopyButton } from "@/components/copy-button";
 
+// Language to file extension mapping
+const languageExtensions: Record<string, string> = {
+  html: "html",
+  css: "css",
+  javascript: "js",
+  typescript: "ts",
+  json: "json",
+  xml: "xml",
+  yaml: "yaml",
+  markdown: "md",
+  sql: "sql",
+};
+
 export default function CodeFormatterPage() {
   const [language, setLanguage] = useState("");
   const editorRef = useRef<HTMLDivElement>(null);
   const editorViewRef = useRef<EditorView | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Format options
   const [formatOptions, setFormatOptions] = useState<FormatOptions>({
@@ -109,6 +132,51 @@ export default function CodeFormatterPage() {
   // Get current editor content
   const getEditorContent = () => {
     return editorViewRef.current?.state.doc.toString() || "";
+  };
+
+  // Set editor content
+  const setEditorContent = (content: string) => {
+    if (!editorViewRef.current) return;
+    const currentContent = getEditorContent();
+    editorViewRef.current.dispatch({
+      changes: { from: 0, to: currentContent.length, insert: content },
+      userEvent: "input",
+    });
+  };
+
+  // Handle file upload
+  const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const content = event.target?.result as string;
+      setEditorContent(content);
+    };
+    reader.onerror = () => toast.error(t("Messages.UploadFailed"));
+    reader.readAsText(file);
+
+    // reset input to allow re-uploading the same file
+    e.target.value = "";
+  };
+
+  // Handle download
+  const handleDownload = () => {
+    const content = getEditorContent();
+    if (!content) {
+      toast.error(t("Messages.DownloadEmpty"));
+      return;
+    }
+
+    try {
+      const ext = language ? languageExtensions[language] || "txt" : "txt";
+      const filename = `formatted.${ext}`;
+      const blob = new Blob([content], { type: "text/plain" });
+      saveBlobAsFile(blob, filename);
+    } catch {
+      toast.error(t("Messages.DownloadFailed"));
+    }
   };
 
   // Create or update editor with current language
@@ -253,11 +321,46 @@ export default function CodeFormatterPage() {
             <Button onClick={handleFormat}>{t("Controls.FormatCode")}</Button>
           </div>
 
-          <CopyButton
-            getValue={getEditorContent}
-            variant="outline"
-            className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-9 rounded-md border [&_svg]:size-4"
-          />
+          <div className="flex items-center gap-2">
+            <input
+              ref={fileInputRef}
+              type="file"
+              className="hidden"
+              onChange={handleFileUpload}
+              accept="*/*"
+            />
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  <Upload className="size-4" />
+                  <span className="sr-only">{t("Controls.Upload")}</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{t("Controls.Upload")}</p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="outline" size="icon" onClick={handleDownload}>
+                  <Download className="size-4" />
+                  <span className="sr-only">{t("Controls.Download")}</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{t("Controls.Download")}</p>
+              </TooltipContent>
+            </Tooltip>
+            <CopyButton
+              getValue={getEditorContent}
+              variant="outline"
+              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-9 rounded-md border [&_svg]:size-4"
+            />
+          </div>
         </div>
 
         {supportedOptions && (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { closeBrackets, closeBracketsKeymap } from "@codemirror/autocomplete";
 import { defaultKeymap, history, historyKeymap } from "@codemirror/commands";
 import { bracketMatching, foldGutter, foldKeymap } from "@codemirror/language";
@@ -14,6 +14,7 @@ import {
   lineNumbers,
 } from "@codemirror/view";
 import { XMLBuilder, XMLParser } from "fast-xml-parser";
+import { Download, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Papa from "papaparse";
@@ -27,6 +28,7 @@ import {
   foldGutterConfig,
   getLanguageExtension,
 } from "@/lib/codemirror";
+import { saveBlobAsFile } from "@/lib/file";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -43,7 +45,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { CopyButton } from "@/components/copy-button";
+
+// Format to file extension mapping
+const formatExtensions: Record<string, string> = {
+  json: "json",
+  yaml: "yaml",
+  xml: "xml",
+  csv: "csv",
+};
 
 // Format types supported by the converter
 type FormatType = "json" | "csv" | "yaml" | "xml";
@@ -68,6 +83,7 @@ export default function DataFormatConverterPage() {
   const outputEditorRef = useRef<HTMLDivElement>(null);
   const inputEditorViewRef = useRef<EditorView | null>(null);
   const outputEditorViewRef = useRef<EditorView | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const { resolvedTheme } = useTheme();
   const t = useTranslations("DataFormatConverterPage");
@@ -163,6 +179,59 @@ export default function DataFormatConverterPage() {
   // Get output editor content
   const getOutputContent = () => {
     return outputEditorViewRef.current?.state.doc.toString() || "";
+  };
+
+  // Set input editor content
+  const setInputContent = (content: string) => {
+    if (!inputEditorViewRef.current) return;
+    const currentContent = getInputContent();
+    inputEditorViewRef.current.dispatch({
+      changes: { from: 0, to: currentContent.length, insert: content },
+      userEvent: "input",
+    });
+
+    // trigger format detection for auto mode
+    if (!selectedInputFormat) {
+      const format = detectInputFormat(content);
+      setDetectedInputFormat(format);
+    }
+  };
+
+  // Handle file upload
+  const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const content = event.target?.result as string;
+      setInputContent(content);
+    };
+    reader.onerror = () => toast.error(t("Messages.UploadFailed"));
+    reader.readAsText(file);
+
+    // reset input to allow re-uploading the same file
+    e.target.value = "";
+  };
+
+  // Handle download
+  const handleDownload = () => {
+    const content = getOutputContent();
+    if (!content) {
+      toast.error(t("Messages.DownloadEmpty"));
+      return;
+    }
+
+    try {
+      const ext = outputFormat
+        ? formatExtensions[outputFormat] || "txt"
+        : "txt";
+      const filename = `converted.${ext}`;
+      const blob = new Blob([content], { type: "text/plain" });
+      saveBlobAsFile(blob, filename);
+    } catch {
+      toast.error(t("Messages.DownloadFailed"));
+    }
   };
 
   // Create or update input editor
@@ -378,11 +447,35 @@ export default function DataFormatConverterPage() {
                 </Badge>
               )}
             </div>
-            <CopyButton
-              getValue={getInputContent}
-              variant="outline"
-              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
-            />
+            <div className="flex items-center gap-2">
+              <input
+                ref={fileInputRef}
+                type="file"
+                className="hidden"
+                onChange={handleFileUpload}
+                accept="*/*"
+              />
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon-sm"
+                    onClick={() => fileInputRef.current?.click()}
+                  >
+                    <Upload className="size-4" />
+                    <span className="sr-only">{t("Labels.Upload")}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("Labels.Upload")}</p>
+                </TooltipContent>
+              </Tooltip>
+              <CopyButton
+                getValue={getInputContent}
+                variant="outline"
+                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
+              />
+            </div>
           </div>
           <div
             ref={inputEditorRef}
@@ -398,11 +491,28 @@ export default function DataFormatConverterPage() {
                 <Badge variant="outline">{outputFormat.toUpperCase()}</Badge>
               )}
             </div>
-            <CopyButton
-              getValue={getOutputContent}
-              variant="outline"
-              className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
-            />
+            <div className="flex items-center gap-2">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon-sm"
+                    onClick={handleDownload}
+                  >
+                    <Download className="size-4" />
+                    <span className="sr-only">{t("Labels.Download")}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("Labels.Download")}</p>
+                </TooltipContent>
+              </Tooltip>
+              <CopyButton
+                getValue={getOutputContent}
+                variant="outline"
+                className="border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground size-8 rounded-md border [&_svg]:size-4"
+              />
+            </div>
           </div>
           <div
             ref={outputEditorRef}

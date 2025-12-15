@@ -254,6 +254,8 @@
     "Controls": {
       "Language": "Select language",
       "FormatCode": "Format Code",
+      "Upload": "Upload",
+      "Download": "Download",
       "PrintWidth": "Print Width:",
       "TabWidth": "Tab Width:",
       "UseTabs": {
@@ -282,7 +284,10 @@
     "Messages": {
       "LanguageRequired": "Please select code language",
       "FormatSuccess": "Format successful",
-      "FormatFailed": "Format failed. Check syntax."
+      "FormatFailed": "Format failed. Check syntax.",
+      "UploadFailed": "Failed to load file",
+      "DownloadEmpty": "No content to download",
+      "DownloadFailed": "Failed to download file"
     }
   },
   "CodeMinifierPage": {
@@ -292,12 +297,17 @@
     },
     "Controls": {
       "Language": "Select language",
-      "MinifyCode": "Minify Code"
+      "MinifyCode": "Minify Code",
+      "Upload": "Upload",
+      "Download": "Download"
     },
     "Messages": {
       "LanguageRequired": "Please select code language",
       "MinifySuccess": "Minify successful",
-      "MinifyFailed": "Minify failed. Check syntax."
+      "MinifyFailed": "Minify failed. Check syntax.",
+      "UploadFailed": "Failed to load file",
+      "DownloadEmpty": "No content to download",
+      "DownloadFailed": "Failed to download file"
     }
   },
   "UUIDGeneratorPage": {
@@ -497,12 +507,17 @@
       "Output": "Output",
       "InputFormat": "Input Format",
       "AutoDetect": "Auto Detect",
-      "ConvertFormat": "Convert Format"
+      "ConvertFormat": "Convert Format",
+      "Upload": "Upload",
+      "Download": "Download"
     },
     "Messages": {
       "ConvertSuccess": "Convert successful",
       "ConvertFailed": "Convert failed. Check syntax.",
-      "UnknownFormat": "Unable to detect input format."
+      "UnknownFormat": "Unable to detect input format.",
+      "UploadFailed": "Failed to load file.",
+      "DownloadEmpty": "No content to download.",
+      "DownloadFailed": "Failed to download file."
     }
   },
   "UserAgentPage": {
