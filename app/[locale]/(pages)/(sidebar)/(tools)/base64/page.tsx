@@ -75,17 +75,17 @@ export default function Base64Page() {
 
   // detect input type and process text
   const detectAndProcessInput = useCallback(
-    async (text: string) => {
-      if (isAutoDetect) {
+    async (text: string, autoDetect: boolean = isAutoDetect) => {
+      if (autoDetect) {
         const isBase64 = await isProbablyBase64(text);
         const urlSafe = isBase64 && hasUrlSafeChars(text);
 
         setIsDecodeMode(isBase64);
         setIsUrlSafe(urlSafe);
 
-        processText(text, isAutoDetect, isBase64, urlSafe);
+        processText(text, autoDetect, isBase64, urlSafe);
       } else {
-        processText(text, isAutoDetect, isDecodeMode, isUrlSafe);
+        processText(text, autoDetect, isDecodeMode, isUrlSafe);
       }
     },
     [isAutoDetect, isDecodeMode, isUrlSafe, processText]
@@ -103,7 +103,7 @@ export default function Base64Page() {
     setIsAutoDetect(checked);
 
     if (checked && inputText) {
-      detectAndProcessInput(inputText);
+      detectAndProcessInput(inputText, true);
     }
   };
 

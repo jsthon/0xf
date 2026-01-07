@@ -49,8 +49,8 @@ export default function URLEncodingPage() {
 
   // detect input type and process text
   const detectAndProcessInput = useCallback(
-    (text: string) => {
-      if (isAutoDetect) {
+    (text: string, autoDetect: boolean = isAutoDetect) => {
+      if (autoDetect) {
         const isUrlEncoded = isValidUrlEncoded(text);
         setIsDecodeMode(isUrlEncoded);
         processText(text, isUrlEncoded);
@@ -81,7 +81,7 @@ export default function URLEncodingPage() {
     setIsAutoDetect(checked);
 
     if (checked && inputText) {
-      detectAndProcessInput(inputText);
+      detectAndProcessInput(inputText, true);
     }
   };
 
