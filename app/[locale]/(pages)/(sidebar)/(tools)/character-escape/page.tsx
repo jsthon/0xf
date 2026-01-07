@@ -35,7 +35,7 @@ export default function CharacterEscapePage() {
 
   // process text based on current state
   const processText = useCallback(
-    (text: string, decode: boolean) => {
+    (text: string, decode: boolean, encoding: EscapeType = charEncoding) => {
       if (!text) {
         setOutputText("");
         return;
@@ -50,11 +50,11 @@ export default function CharacterEscapePage() {
           setOutputText(decoded || t("Messages.Decode.InvalidEncoding"));
         } else {
           // use specific encoding selected by user
-          decoded = decodeCharacters(text, charEncoding);
+          decoded = decodeCharacters(text, encoding);
 
           // show specific error message based on the selected format
           if (!decoded) {
-            switch (charEncoding) {
+            switch (encoding) {
               case EscapeType.CodePoint:
                 setOutputText(t("Messages.Decode.InvalidCodePoint"));
                 break;
@@ -78,7 +78,7 @@ export default function CharacterEscapePage() {
           }
         }
       } else {
-        const encoded = encodeCharacters(text, charEncoding);
+        const encoded = encodeCharacters(text, encoding);
         setOutputText(encoded || t("Messages.Encode.Failed"));
       }
     },
@@ -87,8 +87,8 @@ export default function CharacterEscapePage() {
 
   // detect input type and process text
   const detectAndProcessInput = useCallback(
-    (text: string) => {
-      if (isAutoDetect) {
+    (text: string, autoDetect: boolean = isAutoDetect) => {
+      if (autoDetect) {
         const detectedFormat = detectEscapeType(text);
         const isEncodedFormat = detectedFormat !== null;
 
@@ -122,16 +122,17 @@ export default function CharacterEscapePage() {
   const handleAutoDetectToggle = (checked: boolean) => {
     setIsAutoDetect(checked);
     if (checked && inputText) {
-      detectAndProcessInput(inputText);
+      detectAndProcessInput(inputText, true);
     }
   };
 
   // handle encoding change
   const handleEncodingChange = (value: string) => {
+    const encoding = value as EscapeType;
     setIsAutoDetect(false);
-    setCharEncoding(value as EscapeType);
+    setCharEncoding(encoding);
     if (inputText) {
-      processText(inputText, isDecodeMode);
+      processText(inputText, isDecodeMode, encoding);
     }
   };
 
