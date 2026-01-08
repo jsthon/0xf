@@ -15,7 +15,8 @@ import {
 } from "@/components/ui/tooltip";
 
 interface CopyButtonProps
-  extends Omit<React.ComponentProps<"button">, "children">,
+  extends
+    Omit<React.ComponentProps<"button">, "children">,
     VariantProps<typeof buttonVariants> {
   value?: string;
   getValue?: () => string | Blob | Promise<string | Blob>;
