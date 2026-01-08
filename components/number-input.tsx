@@ -10,8 +10,10 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-export interface NumberInputProps
-  extends Omit<NumericFormatProps, "value" | "onValueChange"> {
+export interface NumberInputProps extends Omit<
+  NumericFormatProps,
+  "value" | "onValueChange"
+> {
   className?: string;
   defaultValue?: number;
   value?: number; // Controlled value from parent
