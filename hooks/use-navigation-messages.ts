@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useMessages } from "next-intl";
 
-import { Navigations, NavSection } from "@/types/nav";
+import { Navigations, NavItem, NavSection } from "@/types/nav";
 import { usePathname } from "@/i18n/navigation";
 
 export function useNavigationMessages(): Navigations {
@@ -31,4 +31,24 @@ export function useActiveNavigationSection(): NavSection | undefined {
   }, [navs, pathname]);
 
   return section;
+}
+
+export type NavToolItem = NavItem & { intl: string; href: string };
+
+export function useNavigationToolItems(): NavToolItem[] {
+  const navigations = useNavigationMessages();
+
+  return useMemo(() => {
+    const section = navigations.sections.find(
+      (section) => section.slug === "tools"
+    );
+
+    return (
+      section?.categories
+        .flatMap((category) => category.items)
+        .filter((item): item is NavToolItem =>
+          Boolean(item.intl && item.href)
+        ) ?? []
+    );
+  }, [navigations]);
 }

@@ -94,6 +94,10 @@
 }
 
 @layer utilities {
+  .container-wrapper {
+    @apply mx-auto w-full max-w-[1400px] min-[1800px]:max-w-screen-2xl;
+  }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
