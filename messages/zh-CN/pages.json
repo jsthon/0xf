@@ -11,6 +11,15 @@
       "Title": "首页",
       "Description": "首页描述"
     },
-    "Welcome": "欢迎"
+    "Hero": {
+      "Announcement": "发布第一个版本",
+      "Title": "实用，顺手即用",
+      "Description": "轻量、开源的开发实用工具集合。",
+      "GetStarted": "开始使用",
+      "GitHub": "GitHub 仓库"
+    },
+    "Tools": {
+      "Title": "开发工具"
+    }
   }
 }
