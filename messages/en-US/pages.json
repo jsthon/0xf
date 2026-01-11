@@ -11,6 +11,15 @@
       "Title": "Home",
       "Description": "Homepage description"
     },
-    "Welcome": "Welcome"
+    "Hero": {
+      "Announcement": "Released first version",
+      "Title": "Utilities, Right at Hand",
+      "Description": "A lightweight, open-source collection of practical development tools.",
+      "GetStarted": "Get Started",
+      "GitHub": "View on GitHub"
+    },
+    "Tools": {
+      "Title": "Dev Tools"
+    }
   }
 }
