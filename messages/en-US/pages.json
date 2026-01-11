@@ -1,10 +1,19 @@
 {
   "ErrorPage": {
-    "Title": "Error",
-    "Reset": "Reset"
+    "Meta": {
+      "Title": "Page load error",
+      "Description": "An error occurred while loading this page."
+    },
+    "Back": "Go back",
+    "Home": "Back to home"
   },
   "NotFoundPage": {
-    "Title": "Not Found"
+    "Meta": {
+      "Title": "Page not found",
+      "Description": "Looks like this page doesn't exist."
+    },
+    "Back": "Go back",
+    "Home": "Back to home"
   },
   "HomePage": {
     "Meta": {

@@ -1,10 +1,19 @@
 {
   "ErrorPage": {
-    "Title": "错误",
-    "Reset": "重置"
+    "Meta": {
+      "Title": "页面出错",
+      "Description": "加载此页面时发生错误。"
+    },
+    "Back": "返回",
+    "Home": "进入首页"
   },
   "NotFoundPage": {
-    "Title": "未找到"
+    "Meta": {
+      "Title": "页面未找到",
+      "Description": "这个页面似乎不存在。"
+    },
+    "Back": "返回",
+    "Home": "进入首页"
   },
   "HomePage": {
     "Meta": {
