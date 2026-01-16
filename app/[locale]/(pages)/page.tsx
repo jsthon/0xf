@@ -1,7 +1,7 @@
 import { use } from "react";
 import { Metadata } from "next";
 import { ArrowRightIcon, CodeIcon, ZapIcon } from "lucide-react";
-import { Locale, useTranslations } from "next-intl";
+import { Locale, useMessages, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { siteConfig } from "@/config/site";
@@ -9,7 +9,7 @@ import { useNavigationToolItems } from "@/hooks/use-navigation-messages";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CustomIcons, Icon } from "@/components/icons";
+import { CustomIcons, Icon, IconKey } from "@/components/icons";
 
 export async function generateMetadata({
   params,
@@ -38,10 +38,18 @@ export default function HomePage({
   // enable static rendering
   setRequestLocale(locale as Locale);
 
+  const messages = useMessages();
   const t = useTranslations("HomePage");
   const tRoot = useTranslations() as (key: string) => string;
 
   const toolItems = useNavigationToolItems();
+  const featureItems = (
+    messages.HomePage as {
+      Features: {
+        Items: Array<{ Title: string; Description: string; Icon: IconKey }>;
+      };
+    }
+  ).Features.Items;
 
   return (
     <>
@@ -110,6 +118,42 @@ export default function HomePage({
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      <section className="container-wrapper px-4 xl:px-6">
+        <div className="my-12 flex flex-col gap-8 md:my-16 md:gap-12 lg:my-20 lg:gap-16">
+          <div className="flex flex-col gap-5 text-center text-balance">
+            <strong className="text-muted-foreground text-xs font-medium tracking-wide uppercase">
+              {t("Features.Badge")}
+            </strong>
+            <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl">
+              {t("Features.Title")}
+            </h2>
+            <p className="text-muted-foreground md:text-lg">
+              {t("Features.Description")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featureItems.map((item) => (
+              <div
+                key={item.Title}
+                className="bg-card relative flex flex-col items-start border p-8"
+              >
+                <span className="bg-muted/70 absolute inset-x-0 bottom-0 h-2 w-full border-t border-dashed"></span>
+                <span className="bg-muted/70 absolute inset-x-0 top-0 h-2 w-full border-b border-dashed"></span>
+                <span className="bg-muted/70 absolute inset-y-0 left-0 h-full w-2 border-e border-dashed"></span>
+                <span className="bg-muted/70 absolute inset-y-0 right-0 h-full w-2 border-s border-dashed"></span>
+
+                <div className="bg-muted rounded-lg p-2">
+                  <Icon name={item.Icon || "circle"} className="size-6" />
+                </div>
+                <h3 className="mt-4 text-xl font-semibold">{item.Title}</h3>
+                <p className="text-foreground/80 mt-2">{item.Description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
