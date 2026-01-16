@@ -29,6 +29,43 @@
     },
     "Tools": {
       "Title": "Dev Tools"
+    },
+    "Features": {
+      "Title": "Built for Developers Who Care",
+      "Description": "Simple and reliable utilities for everyday development work, always ready when you need them.",
+      "Badge": "Why Choose Us",
+      "Items": [
+        {
+          "Title": "Free and Unlimited",
+          "Description": "All tools are available with no limits.",
+          "Icon": "crown"
+        },
+        {
+          "Title": "Open Source",
+          "Description": "Open source on GitHub. Review the code, contribute, or self-host.",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "Privacy-Friendly",
+          "Description": "All tools run directly in your browser, with no backend processing involved.",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "Predictable Results",
+          "Description": "Results are based on defined rules, rather than generative AI language models.",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "Practical by Design",
+          "Description": "Focused utilities for common development tasks, designed to be easy to use.",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "Multiple Languages",
+          "Description": "Supports multiple languages for developers around the world.",
+          "Icon": "languages"
+        }
+      ]
     }
   }
 }

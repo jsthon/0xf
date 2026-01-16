@@ -29,6 +29,43 @@
     },
     "Tools": {
       "Title": "开发工具"
+    },
+    "Features": {
+      "Title": "代码所需，触手可及。",
+      "Description": "简约、可靠的开发实用工具，开箱即用、随用即得。",
+      "Badge": "为什么选择它",
+      "Items": [
+        {
+          "Title": "免费无限制",
+          "Description": "所有工具均可免费使用，没有任何限制。",
+          "Icon": "crown"
+        },
+        {
+          "Title": "开源透明",
+          "Description": "代码开源并托管在 GitHub，欢迎审查、贡献代码，也可自行部署。",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "尊重隐私",
+          "Description": "所有工具均在浏览器中直接运行，没有后端服务处理数据。",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "结果可预期",
+          "Description": "结果遵循明确规则，而非依赖生成式 AI 语言模型。",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "实用至上",
+          "Description": "专注于常见开发任务，交互设计简单易用。",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "多语言支持",
+          "Description": "支持多种语言，面向全球开发者。",
+          "Icon": "languages"
+        }
+      ]
     }
   }
 }
