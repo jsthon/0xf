@@ -10,55 +10,49 @@ import { Icon } from "@/components/icons";
 
 export function SidebarNav() {
   const pathname = usePathname();
-  const shouldScrollNav = useRef(true);
-  const navRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
+  const navRef = useRef<HTMLElement>(null);
+  const itemRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
   const section = useActiveNavigationSection();
 
   useEffect(() => {
-    // only execute on initial page load once
-    if (!shouldScrollNav.current || !pathname) return;
+    if (!pathname) return;
 
     // wait for refs to be populated
     requestAnimationFrame(() => {
-      try {
-        // check if active nav item exists
-        const activeNav = navRefs.current.get(pathname);
-        if (!activeNav) return;
+      // check if sidebar exists and is visible (hidden on mobile)
+      const aside = navRef.current?.closest("aside.hidden");
+      if (!aside || window.getComputedStyle(aside).display === "none") return;
 
-        // check if sidebar exists and is visible (hidden on mobile)
-        const aside = activeNav.closest("aside.hidden");
-        if (!aside || window.getComputedStyle(aside).display === "none") return;
+      // find the scrollable container within the sidebar
+      const sidebar = aside.querySelector("[data-radix-scroll-area-viewport]");
+      if (!sidebar) return;
 
-        // find the scrollable container within the sidebar
-        const sidebar = aside.querySelector(
-          "[data-radix-scroll-area-viewport]"
-        );
-        if (!sidebar) return;
+      // scroll to top if no active nav item
+      const activeNav = itemRefs.current.get(pathname);
+      if (!activeNav) {
+        sidebar.scrollTop = 0;
+        return;
+      }
 
-        // check if active nav item is fully visible in sidebar
-        const { top: navTop, height: navHeight } =
-          activeNav.getBoundingClientRect();
-        const { top: sidebarTop, height: sidebarHeight } =
-          sidebar.getBoundingClientRect();
-        const isVisible =
-          navTop >= sidebarTop &&
-          navTop + navHeight <= sidebarTop + sidebarHeight;
+      // check if active nav item is fully visible in sidebar
+      const { top: navTop, height: navHeight } =
+        activeNav.getBoundingClientRect();
+      const { top: sidebarTop, height: sidebarHeight } =
+        sidebar.getBoundingClientRect();
+      const isVisible =
+        navTop >= sidebarTop &&
+        navTop + navHeight <= sidebarTop + sidebarHeight;
 
-        // scroll to the center of the active nav item
-        if (!isVisible) {
-          const offset = navTop - sidebarTop - (sidebarHeight - navHeight) / 2;
-          sidebar.scrollTop += offset;
-        }
-      } finally {
-        // always set to false after attempt
-        shouldScrollNav.current = false;
+      // scroll to the center of the active nav item
+      if (!isVisible) {
+        const offset = navTop - sidebarTop - (sidebarHeight - navHeight) / 2;
+        sidebar.scrollTop += offset;
       }
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [pathname]);
 
   return section?.categories?.length ? (
-    <nav className="flex flex-col gap-4">
+    <nav ref={navRef} className="flex flex-col gap-4">
       {section?.categories.map((category) => (
         <div key={category.title} className="flex flex-col gap-2">
           <h4 className="flex h-9 w-full items-center px-2 text-sm font-medium">
@@ -68,7 +62,7 @@ export function SidebarNav() {
             <MemoSidebarNavItems
               items={category.items}
               pathname={pathname}
-              navRefs={navRefs}
+              itemRefs={itemRefs}
             />
           )}
         </div>
@@ -83,20 +77,20 @@ const MemoSidebarNavItems = memo(SidebarNavItems);
 function SidebarNavItems({
   items,
   pathname,
-  navRefs,
+  itemRefs,
 }: {
   items: NavItem[];
   pathname: string | null;
-  navRefs: React.RefObject<Map<string, HTMLAnchorElement>>;
+  itemRefs: React.RefObject<Map<string, HTMLAnchorElement>>;
 }) {
   // optimized ref callback
-  const setNavRef = useCallback(
+  const setItemRef = useCallback(
     (el: HTMLAnchorElement | null, href: string | undefined) => {
-      if (el && navRefs.current && href) {
-        navRefs.current.set(href, el);
+      if (el && itemRefs.current && href) {
+        itemRefs.current.set(href, el);
       }
     },
-    [navRefs]
+    [itemRefs]
   );
 
   return items?.length ? (
@@ -106,7 +100,7 @@ function SidebarNavItems({
           <Link
             key={item.title}
             href={item.href}
-            ref={(el) => setNavRef(el, item.href)}
+            ref={(el) => setItemRef(el, item.href)}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noreferrer" : undefined}
             className={cn(
