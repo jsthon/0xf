@@ -20,12 +20,18 @@ import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  CodeBlock,
+  CodeBlockBody,
+  CodeBlockContent,
+  CodeBlockItem,
+  type BundledLanguage,
+} from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 
 const OPTIONS_CONFIG = [
@@ -269,11 +275,27 @@ export default function SvgOptimizerPage() {
             </div>
           </TabsContent>
           <TabsContent value="code">
-            <Textarea
-              className="h-100 resize-none font-mono break-all"
-              value={displaySvg}
-              readOnly
-            />
+            <CodeBlock
+              data={[
+                {
+                  language: "xml",
+                  code: displaySvg,
+                },
+              ]}
+              defaultValue="xml"
+            >
+              <CodeBlockBody>
+                {(item) => (
+                  <CodeBlockItem key={item.language} value={item.language}>
+                    <CodeBlockContent
+                      language={item.language as BundledLanguage}
+                    >
+                      {item.code}
+                    </CodeBlockContent>
+                  </CodeBlockItem>
+                )}
+              </CodeBlockBody>
+            </CodeBlock>
           </TabsContent>
         </Tabs>
 
