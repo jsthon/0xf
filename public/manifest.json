@@ -1,0 +1,13 @@
+{
+  "name": "0xF",
+  "short_name": "0xF",
+  "icons": [
+    {
+      "src": "/app-launcher.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/tools",
+  "display": "standalone"
+}

@@ -1,5 +1,10 @@
 import { defineRouting } from "next-intl/routing";
 
+export const prefixes = {
+  "en-US": "/en",
+  "zh-CN": "/zh",
+};
+
 export const routing = defineRouting({
   // A list of all locales that are supported
   // Don't forget to update the middleware
@@ -11,9 +16,6 @@ export const routing = defineRouting({
   // Hide default locale prefix
   localePrefix: {
     mode: "as-needed",
-    prefixes: {
-      "en-US": "/en",
-      "zh-CN": "/zh",
-    },
+    prefixes: prefixes,
   },
 });

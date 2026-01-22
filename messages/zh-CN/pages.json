@@ -17,8 +17,8 @@
   },
   "HomePage": {
     "Meta": {
-      "Title": "首页",
-      "Description": "首页描述"
+      "Title": "0xF",
+      "Description": "轻量、开源的开发实用工具集合。"
     },
     "Hero": {
       "Announcement": "发布第一个版本",

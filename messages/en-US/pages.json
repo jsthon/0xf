@@ -17,8 +17,8 @@
   },
   "HomePage": {
     "Meta": {
-      "Title": "Home",
-      "Description": "Homepage description"
+      "Title": "0xF",
+      "Description": "A lightweight, open-source collection of practical development tools."
     },
     "Hero": {
       "Announcement": "Released first version",
