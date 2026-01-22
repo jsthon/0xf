@@ -1,7 +1,6 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
 import { fontMono, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -9,22 +8,6 @@ import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/providers";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-
-export async function generateMetadata({
-  params,
-}: Readonly<{
-  params: Promise<{ locale: string }>;
-}>): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({
-    locale: locale as Locale,
-    namespace: "LocaleLayout.Meta",
-  });
-
-  return {
-    description: t("Description"),
-  };
-}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

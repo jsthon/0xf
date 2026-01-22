@@ -23,7 +23,9 @@ export async function generateMetadata({
   });
 
   return {
-    title: t("Title"),
+    title: {
+      absolute: t("Title"),
+    },
     description: t("Description"),
   };
 }

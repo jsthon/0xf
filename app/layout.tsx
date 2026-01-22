@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
+import { prefixes } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: {
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
+  alternates: {
+    languages: prefixes,
+  },
   icons: {
     icon: [
       {
@@ -23,6 +27,19 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  manifest: `${siteConfig.url}/manifest.json`,
 };
 
 // Since we have a `not-found.tsx` page on the root, a layout file
