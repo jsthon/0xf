@@ -32,7 +32,7 @@ export function LocaleSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        align="end"
+        collisionPadding={16}
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
         {routing.locales.map((lang) => (

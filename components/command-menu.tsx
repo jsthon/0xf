@@ -6,7 +6,7 @@ import { Monitor, Moon, SearchIcon, Sun } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
-import { isAppleDevice } from "@/lib/platform";
+import { NavItem } from "@/types/nav";
 import { cn } from "@/lib/utils";
 import { useNavigationMessages } from "@/hooks/use-navigation-messages";
 import { useRouter } from "@/i18n/navigation";
@@ -22,24 +22,17 @@ import {
 } from "@/components/ui/command";
 import { Icon } from "@/components/icons";
 
-function getSearchValue(item: { title: string; keywords?: string[] }) {
-  return [item.title, ...(item.keywords || [])].join(" ");
+function getSearchValue(item: NavItem) {
+  return [item.title, item.href, ...(item.keywords || [])].join(" ");
 }
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
   const { headers, sections } = useNavigationMessages();
   const t = useTranslations("CommandMenu");
   const tTheme = useTranslations("ThemeSwitcher");
-
-  // Prevent hydration mismatch
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsMounted(true);
-  }, []);
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -70,26 +63,23 @@ export function CommandMenu({ ...props }: DialogProps) {
   return (
     <>
       <Button
-        variant="outline"
+        variant="ghost"
+        size="sm"
         className={cn(
-          "bg-muted/50 text-muted-foreground relative h-8 w-full justify-start rounded-xl text-sm font-normal shadow-none md:h-9"
+          "sm:text-muted-foreground dark:border-input sm:dark:bg-input/30 relative justify-start font-normal has-[>svg]:px-2 sm:w-40 sm:border sm:has-[>svg]:px-2.5 lg:w-48"
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
-        <SearchIcon className="size-4 opacity-50" />
-        <span className="hidden md:inline-flex">{t("SearchPlaceholder")}</span>
-        <span className="inline-flex md:hidden">{t("Search")}</span>
-        {isMounted && (
-          <kbd className="bg-background pointer-events-none absolute top-1.5 right-2 hidden h-5.5 items-center gap-1 rounded-sm border px-1.5 font-sans text-[10px] font-medium select-none md:flex">
-            {isAppleDevice ? "⌘" : "Ctrl"} K
-          </kbd>
-        )}
+        <SearchIcon />
+        <span className="hidden sm:inline-flex">{t("Search")}</span>
+        <kbd className="bg-background dark:bg-card pointer-events-none absolute top-1/2 right-[5px] hidden h-5 -translate-y-1/2 items-center gap-1 rounded-sm border px-1.5 font-sans text-[10px] font-medium select-none md:flex">
+          /
+        </kbd>
       </Button>
       <CommandDialog
         className="top-[15%] translate-y-0"
         title={t("Search")}
-        description={t("SearchPlaceholder")}
         open={open}
         onOpenChange={setOpen}
       >

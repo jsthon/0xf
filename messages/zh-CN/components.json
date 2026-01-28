@@ -13,8 +13,7 @@
     "DarkTheme": "深色主题"
   },
   "CommandMenu": {
-    "Search": "搜索",
-    "SearchPlaceholder": "搜索所有内容...",
+    "Search": "搜索...",
     "CommandPlaceholder": "输入命令或搜索...",
     "Empty": "未找到结果",
     "LinksHeading": "链接"
