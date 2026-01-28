@@ -55,7 +55,7 @@ export default function HomePage({
 
   return (
     <>
-      <section className="container-wrapper px-4 xl:px-6">
+      <section className="container-fixed">
         <div className="my-12 flex flex-col items-center gap-4 md:my-16 lg:my-20 lg:gap-6">
           <Badge variant="secondary" className="bg-transparent" asChild>
             <Link href="/changelog">
@@ -89,7 +89,7 @@ export default function HomePage({
         </div>
       </section>
 
-      <section className="container-wrapper px-4 xl:px-6">
+      <section className="container-fixed">
         <div className="outline-border grid grid-cols-2 bg-[repeating-linear-gradient(315deg,var(--muted)_0,var(--muted)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed outline -outline-offset-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <div className="bg-card flex items-center gap-2 border-r border-b p-4 text-base leading-tight font-semibold md:gap-4 md:px-6 md:py-5 md:text-lg">
             <CodeIcon className="size-6" />
@@ -123,7 +123,7 @@ export default function HomePage({
         </div>
       </section>
 
-      <section className="container-wrapper px-4 xl:px-6">
+      <section className="container-fixed">
         <div className="my-12 flex flex-col gap-8 md:my-16 md:gap-12 lg:my-20 lg:gap-16">
           <div className="flex flex-col gap-5 text-center text-balance">
             <strong className="text-muted-foreground text-xs font-medium tracking-wide uppercase">

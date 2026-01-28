@@ -13,8 +13,7 @@
     "DarkTheme": "Dark Theme"
   },
   "CommandMenu": {
-    "Search": "Search",
-    "SearchPlaceholder": "Search everything...",
+    "Search": "Search...",
     "CommandPlaceholder": "Type a command or search...",
     "Empty": "No results found.",
     "LinksHeading": "Links"

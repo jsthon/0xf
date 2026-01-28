@@ -86,6 +86,9 @@
   ::selection {
     @apply bg-selection text-selection-foreground;
   }
+  html {
+    @apply overscroll-y-none;
+  }
   body {
     @apply bg-background text-foreground;
     font-synthesis-weight: none;
@@ -93,21 +96,25 @@
   }
 }
 
-@layer utilities {
-  .container-wrapper {
-    @apply mx-auto w-full max-w-[1400px] min-[1800px]:max-w-screen-2xl;
+@utility container-fixed {
+  @apply mx-auto w-full max-w-screen-2xl px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20;
+}
+
+@utility container-fluid {
+  @apply w-full px-4 md:px-6 lg:px-8;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
+}
 
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .no-password-reveal::-ms-reveal {
+@utility no-password-reveal {
+  &::-ms-reveal {
     display: none;
   }
 }

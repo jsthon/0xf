@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useCallback, useState } from "react";
-import { MenuIcon } from "lucide-react";
+import { ArrowUpRight, MenuIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { cn } from "@/lib/utils";
@@ -59,9 +59,12 @@ export function MobileNav() {
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noreferrer" : undefined}
                     onOpenChange={setOpen}
-                    className="text-lg font-medium"
+                    className="flex items-center gap-0.5 text-lg font-medium"
                   >
                     {item.title}
+                    {item.external && (
+                      <ArrowUpRight className="mb-3 size-3 opacity-60" />
+                    )}
                   </MobileLink>
                 )
               );
@@ -81,9 +84,12 @@ export function MobileNav() {
                           target={item.external ? "_blank" : undefined}
                           rel={item.external ? "noreferrer" : undefined}
                           onOpenChange={setOpen}
-                          className="text-muted-foreground"
+                          className="text-muted-foreground flex items-center gap-0.5"
                         >
                           {item.title}
+                          {item.external && (
+                            <ArrowUpRight className="mb-3 size-3 opacity-60" />
+                          )}
                         </MobileLink>
                       ) : (
                         item.title

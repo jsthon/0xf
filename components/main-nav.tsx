@@ -1,51 +1,42 @@
-"use client";
+import { ArrowUpRight } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-import {
-  useActiveNavigationSection,
-  useNavigationMessages,
-} from "@/hooks/use-navigation-messages";
-import { Link, usePathname } from "@/i18n/navigation";
-import { LocaleSwitcher } from "@/components/locale-switcher";
-import { MobileNav } from "@/components/mobile-nav";
-import { ThemeSelector } from "@/components/theme-selector";
+import { useNavigationMessages } from "@/hooks/use-navigation-messages";
+import { Link } from "@/i18n/navigation";
+import { Button } from "@/components/ui/button";
 
 export function MainNav() {
-  const pathname = usePathname();
   const { headers } = useNavigationMessages();
-  const section = useActiveNavigationSection();
 
   return (
-    <div className="flex h-10 items-center justify-between md:w-full md:gap-2 md:border-b md:px-4 xl:px-6">
-      <nav className="no-scrollbar hidden h-full gap-6 overflow-x-auto md:flex">
+    <div className="mr-4 hidden items-center justify-center md:flex">
+      <nav className="flex items-center gap-2">
         {headers.map((item) => {
-          const isActive =
-            pathname === item.href || item.slug === section?.slug;
-
           return (
             !item.disabled &&
             item.href && (
-              <Link
-                key={item.title}
-                href={item.href}
-                target={item?.external ? "_blank" : undefined}
-                rel={item?.external ? "noreferrer" : undefined}
-                className={cn(
-                  "inline-flex items-center gap-2 border-b-2 px-1 text-sm text-nowrap transition-colors",
-                  isActive
-                    ? "text-foreground border-primary font-semibold"
-                    : "hover:text-foreground text-muted-foreground border-transparent font-medium"
-                )}
+              <Button
+                key={item.href}
+                variant="ghost"
+                size="sm"
+                className="gap-0"
+                asChild
               >
-                {item.title}
-              </Link>
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
+                >
+                  {item.title}
+                  {item.external && (
+                    <ArrowUpRight className="text-muted-foreground mb-2.5 size-2.5" />
+                  )}
+                </Link>
+              </Button>
             )
           );
         })}
       </nav>
-      <LocaleSwitcher />
-      <ThemeSelector className="md:hidden" />
-      <MobileNav />
     </div>
   );
 }

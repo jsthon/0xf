@@ -34,7 +34,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          "bg-background min-h-svh font-sans antialiased",
+          "min-h-svh overscroll-none font-sans antialiased",
           fontSans.variable,
           fontMono.variable
         )}
