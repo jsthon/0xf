@@ -42,7 +42,7 @@ describe("platform utilities", () => {
       const { isAppleDevice } = await import("./platform");
 
       // verify detection works correctly
-      expect(isAppleDevice).toBe(expected);
+      expect(isAppleDevice()).toBe(expected);
 
       // reset module cache for next test case
       vi.resetModules();

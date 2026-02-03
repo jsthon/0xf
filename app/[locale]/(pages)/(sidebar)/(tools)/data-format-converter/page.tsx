@@ -479,7 +479,7 @@ export default function DataFormatConverterPage() {
           </div>
           <div
             ref={inputEditorRef}
-            className="border-input h-100 min-h-40 overflow-hidden rounded-md border shadow-xs md:h-[calc(100vh-26.5rem)] 2xl:h-[calc(100vh-23.5rem)]"
+            className="border-input min-h-60 flex-1 overflow-hidden rounded-md border shadow-xs"
           />
         </div>
 
@@ -516,7 +516,7 @@ export default function DataFormatConverterPage() {
           </div>
           <div
             ref={outputEditorRef}
-            className="border-input h-100 min-h-40 overflow-hidden rounded-md border shadow-xs md:h-[calc(100vh-26.5rem)] 2xl:h-[calc(100vh-23.5rem)]"
+            className="border-input min-h-60 flex-1 overflow-hidden rounded-md border shadow-xs"
           />
         </div>
       </div>

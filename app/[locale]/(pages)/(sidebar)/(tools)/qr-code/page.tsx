@@ -139,7 +139,7 @@ export default function QRCodePage() {
 
   return (
     <>
-      <div className="grid flex-1 gap-6 md:gap-8 lg:grid-cols-2">
+      <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
         <div className="flex flex-col gap-6 md:gap-8">
           <Label htmlFor="qr-code" className="text-lg">
             {t("Labels.Generated")}
