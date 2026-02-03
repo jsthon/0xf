@@ -3,6 +3,9 @@
     "Menu": "菜单",
     "ToggleMenu": "切换菜单"
   },
+  "Sidebar": {
+    "ToggleSidebar": "切换侧边栏"
+  },
   "LocaleSwitcher": {
     "Locale": "{locale, select, en_US {English} zh_CN {简体中文} other {未知}}"
   },

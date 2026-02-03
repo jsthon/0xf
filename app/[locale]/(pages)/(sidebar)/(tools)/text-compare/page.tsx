@@ -116,7 +116,7 @@ export default function TextComparePage() {
 
       <div
         ref={editorRef}
-        className="border-input h-100 min-h-40 overflow-hidden rounded-md border shadow-xs md:h-[calc(100vh-19.4rem)] [&_.cm-mergeView]:h-full [&_.cm-mergeViewEditors]:h-full"
+        className="border-input min-h-60 flex-1 overflow-hidden rounded-md border shadow-xs [&_.cm-mergeView]:h-full [&_.cm-mergeViewEditors]:h-full"
       />
     </>
   );
