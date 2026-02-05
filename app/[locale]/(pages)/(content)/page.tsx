@@ -1,6 +1,11 @@
 import { use } from "react";
 import { Metadata } from "next";
-import { ArrowRightIcon, CodeIcon, ZapIcon } from "lucide-react";
+import {
+  ArrowRightIcon,
+  ArrowUpRightIcon,
+  CodeIcon,
+  ZapIcon,
+} from "lucide-react";
 import { Locale, useMessages, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -72,7 +77,7 @@ export default function HomePage({
             {t("Hero.Description")}
           </p>
 
-          <div className="flex w-full items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             <Button asChild>
               <Link href="/tools">{t("Hero.GetStarted")}</Link>
             </Button>
@@ -124,8 +129,8 @@ export default function HomePage({
       </section>
 
       <section className="container-fixed">
-        <div className="my-12 flex flex-col gap-8 md:my-16 md:gap-12 lg:my-20 lg:gap-16">
-          <div className="flex flex-col gap-5 text-center text-balance">
+        <div className="mt-12 flex flex-col gap-8 md:mt-16 md:gap-12 lg:mt-20 lg:gap-16">
+          <div className="flex flex-col gap-4 text-center text-balance">
             <strong className="text-muted-foreground text-xs font-medium tracking-wide uppercase">
               {t("Features.Badge")}
             </strong>
@@ -155,6 +160,38 @@ export default function HomePage({
                 <p className="text-foreground/80 mt-2">{item.Description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fixed">
+        <div className="my-12 flex flex-col gap-8 md:my-16 lg:my-20">
+          <div className="flex flex-col gap-4 text-center text-balance">
+            <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl">
+              {t("Ready.Title")}
+            </h2>
+            <p className="text-muted-foreground md:text-lg">
+              {t("Ready.Description")}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+            <Button size="lg" asChild>
+              <Link href="/tools">
+                {t("Ready.GetStarted")}
+                <ArrowRightIcon />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link
+                href={siteConfig.links.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <CustomIcons.gitHub /> {t("Ready.GitHub")}
+                <ArrowUpRightIcon />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
