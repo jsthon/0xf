@@ -66,6 +66,12 @@
           "Icon": "languages"
         }
       ]
+    },
+    "Ready": {
+      "Title": "需要的时候，刚刚好。",
+      "Description": "无需多想，打开浏览器就行。",
+      "GetStarted": "开始使用",
+      "GitHub": "GitHub"
     }
   }
 }

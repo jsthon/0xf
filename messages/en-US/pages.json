@@ -66,6 +66,12 @@
           "Icon": "languages"
         }
       ]
+    },
+    "Ready": {
+      "Title": "Ready when you need it",
+      "Description": "Everything works as expected, right in your browser.",
+      "GetStarted": "Get Started",
+      "GitHub": "GitHub"
     }
   }
 }
