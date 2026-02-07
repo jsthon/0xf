@@ -8,13 +8,13 @@
   "Base64Page": {
     "Meta": {
       "Title": "Base64 编码解码",
-      "Description": "Base64 编码和解码工具，支持自动检测输入格式和 URL Safe 模式。"
+      "Description": "Base64 编码与解码，自动识别输入并支持 URL 安全模式。"
     },
     "Controls": {
-      "AutoDetect": "自动检测",
+      "AutoDetect": "自动识别",
       "Decode": "解码",
       "Encode": "编码",
-      "UrlSafe": "URL Safe"
+      "UrlSafe": "URL 安全"
     },
     "Labels": {
       "Input": "输入",
@@ -24,11 +24,11 @@
     },
     "Badges": {
       "Base64": "Base64",
-      "UrlSafe": "URL Safe"
+      "UrlSafe": "URL 安全"
     },
     "Tooltips": {
-      "AutoDetect": "自动检测输入的纯文本还是 Base64",
-      "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充以便在 URL 中安全使用"
+      "AutoDetect": "自动识别输入是纯文本还是 Base64",
+      "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充符以便在 URL 中安全使用"
     },
     "Messages": {
       "Encode": {
@@ -36,8 +36,8 @@
       },
       "Decode": {
         "Invalid": "无效的 Base64 内容",
-        "StandardChars": "需关闭 URL Safe 才能解码 '+' 或 '/' 字符",
-        "UrlSafeChars": "需开启 URL Safe 才能解码 '-' 或 '_' 字符"
+        "StandardChars": "需关闭 URL 安全才能解码 + 或 / 字符",
+        "UrlSafeChars": "需开启 URL 安全才能解码 - 或 _ 字符"
       },
       "Upload": {
         "Failed": "文件加载失败",
@@ -64,10 +64,10 @@
   "URLEncodingPage": {
     "Meta": {
       "Title": "URL 编码解码",
-      "Description": "URL 编码和解码工具，支持自动检测输入格式，便于快速转换。"
+      "Description": "URL 编码和 URL 解码工具。"
     },
     "Controls": {
-      "AutoDetect": "自动检测",
+      "AutoDetect": "自动识别",
       "Decode": "解码",
       "Encode": "编码"
     },
@@ -77,7 +77,7 @@
       "URLEncoded": "URL 编码"
     },
     "Tooltips": {
-      "AutoDetect": "自动检测输入的纯文本还是 URL 编码"
+      "AutoDetect": "自动识别输入的纯文本还是 URL 编码"
     },
     "Messages": {
       "Decode": {
@@ -103,10 +103,10 @@
   "CharacterEscapePage": {
     "Meta": {
       "Title": "字符转义",
-      "Description": "将文本转换为 Unicode 编码（Unicode 码点、Unicode 转义）、CSS 转义或 HTML 实体，并解码回普通文本。"
+      "Description": "Unicode 码点、Unicode 转义、CSS 转义或 HTML 实体的编码和解码。"
     },
     "Controls": {
-      "AutoDetect": "自动检测",
+      "AutoDetect": "自动识别",
       "Decode": "解码",
       "Encode": "编码",
       "CodePoint": "Unicode 码点 U+0000",
@@ -125,7 +125,7 @@
       "HtmlEntity": "HTML 实体"
     },
     "Tooltips": {
-      "AutoDetect": "自动检测输入内容是否已编码"
+      "AutoDetect": "自动识别输入内容是否已编码"
     },
     "Messages": {
       "Decode": {
@@ -172,7 +172,7 @@
   "LoremIpsumPage": {
     "Meta": {
       "Title": "随机文章生成",
-      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本段落"
+      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本段落。"
     },
     "Labels": {
       "Text": "生成文本",
@@ -185,13 +185,13 @@
       "Words": "每句词数"
     },
     "Messages": {
-      "GenerateError": "生成 Lorem Ipsum 文本时出错"
+      "GenerateError": "生成随机文本时出错"
     }
   },
   "HashGeneratorPage": {
     "Meta": {
       "Title": "哈希计算",
-      "Description": "支持 MD5、SHA1、SHA256、SHA512、SHA3 等多种 Hash 算法。可处理文本和文件输入，提供多种摘要编码格式。"
+      "Description": "计算文本或文件的哈希摘要，支持 MD5、SHA1、SHA256、SHA512、SHA3 等算法。"
     },
     "Labels": {
       "Input": "输入",
@@ -219,7 +219,7 @@
   "CharacterCountPage": {
     "Meta": {
       "Title": "字符统计",
-      "Description": "分析并统计文本中不同类型字符的数量"
+      "Description": "分析并统计文本中各种类型字符的数量。"
     },
     "Labels": {
       "Text": "输入文本",
@@ -239,7 +239,7 @@
   "TextComparePage": {
     "Meta": {
       "Title": "文本对比",
-      "Description": "比较和分析文本差异"
+      "Description": "比较两段文本的差异并高亮显示。"
     },
     "Controls": {
       "UnifiedView": "合并视图",
@@ -249,7 +249,7 @@
   "CodeFormatterPage": {
     "Meta": {
       "Title": "代码格式化",
-      "Description": "格式化代码，支持多种代码语言，并提供多种格式化选项。"
+      "Description": "格式化代码，支持多种语言与常用选项。"
     },
     "Controls": {
       "Language": "选择语言",
@@ -261,7 +261,7 @@
       "UseTabs": {
         "Label": "缩进:",
         "Space": "空格",
-        "Tab": "制表符"
+        "Tab": "Tab"
       },
       "SingleQuote": {
         "Label": "引号:",
@@ -277,7 +277,7 @@
     "Tooltips": {
       "PrintWidth": "每行最多字符数，超出自动换行",
       "TabWidth": "每级缩进的空白字符数量",
-      "UseTabs": "使用制表符或空格进行缩进",
+      "UseTabs": "使用 Tab 或空格进行缩进",
       "SingleQuote": "选择使用单引号或双引号",
       "Semicolons": "是否在语句末尾添加分号"
     },
@@ -293,7 +293,7 @@
   "CodeMinifierPage": {
     "Meta": {
       "Title": "代码压缩",
-      "Description": "通过移除不必要的字符、空白和冗余格式化，减小代码体积。"
+      "Description": "代码压缩与精简，支持多种语言与常用选项。"
     },
     "Controls": {
       "Language": "选择语言",
@@ -313,7 +313,7 @@
   "UUIDGeneratorPage": {
     "Meta": {
       "Title": "UUID 生成",
-      "Description": "生成各种版本的通用唯一识别码 (UUID)"
+      "Description": "生成多种版本的 UUID 唯一标识符。"
     },
     "Labels": {
       "Generated": "UUID 结果",
@@ -353,7 +353,7 @@
   "QRCodePage": {
     "Meta": {
       "Title": "二维码生成",
-      "Description": "生成文本或 WiFi 连接信息的二维码。"
+      "Description": "生成文本或 WiFi 配置的二维码。"
     },
     "Labels": {
       "Generated": "生成图像",
@@ -367,7 +367,7 @@
       "WiFi": "WiFi"
     },
     "WiFi": {
-      "Title": "WiFi 信息",
+      "Title": "WiFi 配置",
       "SSID": "网络名称",
       "Type": "认证类型",
       "Password": "密码",
@@ -390,7 +390,7 @@
   "ColorConverterPage": {
     "Meta": {
       "Title": "颜色转换",
-      "Description": "支持多种颜色格式转换，包括 HEX、RGB、HSL、HWB、LCH、CMYK。"
+      "Description": "在 HEX、RGB、HSL、HWB、LCH、CMYK 等颜色格式之间转换。"
     },
     "Labels": {
       "Input": "输入颜色",
@@ -403,18 +403,18 @@
   "TimestampConverterPage": {
     "Meta": {
       "Title": "时间戳转换",
-      "Description": "转换 UNIX 时间戳、ISO8601、RFC3339、JavaScript 实例等时间日期格式，支持指定时区显示。"
+      "Description": "转换 UNIX 时间戳、ISO8601、RFC3339、JavaScript Date 等时间日期格式。"
     },
     "Labels": {
       "Input": "输入时间",
       "Output": "输出时间",
       "InputFormat": "输入格式",
-      "AutoDetect": "自动检测",
+      "AutoDetect": "自动识别",
       "OutputTimezone": "输出时区"
     },
     "DateFormats": {
       "CurrentTime": "当前时间",
-      "Javascript": "JavaScript 实例",
+      "Javascript": "JavaScript Date",
       "ISO8601": "ISO 8601",
       "ISO9075": "ISO 9075",
       "RFC3339": "RFC 3339",
@@ -430,15 +430,15 @@
   "CaseConverterPage": {
     "Meta": {
       "Title": "文本大小写转换",
-      "Description": "将文本转换为小驼峰、大驼峰（帕斯卡）、下划线、全大写、全小写等多种命名格式。"
+      "Description": "转换文本命名格式，支持驼峰、帕斯卡、下划线及大小写等。"
     },
     "Labels": {
       "Input": "输入文本",
       "Output": "转换结果"
     },
     "Formats": {
-      "camel": "小驼峰命名",
-      "pascal": "大驼峰命名",
+      "camel": "驼峰命名",
+      "pascal": "帕斯卡命名",
       "capital": "首字母大写",
       "sentence": "句子格式",
       "constant": "常量命名",
@@ -499,14 +499,14 @@
   },
   "DataFormatConverterPage": {
     "Meta": {
-      "Title": "数据格式转换",
-      "Description": "在 JSON、YAML、XML 和 CSV 格式之间转换，支持自动格式检测。"
+      "Title": "结构化数据转换",
+      "Description": "在 JSON、YAML、XML、CSV 等格式之间转换，自动识别格式。"
     },
     "Labels": {
       "Input": "输入",
       "Output": "输出",
       "InputFormat": "输入格式",
-      "AutoDetect": "自动检测",
+      "AutoDetect": "自动识别",
       "ConvertFormat": "转换格式",
       "Upload": "上传",
       "Download": "下载"
@@ -514,7 +514,7 @@
     "Messages": {
       "ConvertSuccess": "转换成功",
       "ConvertFailed": "转换失败，请检查语法",
-      "UnknownFormat": "无法检测输入格式",
+      "UnknownFormat": "无法识别输入格式",
       "UploadFailed": "文件加载失败",
       "DownloadEmpty": "文件内容为空",
       "DownloadFailed": "文件下载失败"
@@ -523,7 +523,7 @@
   "UserAgentPage": {
     "Meta": {
       "Title": "User-Agent 解析",
-      "Description": "解析和解码 User-Agent 字符串，分析并显示浏览器、渲染引擎、操作系统、设备型号等详细信息。"
+      "Description": "解析 User-Agent 字符串，显示浏览器、系统、设备与渲染引擎等信息。"
     },
     "Labels": {
       "Input": "输入文本",
@@ -538,7 +538,7 @@
       "CPUArchitecture": "CPU 架构",
       "OSName": "操作系统名称",
       "OSVersion": "操作系统版本",
-      "IsBot": "检测为机器人",
+      "IsBot": "识别为机器人",
       "ChromiumBased": "Chromium 内核"
     },
     "Values": {
@@ -578,7 +578,7 @@
   "TimeIntervalPage": {
     "Meta": {
       "Title": "时间间隔计算",
-      "Description": "计算两个日期时间之间的时间间隔，支持多种显示格式。"
+      "Description": "计算两个日期时间之间的间隔，支持多种显示格式。"
     },
     "Labels": {
       "Format": "显示格式",
@@ -612,7 +612,7 @@
   "SvgOptimizerPage": {
     "Meta": {
       "Title": "SVG 优化",
-      "Description": "整理和压缩 SVG 文件，移除冗余的元素和属性。"
+      "Description": "清理并压缩 SVG 文件，移除冗余元素与属性。"
     },
     "Labels": {
       "Input": "输入",

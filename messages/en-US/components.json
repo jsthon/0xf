@@ -17,7 +17,7 @@
   },
   "CommandMenu": {
     "Search": "Search...",
-    "CommandPlaceholder": "Type a command or search...",
+    "CommandPlaceholder": "Type keywords...",
     "Empty": "No results found.",
     "LinksHeading": "Links"
   },
