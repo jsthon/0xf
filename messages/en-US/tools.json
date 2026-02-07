@@ -8,7 +8,7 @@
   "Base64Page": {
     "Meta": {
       "Title": "Base64 Encode Decode",
-      "Description": "Encode text to Base64 or decode Base64 to plain text. Auto-detects input format and supports URL-safe characters."
+      "Description": "Encode and decode Base64 with auto-detection and URL-safe support."
     },
     "Controls": {
       "AutoDetect": "Auto Detect",
@@ -27,7 +27,7 @@
       "UrlSafe": "URL Safe"
     },
     "Tooltips": {
-      "AutoDetect": "Automatically detect if input is Base64 or plain text",
+      "AutoDetect": "Auto-detect whether the input is plain text or Base64",
       "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
     },
     "Messages": {
@@ -36,8 +36,8 @@
       },
       "Decode": {
         "Invalid": "Invalid Base64 string",
-        "StandardChars": "Disable URL Safe to decode '+' or '/' characters",
-        "UrlSafeChars": "Enable URL Safe to decode '-' or '_' characters"
+        "StandardChars": "Disable URL Safe to decode + or / characters",
+        "UrlSafeChars": "Enable URL Safe to decode - or _ characters"
       },
       "Upload": {
         "Failed": "Failed to load file",
@@ -64,7 +64,7 @@
   "URLEncodingPage": {
     "Meta": {
       "Title": "URL Encode Decode",
-      "Description": "Encode text to URL format or decode URL encoded text. Auto-detects input format for easy conversion."
+      "Description": "Encode text to URL format or decode URL encoded text."
     },
     "Controls": {
       "AutoDetect": "Auto Detect",
@@ -103,7 +103,7 @@
   "CharacterEscapePage": {
     "Meta": {
       "Title": "Character Escape",
-      "Description": "Convert text to Unicode format (Code Point, Unicode Escape, CSS Escape, HTML Entity) and decode it back to plain text."
+      "Description": "Encode and decode text as Unicode code points, escapes, CSS escapes, or HTML entities."
     },
     "Controls": {
       "AutoDetect": "Auto Detect",
@@ -156,7 +156,7 @@
   "PasswordGeneratorPage": {
     "Meta": {
       "Title": "Password Generator",
-      "Description": "Generate secure random passwords with customizable options for length and character types."
+      "Description": "Generate secure passwords with custom length and character options."
     },
     "Labels": {
       "Password": "Password",
@@ -172,7 +172,7 @@
   "LoremIpsumPage": {
     "Meta": {
       "Title": "Lorem Ipsum Generator",
-      "Description": "Generate Lorem Ipsum dummy text with customizable options"
+      "Description": "Generate random Lorem Ipsum paragraphs with customizable options."
     },
     "Labels": {
       "Text": "Generated Text",
@@ -191,7 +191,7 @@
   "HashGeneratorPage": {
     "Meta": {
       "Title": "Hash Generator",
-      "Description": "Generate hash values using MD5, SHA1, SHA256, SHA512, SHA3 and more algorithms. Support both text and file input with various digest encoding formats."
+      "Description": "Generate hash digests for text or files with common algorithms like MD5, SHA1, SHA256, SHA512, and SHA3."
     },
     "Labels": {
       "Input": "Input",
@@ -219,7 +219,7 @@
   "CharacterCountPage": {
     "Meta": {
       "Title": "Character Count",
-      "Description": "Analyze and count different types of characters in your text"
+      "Description": "Analyze and count different character types in text."
     },
     "Labels": {
       "Text": "Input Text",
@@ -239,7 +239,7 @@
   "TextComparePage": {
     "Meta": {
       "Title": "Text Compare",
-      "Description": "Compare and analyze text differences"
+      "Description": "Compare text and highlight differences."
     },
     "Controls": {
       "UnifiedView": "Unified View",
@@ -249,7 +249,7 @@
   "CodeFormatterPage": {
     "Meta": {
       "Title": "Code Formatter",
-      "Description": "Format code, support multiple code languages, and provide multiple formatting options."
+      "Description": "Format code with support for multiple languages and common options."
     },
     "Controls": {
       "Language": "Select language",
@@ -293,7 +293,7 @@
   "CodeMinifierPage": {
     "Meta": {
       "Title": "Code Minifier",
-      "Description": "Reduce code size by removing unnecessary characters and redundant formatting."
+      "Description": "Minify code with support for multiple languages and common options."
     },
     "Controls": {
       "Language": "Select language",
@@ -313,7 +313,7 @@
   "UUIDGeneratorPage": {
     "Meta": {
       "Title": "UUID Generator",
-      "Description": "Generate Universal Unique Identifiers (UUID) of various versions"
+      "Description": "Generate UUIDs in multiple versions and formats."
     },
     "Labels": {
       "Generated": "Generated UUIDs",
@@ -353,7 +353,7 @@
   "QRCodePage": {
     "Meta": {
       "Title": "QR Code Generator",
-      "Description": "Generate QR codes for text or WiFi connections."
+      "Description": "Generate QR codes for text or WiFi credentials."
     },
     "Labels": {
       "Generated": "Generated Image",
@@ -367,7 +367,7 @@
       "WiFi": "WiFi"
     },
     "WiFi": {
-      "Title": "WiFi Information",
+      "Title": "WiFi Credentials",
       "SSID": "Network Name",
       "Type": "Authentication Type",
       "Password": "Password",
@@ -403,7 +403,7 @@
   "TimestampConverterPage": {
     "Meta": {
       "Title": "Timestamp Converter",
-      "Description": "Convert between UNIX timestamps, ISO8601, RFC3339, JavaScript Date and other formats with customizable timezone."
+      "Description": "Convert between UNIX timestamps, ISO8601, RFC3339, JavaScript Date, and other formats."
     },
     "Labels": {
       "Input": "Input Date",
@@ -430,7 +430,7 @@
   "CaseConverterPage": {
     "Meta": {
       "Title": "Text Case Converter",
-      "Description": "Convert text to camel case, pascal case, snake case, lowercase, uppercase and other naming formats."
+      "Description": "Convert text between camel case, Pascal case, snake case, and other naming styles."
     },
     "Labels": {
       "Input": "Input Text",
@@ -500,7 +500,7 @@
   "DataFormatConverterPage": {
     "Meta": {
       "Title": "Data Format Converter",
-      "Description": "Convert between JSON, YAML, XML, and CSV formats with automatic format detection."
+      "Description": "Convert between JSON, YAML, XML, and CSV with automatic format detection."
     },
     "Labels": {
       "Input": "Input",
@@ -523,7 +523,7 @@
   "UserAgentPage": {
     "Meta": {
       "Title": "User-Agent Parser",
-      "Description": "Parse and decode User-Agent strings to analyze and display browser, OS, device, and engine details."
+      "Description": "Parse User-Agent strings to display browser, OS, device, and engine details."
     },
     "Labels": {
       "Input": "Input Text",
@@ -578,7 +578,7 @@
   "TimeIntervalPage": {
     "Meta": {
       "Title": "Time Interval Calculator",
-      "Description": "Calculate time intervals between two dates and times with customizable display formats."
+      "Description": "Calculate the time interval between two dates and times with flexible display options."
     },
     "Labels": {
       "Format": "Display Format",

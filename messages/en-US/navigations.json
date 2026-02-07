@@ -3,22 +3,17 @@
     "headers": [
       {
         "title": "Home",
-        "href": "/",
-        "slug": "home",
-        "keywords": ["home", "index"]
+        "href": "/"
       },
       {
         "title": "Tools",
         "href": "/tools",
-        "slug": "tools",
-        "keywords": [
-          "dev tools",
-          "developer tools",
-          "developer toolbox",
-          "development utilities",
-          "devkit",
-          "coding toolkit"
-        ]
+        "slug": "tools"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/",
+        "external": true
       }
     ],
     "sections": [
@@ -33,19 +28,13 @@
                 "title": "Base64 Code",
                 "href": "/base64",
                 "icon": "square-code",
-                "intl": "Base64Page",
-                "keywords": [
-                  "Base64 Encode",
-                  "Base64 Decode",
-                  "Base64 Converter"
-                ]
+                "intl": "Base64Page"
               },
               {
                 "title": "URL Encoding",
                 "href": "/url-encoding",
-                "intl": "URLEncodingPage",
                 "icon": "link-2",
-                "keywords": ["URL Encode", "URL Decode", "Percent Encoding"]
+                "intl": "URLEncodingPage"
               },
               {
                 "title": "Character Escape",
@@ -53,12 +42,11 @@
                 "icon": "ampersand",
                 "intl": "CharacterEscapePage",
                 "keywords": [
-                  "Unicode Code Point",
-                  "Unicode Escape Sequence",
+                  "Unicode",
+                  "Code Point",
+                  "CSS Sequence",
                   "HTML Entity",
-                  "HTML Numeric Character Reference",
-                  "CSS Unicode Escape",
-                  "Text Symbols"
+                  "Symbols"
                 ]
               }
             ]
@@ -71,18 +59,13 @@
                 "href": "/password-generator",
                 "icon": "key-round",
                 "intl": "PasswordGeneratorPage",
-                "keywords": [
-                  "Password Generator",
-                  "Strong Password",
-                  "Secure Password"
-                ]
+                "keywords": ["Random"]
               },
               {
                 "title": "QR Code",
                 "href": "/qr-code",
                 "icon": "qr-code",
-                "intl": "QRCodePage",
-                "keywords": ["QR Generator", "QR Code Creator", "Barcode"]
+                "intl": "QRCodePage"
               },
               {
                 "title": "Lorem Ipsum",
@@ -101,14 +84,27 @@
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
                 "intl": "HashGeneratorPage",
-                "keywords": ["MD5", "SHA1", "SHA256", "Checksum"]
+                "keywords": [
+                  "Adler32",
+                  "BLAKE",
+                  "CRC32C",
+                  "CRC64",
+                  "Keccak",
+                  "MD4",
+                  "MD5",
+                  "RIPEMD160",
+                  "SHA",
+                  "SM3",
+                  "Whirlpool",
+                  "XXHash"
+                ]
               },
               {
                 "title": "UUID Generator",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
                 "intl": "UUIDGeneratorPage",
-                "keywords": ["GUID", "Unique ID", "UUID v4"]
+                "keywords": ["GUID", "Unique ID"]
               }
             ]
           },
@@ -127,21 +123,21 @@
                 "href": "/code-minifier",
                 "icon": "file-minus",
                 "intl": "CodeMinifierPage",
-                "keywords": ["Code Compressor", "Code Compress"]
+                "keywords": ["Code Compressor"]
               },
               {
                 "title": "Text Compare",
                 "href": "/text-compare",
                 "icon": "file-diff",
                 "intl": "TextComparePage",
-                "keywords": ["Diff Checker", "Text Comparison", "Text Diff"]
+                "keywords": ["Diff Checker"]
               },
               {
                 "title": "Character Count",
                 "href": "/character-count",
                 "icon": "square-sigma",
                 "intl": "CharacterCountPage",
-                "keywords": ["Word Counter", "Letter Count", "Text Count"]
+                "keywords": ["Word Counter", "Letter Count"]
               }
             ]
           },
@@ -153,7 +149,15 @@
                 "href": "/color-converter",
                 "icon": "palette",
                 "intl": "ColorConverterPage",
-                "keywords": ["Color Picker", "HEX to RGB", "RGB Converter"]
+                "keywords": [
+                  "Color Picker",
+                  "Hex",
+                  "RBG",
+                  "HSL",
+                  "HWB",
+                  "LCH",
+                  "CMYK"
+                ]
               },
               {
                 "title": "Data Format Converter",
@@ -161,12 +165,13 @@
                 "icon": "braces",
                 "intl": "DataFormatConverterPage",
                 "keywords": [
-                  "JSON to YAML",
-                  "YAML to JSON",
-                  "CSV to JSON",
-                  "JSON to CSV",
                   "Data Format",
-                  "Structured Data"
+                  "Structured Data",
+                  "JSON",
+                  "YAML",
+                  "YML",
+                  "XML",
+                  "CSV"
                 ]
               },
               {
@@ -218,13 +223,7 @@
                 "href": "/keyboard-event",
                 "icon": "keyboard",
                 "intl": "KeyboardEventPage",
-                "keywords": [
-                  "KeyboardEvent",
-                  "Keyboard Code",
-                  "keydown",
-                  "keyup",
-                  "keypress"
-                ]
+                "keywords": ["keydown", "keyup", "keypress"]
               },
               {
                 "title": "User-Agent Parser",
@@ -233,7 +232,7 @@
                 "intl": "UserAgentPage",
                 "keywords": [
                   "Browser Detection",
-                  "User-Agent Parser",
+                  "UserAgent Parser",
                   "UA Information"
                 ]
               }

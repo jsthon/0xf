@@ -17,13 +17,13 @@
   },
   "HomePage": {
     "Meta": {
-      "Title": "0xF",
-      "Description": "A lightweight, open-source collection of practical development tools."
+      "Title": "0xF - Open source developer toolkit",
+      "Description": "A lightweight, open-source developer toolkit for practical development tasks."
     },
     "Hero": {
-      "Announcement": "Released first version",
+      "Announcement": "Released as open source on GitHub",
       "Title": "Utilities, Right at Hand",
-      "Description": "A lightweight, open-source collection of practical development tools.",
+      "Description": "A lightweight, open-source developer toolkit for practical development tasks.",
       "GetStarted": "Get Started",
       "GitHub": "View on GitHub"
     },

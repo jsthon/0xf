@@ -4,7 +4,7 @@
     "ToggleMenu": "切换菜单"
   },
   "Sidebar": {
-    "ToggleSidebar": "切换侧边栏"
+    "ToggleSidebar": "切换侧栏"
   },
   "LocaleSwitcher": {
     "Locale": "{locale, select, en_US {English} zh_CN {简体中文} other {未知}}"
@@ -17,7 +17,7 @@
   },
   "CommandMenu": {
     "Search": "搜索...",
-    "CommandPlaceholder": "输入命令或搜索...",
+    "CommandPlaceholder": "输入关键词...",
     "Empty": "未找到结果",
     "LinksHeading": "链接"
   },
