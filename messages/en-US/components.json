@@ -6,6 +6,14 @@
   "Sidebar": {
     "ToggleSidebar": "Toggle sidebar"
   },
+  "AsideBlock": {
+    "Title": "Explore {name} on GitHub",
+    "Description": [
+      "Open source, with the full code available.",
+      "Review the code, contribute, or self-host anytime."
+    ],
+    "Button": "View on GitHub"
+  },
   "LocaleSwitcher": {
     "Locale": "{locale, select, en_US {English} zh_CN {简体中文} other {Unknown}}"
   },
