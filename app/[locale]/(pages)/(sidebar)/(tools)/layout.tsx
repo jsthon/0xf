@@ -13,7 +13,9 @@ export default function ToolsLayout({
       <aside className="hidden text-sm xl:block">
         <div className="sticky top-[65px] h-[calc(100vh-65px)] pt-8">
           <div className="no-scrollbar h-full overflow-auto pb-8">
-            <AsideBlock className="mt-6 max-w-[90%]" />
+            <div className="mt-6 flex flex-col gap-4">
+              <AsideBlock className="max-w-[90%]" />
+            </div>
           </div>
         </div>
       </aside>
