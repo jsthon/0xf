@@ -18,7 +18,7 @@
     "Button": "GitHub を見る"
   },
   "LocaleSwitcher": {
-    "Locale": "{locale, select, de_DE {Deutsch} en_US {English} ja_JP {日本語} zh_CN {简体中文} zh_TW {繁體中文} other {不明}}"
+    "Locale": "{locale, select, de_DE {Deutsch} en_US {English} fr_FR {Français} ja_JP {日本語} zh_CN {简体中文} zh_TW {繁體中文} other {不明}}"
   },
   "ThemeSwitcher": {
     "Theme": "テーマ",

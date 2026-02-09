@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "Erreur de chargement",
+      "Description": "Une erreur est survenue lors du chargement de cette page."
+    },
+    "Back": "Retour",
+    "Home": "Retour à l'accueil"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "Page introuvable",
+      "Description": "Cette page semble ne pas exister."
+    },
+    "Back": "Retour",
+    "Home": "Retour à l'accueil"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF - Boîte à outils open source pour développeurs",
+      "Description": "Une collection légère et open source d'outils pratiques pour le développement."
+    },
+    "Hero": {
+      "Announcement": "Publié en open source sur GitHub",
+      "Title": "Des utilitaires, à portée de main",
+      "Description": "Une collection légère et open source d'outils pratiques pour le développement.",
+      "GetStarted": "Commencer",
+      "GitHub": "Voir sur GitHub"
+    },
+    "Tools": {
+      "Title": "Outils Dev"
+    },
+    "Features": {
+      "Title": "Pensé pour les développeurs exigeants",
+      "Description": "Des utilitaires simples et fiables pour le développement, toujours prêts quand vous en avez besoin.",
+      "Badge": "Pourquoi nous choisir",
+      "Items": [
+        {
+          "Title": "Gratuit et illimité",
+          "Description": "Tous les outils sont disponibles sans aucune restriction.",
+          "Icon": "crown"
+        },
+        {
+          "Title": "Open source",
+          "Description": "Code ouvert sur GitHub. Consultez le code, contribuez ou auto-hébergez.",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "Respect de la vie privée",
+          "Description": "Tous les outils s'exécutent directement dans votre navigateur, sans traitement côté serveur.",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "Résultats prévisibles",
+          "Description": "Les résultats reposent sur des règles définies, et non sur des modèles d'IA générative.",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "Pensé pour être pratique",
+          "Description": "Des utilitaires ciblés pour les tâches courantes, conçus pour être simples à utiliser.",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "Multilingue",
+          "Description": "Disponible en plusieurs langues pour les développeurs du monde entier.",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "Prêt quand vous en avez besoin",
+      "Description": "Tout fonctionne comme prévu, directement dans votre navigateur.",
+      "GetStarted": "Commencer",
+      "GitHub": "GitHub"
+    }
+  }
+}
