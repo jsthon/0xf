@@ -1,0 +1,66 @@
+{
+  "MobileNav": {
+    "Menu": "選單",
+    "ToggleMenu": "切換選單"
+  },
+  "Footer": {
+    "Text": "由 <url>{name}</url> 為開發者打造，原始碼在 <github>GitHub</github> 開源。"
+  },
+  "Sidebar": {
+    "ToggleSidebar": "切換側欄"
+  },
+  "AsideBlock": {
+    "Title": "探索 {name} 的 GitHub 倉庫",
+    "Description": [
+      "程式碼已開源，完整原始碼公開可見。",
+      "歡迎檢視程式碼、參與貢獻，或自行部署使用。"
+    ],
+    "Button": "瀏覽 GitHub"
+  },
+  "LocaleSwitcher": {
+    "Locale": "{locale, select, en_US {English} zh_CN {简体中文} zh_TW {繁體中文} other {未知}}"
+  },
+  "ThemeSwitcher": {
+    "Theme": "主題",
+    "SystemTheme": "系統主題",
+    "LightTheme": "淺色主題",
+    "DarkTheme": "深色主題"
+  },
+  "CommandMenu": {
+    "Search": "搜尋...",
+    "CommandPlaceholder": "輸入關鍵字...",
+    "Empty": "找不到結果",
+    "LinksHeading": "連結"
+  },
+  "CopyButton": {
+    "Copy": "複製",
+    "Error": "複製失敗"
+  },
+  "ColorPicker": {
+    "SelectColor": "選擇顏色"
+  },
+  "PasswordInput": {
+    "Show": "顯示密碼",
+    "Hide": "隱藏密碼"
+  },
+  "TimezoneSelect": {
+    "Placeholder": "選擇時區",
+    "Empty": "找不到時區"
+  },
+  "DateTimePicker": {
+    "SelectDate": "選擇日期"
+  },
+  "FileUpload": {
+    "PrimaryText": "選擇或拖曳檔案至此",
+    "SecondaryText": "不限檔案類型",
+    "Remove": "移除",
+    "Messages": {
+      "InvalidFiles": "未選擇有效檔案"
+    }
+  },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ 行未變更"
+    }
+  }
+}

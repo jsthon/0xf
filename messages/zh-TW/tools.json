@@ -1,0 +1,679 @@
+{
+  "ToolsPage": {
+    "Meta": {
+      "Title": "開發工具",
+      "Description": "輕量、高效的日常開發工具集。"
+    }
+  },
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 編碼解碼",
+      "Description": "Base64 編碼與解碼，自動偵測輸入並支援 URL 安全模式。"
+    },
+    "Controls": {
+      "AutoDetect": "自動偵測",
+      "Decode": "解碼",
+      "Encode": "編碼",
+      "UrlSafe": "URL 安全"
+    },
+    "Labels": {
+      "Input": "輸入",
+      "Output": "結果",
+      "Upload": "上傳",
+      "Download": "下載"
+    },
+    "Badges": {
+      "Base64": "Base64",
+      "UrlSafe": "URL 安全"
+    },
+    "Tooltips": {
+      "AutoDetect": "自動偵測輸入為純文字或 Base64",
+      "UrlSafe": "將 +/ 替換為 -_ 並移除 = 填充字元以便在 URL 中安全使用"
+    },
+    "Messages": {
+      "Encode": {
+        "Failed": "編碼失敗"
+      },
+      "Decode": {
+        "Invalid": "無效的 Base64 內容",
+        "StandardChars": "需關閉 URL 安全才能解碼 + 或 / 字元",
+        "UrlSafeChars": "需開啟 URL 安全才能解碼 - 或 _ 字元"
+      },
+      "Upload": {
+        "Failed": "檔案載入失敗",
+        "Limit": "檔案大小不可超過 20MB"
+      },
+      "Download": {
+        "Failed": "檔案下載失敗",
+        "Empty": "無法下載空白檔案"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "輸入文字將自動偵測",
+        "Encode": "輸入要編碼的文字",
+        "Decode": "輸入要解碼的 Base64"
+      },
+      "Output": {
+        "AutoDetect": "Base64 編碼或解碼內容",
+        "Encode": "編碼後的 Base64 內容",
+        "Decode": "解碼後的文字內容"
+      }
+    }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL 編碼解碼",
+      "Description": "URL 編碼與 URL 解碼工具。"
+    },
+    "Controls": {
+      "AutoDetect": "自動偵測",
+      "Decode": "解碼",
+      "Encode": "編碼"
+    },
+    "Labels": {
+      "Input": "輸入",
+      "Output": "結果",
+      "URLEncoded": "URL 編碼"
+    },
+    "Tooltips": {
+      "AutoDetect": "自動偵測輸入為純文字或 URL 編碼"
+    },
+    "Messages": {
+      "Decode": {
+        "Invalid": "無效的 URL 編碼內容"
+      },
+      "Encode": {
+        "Failed": "編碼失敗"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "輸入文字將自動偵測",
+        "Encode": "輸入要編碼的文字",
+        "Decode": "輸入要解碼的 URL 編碼文字"
+      },
+      "Output": {
+        "AutoDetect": "URL 編碼或解碼文字",
+        "Encode": "編碼後的 URL 編碼文字",
+        "Decode": "解碼後的文字內容"
+      }
+    }
+  },
+  "CharacterEscapePage": {
+    "Meta": {
+      "Title": "字元轉義",
+      "Description": "Unicode 碼位、Unicode 轉義、CSS 轉義或 HTML 實體的編碼與解碼。"
+    },
+    "Controls": {
+      "AutoDetect": "自動偵測",
+      "Decode": "解碼",
+      "Encode": "編碼",
+      "CodePoint": "Unicode 碼位 U+0000",
+      "EscapeSequence": "Unicode 轉義 \\u0000",
+      "CssEscape": "CSS 轉義 \\0000",
+      "HtmlCode": "HTML 轉義 &#00;",
+      "HtmlEntity": "HTML 實體 &name;"
+    },
+    "Labels": {
+      "Input": "輸入",
+      "Output": "結果",
+      "CodePoint": "Unicode 碼位",
+      "EscapeSequence": "Unicode 轉義",
+      "CssEscape": "CSS 轉義",
+      "HtmlCode": "HTML 轉義",
+      "HtmlEntity": "HTML 實體"
+    },
+    "Tooltips": {
+      "AutoDetect": "自動偵測輸入內容是否已編碼"
+    },
+    "Messages": {
+      "Decode": {
+        "InvalidEncoding": "無效的編碼格式",
+        "InvalidCodePoint": "無效的 Unicode 碼位格式",
+        "InvalidEscapeSequence": "無效的 Unicode 轉義格式",
+        "InvalidCssEscape": "無效的 CSS 轉義格式",
+        "InvalidHtmlCode": "無效的 HTML 轉義格式",
+        "InvalidHtmlEntity": "無效的 HTML 實體格式"
+      },
+      "Encode": {
+        "Failed": "編碼失敗"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "輸入文字將自動偵測",
+        "Encode": "輸入要編碼的文字",
+        "Decode": "輸入要解碼的內容"
+      },
+      "Output": {
+        "AutoDetect": "編碼或解碼內容",
+        "Encode": "編碼後的內容",
+        "Decode": "解碼後的文字"
+      }
+    }
+  },
+  "PasswordGeneratorPage": {
+    "Meta": {
+      "Title": "密碼產生",
+      "Description": "產生安全的隨機密碼，可自訂長度與字元類型。"
+    },
+    "Labels": {
+      "Password": "密碼",
+      "Regenerate": "重新產生",
+      "CharacterLength": "字元長度",
+      "CharacterTypes": "字元類型"
+    },
+    "Messages": {
+      "GenerateError": "產生密碼失敗",
+      "SelectCharType": "至少需選擇一種字元類型"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "隨機文章產生",
+      "Description": "產生可自訂選項的 Lorem Ipsum 隨機文字段落。"
+    },
+    "Labels": {
+      "Text": "產生文字",
+      "Regenerate": "重新產生",
+      "StartWithLorem": "以 'Lorem ipsum' 開頭",
+      "RandomRange": "隨機範圍",
+      "DisplayPTags": "顯示 '<p>' 標籤",
+      "Paragraphs": "段落數",
+      "Sentences": "每段句數",
+      "Words": "每句字數"
+    },
+    "Messages": {
+      "GenerateError": "產生隨機文字時發生錯誤"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "雜湊計算",
+      "Description": "計算文字或檔案的雜湊摘要，支援 MD5、SHA1、SHA256、SHA512、SHA3 等演算法。"
+    },
+    "Labels": {
+      "Input": "輸入",
+      "Output": "結果",
+      "Algorithm": "雜湊演算法",
+      "DigestEncoding": "摘要編碼"
+    },
+    "Placeholders": {
+      "Input": "輸入要雜湊的文字"
+    },
+    "Messages": {
+      "LocalProcessing": "檔案僅在本機處理",
+      "GenerationFailed": "產生雜湊失敗"
+    },
+    "InputType": {
+      "Text": "文字",
+      "File": "檔案"
+    },
+    "DigestEncoding": {
+      "HexLower": "十六進位（小寫）",
+      "HexUpper": "十六進位（大寫）",
+      "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "字元統計",
+      "Description": "分析並統計文字中各類字元的數量。"
+    },
+    "Labels": {
+      "Text": "輸入文字",
+      "Total": "總字元",
+      "Words": "單字",
+      "Lines": "行數",
+      "Whitespace": "空白字元",
+      "LatinScript": "拉丁文字",
+      "NonLatinScript": "非拉丁文字",
+      "Digits": "數字",
+      "Symbols": "符號"
+    },
+    "Placeholders": {
+      "Input": "輸入要統計的文字"
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "文字比對",
+      "Description": "比較兩段文字的差異並標示出來。"
+    },
+    "Controls": {
+      "UnifiedView": "合併檢視",
+      "CollapseUnchanged": "摺疊相同"
+    }
+  },
+  "CodeFormatterPage": {
+    "Meta": {
+      "Title": "程式碼格式化",
+      "Description": "格式化程式碼，支援多種語言與常用選項。"
+    },
+    "Controls": {
+      "Language": "選擇語言",
+      "FormatCode": "格式化程式碼",
+      "Upload": "上傳",
+      "Download": "下載",
+      "PrintWidth": "最大行寬:",
+      "TabWidth": "縮排寬度:",
+      "UseTabs": {
+        "Label": "縮排:",
+        "Space": "空格",
+        "Tab": "Tab"
+      },
+      "SingleQuote": {
+        "Label": "引號:",
+        "Double": "雙引號",
+        "Single": "單引號"
+      },
+      "Semi": {
+        "Label": "分號:",
+        "On": "開啟",
+        "Off": "關閉"
+      }
+    },
+    "Tooltips": {
+      "PrintWidth": "每行最多字元數，超出自動換行",
+      "TabWidth": "每級縮排的空白字元數",
+      "UseTabs": "使用 Tab 或空格進行縮排",
+      "SingleQuote": "選擇使用單引號或雙引號",
+      "Semicolons": "是否在陳述式末尾加上分號"
+    },
+    "Messages": {
+      "LanguageRequired": "請選擇程式語言",
+      "FormatSuccess": "格式化成功",
+      "FormatFailed": "格式化失敗，請檢查語法",
+      "UploadFailed": "檔案載入失敗",
+      "DownloadEmpty": "檔案內容為空",
+      "DownloadFailed": "檔案下載失敗"
+    }
+  },
+  "CodeMinifierPage": {
+    "Meta": {
+      "Title": "程式碼壓縮",
+      "Description": "壓縮與精簡程式碼，支援多種語言與常用選項。"
+    },
+    "Controls": {
+      "Language": "選擇語言",
+      "MinifyCode": "壓縮程式碼",
+      "Upload": "上傳",
+      "Download": "下載"
+    },
+    "Messages": {
+      "LanguageRequired": "請選擇程式語言",
+      "MinifySuccess": "壓縮成功",
+      "MinifyFailed": "壓縮失敗，請檢查語法",
+      "UploadFailed": "檔案載入失敗",
+      "DownloadEmpty": "檔案內容為空",
+      "DownloadFailed": "檔案下載失敗"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID 產生",
+      "Description": "產生多種版本的 UUID。"
+    },
+    "Labels": {
+      "Generated": "UUID 結果",
+      "Regenerate": "重新產生",
+      "Version": "UUID 版本",
+      "Quantity": "數量",
+      "Format": "格式",
+      "Uppercase": "大寫",
+      "Hyphens": "連字符",
+      "Braces": "大括號",
+      "Quotes": "引號",
+      "Commas": "逗號",
+      "Namespace": "命名空間",
+      "Name": "名稱"
+    },
+    "Versions": {
+      "v1": "V1 (時間戳記)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (隨機)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Tooltips": {
+      "Hyphens": "在 UUID 各部分之間加入標準分隔符",
+      "Uppercase": "將十六進位值轉為大寫",
+      "Braces": "以大括號包裹 UUID",
+      "Quotes": "以雙引號包裹 UUID",
+      "Commas": "在每個 UUID 末尾加上逗號"
+    },
+    "Messages": {
+      "GenerateError": "UUID 產生失敗",
+      "NamespaceRequired": "需提供命名空間與名稱",
+      "NamespaceHint": "選擇預設命名空間或輸入自訂 UUID",
+      "InvalidNamespace": "命名空間必須是有效的 UUID"
+    }
+  },
+  "QRCodePage": {
+    "Meta": {
+      "Title": "QR Code 產生",
+      "Description": "產生文字或 WiFi 設定的 QR Code。"
+    },
+    "Labels": {
+      "Generated": "產生圖片",
+      "Download": "下載",
+      "ForegroundColor": "前景色",
+      "BackgroundColor": "背景色",
+      "InputText": "輸入文字"
+    },
+    "Tabs": {
+      "Text": "文字",
+      "WiFi": "WiFi"
+    },
+    "WiFi": {
+      "Title": "WiFi 設定",
+      "SSID": "網路名稱",
+      "Type": "驗證類型",
+      "Password": "密碼",
+      "Hidden": "隱藏網路名稱",
+      "EAPMethod": "EAP 方法",
+      "Identity": "身分或使用者名稱",
+      "AnonymousIdentity": "匿名身分",
+      "Phase2Method": "階段 2 驗證方法",
+      "AuthenticationType": {
+        "WPA": "WPA/WPA2",
+        "WEP": "WEP",
+        "WPA2-EAP": "WPA2-EAP",
+        "nopass": "無密碼"
+      }
+    },
+    "Placeholders": {
+      "InputText": "輸入要轉為 QR Code 的內容"
+    }
+  },
+  "ColorConverterPage": {
+    "Meta": {
+      "Title": "顏色轉換",
+      "Description": "在 HEX、RGB、HSL、HWB、LCH、CMYK 等顏色格式之間轉換。"
+    },
+    "Labels": {
+      "Input": "輸入顏色",
+      "Output": "轉換結果"
+    },
+    "Placeholders": {
+      "Input": "輸入顏色值"
+    }
+  },
+  "TimestampConverterPage": {
+    "Meta": {
+      "Title": "時間戳記轉換",
+      "Description": "轉換 UNIX 時間戳記、ISO8601、RFC3339、JavaScript Date 等日期時間格式。"
+    },
+    "Labels": {
+      "Input": "輸入時間",
+      "Output": "輸出時間",
+      "InputFormat": "輸入格式",
+      "AutoDetect": "自動偵測",
+      "OutputTimezone": "輸出時區"
+    },
+    "DateFormats": {
+      "CurrentTime": "目前時間",
+      "Javascript": "JavaScript Date",
+      "ISO8601": "ISO 8601",
+      "ISO9075": "ISO 9075",
+      "RFC3339": "RFC 3339",
+      "RFC7231": "RFC 7231",
+      "TimestampSeconds": "Timestamp（秒）",
+      "TimestampMilliseconds": "Timestamp（毫秒）"
+    },
+    "Placeholders": {
+      "Input": "輸入日期時間文字",
+      "Invalid": "無效格式"
+    }
+  },
+  "CaseConverterPage": {
+    "Meta": {
+      "Title": "文字大小寫轉換",
+      "Description": "轉換文字命名格式，支援駝峰、Pascal、底線及大小寫等。"
+    },
+    "Labels": {
+      "Input": "輸入文字",
+      "Output": "轉換結果"
+    },
+    "Formats": {
+      "camel": "駝峰命名",
+      "pascal": "Pascal 命名",
+      "capital": "首字母大寫",
+      "sentence": "句子格式",
+      "constant": "常數命名",
+      "snake": "底線命名",
+      "no": "空格命名",
+      "kebab": "連字符命名",
+      "dot": "點式命名",
+      "path": "路徑命名",
+      "title": "標題格式",
+      "train": "標題連接格式",
+      "lower": "全小寫格式",
+      "upper": "全大寫格式",
+      "lowerFirst": "首字母小寫",
+      "upperFirst": "首字母大寫",
+      "sponge": "亂序格式"
+    },
+    "Tooltips": {
+      "camel": "第一個字全小寫，其他字首字母大寫，無分隔符。",
+      "pascal": "所有字首字母大寫，無分隔符。",
+      "capital": "所有字首字母大寫，空格分隔。",
+      "sentence": "第一個字首字母大寫，其餘全小寫，空格分隔。",
+      "constant": "全部大寫，底線分隔。",
+      "snake": "全部小寫，底線分隔。",
+      "no": "全部小寫，空格分隔。",
+      "kebab": "全部小寫，連字符分隔。",
+      "dot": "全部小寫，點號分隔。",
+      "path": "全部小寫，斜線分隔。",
+      "title": "所有字首字母大寫，分隔符不變。",
+      "train": "所有字首字母大寫，連字符分隔。",
+      "lower": "所有字母小寫，分隔符不變。",
+      "upper": "所有字母大寫，分隔符不變。",
+      "lowerFirst": "首字母小寫，其餘保持不變。",
+      "upperFirst": "首字母大寫，其餘保持不變。",
+      "sponge": "隨機大小寫混合，分隔符不變。"
+    },
+    "Badges": {
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "capital": "Capital Case",
+      "sentence": "Sentence case",
+      "constant": "CONSTANT_CASE",
+      "snake": "snake_case",
+      "no": "space case",
+      "kebab": "kebab-case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "title": "Title Case",
+      "train": "Train-Case",
+      "lower": "lowercase",
+      "upper": "UPPERCASE",
+      "lowerFirst": "lowerFirst",
+      "upperFirst": "UpperFirst",
+      "sponge": "SpOnGe CaSe"
+    },
+    "Placeholders": {
+      "Input": "輸入要轉換的文字"
+    }
+  },
+  "DataFormatConverterPage": {
+    "Meta": {
+      "Title": "結構化資料轉換",
+      "Description": "在 JSON、YAML、XML、CSV 等格式之間轉換，自動偵測格式。"
+    },
+    "Labels": {
+      "Input": "輸入",
+      "Output": "輸出",
+      "InputFormat": "輸入格式",
+      "AutoDetect": "自動偵測",
+      "ConvertFormat": "轉換格式",
+      "Upload": "上傳",
+      "Download": "下載"
+    },
+    "Messages": {
+      "ConvertSuccess": "轉換成功",
+      "ConvertFailed": "轉換失敗，請檢查語法",
+      "UnknownFormat": "無法偵測輸入格式",
+      "UploadFailed": "檔案載入失敗",
+      "DownloadEmpty": "檔案內容為空",
+      "DownloadFailed": "檔案下載失敗"
+    }
+  },
+  "UserAgentPage": {
+    "Meta": {
+      "Title": "User-Agent 解析",
+      "Description": "解析 User-Agent 字串，顯示瀏覽器、系統、裝置與渲染引擎等資訊。"
+    },
+    "Labels": {
+      "Input": "輸入文字",
+      "Output": "解析結果",
+      "BrowserName": "瀏覽器名稱",
+      "BrowserVersion": "瀏覽器版本",
+      "EngineName": "渲染引擎名稱",
+      "EngineVersion": "渲染引擎版本",
+      "DeviceType": "裝置類型",
+      "DeviceVendor": "裝置廠商",
+      "DeviceModel": "裝置型號",
+      "CPUArchitecture": "CPU 架構",
+      "OSName": "作業系統名稱",
+      "OSVersion": "作業系統版本",
+      "IsBot": "識別為機器人",
+      "ChromiumBased": "Chromium 核心"
+    },
+    "Values": {
+      "Yes": "是",
+      "No": "否"
+    },
+    "Placeholders": {
+      "Input": "輸入 User-Agent 字串"
+    }
+  },
+  "KeyboardEventPage": {
+    "Meta": {
+      "Title": "鍵盤事件屬性",
+      "Description": "檢視 KeyboardEvent 鍵盤事件的 key、code 等屬性，支援即時顯示與除錯。"
+    },
+    "Placeholders": {
+      "Input": "按任意鍵或輸入文字以觸發鍵盤事件"
+    },
+    "Tooltips": {
+      "keydown": "按下任意按鍵時觸發。",
+      "keypress": "[已棄用] 按下會產生字元的按鍵時觸發。",
+      "keyup": "釋放任意按鍵時觸發。",
+      "key": "回傳按鍵值，受鍵盤配置與修飾鍵影響。",
+      "code": "回傳實體按鍵的編碼，不受鍵盤配置影響。",
+      "location": "回傳按鍵在鍵盤或輸入裝置上的位置編號。",
+      "repeat": "按鍵持續按住並自動重複時為 true。",
+      "isComposing": "事件在輸入法組合會話期間觸發時為 true。",
+      "shiftKey": "事件觸發時 Shift 鍵處於啟用狀態則為 true。",
+      "ctrlKey": "事件觸發時 Ctrl 鍵處於啟用狀態則為 true。",
+      "altKey": "事件觸發時 Alt（Option）鍵處於啟用狀態則為 true。",
+      "metaKey": "事件觸發時 Meta 鍵（Command 或 Windows 鍵）處於啟用狀態則為 true。",
+      "which": "[已棄用] 回傳滑鼠或鍵盤按鍵的數字編碼。",
+      "keyCode": "[已棄用] 回傳按鍵未修改值的系統相關編碼。",
+      "charCode": "[已棄用] 回傳按鍵產生字元的 Unicode 編碼，僅用於 keypress 事件。"
+    }
+  },
+  "TimeIntervalPage": {
+    "Meta": {
+      "Title": "時間間隔計算",
+      "Description": "計算兩個日期時間之間的間隔，支援多種顯示格式。"
+    },
+    "Labels": {
+      "Format": "顯示格式",
+      "Start": "開始時間",
+      "End": "結束時間",
+      "Interval": "時間間隔"
+    },
+    "Placeholders": {
+      "Interval": "請選擇開始與結束時間"
+    },
+    "Formats": {
+      "auto": "自動",
+      "years": "年",
+      "months": "月",
+      "days": "天",
+      "hours": "小時",
+      "minutes": "分鐘",
+      "seconds": "秒",
+      "milliseconds": "毫秒"
+    },
+    "Units": {
+      "years": "{count, plural, other {{count} 年}}",
+      "months": "{count, plural, other {{count} 月}}",
+      "days": "{count, plural, other {{count} 天}}",
+      "hours": "{count, plural, other {{count} 小時}}",
+      "minutes": "{count, plural, other {{count} 分鐘}}",
+      "seconds": "{count, plural, other {{count} 秒}}",
+      "milliseconds": "{count, plural, other {{count} 毫秒}}"
+    }
+  },
+  "SvgOptimizerPage": {
+    "Meta": {
+      "Title": "SVG 最佳化",
+      "Description": "清理並壓縮 SVG 檔案，移除冗餘元素與屬性。"
+    },
+    "Labels": {
+      "Input": "輸入",
+      "Preview": "預覽",
+      "Code": "程式碼",
+      "Upload": "上傳",
+      "Download": "下載",
+      "ShowOriginal": "顯示原始"
+    },
+    "Options": {
+      "floatPrecision": "數值精度",
+      "pretty": "程式碼格式化",
+      "removeXMLNS": "移除 xmlns",
+      "removeRasterImages": "移除內嵌圖片",
+      "removeDimensions": "移除 width 和 height",
+      "removeViewBox": "移除 viewBox",
+      "convertStyleToAttrs": "樣式轉為屬性",
+      "reusePaths": "重複利用路徑",
+      "removeScripts": "移除腳本",
+      "removeOffCanvasPaths": "移除畫布外路徑",
+      "removeDoctype": "移除 doctype",
+      "removeXMLProcInst": "移除 XML 宣告",
+      "removeComments": "移除註解",
+      "removeMetadata": "移除 metadata",
+      "removeEditorsNSData": "移除編輯器資料",
+      "cleanupAttrs": "清理屬性",
+      "mergeStyles": "合併樣式",
+      "inlineStyles": "內聯樣式",
+      "minifyStyles": "壓縮樣式",
+      "cleanupIds": "清理 ID",
+      "removeUselessDefs": "移除未使用的 defs",
+      "cleanupNumericValues": "清理數值",
+      "convertColors": "壓縮顏色",
+      "removeUnknownsAndDefaults": "移除未知項與預設值",
+      "removeNonInheritableGroupAttrs": "移除無效的群組屬性",
+      "removeUselessStrokeAndFill": "移除無效的描邊與填色",
+      "cleanupEnableBackground": "移除 enable-background",
+      "removeHiddenElems": "移除隱藏元素",
+      "removeEmptyText": "移除空文字",
+      "convertShapeToPath": "將形狀轉換為路徑",
+      "convertEllipseToCircle": "ellipse 轉為 circle",
+      "moveElemsAttrsToGroup": "移動元素屬性至群組",
+      "moveGroupAttrsToElems": "移動群組屬性至元素",
+      "collapseGroups": "摺疊無用的群組",
+      "convertPathData": "轉換路徑資料",
+      "convertTransform": "轉換 transform 屬性",
+      "removeEmptyAttrs": "移除空屬性",
+      "removeEmptyContainers": "移除空容器元素",
+      "mergePaths": "合併路徑",
+      "removeUnusedNS": "移除未使用的命名空間",
+      "sortAttrs": "排序屬性",
+      "sortDefsChildren": "排序 defs 子元素",
+      "removeTitle": "移除 title",
+      "removeDesc": "移除 desc"
+    },
+    "Badges": {
+      "Invalid": "無效 SVG",
+      "Original": "原始"
+    },
+    "Placeholders": {
+      "Input": "貼上 SVG 程式碼"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "Navigation": {
+    "headers": [
+      {
+        "title": "首頁",
+        "href": "/"
+      },
+      {
+        "title": "工具",
+        "href": "/tools",
+        "slug": "tools"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/",
+        "external": true
+      }
+    ],
+    "sections": [
+      {
+        "title": "開發工具",
+        "slug": "tools",
+        "categories": [
+          {
+            "title": "編碼與解碼",
+            "items": [
+              {
+                "title": "Base64 編碼",
+                "href": "/base64",
+                "icon": "square-code",
+                "intl": "Base64Page"
+              },
+              {
+                "title": "URL 編碼",
+                "href": "/url-encoding",
+                "icon": "link-2",
+                "intl": "URLEncodingPage"
+              },
+              {
+                "title": "字元轉義",
+                "href": "/character-escape",
+                "icon": "ampersand",
+                "intl": "CharacterEscapePage",
+                "keywords": ["Unicode", "CSS", "HTML", "字元跳脫"]
+              }
+            ]
+          },
+          {
+            "title": "產生器",
+            "items": [
+              {
+                "title": "密碼產生",
+                "href": "/password-generator",
+                "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
+                "keywords": ["隨機"]
+              },
+              {
+                "title": "QR Code 產生",
+                "href": "/qr-code",
+                "icon": "qr-code",
+                "intl": "QRCodePage"
+              },
+              {
+                "title": "隨機文章產生",
+                "href": "/lorem-ipsum",
+                "icon": "letter-text",
+                "intl": "LoremIpsumPage",
+                "keywords": ["模擬資料", "測試文字", "段落句子填充"]
+              },
+              {
+                "title": "雜湊計算",
+                "href": "/hash-generator",
+                "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
+                "keywords": [
+                  "Adler32",
+                  "BLAKE",
+                  "CRC32C",
+                  "CRC64",
+                  "Keccak",
+                  "MD4",
+                  "MD5",
+                  "RIPEMD160",
+                  "SHA",
+                  "SM3",
+                  "Whirlpool",
+                  "XXHash"
+                ]
+              },
+              {
+                "title": "UUID 產生",
+                "href": "/uuid-generator",
+                "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
+                "keywords": ["GUID", "Unique ID"]
+              }
+            ]
+          },
+          {
+            "title": "文字與字元",
+            "items": [
+              {
+                "title": "程式碼格式化",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
+                "keywords": ["程式碼格式化", "程式碼美化"]
+              },
+              {
+                "title": "程式碼壓縮",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "intl": "CodeMinifierPage",
+                "keywords": ["程式碼精簡"]
+              },
+              {
+                "title": "文字比對",
+                "href": "/text-compare",
+                "icon": "file-diff",
+                "intl": "TextComparePage",
+                "keywords": ["文字比較", "文字差異"]
+              },
+              {
+                "title": "字元統計",
+                "href": "/character-count",
+                "icon": "square-sigma",
+                "intl": "CharacterCountPage",
+                "keywords": ["字數統計", "計數統計"]
+              }
+            ]
+          },
+          {
+            "title": "轉換與計算",
+            "items": [
+              {
+                "title": "顏色轉換",
+                "href": "/color-converter",
+                "icon": "palette",
+                "intl": "ColorConverterPage",
+                "keywords": [
+                  "顏色格式",
+                  "Hex",
+                  "RBG",
+                  "HSL",
+                  "HWB",
+                  "LCH",
+                  "CMYK"
+                ]
+              },
+              {
+                "title": "結構化資料轉換",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "intl": "DataFormatConverterPage",
+                "keywords": [
+                  "資料格式",
+                  "結構化資料",
+                  "JSON",
+                  "YAML",
+                  "YML",
+                  "XML",
+                  "CSV"
+                ]
+              },
+              {
+                "title": "文字大小寫轉換",
+                "href": "/case-converter",
+                "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
+                "keywords": ["駝峰命名", "蛇形命名"]
+              },
+              {
+                "title": "時間戳記轉換",
+                "href": "/timestamp-converter",
+                "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
+                "keywords": ["日期時間格式", "Timestamp", "Unix"]
+              },
+              {
+                "title": "時間間隔計算",
+                "href": "/time-interval",
+                "icon": "hourglass",
+                "intl": "TimeIntervalPage",
+                "keywords": ["預計時間", "未來時間", "時間差"]
+              }
+            ]
+          },
+          {
+            "title": "Web 開發",
+            "items": [
+              {
+                "title": "SVG 最佳化",
+                "href": "/svg-optimizer",
+                "icon": "layers",
+                "intl": "SvgOptimizerPage",
+                "keywords": ["SVG 壓縮", "SVG 清理", "SVG 格式化"]
+              },
+              {
+                "title": "鍵盤事件屬性",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
+                "intl": "KeyboardEventPage",
+                "keywords": ["鍵盤按鍵", "keydown", "keyup", "keypress"]
+              },
+              {
+                "title": "User-Agent 解析",
+                "href": "/user-agent",
+                "icon": "compass",
+                "intl": "UserAgentPage",
+                "keywords": ["瀏覽器偵測", "瀏覽器指紋", "UA 資訊"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
