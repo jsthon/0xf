@@ -6,6 +6,7 @@ export const prefixes = {
   "en-US": "/en",
   "es-ES": "/es",
   "ja-JP": "/ja",
+  "pt-PT": "/pt",
   "zh-CN": "/zh-cn",
   "zh-TW": "/zh-tw",
 };
@@ -13,7 +14,16 @@ export const prefixes = {
 export const routing = defineRouting({
   // A list of all locales that are supported
   // Don't forget to update the proxy.ts
-  locales: ["de-DE", "fr-FR", "en-US", "es-ES", "ja-JP", "zh-CN", "zh-TW"],
+  locales: [
+    "de-DE",
+    "fr-FR",
+    "en-US",
+    "es-ES",
+    "ja-JP",
+    "pt-PT",
+    "zh-CN",
+    "zh-TW",
+  ],
 
   // Used when no locale matches
   defaultLocale: "en-US",
