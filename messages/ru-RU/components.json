@@ -1,0 +1,63 @@
+{
+  "MobileNav": {
+    "Menu": "Меню",
+    "ToggleMenu": "Переключить меню"
+  },
+  "Footer": {
+    "Text": "Создано <url>{name}</url> для разработчиков. Исходный код на <github>GitHub</github>."
+  },
+  "Sidebar": {
+    "ToggleSidebar": "Переключить боковую панель"
+  },
+  "AsideBlock": {
+    "Title": "Проект {name} на GitHub",
+    "Description": [
+      "Открытый исходный код, полностью доступен.",
+      "Изучайте код, вносите вклад или разверните у себя."
+    ],
+    "Button": "Открыть на GitHub"
+  },
+  "ThemeSwitcher": {
+    "Theme": "Тема",
+    "SystemTheme": "Системная тема",
+    "LightTheme": "Светлая тема",
+    "DarkTheme": "Тёмная тема"
+  },
+  "CommandMenu": {
+    "Search": "Поиск...",
+    "CommandPlaceholder": "Введите ключевые слова...",
+    "Empty": "Ничего не найдено.",
+    "LinksHeading": "Ссылки"
+  },
+  "CopyButton": {
+    "Copy": "Копировать",
+    "Error": "Не удалось скопировать"
+  },
+  "ColorPicker": {
+    "SelectColor": "Выбрать цвет"
+  },
+  "PasswordInput": {
+    "Show": "Показать пароль",
+    "Hide": "Скрыть пароль"
+  },
+  "TimezoneSelect": {
+    "Placeholder": "Выберите часовой пояс",
+    "Empty": "Часовой пояс не найден."
+  },
+  "DateTimePicker": {
+    "SelectDate": "Выберите дату"
+  },
+  "FileUpload": {
+    "PrimaryText": "Выберите или перетащите файлы сюда",
+    "SecondaryText": "Любой тип файла",
+    "Remove": "Удалить",
+    "Messages": {
+      "InvalidFiles": "Не выбрано допустимых файлов"
+    }
+  },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ неизменённых строк"
+    }
+  }
+}

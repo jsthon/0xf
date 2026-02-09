@@ -12,6 +12,7 @@ export const localePrefixes: Record<string, string> = {
   "fr-FR": "/fr",
   "ja-JP": "/ja",
   "pt-PT": "/pt",
+  "ru-RU": "/ru",
   "zh-CN": "/zh-cn",
   "zh-TW": "/zh-tw",
 };
@@ -23,6 +24,7 @@ export const localeNames: Record<string, string> = {
   "fr-FR": "Français",
   "ja-JP": "日本語",
   "pt-PT": "Português",
+  "ru-RU": "Русский",
   "zh-CN": "简体中文",
   "zh-TW": "繁體中文",
 };
