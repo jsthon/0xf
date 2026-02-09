@@ -3,6 +3,9 @@
     "Menu": "Menu",
     "ToggleMenu": "Toggle menu"
   },
+  "Footer": {
+    "Text": "Made by <url>{name}</url> for developers. Open source on <github>GitHub</github>."
+  },
   "Sidebar": {
     "ToggleSidebar": "Toggle sidebar"
   },

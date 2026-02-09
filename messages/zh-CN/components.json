@@ -3,6 +3,9 @@
     "Menu": "菜单",
     "ToggleMenu": "切换菜单"
   },
+  "Footer": {
+    "Text": "由 <url>{name}</url> 为开发者打造，代码在 <github>GitHub</github> 开源。"
+  },
   "Sidebar": {
     "ToggleSidebar": "切换侧栏"
   },
