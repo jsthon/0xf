@@ -1,36 +1,17 @@
 import { defineRouting } from "next-intl/routing";
 
-export const prefixes = {
-  "de-DE": "/de",
-  "fr-FR": "/fr",
-  "en-US": "/en",
-  "es-ES": "/es",
-  "ja-JP": "/ja",
-  "pt-PT": "/pt",
-  "zh-CN": "/zh-cn",
-  "zh-TW": "/zh-tw",
-};
+import { defaultLocale, localePrefixes } from "@/i18n/locales";
 
 export const routing = defineRouting({
   // A list of all locales that are supported
-  // Don't forget to update the proxy.ts
-  locales: [
-    "de-DE",
-    "fr-FR",
-    "en-US",
-    "es-ES",
-    "ja-JP",
-    "pt-PT",
-    "zh-CN",
-    "zh-TW",
-  ],
+  locales: Object.keys(localePrefixes),
 
   // Used when no locale matches
-  defaultLocale: "en-US",
+  defaultLocale,
 
   // Hide default locale prefix
   localePrefix: {
     mode: "as-needed",
-    prefixes: prefixes,
+    prefixes: localePrefixes,
   },
 });

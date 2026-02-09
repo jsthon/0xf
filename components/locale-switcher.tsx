@@ -1,8 +1,9 @@
 "use client";
 
 import { Globe } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
+import { localeNames } from "@/i18n/locales";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
@@ -13,11 +14,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-// Message value not support "-"
-const formatLocale = (locale: string) => locale.replaceAll("-", "_");
+const getLocaleName = (locale: string) => localeNames[locale] ?? locale;
 
 export function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher");
   const locale = useLocale();
   const pathname = usePathname();
 
@@ -26,9 +25,7 @@ export function LocaleSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="max-md:has-[>svg]:px-2">
           <Globe />
-          <span className="hidden md:inline-flex">
-            {t("Locale", { locale: formatLocale(locale) })}
-          </span>
+          <span className="hidden md:inline-flex">{getLocaleName(locale)}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -38,7 +35,7 @@ export function LocaleSwitcher() {
         {routing.locales.map((lang) => (
           <Link key={lang} href={pathname} locale={lang}>
             <DropdownMenuCheckboxItem checked={lang === locale}>
-              {t("Locale", { locale: formatLocale(lang) })}
+              {getLocaleName(lang)}
             </DropdownMenuCheckboxItem>
           </Link>
         ))}

@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
-import { prefixes } from "@/i18n/routing";
+import { localePrefixes } from "@/i18n/locales";
 
 export const metadata: Metadata = {
   title: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   alternates: {
-    languages: prefixes,
+    languages: localePrefixes,
   },
   icons: {
     icon: [

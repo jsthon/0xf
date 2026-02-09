@@ -17,9 +17,6 @@
     ],
     "Button": "Voir sur GitHub"
   },
-  "LocaleSwitcher": {
-    "Locale": "{locale, select, de_DE {Deutsch} en_US {English} es_ES {Español} fr_FR {Français} ja_JP {日本語} pt_PT {Português} zh_CN {简体中文} zh_TW {繁體中文} other {Inconnu}}"
-  },
   "ThemeSwitcher": {
     "Theme": "Thème",
     "SystemTheme": "Thème système",
