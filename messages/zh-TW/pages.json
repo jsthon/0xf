@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "頁面發生錯誤",
+      "Description": "載入此頁面時發生錯誤。"
+    },
+    "Back": "返回",
+    "Home": "回到首頁"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "找不到頁面",
+      "Description": "這個頁面似乎不存在。"
+    },
+    "Back": "返回",
+    "Home": "回到首頁"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF - 開源實用的開發工具集",
+      "Description": "輕量、開源的實用開發工具集。"
+    },
+    "Hero": {
+      "Announcement": "已在 GitHub 開放原始碼",
+      "Title": "實用，順手即用",
+      "Description": "輕量、開源的實用開發工具集。",
+      "GetStarted": "開始使用",
+      "GitHub": "GitHub 倉庫"
+    },
+    "Tools": {
+      "Title": "開發工具"
+    },
+    "Features": {
+      "Title": "開發所需，觸手可及。",
+      "Description": "簡潔、可靠的實用開發工具，開箱即用、隨時待命。",
+      "Badge": "為什麼選擇它",
+      "Items": [
+        {
+          "Title": "免費無限制",
+          "Description": "所有工具皆可免費使用，沒有任何限制。",
+          "Icon": "crown"
+        },
+        {
+          "Title": "開源透明",
+          "Description": "原始碼託管在 GitHub，歡迎審閱、貢獻程式碼，也可自行部署。",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "尊重隱私",
+          "Description": "所有工具皆在瀏覽器中直接執行，不經過任何後端處理。",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "結果可預期",
+          "Description": "結果依循明確規則，而非仰賴生成式 AI 語言模型。",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "實用至上",
+          "Description": "專注於常見開發任務，操作簡單、容易上手。",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "多語系支援",
+          "Description": "支援多種語言，面向全球開發者。",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "需要的時候，恰到好處。",
+      "Description": "無需多想，打開瀏覽器就行。",
+      "GetStarted": "開始使用",
+      "GitHub": "GitHub"
+    }
+  }
+}
