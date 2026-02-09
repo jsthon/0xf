@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "Erro ao carregar a página",
+      "Description": "Ocorreu um erro ao carregar esta página."
+    },
+    "Back": "Voltar",
+    "Home": "Ir para o início"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "Página não encontrada",
+      "Description": "Parece que esta página não existe."
+    },
+    "Back": "Voltar",
+    "Home": "Ir para o início"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF - Ferramentas de desenvolvimento open source",
+      "Description": "Uma coleção leve e open source de ferramentas práticas para programadores."
+    },
+    "Hero": {
+      "Announcement": "Disponível como open source no GitHub",
+      "Title": "Utilitários Sempre à Mão",
+      "Description": "Uma coleção leve e open source de ferramentas práticas para programadores.",
+      "GetStarted": "Começar",
+      "GitHub": "Ver no GitHub"
+    },
+    "Tools": {
+      "Title": "Ferramentas Dev"
+    },
+    "Features": {
+      "Title": "Pensado para Programadores Exigentes",
+      "Description": "Utilitários simples e fiáveis para o dia a dia do desenvolvimento, sempre prontos quando precisa.",
+      "Badge": "Porquê Escolher-nos",
+      "Items": [
+        {
+          "Title": "Gratuito e Ilimitado",
+          "Description": "Todas as ferramentas disponíveis sem qualquer limite.",
+          "Icon": "crown"
+        },
+        {
+          "Title": "Open Source",
+          "Description": "Código aberto no GitHub. Reveja, contribua ou aloje a sua instância.",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "Respeita a Privacidade",
+          "Description": "Todas as ferramentas funcionam diretamente no navegador, sem processamento no servidor.",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "Resultados Previsíveis",
+          "Description": "Os resultados seguem regras definidas, sem depender de modelos de IA generativa.",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "Prático por Natureza",
+          "Description": "Utilitários focados em tarefas comuns de desenvolvimento, concebidos para serem fáceis de usar.",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "Vários Idiomas",
+          "Description": "Suporte multilingue para programadores de todo o mundo.",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "Pronto quando precisar",
+      "Description": "Tudo funciona como esperado, diretamente no seu navegador.",
+      "GetStarted": "Começar",
+      "GitHub": "GitHub"
+    }
+  }
+}
