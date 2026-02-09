@@ -3,7 +3,8 @@ import navigations from "@/messages/en-US/navigations.json";
 
 import { NavItem } from "@/types/nav";
 import { siteConfig } from "@/config/site";
-import { prefixes, routing } from "@/i18n/routing";
+import { localePrefixes } from "@/i18n/locales";
+import { routing } from "@/i18n/routing";
 
 type Locale = (typeof routing.locales)[number];
 
@@ -21,7 +22,8 @@ const localesByLang = locales.reduce(
 
 // Build full URL with optional locale prefix.
 function getUrl(path: string, locale?: Locale): string {
-  const prefix = locale && locale !== defaultLocale ? prefixes[locale] : "";
+  const prefix =
+    locale && locale !== defaultLocale ? localePrefixes[locale] : "";
   return `${siteConfig.url}${prefix}${path === "/" ? "" : path}`;
 }
 
