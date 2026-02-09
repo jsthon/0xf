@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "페이지 오류",
+      "Description": "페이지를 불러오는 중 오류가 발생했습니다."
+    },
+    "Back": "뒤로 가기",
+    "Home": "홈으로 이동"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "페이지를 찾을 수 없음",
+      "Description": "이 페이지는 존재하지 않는 것 같습니다."
+    },
+    "Back": "뒤로 가기",
+    "Home": "홈으로 이동"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF - 오픈 소스 개발자 도구 모음",
+      "Description": "가볍고 오픈 소스인 실용적인 개발 도구 모음입니다."
+    },
+    "Hero": {
+      "Announcement": "GitHub에 오픈 소스로 공개",
+      "Title": "필요한 도구, 바로 여기에",
+      "Description": "가볍고 오픈 소스인 실용적인 개발 도구 모음입니다.",
+      "GetStarted": "시작하기",
+      "GitHub": "GitHub에서 보기"
+    },
+    "Tools": {
+      "Title": "개발 도구"
+    },
+    "Features": {
+      "Title": "개발자를 위해, 개발자답게.",
+      "Description": "간결하고 신뢰할 수 있는 개발 유틸리티, 필요할 때 언제든 바로 사용할 수 있습니다.",
+      "Badge": "왜 선택해야 할까요",
+      "Items": [
+        {
+          "Title": "무료 & 무제한",
+          "Description": "모든 도구를 제한 없이 무료로 사용할 수 있습니다.",
+          "Icon": "crown"
+        },
+        {
+          "Title": "오픈 소스",
+          "Description": "GitHub에서 오픈 소스로 공개되어 있습니다. 코드 리뷰, 기여, 또는 직접 배포가 가능합니다.",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "프라이버시 보호",
+          "Description": "모든 도구가 브라우저에서 직접 실행되며, 백엔드 처리가 없습니다.",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "예측 가능한 결과",
+          "Description": "결과는 명확한 규칙에 따르며, 생성형 AI 언어 모델에 의존하지 않습니다.",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "실용적인 설계",
+          "Description": "일상적인 개발 작업에 맞춘 유틸리티, 간편하게 사용할 수 있도록 설계되었습니다.",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "다국어 지원",
+          "Description": "전 세계 개발자를 위해 다양한 언어를 지원합니다.",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "필요할 때, 바로 여기에.",
+      "Description": "브라우저만 열면 바로 사용할 수 있습니다.",
+      "GetStarted": "시작하기",
+      "GitHub": "GitHub"
+    }
+  }
+}

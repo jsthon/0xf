@@ -1,0 +1,225 @@
+{
+  "Navigation": {
+    "headers": [
+      {
+        "title": "홈",
+        "href": "/"
+      },
+      {
+        "title": "도구",
+        "href": "/tools",
+        "slug": "tools"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/",
+        "external": true
+      }
+    ],
+    "sections": [
+      {
+        "title": "개발 도구",
+        "slug": "tools",
+        "categories": [
+          {
+            "title": "인코딩 & 디코딩",
+            "items": [
+              {
+                "title": "Base64 인코딩",
+                "href": "/base64",
+                "icon": "square-code",
+                "intl": "Base64Page"
+              },
+              {
+                "title": "URL 인코딩",
+                "href": "/url-encoding",
+                "icon": "link-2",
+                "intl": "URLEncodingPage"
+              },
+              {
+                "title": "문자 이스케이프",
+                "href": "/character-escape",
+                "icon": "ampersand",
+                "intl": "CharacterEscapePage",
+                "keywords": [
+                  "Unicode",
+                  "CSS",
+                  "HTML",
+                  "코드 포인트",
+                  "HTML 엔티티"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "생성기",
+            "items": [
+              {
+                "title": "비밀번호 생성",
+                "href": "/password-generator",
+                "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
+                "keywords": ["랜덤"]
+              },
+              {
+                "title": "QR 코드 생성",
+                "href": "/qr-code",
+                "icon": "qr-code",
+                "intl": "QRCodePage"
+              },
+              {
+                "title": "Lorem Ipsum 생성",
+                "href": "/lorem-ipsum",
+                "icon": "letter-text",
+                "intl": "LoremIpsumPage",
+                "keywords": ["더미 텍스트", "테스트 텍스트", "랜덤 문장"]
+              },
+              {
+                "title": "해시 생성",
+                "href": "/hash-generator",
+                "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
+                "keywords": [
+                  "Adler32",
+                  "BLAKE",
+                  "CRC32C",
+                  "CRC64",
+                  "Keccak",
+                  "MD4",
+                  "MD5",
+                  "RIPEMD160",
+                  "SHA",
+                  "SM3",
+                  "Whirlpool",
+                  "XXHash"
+                ]
+              },
+              {
+                "title": "UUID 생성",
+                "href": "/uuid-generator",
+                "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
+                "keywords": ["GUID", "Unique ID"]
+              }
+            ]
+          },
+          {
+            "title": "텍스트 & 문자",
+            "items": [
+              {
+                "title": "코드 포매터",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
+                "keywords": ["코드 정리", "코드 미화"]
+              },
+              {
+                "title": "코드 압축",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "intl": "CodeMinifierPage",
+                "keywords": ["코드 축소"]
+              },
+              {
+                "title": "텍스트 비교",
+                "href": "/text-compare",
+                "icon": "file-diff",
+                "intl": "TextComparePage",
+                "keywords": ["텍스트 차이", "Diff"]
+              },
+              {
+                "title": "문자 수 세기",
+                "href": "/character-count",
+                "icon": "square-sigma",
+                "intl": "CharacterCountPage",
+                "keywords": ["글자 수", "단어 수"]
+              }
+            ]
+          },
+          {
+            "title": "변환 & 계산",
+            "items": [
+              {
+                "title": "색상 변환",
+                "href": "/color-converter",
+                "icon": "palette",
+                "intl": "ColorConverterPage",
+                "keywords": [
+                  "색상 형식",
+                  "Hex",
+                  "RBG",
+                  "HSL",
+                  "HWB",
+                  "LCH",
+                  "CMYK"
+                ]
+              },
+              {
+                "title": "데이터 형식 변환",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "intl": "DataFormatConverterPage",
+                "keywords": [
+                  "데이터 형식",
+                  "구조화 데이터",
+                  "JSON",
+                  "YAML",
+                  "YML",
+                  "XML",
+                  "CSV"
+                ]
+              },
+              {
+                "title": "대소문자 변환",
+                "href": "/case-converter",
+                "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
+                "keywords": ["카멜 케이스", "스네이크 케이스"]
+              },
+              {
+                "title": "타임스탬프 변환",
+                "href": "/timestamp-converter",
+                "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
+                "keywords": ["날짜 시간 형식", "Timestamp", "Unix"]
+              },
+              {
+                "title": "시간 간격 계산",
+                "href": "/time-interval",
+                "icon": "hourglass",
+                "intl": "TimeIntervalPage",
+                "keywords": ["예상 시간", "시간 차이", "경과 시간"]
+              }
+            ]
+          },
+          {
+            "title": "웹 개발",
+            "items": [
+              {
+                "title": "SVG 최적화",
+                "href": "/svg-optimizer",
+                "icon": "layers",
+                "intl": "SvgOptimizerPage",
+                "keywords": ["SVG 압축", "SVG 정리", "SVG 포맷"]
+              },
+              {
+                "title": "키보드 이벤트",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
+                "intl": "KeyboardEventPage",
+                "keywords": ["키보드 입력", "keydown", "keyup", "keypress"]
+              },
+              {
+                "title": "User-Agent 분석",
+                "href": "/user-agent",
+                "icon": "compass",
+                "intl": "UserAgentPage",
+                "keywords": ["브라우저 감지", "브라우저 정보", "UA 정보"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
