@@ -1,0 +1,66 @@
+{
+  "MobileNav": {
+    "Menu": "Menü",
+    "ToggleMenu": "Menü umschalten"
+  },
+  "Footer": {
+    "Text": "Erstellt von <url>{name}</url> für Entwickler. Open Source auf <github>GitHub</github>."
+  },
+  "Sidebar": {
+    "ToggleSidebar": "Seitenleiste umschalten"
+  },
+  "AsideBlock": {
+    "Title": "{name} auf GitHub entdecken",
+    "Description": [
+      "Open Source – der vollständige Quellcode ist einsehbar.",
+      "Code überprüfen, beitragen oder selbst hosten."
+    ],
+    "Button": "Auf GitHub ansehen"
+  },
+  "LocaleSwitcher": {
+    "Locale": "{locale, select, de_DE {Deutsch} en_US {English} ja_JP {日本語} zh_CN {简体中文} zh_TW {繁體中文} other {Unbekannt}}"
+  },
+  "ThemeSwitcher": {
+    "Theme": "Design",
+    "SystemTheme": "Systemdesign",
+    "LightTheme": "Helles Design",
+    "DarkTheme": "Dunkles Design"
+  },
+  "CommandMenu": {
+    "Search": "Suchen...",
+    "CommandPlaceholder": "Suchbegriff eingeben...",
+    "Empty": "Keine Ergebnisse gefunden.",
+    "LinksHeading": "Links"
+  },
+  "CopyButton": {
+    "Copy": "Kopieren",
+    "Error": "Kopieren fehlgeschlagen"
+  },
+  "ColorPicker": {
+    "SelectColor": "Farbe wählen"
+  },
+  "PasswordInput": {
+    "Show": "Passwort anzeigen",
+    "Hide": "Passwort verbergen"
+  },
+  "TimezoneSelect": {
+    "Placeholder": "Zeitzone wählen",
+    "Empty": "Keine Zeitzone gefunden."
+  },
+  "DateTimePicker": {
+    "SelectDate": "Datum wählen"
+  },
+  "FileUpload": {
+    "PrimaryText": "Dateien auswählen oder hierher ziehen",
+    "SecondaryText": "Beliebiger Dateityp",
+    "Remove": "Entfernen",
+    "Messages": {
+      "InvalidFiles": "Keine gültigen Dateien ausgewählt"
+    }
+  },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ unveränderte Zeilen"
+    }
+  }
+}
