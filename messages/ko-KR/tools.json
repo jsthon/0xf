@@ -1,0 +1,679 @@
+{
+  "ToolsPage": {
+    "Meta": {
+      "Title": "개발 도구",
+      "Description": "가볍고 효율적인 일상 개발 도구 모음."
+    }
+  },
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 인코딩/디코딩",
+      "Description": "Base64 인코딩 및 디코딩, 자동 감지 및 URL 안전 모드를 지원합니다."
+    },
+    "Controls": {
+      "AutoDetect": "자동 감지",
+      "Decode": "디코딩",
+      "Encode": "인코딩",
+      "UrlSafe": "URL 안전"
+    },
+    "Labels": {
+      "Input": "입력",
+      "Output": "결과",
+      "Upload": "업로드",
+      "Download": "다운로드"
+    },
+    "Badges": {
+      "Base64": "Base64",
+      "UrlSafe": "URL 안전"
+    },
+    "Tooltips": {
+      "AutoDetect": "입력이 일반 텍스트인지 Base64인지 자동으로 감지합니다",
+      "UrlSafe": "+/를 -_로 대체하고 = 패딩을 제거하여 URL에서 안전하게 사용합니다"
+    },
+    "Messages": {
+      "Encode": {
+        "Failed": "인코딩 실패"
+      },
+      "Decode": {
+        "Invalid": "유효하지 않은 Base64 문자열",
+        "StandardChars": "URL 안전 모드를 꺼야 + 또는 / 문자를 디코딩할 수 있습니다",
+        "UrlSafeChars": "URL 안전 모드를 켜야 - 또는 _ 문자를 디코딩할 수 있습니다"
+      },
+      "Upload": {
+        "Failed": "파일 로드 실패",
+        "Limit": "파일 크기는 20MB 이하여야 합니다"
+      },
+      "Download": {
+        "Failed": "파일 다운로드 실패",
+        "Empty": "빈 파일은 다운로드할 수 없습니다"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "텍스트를 입력하면 자동 감지됩니다...",
+        "Encode": "인코딩할 텍스트를 입력하세요...",
+        "Decode": "디코딩할 Base64를 입력하세요..."
+      },
+      "Output": {
+        "AutoDetect": "Base64 인코딩 또는 디코딩 결과...",
+        "Encode": "인코딩된 Base64 결과...",
+        "Decode": "디코딩된 텍스트 결과..."
+      }
+    }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL 인코딩/디코딩",
+      "Description": "텍스트를 URL 형식으로 인코딩하거나 URL 인코딩된 텍스트를 디코딩합니다."
+    },
+    "Controls": {
+      "AutoDetect": "자동 감지",
+      "Decode": "디코딩",
+      "Encode": "인코딩"
+    },
+    "Labels": {
+      "Input": "입력",
+      "Output": "결과",
+      "URLEncoded": "URL 인코딩"
+    },
+    "Tooltips": {
+      "AutoDetect": "입력이 URL 인코딩인지 일반 텍스트인지 자동으로 감지합니다"
+    },
+    "Messages": {
+      "Decode": {
+        "Invalid": "유효하지 않은 URL 인코딩 문자열"
+      },
+      "Encode": {
+        "Failed": "인코딩 실패"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "텍스트를 입력하면 자동 감지됩니다...",
+        "Encode": "인코딩할 텍스트를 입력하세요...",
+        "Decode": "디코딩할 URL 인코딩 텍스트를 입력하세요..."
+      },
+      "Output": {
+        "AutoDetect": "URL 인코딩 또는 디코딩 결과...",
+        "Encode": "인코딩된 URL 결과...",
+        "Decode": "디코딩된 텍스트 결과..."
+      }
+    }
+  },
+  "CharacterEscapePage": {
+    "Meta": {
+      "Title": "문자 이스케이프",
+      "Description": "Unicode 코드 포인트, Unicode 이스케이프, CSS 이스케이프, HTML 엔티티의 인코딩 및 디코딩."
+    },
+    "Controls": {
+      "AutoDetect": "자동 감지",
+      "Decode": "디코딩",
+      "Encode": "인코딩",
+      "CodePoint": "Code Point U+0000",
+      "EscapeSequence": "Unicode Escape \\u0000",
+      "CssEscape": "CSS Escape \\0000",
+      "HtmlCode": "HTML Code &#00;",
+      "HtmlEntity": "HTML Entity &name;"
+    },
+    "Labels": {
+      "Input": "입력",
+      "Output": "결과",
+      "CodePoint": "Code Point",
+      "EscapeSequence": "Unicode Escape",
+      "CssEscape": "CSS Escape",
+      "HtmlCode": "HTML Code",
+      "HtmlEntity": "HTML Entity"
+    },
+    "Tooltips": {
+      "AutoDetect": "입력이 인코딩된 텍스트인지 자동으로 감지합니다"
+    },
+    "Messages": {
+      "Decode": {
+        "InvalidEncoding": "유효하지 않은 인코딩 형식",
+        "InvalidCodePoint": "유효하지 않은 Code Point 형식",
+        "InvalidEscapeSequence": "유효하지 않은 Unicode Escape 형식",
+        "InvalidCssEscape": "유효하지 않은 CSS Escape 형식",
+        "InvalidHtmlCode": "유효하지 않은 HTML Code 형식",
+        "InvalidHtmlEntity": "유효하지 않은 HTML Entity 형식"
+      },
+      "Encode": {
+        "Failed": "인코딩 실패"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "텍스트를 입력하면 자동 감지됩니다...",
+        "Encode": "인코딩할 텍스트를 입력하세요...",
+        "Decode": "디코딩할 텍스트를 입력하세요..."
+      },
+      "Output": {
+        "AutoDetect": "인코딩 또는 디코딩 결과...",
+        "Encode": "인코딩된 결과...",
+        "Decode": "디코딩된 텍스트 결과..."
+      }
+    }
+  },
+  "PasswordGeneratorPage": {
+    "Meta": {
+      "Title": "비밀번호 생성",
+      "Description": "길이와 문자 유형을 맞춤 설정하여 안전한 비밀번호를 생성합니다."
+    },
+    "Labels": {
+      "Password": "비밀번호",
+      "Regenerate": "재생성",
+      "CharacterLength": "문자 길이",
+      "CharacterTypes": "문자 유형"
+    },
+    "Messages": {
+      "GenerateError": "비밀번호 생성 실패",
+      "SelectCharType": "최소 하나의 문자 유형을 선택해야 합니다"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "Lorem Ipsum 생성",
+      "Description": "옵션을 맞춤 설정하여 Lorem Ipsum 랜덤 텍스트 단락을 생성합니다."
+    },
+    "Labels": {
+      "Text": "생성된 텍스트",
+      "Regenerate": "재생성",
+      "StartWithLorem": "'Lorem ipsum'으로 시작",
+      "RandomRange": "랜덤 범위",
+      "DisplayPTags": "'<p>' 태그 표시",
+      "Paragraphs": "단락 수",
+      "Sentences": "단락당 문장 수",
+      "Words": "문장당 단어 수"
+    },
+    "Messages": {
+      "GenerateError": "Lorem Ipsum 텍스트 생성 중 오류 발생"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "해시 생성",
+      "Description": "MD5, SHA1, SHA256, SHA512, SHA3 등의 알고리즘으로 텍스트 또는 파일의 해시 다이제스트를 생성합니다."
+    },
+    "Labels": {
+      "Input": "입력",
+      "Output": "결과",
+      "Algorithm": "해시 알고리즘",
+      "DigestEncoding": "다이제스트 인코딩"
+    },
+    "Placeholders": {
+      "Input": "해시할 텍스트를 입력하세요..."
+    },
+    "Messages": {
+      "LocalProcessing": "파일은 로컬에서만 처리됩니다",
+      "GenerationFailed": "해시 생성 실패"
+    },
+    "InputType": {
+      "Text": "텍스트",
+      "File": "파일"
+    },
+    "DigestEncoding": {
+      "HexLower": "16진수 (소문자)",
+      "HexUpper": "16진수 (대문자)",
+      "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "문자 수 세기",
+      "Description": "텍스트의 다양한 문자 유형을 분석하고 개수를 셉니다."
+    },
+    "Labels": {
+      "Text": "입력 텍스트",
+      "Total": "전체 문자",
+      "Words": "단어",
+      "Lines": "줄 수",
+      "Whitespace": "공백 문자",
+      "LatinScript": "라틴 문자",
+      "NonLatinScript": "비라틴 문자",
+      "Digits": "숫자",
+      "Symbols": "기호"
+    },
+    "Placeholders": {
+      "Input": "분석할 텍스트를 입력하세요..."
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "텍스트 비교",
+      "Description": "두 텍스트의 차이점을 비교하고 하이라이트합니다."
+    },
+    "Controls": {
+      "UnifiedView": "통합 보기",
+      "CollapseUnchanged": "변경 없는 부분 접기"
+    }
+  },
+  "CodeFormatterPage": {
+    "Meta": {
+      "Title": "코드 포매터",
+      "Description": "다양한 언어와 옵션을 지원하는 코드 포맷팅 도구."
+    },
+    "Controls": {
+      "Language": "언어 선택",
+      "FormatCode": "코드 포맷",
+      "Upload": "업로드",
+      "Download": "다운로드",
+      "PrintWidth": "최대 줄 너비:",
+      "TabWidth": "들여쓰기 너비:",
+      "UseTabs": {
+        "Label": "들여쓰기:",
+        "Space": "스페이스",
+        "Tab": "Tab"
+      },
+      "SingleQuote": {
+        "Label": "따옴표:",
+        "Double": "큰따옴표",
+        "Single": "작은따옴표"
+      },
+      "Semi": {
+        "Label": "세미콜론:",
+        "On": "사용",
+        "Off": "미사용"
+      }
+    },
+    "Tooltips": {
+      "PrintWidth": "한 줄의 최대 문자 수, 초과 시 자동 줄 바꿈",
+      "TabWidth": "들여쓰기 한 단계당 공백 수",
+      "UseTabs": "Tab 또는 스페이스로 들여쓰기",
+      "SingleQuote": "작은따옴표 또는 큰따옴표 사용",
+      "Semicolons": "문장 끝에 세미콜론 추가 여부"
+    },
+    "Messages": {
+      "LanguageRequired": "코드 언어를 선택하세요",
+      "FormatSuccess": "포맷 완료",
+      "FormatFailed": "포맷 실패. 구문을 확인하세요.",
+      "UploadFailed": "파일 로드 실패",
+      "DownloadEmpty": "다운로드할 내용이 없습니다",
+      "DownloadFailed": "파일 다운로드 실패"
+    }
+  },
+  "CodeMinifierPage": {
+    "Meta": {
+      "Title": "코드 압축",
+      "Description": "다양한 언어와 옵션을 지원하는 코드 압축 도구."
+    },
+    "Controls": {
+      "Language": "언어 선택",
+      "MinifyCode": "코드 압축",
+      "Upload": "업로드",
+      "Download": "다운로드"
+    },
+    "Messages": {
+      "LanguageRequired": "코드 언어를 선택하세요",
+      "MinifySuccess": "압축 완료",
+      "MinifyFailed": "압축 실패. 구문을 확인하세요.",
+      "UploadFailed": "파일 로드 실패",
+      "DownloadEmpty": "다운로드할 내용이 없습니다",
+      "DownloadFailed": "파일 다운로드 실패"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID 생성",
+      "Description": "다양한 버전과 형식의 UUID를 생성합니다."
+    },
+    "Labels": {
+      "Generated": "생성된 UUID",
+      "Regenerate": "재생성",
+      "Version": "UUID 버전",
+      "Quantity": "수량",
+      "Format": "형식",
+      "Uppercase": "대문자",
+      "Hyphens": "하이픈",
+      "Braces": "중괄호",
+      "Quotes": "따옴표",
+      "Commas": "쉼표",
+      "Namespace": "네임스페이스",
+      "Name": "이름"
+    },
+    "Versions": {
+      "v1": "V1 (타임스탬프)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (랜덤)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Tooltips": {
+      "Hyphens": "UUID 각 부분 사이에 표준 구분자를 추가합니다",
+      "Uppercase": "16진수 값을 대문자로 변환합니다",
+      "Braces": "UUID를 중괄호로 감쌉니다",
+      "Quotes": "UUID를 큰따옴표로 감쌉니다",
+      "Commas": "각 UUID 끝에 쉼표를 추가합니다"
+    },
+    "Messages": {
+      "GenerateError": "UUID 생성 오류",
+      "NamespaceRequired": "네임스페이스와 이름이 필요합니다",
+      "NamespaceHint": "사전 정의된 네임스페이스를 선택하거나 사용자 정의 UUID를 입력하세요",
+      "InvalidNamespace": "네임스페이스는 유효한 UUID여야 합니다"
+    }
+  },
+  "QRCodePage": {
+    "Meta": {
+      "Title": "QR 코드 생성",
+      "Description": "텍스트 또는 WiFi 정보로 QR 코드를 생성합니다."
+    },
+    "Labels": {
+      "Generated": "생성된 이미지",
+      "Download": "다운로드",
+      "ForegroundColor": "전경색",
+      "BackgroundColor": "배경색",
+      "InputText": "입력 텍스트"
+    },
+    "Tabs": {
+      "Text": "텍스트",
+      "WiFi": "WiFi"
+    },
+    "WiFi": {
+      "Title": "WiFi 설정",
+      "SSID": "네트워크 이름",
+      "Type": "인증 유형",
+      "Password": "비밀번호",
+      "Hidden": "숨겨진 SSID",
+      "EAPMethod": "EAP 방식",
+      "Identity": "사용자 ID",
+      "AnonymousIdentity": "익명 ID",
+      "Phase2Method": "Phase 2 방식",
+      "AuthenticationType": {
+        "WPA": "WPA/WPA2",
+        "WEP": "WEP",
+        "WPA2-EAP": "WPA2-EAP",
+        "nopass": "비밀번호 없음"
+      }
+    },
+    "Placeholders": {
+      "InputText": "QR 코드로 변환할 텍스트를 입력하세요..."
+    }
+  },
+  "ColorConverterPage": {
+    "Meta": {
+      "Title": "색상 변환",
+      "Description": "HEX, RGB, HSL, HWB, LCH, CMYK 등 색상 형식 간 변환."
+    },
+    "Labels": {
+      "Input": "입력 색상",
+      "Output": "변환 결과"
+    },
+    "Placeholders": {
+      "Input": "색상 값을 입력하세요..."
+    }
+  },
+  "TimestampConverterPage": {
+    "Meta": {
+      "Title": "타임스탬프 변환",
+      "Description": "UNIX 타임스탬프, ISO8601, RFC3339, JavaScript Date 등 날짜 시간 형식 간 변환."
+    },
+    "Labels": {
+      "Input": "입력 날짜",
+      "Output": "출력 날짜",
+      "InputFormat": "입력 형식",
+      "AutoDetect": "자동 감지",
+      "OutputTimezone": "출력 시간대"
+    },
+    "DateFormats": {
+      "CurrentTime": "현재 시간",
+      "Javascript": "JavaScript Date",
+      "ISO8601": "ISO 8601",
+      "ISO9075": "ISO 9075",
+      "RFC3339": "RFC 3339",
+      "RFC7231": "RFC 7231",
+      "TimestampSeconds": "Timestamp (초)",
+      "TimestampMilliseconds": "Timestamp (밀리초)"
+    },
+    "Placeholders": {
+      "Input": "날짜 시간 텍스트를 입력하세요...",
+      "Invalid": "유효하지 않은 형식"
+    }
+  },
+  "CaseConverterPage": {
+    "Meta": {
+      "Title": "대소문자 변환",
+      "Description": "카멜 케이스, 파스칼 케이스, 스네이크 케이스 등 다양한 네이밍 스타일로 텍스트를 변환합니다."
+    },
+    "Labels": {
+      "Input": "입력 텍스트",
+      "Output": "변환 결과"
+    },
+    "Formats": {
+      "camel": "카멜 케이스",
+      "pascal": "파스칼 케이스",
+      "capital": "캐피탈 케이스",
+      "sentence": "문장 형식",
+      "constant": "상수 케이스",
+      "snake": "스네이크 케이스",
+      "no": "스페이스 케이스",
+      "kebab": "케밥 케이스",
+      "dot": "닷 케이스",
+      "path": "패스 케이스",
+      "title": "타이틀 케이스",
+      "train": "트레인 케이스",
+      "lower": "소문자",
+      "upper": "대문자",
+      "lowerFirst": "첫 글자 소문자",
+      "upperFirst": "첫 글자 대문자",
+      "sponge": "스폰지 케이스"
+    },
+    "Tooltips": {
+      "camel": "첫 단어는 소문자, 나머지 단어는 대문자로 시작, 구분자 없음.",
+      "pascal": "모든 단어가 대문자로 시작, 구분자 없음.",
+      "capital": "모든 단어가 대문자로 시작, 공백으로 구분.",
+      "sentence": "첫 단어만 대문자로 시작, 나머지 소문자, 공백으로 구분.",
+      "constant": "모두 대문자, 밑줄로 구분.",
+      "snake": "모두 소문자, 밑줄로 구분.",
+      "no": "모두 소문자, 공백으로 구분.",
+      "kebab": "모두 소문자, 하이픈으로 구분.",
+      "dot": "모두 소문자, 점으로 구분.",
+      "path": "모두 소문자, 슬래시로 구분.",
+      "title": "모든 주요 단어가 대문자로 시작, 구분자 유지.",
+      "train": "모든 단어가 대문자로 시작, 하이픈으로 구분.",
+      "lower": "모든 글자 소문자, 구분자 유지.",
+      "upper": "모든 글자 대문자, 구분자 유지.",
+      "lowerFirst": "첫 글자만 소문자, 나머지 유지.",
+      "upperFirst": "첫 글자만 대문자, 나머지 유지.",
+      "sponge": "대소문자 랜덤 혼합, 구분자 유지."
+    },
+    "Badges": {
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "capital": "Capital Case",
+      "sentence": "Sentence case",
+      "constant": "CONSTANT_CASE",
+      "snake": "snake_case",
+      "no": "space case",
+      "kebab": "kebab-case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "title": "Title Case",
+      "train": "Train-Case",
+      "lower": "lowercase",
+      "upper": "UPPERCASE",
+      "lowerFirst": "lowerFirst",
+      "upperFirst": "UpperFirst",
+      "sponge": "SpOnGe CaSe"
+    },
+    "Placeholders": {
+      "Input": "변환할 텍스트를 입력하세요..."
+    }
+  },
+  "DataFormatConverterPage": {
+    "Meta": {
+      "Title": "데이터 형식 변환",
+      "Description": "JSON, YAML, XML, CSV 간 변환, 자동 형식 감지를 지원합니다."
+    },
+    "Labels": {
+      "Input": "입력",
+      "Output": "출력",
+      "InputFormat": "입력 형식",
+      "AutoDetect": "자동 감지",
+      "ConvertFormat": "변환 형식",
+      "Upload": "업로드",
+      "Download": "다운로드"
+    },
+    "Messages": {
+      "ConvertSuccess": "변환 완료",
+      "ConvertFailed": "변환 실패. 구문을 확인하세요.",
+      "UnknownFormat": "입력 형식을 감지할 수 없습니다.",
+      "UploadFailed": "파일 로드 실패",
+      "DownloadEmpty": "다운로드할 내용이 없습니다.",
+      "DownloadFailed": "파일 다운로드 실패"
+    }
+  },
+  "UserAgentPage": {
+    "Meta": {
+      "Title": "User-Agent 분석",
+      "Description": "User-Agent 문자열을 분석하여 브라우저, OS, 디바이스, 엔진 정보를 표시합니다."
+    },
+    "Labels": {
+      "Input": "입력 텍스트",
+      "Output": "분석 결과",
+      "BrowserName": "브라우저 이름",
+      "BrowserVersion": "브라우저 버전",
+      "EngineName": "렌더링 엔진",
+      "EngineVersion": "엔진 버전",
+      "DeviceType": "디바이스 유형",
+      "DeviceVendor": "디바이스 제조사",
+      "DeviceModel": "디바이스 모델",
+      "CPUArchitecture": "CPU 아키텍처",
+      "OSName": "운영 체제",
+      "OSVersion": "OS 버전",
+      "IsBot": "봇 감지",
+      "ChromiumBased": "Chromium 기반"
+    },
+    "Values": {
+      "Yes": "예",
+      "No": "아니오"
+    },
+    "Placeholders": {
+      "Input": "User-Agent 문자열을 입력하세요..."
+    }
+  },
+  "KeyboardEventPage": {
+    "Meta": {
+      "Title": "키보드 이벤트 속성",
+      "Description": "KeyboardEvent의 key, code, 보조 키 등의 속성을 실시간으로 확인하고 디버깅합니다."
+    },
+    "Placeholders": {
+      "Input": "아무 키나 누르거나 텍스트를 입력하여 KeyboardEvent를 트리거하세요..."
+    },
+    "Tooltips": {
+      "keydown": "아무 키나 누를 때 발생합니다.",
+      "keypress": "[더 이상 사용되지 않음] 문자를 생성하는 키를 누를 때 발생합니다.",
+      "keyup": "아무 키나 놓을 때 발생합니다.",
+      "key": "키보드 레이아웃과 보조 키를 고려한 키 값을 반환합니다.",
+      "code": "키보드 레이아웃과 무관한 물리적 키 코드를 반환합니다.",
+      "location": "키보드 또는 입력 장치에서의 키 위치를 반환합니다.",
+      "repeat": "키를 누르고 있어 자동 반복 중이면 true입니다.",
+      "isComposing": "입력기(IME) 조합 세션 중에 이벤트가 발생하면 true입니다.",
+      "shiftKey": "이벤트 발생 시 Shift 키가 활성화되어 있으면 true입니다.",
+      "ctrlKey": "이벤트 발생 시 Control 키가 활성화되어 있으면 true입니다.",
+      "altKey": "이벤트 발생 시 Alt(Option) 키가 활성화되어 있으면 true입니다.",
+      "metaKey": "이벤트 발생 시 Meta 키(Command 또는 Windows 키)가 활성화되어 있으면 true입니다.",
+      "which": "[더 이상 사용되지 않음] 눌린 키 또는 버튼의 숫자 코드를 반환합니다.",
+      "keyCode": "[더 이상 사용되지 않음] 키의 수정되지 않은 값에 대한 시스템 종속 코드를 반환합니다.",
+      "charCode": "[더 이상 사용되지 않음] keypress 이벤트에서 생성된 문자의 Unicode 값을 반환합니다."
+    }
+  },
+  "TimeIntervalPage": {
+    "Meta": {
+      "Title": "시간 간격 계산",
+      "Description": "두 날짜 시간 사이의 간격을 다양한 표시 형식으로 계산합니다."
+    },
+    "Labels": {
+      "Format": "표시 형식",
+      "Start": "시작 시간",
+      "End": "종료 시간",
+      "Interval": "시간 간격"
+    },
+    "Placeholders": {
+      "Interval": "시작 시간과 종료 시간을 선택하세요"
+    },
+    "Formats": {
+      "auto": "자동",
+      "years": "년",
+      "months": "월",
+      "days": "일",
+      "hours": "시간",
+      "minutes": "분",
+      "seconds": "초",
+      "milliseconds": "밀리초"
+    },
+    "Units": {
+      "years": "{count, plural, other {{count}년}}",
+      "months": "{count, plural, other {{count}개월}}",
+      "days": "{count, plural, other {{count}일}}",
+      "hours": "{count, plural, other {{count}시간}}",
+      "minutes": "{count, plural, other {{count}분}}",
+      "seconds": "{count, plural, other {{count}초}}",
+      "milliseconds": "{count, plural, other {{count}밀리초}}"
+    }
+  },
+  "SvgOptimizerPage": {
+    "Meta": {
+      "Title": "SVG 최적화",
+      "Description": "불필요한 요소와 속성을 제거하여 SVG 파일을 정리하고 압축합니다."
+    },
+    "Labels": {
+      "Input": "입력",
+      "Preview": "미리보기",
+      "Code": "코드",
+      "Upload": "업로드",
+      "Download": "다운로드",
+      "ShowOriginal": "원본 보기"
+    },
+    "Options": {
+      "floatPrecision": "숫자 정밀도",
+      "pretty": "코드 정리",
+      "removeXMLNS": "xmlns 제거",
+      "removeRasterImages": "래스터 이미지 제거",
+      "removeDimensions": "width, height 제거",
+      "removeViewBox": "viewBox 제거",
+      "convertStyleToAttrs": "스타일을 속성으로 변환",
+      "reusePaths": "중복 경로 재사용",
+      "removeScripts": "스크립트 제거",
+      "removeOffCanvasPaths": "캔버스 밖 경로 제거",
+      "removeDoctype": "doctype 제거",
+      "removeXMLProcInst": "XML 선언 제거",
+      "removeComments": "주석 제거",
+      "removeMetadata": "metadata 제거",
+      "removeEditorsNSData": "편집기 데이터 제거",
+      "cleanupAttrs": "속성 정리",
+      "mergeStyles": "스타일 병합",
+      "inlineStyles": "인라인 스타일",
+      "minifyStyles": "스타일 압축",
+      "cleanupIds": "ID 정리",
+      "removeUselessDefs": "미사용 defs 제거",
+      "cleanupNumericValues": "숫자 값 정리",
+      "convertColors": "색상 압축",
+      "removeUnknownsAndDefaults": "알 수 없는 항목 및 기본값 제거",
+      "removeNonInheritableGroupAttrs": "불필요한 그룹 속성 제거",
+      "removeUselessStrokeAndFill": "불필요한 stroke, fill 제거",
+      "cleanupEnableBackground": "enable-background 제거",
+      "removeHiddenElems": "숨겨진 요소 제거",
+      "removeEmptyText": "빈 텍스트 제거",
+      "convertShapeToPath": "도형을 경로로 변환",
+      "convertEllipseToCircle": "ellipse를 circle로 변환",
+      "moveElemsAttrsToGroup": "요소 속성을 그룹으로 이동",
+      "moveGroupAttrsToElems": "그룹 속성을 요소로 이동",
+      "collapseGroups": "불필요한 그룹 축소",
+      "convertPathData": "경로 데이터 변환",
+      "convertTransform": "transform 변환",
+      "removeEmptyAttrs": "빈 속성 제거",
+      "removeEmptyContainers": "빈 컨테이너 제거",
+      "mergePaths": "경로 병합",
+      "removeUnusedNS": "미사용 네임스페이스 제거",
+      "sortAttrs": "속성 정렬",
+      "sortDefsChildren": "defs 하위 요소 정렬",
+      "removeTitle": "title 제거",
+      "removeDesc": "desc 제거"
+    },
+    "Badges": {
+      "Invalid": "유효하지 않은 SVG",
+      "Original": "원본"
+    },
+    "Placeholders": {
+      "Input": "SVG 코드를 붙여넣으세요"
+    }
+  }
+}

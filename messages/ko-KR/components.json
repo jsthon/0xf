@@ -1,0 +1,63 @@
+{
+  "MobileNav": {
+    "Menu": "메뉴",
+    "ToggleMenu": "메뉴 전환"
+  },
+  "Footer": {
+    "Text": "<url>{name}</url>이 개발자를 위해 만들었으며, <github>GitHub</github>에서 오픈 소스로 공개되어 있습니다."
+  },
+  "Sidebar": {
+    "ToggleSidebar": "사이드바 전환"
+  },
+  "AsideBlock": {
+    "Title": "GitHub에서 {name} 살펴보기",
+    "Description": [
+      "오픈 소스로 전체 소스 코드를 확인할 수 있습니다.",
+      "코드 리뷰, 기여, 또는 직접 배포가 가능합니다."
+    ],
+    "Button": "GitHub에서 보기"
+  },
+  "ThemeSwitcher": {
+    "Theme": "테마",
+    "SystemTheme": "시스템 테마",
+    "LightTheme": "라이트 테마",
+    "DarkTheme": "다크 테마"
+  },
+  "CommandMenu": {
+    "Search": "검색...",
+    "CommandPlaceholder": "키워드 입력...",
+    "Empty": "결과를 찾을 수 없습니다.",
+    "LinksHeading": "링크"
+  },
+  "CopyButton": {
+    "Copy": "복사",
+    "Error": "복사 실패"
+  },
+  "ColorPicker": {
+    "SelectColor": "색상 선택"
+  },
+  "PasswordInput": {
+    "Show": "비밀번호 표시",
+    "Hide": "비밀번호 숨기기"
+  },
+  "TimezoneSelect": {
+    "Placeholder": "시간대 선택",
+    "Empty": "시간대를 찾을 수 없습니다."
+  },
+  "DateTimePicker": {
+    "SelectDate": "날짜 선택"
+  },
+  "FileUpload": {
+    "PrimaryText": "파일을 선택하거나 드래그하여 놓으세요",
+    "SecondaryText": "모든 파일 형식",
+    "Remove": "삭제",
+    "Messages": {
+      "InvalidFiles": "유효한 파일이 선택되지 않았습니다"
+    }
+  },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "변경 없는 $ 줄"
+    }
+  }
+}
