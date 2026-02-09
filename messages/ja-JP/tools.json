@@ -1,0 +1,679 @@
+{
+  "ToolsPage": {
+    "Meta": {
+      "Title": "開発ツール",
+      "Description": "軽量で効率的な日常開発ツールコレクション。"
+    }
+  },
+  "Base64Page": {
+    "Meta": {
+      "Title": "Base64 エンコード・デコード",
+      "Description": "Base64 のエンコードとデコード。入力を自動判別し、URL セーフモードにも対応。"
+    },
+    "Controls": {
+      "AutoDetect": "自動判別",
+      "Decode": "デコード",
+      "Encode": "エンコード",
+      "UrlSafe": "URL セーフ"
+    },
+    "Labels": {
+      "Input": "入力",
+      "Output": "結果",
+      "Upload": "アップロード",
+      "Download": "ダウンロード"
+    },
+    "Badges": {
+      "Base64": "Base64",
+      "UrlSafe": "URL セーフ"
+    },
+    "Tooltips": {
+      "AutoDetect": "入力がプレーンテキストか Base64 かを自動判別",
+      "UrlSafe": "+/ を -_ に置換し、= パディングを除去して URL で安全に使用"
+    },
+    "Messages": {
+      "Encode": {
+        "Failed": "エンコード失敗"
+      },
+      "Decode": {
+        "Invalid": "無効な Base64 コンテンツ",
+        "StandardChars": "+ または / 文字をデコードするには URL セーフをオフにしてください",
+        "UrlSafeChars": "- または _ 文字をデコードするには URL セーフをオンにしてください"
+      },
+      "Upload": {
+        "Failed": "ファイルの読み込みに失敗",
+        "Limit": "ファイルサイズは 20MB 以下にしてください"
+      },
+      "Download": {
+        "Failed": "ファイルのダウンロードに失敗",
+        "Empty": "空のファイルはダウンロードできません"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "テキストを入力すると自動判別されます",
+        "Encode": "エンコードするテキストを入力",
+        "Decode": "デコードする Base64 を入力"
+      },
+      "Output": {
+        "AutoDetect": "Base64 エンコードまたはデコード結果",
+        "Encode": "エンコード後の Base64",
+        "Decode": "デコード後のテキスト"
+      }
+    }
+  },
+  "URLEncodingPage": {
+    "Meta": {
+      "Title": "URL エンコード・デコード",
+      "Description": "URL エンコードと URL デコードツール。"
+    },
+    "Controls": {
+      "AutoDetect": "自動判別",
+      "Decode": "デコード",
+      "Encode": "エンコード"
+    },
+    "Labels": {
+      "Input": "入力",
+      "Output": "結果",
+      "URLEncoded": "URL エンコード"
+    },
+    "Tooltips": {
+      "AutoDetect": "入力がプレーンテキストか URL エンコードかを自動判別"
+    },
+    "Messages": {
+      "Decode": {
+        "Invalid": "無効な URL エンコードコンテンツ"
+      },
+      "Encode": {
+        "Failed": "エンコード失敗"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "テキストを入力すると自動判別されます",
+        "Encode": "エンコードするテキストを入力",
+        "Decode": "デコードする URL エンコードを入力"
+      },
+      "Output": {
+        "AutoDetect": "URL エンコードまたはデコード結果",
+        "Encode": "エンコード後の URL エンコード",
+        "Decode": "デコード後のテキスト"
+      }
+    }
+  },
+  "CharacterEscapePage": {
+    "Meta": {
+      "Title": "文字エスケープ",
+      "Description": "Unicode コードポイント、Unicode エスケープ、CSS エスケープ、HTML エンティティのエンコードとデコード。"
+    },
+    "Controls": {
+      "AutoDetect": "自動判別",
+      "Decode": "デコード",
+      "Encode": "エンコード",
+      "CodePoint": "Unicode コードポイント U+0000",
+      "EscapeSequence": "Unicode エスケープ \\u0000",
+      "CssEscape": "CSS エスケープ \\0000",
+      "HtmlCode": "HTML エスケープ &#00;",
+      "HtmlEntity": "HTML エンティティ &name;"
+    },
+    "Labels": {
+      "Input": "入力",
+      "Output": "結果",
+      "CodePoint": "Unicode コードポイント",
+      "EscapeSequence": "Unicode エスケープ",
+      "CssEscape": "CSS エスケープ",
+      "HtmlCode": "HTML エスケープ",
+      "HtmlEntity": "HTML エンティティ"
+    },
+    "Tooltips": {
+      "AutoDetect": "入力内容がエンコード済みかどうかを自動判別"
+    },
+    "Messages": {
+      "Decode": {
+        "InvalidEncoding": "無効なエンコード形式",
+        "InvalidCodePoint": "無効な Unicode コードポイント形式",
+        "InvalidEscapeSequence": "無効な Unicode エスケープ形式",
+        "InvalidCssEscape": "無効な CSS エスケープ形式",
+        "InvalidHtmlCode": "無効な HTML エスケープ形式",
+        "InvalidHtmlEntity": "無効な HTML エンティティ形式"
+      },
+      "Encode": {
+        "Failed": "エンコード失敗"
+      }
+    },
+    "Placeholders": {
+      "Input": {
+        "AutoDetect": "テキストを入力すると自動判別されます",
+        "Encode": "エンコードするテキストを入力",
+        "Decode": "デコードするコンテンツを入力"
+      },
+      "Output": {
+        "AutoDetect": "エンコードまたはデコード結果",
+        "Encode": "エンコード後のコンテンツ",
+        "Decode": "デコード後のテキスト"
+      }
+    }
+  },
+  "PasswordGeneratorPage": {
+    "Meta": {
+      "Title": "パスワード生成",
+      "Description": "安全なランダムパスワードを生成。文字数や文字種別をカスタマイズ可能。"
+    },
+    "Labels": {
+      "Password": "パスワード",
+      "Regenerate": "再生成",
+      "CharacterLength": "文字数",
+      "CharacterTypes": "文字種別"
+    },
+    "Messages": {
+      "GenerateError": "パスワードの生成に失敗",
+      "SelectCharType": "少なくとも1つの文字種別を選択してください"
+    }
+  },
+  "LoremIpsumPage": {
+    "Meta": {
+      "Title": "ダミーテキスト生成",
+      "Description": "カスタマイズ可能な Lorem Ipsum ダミーテキストを生成。"
+    },
+    "Labels": {
+      "Text": "生成テキスト",
+      "Regenerate": "再生成",
+      "StartWithLorem": "'Lorem ipsum' で開始",
+      "RandomRange": "ランダム範囲",
+      "DisplayPTags": "'<p>' タグを表示",
+      "Paragraphs": "段落数",
+      "Sentences": "段落あたりの文数",
+      "Words": "文あたりの単語数"
+    },
+    "Messages": {
+      "GenerateError": "ダミーテキストの生成中にエラーが発生"
+    }
+  },
+  "HashGeneratorPage": {
+    "Meta": {
+      "Title": "ハッシュ計算",
+      "Description": "テキストやファイルのハッシュダイジェストを計算。MD5、SHA1、SHA256、SHA512、SHA3 などに対応。"
+    },
+    "Labels": {
+      "Input": "入力",
+      "Output": "結果",
+      "Algorithm": "ハッシュアルゴリズム",
+      "DigestEncoding": "ダイジェストエンコード"
+    },
+    "Placeholders": {
+      "Input": "ハッシュするテキストを入力"
+    },
+    "Messages": {
+      "LocalProcessing": "ファイルはローカルでのみ処理されます",
+      "GenerationFailed": "ハッシュの生成に失敗"
+    },
+    "InputType": {
+      "Text": "テキスト",
+      "File": "ファイル"
+    },
+    "DigestEncoding": {
+      "HexLower": "16進数（小文字）",
+      "HexUpper": "16進数（大文字）",
+      "Base64": "Base64"
+    }
+  },
+  "CharacterCountPage": {
+    "Meta": {
+      "Title": "文字数カウント",
+      "Description": "テキスト内の各種文字を分析・カウント。"
+    },
+    "Labels": {
+      "Text": "入力テキスト",
+      "Total": "総文字数",
+      "Words": "単語",
+      "Lines": "行数",
+      "Whitespace": "空白文字",
+      "LatinScript": "ラテン文字",
+      "NonLatinScript": "非ラテン文字",
+      "Digits": "数字",
+      "Symbols": "記号"
+    },
+    "Placeholders": {
+      "Input": "カウントするテキストを入力"
+    }
+  },
+  "TextComparePage": {
+    "Meta": {
+      "Title": "テキスト比較",
+      "Description": "2つのテキストの差分を比較し、ハイライト表示。"
+    },
+    "Controls": {
+      "UnifiedView": "統合ビュー",
+      "CollapseUnchanged": "同一部分を折りたたみ"
+    }
+  },
+  "CodeFormatterPage": {
+    "Meta": {
+      "Title": "コード整形",
+      "Description": "コードを整形。複数の言語と主要なオプションに対応。"
+    },
+    "Controls": {
+      "Language": "言語選択",
+      "FormatCode": "コードを整形",
+      "Upload": "アップロード",
+      "Download": "ダウンロード",
+      "PrintWidth": "最大行幅:",
+      "TabWidth": "インデント幅:",
+      "UseTabs": {
+        "Label": "インデント:",
+        "Space": "スペース",
+        "Tab": "Tab"
+      },
+      "SingleQuote": {
+        "Label": "引用符:",
+        "Double": "ダブルクォート",
+        "Single": "シングルクォート"
+      },
+      "Semi": {
+        "Label": "セミコロン:",
+        "On": "オン",
+        "Off": "オフ"
+      }
+    },
+    "Tooltips": {
+      "PrintWidth": "1行あたりの最大文字数。超過すると自動改行",
+      "TabWidth": "インデント1レベルあたりのスペース数",
+      "UseTabs": "Tab またはスペースでインデント",
+      "SingleQuote": "シングルクォートまたはダブルクォートを選択",
+      "Semicolons": "文末にセミコロンを付けるかどうか"
+    },
+    "Messages": {
+      "LanguageRequired": "言語を選択してください",
+      "FormatSuccess": "整形完了",
+      "FormatFailed": "整形に失敗。構文を確認してください",
+      "UploadFailed": "ファイルの読み込みに失敗",
+      "DownloadEmpty": "ファイルの内容が空です",
+      "DownloadFailed": "ファイルのダウンロードに失敗"
+    }
+  },
+  "CodeMinifierPage": {
+    "Meta": {
+      "Title": "コード圧縮",
+      "Description": "コードの圧縮・最小化。複数の言語と主要なオプションに対応。"
+    },
+    "Controls": {
+      "Language": "言語選択",
+      "MinifyCode": "コードを圧縮",
+      "Upload": "アップロード",
+      "Download": "ダウンロード"
+    },
+    "Messages": {
+      "LanguageRequired": "言語を選択してください",
+      "MinifySuccess": "圧縮完了",
+      "MinifyFailed": "圧縮に失敗。構文を確認してください",
+      "UploadFailed": "ファイルの読み込みに失敗",
+      "DownloadEmpty": "ファイルの内容が空です",
+      "DownloadFailed": "ファイルのダウンロードに失敗"
+    }
+  },
+  "UUIDGeneratorPage": {
+    "Meta": {
+      "Title": "UUID 生成",
+      "Description": "複数バージョンの UUID を生成。"
+    },
+    "Labels": {
+      "Generated": "UUID 結果",
+      "Regenerate": "再生成",
+      "Version": "UUID バージョン",
+      "Quantity": "数量",
+      "Format": "フォーマット",
+      "Uppercase": "大文字",
+      "Hyphens": "ハイフン",
+      "Braces": "波括弧",
+      "Quotes": "引用符",
+      "Commas": "カンマ",
+      "Namespace": "名前空間",
+      "Name": "名前"
+    },
+    "Versions": {
+      "v1": "V1 (タイムスタンプ)",
+      "v3": "V3 (MD5)",
+      "v4": "V4 (ランダム)",
+      "v5": "V5 (SHA-1)",
+      "nil": "NIL"
+    },
+    "Tooltips": {
+      "Hyphens": "UUID の各セクション間に標準の区切り文字を追加",
+      "Uppercase": "16進数値を大文字に変換",
+      "Braces": "UUID を波括弧で囲む",
+      "Quotes": "UUID をダブルクォートで囲む",
+      "Commas": "各 UUID の末尾にカンマを追加"
+    },
+    "Messages": {
+      "GenerateError": "UUID の生成に失敗",
+      "NamespaceRequired": "名前空間と名前を指定してください",
+      "NamespaceHint": "プリセットの名前空間を選択またはカスタム UUID を入力",
+      "InvalidNamespace": "名前空間は有効な UUID である必要があります"
+    }
+  },
+  "QRCodePage": {
+    "Meta": {
+      "Title": "QR コード生成",
+      "Description": "テキストや WiFi 設定の QR コードを生成。"
+    },
+    "Labels": {
+      "Generated": "生成画像",
+      "Download": "ダウンロード",
+      "ForegroundColor": "前景色",
+      "BackgroundColor": "背景色",
+      "InputText": "入力テキスト"
+    },
+    "Tabs": {
+      "Text": "テキスト",
+      "WiFi": "WiFi"
+    },
+    "WiFi": {
+      "Title": "WiFi 設定",
+      "SSID": "ネットワーク名",
+      "Type": "認証タイプ",
+      "Password": "パスワード",
+      "Hidden": "ネットワーク名を非表示",
+      "EAPMethod": "EAP 方式",
+      "Identity": "ID またはユーザー名",
+      "AnonymousIdentity": "匿名 ID",
+      "Phase2Method": "フェーズ2認証方式",
+      "AuthenticationType": {
+        "WPA": "WPA/WPA2",
+        "WEP": "WEP",
+        "WPA2-EAP": "WPA2-EAP",
+        "nopass": "パスワードなし"
+      }
+    },
+    "Placeholders": {
+      "InputText": "QR コードに変換する内容を入力"
+    }
+  },
+  "ColorConverterPage": {
+    "Meta": {
+      "Title": "カラー変換",
+      "Description": "HEX、RGB、HSL、HWB、LCH、CMYK などのカラー形式を相互変換。"
+    },
+    "Labels": {
+      "Input": "カラー入力",
+      "Output": "変換結果"
+    },
+    "Placeholders": {
+      "Input": "カラー値を入力"
+    }
+  },
+  "TimestampConverterPage": {
+    "Meta": {
+      "Title": "タイムスタンプ変換",
+      "Description": "UNIX タイムスタンプ、ISO8601、RFC3339、JavaScript Date などの日時形式を変換。"
+    },
+    "Labels": {
+      "Input": "入力時刻",
+      "Output": "出力時刻",
+      "InputFormat": "入力形式",
+      "AutoDetect": "自動判別",
+      "OutputTimezone": "出力タイムゾーン"
+    },
+    "DateFormats": {
+      "CurrentTime": "現在時刻",
+      "Javascript": "JavaScript Date",
+      "ISO8601": "ISO 8601",
+      "ISO9075": "ISO 9075",
+      "RFC3339": "RFC 3339",
+      "RFC7231": "RFC 7231",
+      "TimestampSeconds": "Timestamp（秒）",
+      "TimestampMilliseconds": "Timestamp（ミリ秒）"
+    },
+    "Placeholders": {
+      "Input": "日時テキストを入力",
+      "Invalid": "無効な形式"
+    }
+  },
+  "CaseConverterPage": {
+    "Meta": {
+      "Title": "ケース変換",
+      "Description": "テキストの命名規則を変換。キャメル、パスカル、スネーク、大文字・小文字などに対応。"
+    },
+    "Labels": {
+      "Input": "入力テキスト",
+      "Output": "変換結果"
+    },
+    "Formats": {
+      "camel": "キャメルケース",
+      "pascal": "パスカルケース",
+      "capital": "先頭大文字",
+      "sentence": "文形式",
+      "constant": "定数形式",
+      "snake": "スネークケース",
+      "no": "スペース区切り",
+      "kebab": "ケバブケース",
+      "dot": "ドット区切り",
+      "path": "パス区切り",
+      "title": "タイトルケース",
+      "train": "トレインケース",
+      "lower": "全小文字",
+      "upper": "全大文字",
+      "lowerFirst": "先頭小文字",
+      "upperFirst": "先頭大文字",
+      "sponge": "ランダムケース"
+    },
+    "Tooltips": {
+      "camel": "最初の単語は全小文字、他の単語は先頭大文字、区切りなし。",
+      "pascal": "すべての単語の先頭大文字、区切りなし。",
+      "capital": "すべての単語の先頭大文字、スペース区切り。",
+      "sentence": "最初の単語の先頭大文字、他は全小文字、スペース区切り。",
+      "constant": "全大文字、アンダースコア区切り。",
+      "snake": "全小文字、アンダースコア区切り。",
+      "no": "全小文字、スペース区切り。",
+      "kebab": "全小文字、ハイフン区切り。",
+      "dot": "全小文字、ドット区切り。",
+      "path": "全小文字、スラッシュ区切り。",
+      "title": "すべての単語の先頭大文字、区切り文字はそのまま。",
+      "train": "すべての単語の先頭大文字、ハイフン区切り。",
+      "lower": "すべて小文字、区切り文字はそのまま。",
+      "upper": "すべて大文字、区切り文字はそのまま。",
+      "lowerFirst": "先頭文字を小文字に、他はそのまま。",
+      "upperFirst": "先頭文字を大文字に、他はそのまま。",
+      "sponge": "ランダムに大文字・小文字を混合、区切り文字はそのまま。"
+    },
+    "Badges": {
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "capital": "Capital Case",
+      "sentence": "Sentence case",
+      "constant": "CONSTANT_CASE",
+      "snake": "snake_case",
+      "no": "space case",
+      "kebab": "kebab-case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "title": "Title Case",
+      "train": "Train-Case",
+      "lower": "lowercase",
+      "upper": "UPPERCASE",
+      "lowerFirst": "lowerFirst",
+      "upperFirst": "UpperFirst",
+      "sponge": "SpOnGe CaSe"
+    },
+    "Placeholders": {
+      "Input": "変換するテキストを入力"
+    }
+  },
+  "DataFormatConverterPage": {
+    "Meta": {
+      "Title": "データ形式変換",
+      "Description": "JSON、YAML、XML、CSV などの形式を相互変換。形式を自動判別。"
+    },
+    "Labels": {
+      "Input": "入力",
+      "Output": "出力",
+      "InputFormat": "入力形式",
+      "AutoDetect": "自動判別",
+      "ConvertFormat": "変換形式",
+      "Upload": "アップロード",
+      "Download": "ダウンロード"
+    },
+    "Messages": {
+      "ConvertSuccess": "変換完了",
+      "ConvertFailed": "変換に失敗。構文を確認してください",
+      "UnknownFormat": "入力形式を判別できません",
+      "UploadFailed": "ファイルの読み込みに失敗",
+      "DownloadEmpty": "ファイルの内容が空です",
+      "DownloadFailed": "ファイルのダウンロードに失敗"
+    }
+  },
+  "UserAgentPage": {
+    "Meta": {
+      "Title": "User-Agent 解析",
+      "Description": "User-Agent 文字列を解析し、ブラウザ、OS、デバイス、レンダリングエンジンなどの情報を表示。"
+    },
+    "Labels": {
+      "Input": "入力テキスト",
+      "Output": "解析結果",
+      "BrowserName": "ブラウザ名",
+      "BrowserVersion": "ブラウザバージョン",
+      "EngineName": "レンダリングエンジン名",
+      "EngineVersion": "レンダリングエンジンバージョン",
+      "DeviceType": "デバイスタイプ",
+      "DeviceVendor": "デバイスメーカー",
+      "DeviceModel": "デバイスモデル",
+      "CPUArchitecture": "CPU アーキテクチャ",
+      "OSName": "OS 名",
+      "OSVersion": "OS バージョン",
+      "IsBot": "ボット判定",
+      "ChromiumBased": "Chromium ベース"
+    },
+    "Values": {
+      "Yes": "はい",
+      "No": "いいえ"
+    },
+    "Placeholders": {
+      "Input": "User-Agent 文字列を入力"
+    }
+  },
+  "KeyboardEventPage": {
+    "Meta": {
+      "Title": "キーボードイベント",
+      "Description": "KeyboardEvent の key、code などのプロパティをリアルタイムで確認・デバッグ。"
+    },
+    "Placeholders": {
+      "Input": "任意のキーを押すかテキストを入力してイベントを発火"
+    },
+    "Tooltips": {
+      "keydown": "任意のキーを押下したときに発火。",
+      "keypress": "[非推奨] 文字を生成するキーを押下したときに発火。",
+      "keyup": "任意のキーを離したときに発火。",
+      "key": "キーの値を返す。キーボードレイアウトと修飾キーの影響を受ける。",
+      "code": "物理キーのコードを返す。キーボードレイアウトの影響を受けない。",
+      "location": "キーボードまたは入力デバイス上のキー位置番号を返す。",
+      "repeat": "キーを押し続けて自動リピートされているとき true。",
+      "isComposing": "IME の変換セッション中にイベントが発火されたとき true。",
+      "shiftKey": "イベント発火時に Shift キーが有効なら true。",
+      "ctrlKey": "イベント発火時に Ctrl キーが有効なら true。",
+      "altKey": "イベント発火時に Alt（Option）キーが有効なら true。",
+      "metaKey": "イベント発火時に Meta キー（Command または Windows キー）が有効なら true。",
+      "which": "[非推奨] マウスまたはキーボードのキーの数値コードを返す。",
+      "keyCode": "[非推奨] キーの未修正値のシステム依存コードを返す。",
+      "charCode": "[非推奨] キーが生成する文字の Unicode コードを返す。keypress イベントのみ。"
+    }
+  },
+  "TimeIntervalPage": {
+    "Meta": {
+      "Title": "時間間隔計算",
+      "Description": "2つの日時間の間隔を計算。複数の表示形式に対応。"
+    },
+    "Labels": {
+      "Format": "表示形式",
+      "Start": "開始時刻",
+      "End": "終了時刻",
+      "Interval": "時間間隔"
+    },
+    "Placeholders": {
+      "Interval": "開始と終了の時刻を選択してください"
+    },
+    "Formats": {
+      "auto": "自動",
+      "years": "年",
+      "months": "月",
+      "days": "日",
+      "hours": "時間",
+      "minutes": "分",
+      "seconds": "秒",
+      "milliseconds": "ミリ秒"
+    },
+    "Units": {
+      "years": "{count, plural, other {{count} 年}}",
+      "months": "{count, plural, other {{count} ヶ月}}",
+      "days": "{count, plural, other {{count} 日}}",
+      "hours": "{count, plural, other {{count} 時間}}",
+      "minutes": "{count, plural, other {{count} 分}}",
+      "seconds": "{count, plural, other {{count} 秒}}",
+      "milliseconds": "{count, plural, other {{count} ミリ秒}}"
+    }
+  },
+  "SvgOptimizerPage": {
+    "Meta": {
+      "Title": "SVG 最適化",
+      "Description": "SVG ファイルをクリーンアップ・圧縮し、不要な要素や属性を削除。"
+    },
+    "Labels": {
+      "Input": "入力",
+      "Preview": "プレビュー",
+      "Code": "コード",
+      "Upload": "アップロード",
+      "Download": "ダウンロード",
+      "ShowOriginal": "元の表示"
+    },
+    "Options": {
+      "floatPrecision": "数値精度",
+      "pretty": "コード整形",
+      "removeXMLNS": "xmlns を削除",
+      "removeRasterImages": "埋め込み画像を削除",
+      "removeDimensions": "width と height を削除",
+      "removeViewBox": "viewBox を削除",
+      "convertStyleToAttrs": "スタイルを属性に変換",
+      "reusePaths": "重複パスを再利用",
+      "removeScripts": "スクリプトを削除",
+      "removeOffCanvasPaths": "キャンバス外のパスを削除",
+      "removeDoctype": "doctype を削除",
+      "removeXMLProcInst": "XML 宣言を削除",
+      "removeComments": "コメントを削除",
+      "removeMetadata": "metadata を削除",
+      "removeEditorsNSData": "エディタデータを削除",
+      "cleanupAttrs": "属性をクリーンアップ",
+      "mergeStyles": "スタイルを統合",
+      "inlineStyles": "インラインスタイル",
+      "minifyStyles": "スタイルを圧縮",
+      "cleanupIds": "ID をクリーンアップ",
+      "removeUselessDefs": "未使用の defs を削除",
+      "cleanupNumericValues": "数値をクリーンアップ",
+      "convertColors": "カラーを圧縮",
+      "removeUnknownsAndDefaults": "不明な項目とデフォルト値を削除",
+      "removeNonInheritableGroupAttrs": "無効なグループ属性を削除",
+      "removeUselessStrokeAndFill": "無効なストロークとフィルを削除",
+      "cleanupEnableBackground": "enable-background を削除",
+      "removeHiddenElems": "非表示要素を削除",
+      "removeEmptyText": "空テキストを削除",
+      "convertShapeToPath": "シェイプをパスに変換",
+      "convertEllipseToCircle": "ellipse を circle に変換",
+      "moveElemsAttrsToGroup": "要素属性をグループに移動",
+      "moveGroupAttrsToElems": "グループ属性を要素に移動",
+      "collapseGroups": "不要なグループを折りたたみ",
+      "convertPathData": "パスデータを変換",
+      "convertTransform": "transform 属性を変換",
+      "removeEmptyAttrs": "空属性を削除",
+      "removeEmptyContainers": "空コンテナ要素を削除",
+      "mergePaths": "パスを統合",
+      "removeUnusedNS": "未使用の名前空間を削除",
+      "sortAttrs": "属性をソート",
+      "sortDefsChildren": "defs 子要素をソート",
+      "removeTitle": "title を削除",
+      "removeDesc": "desc を削除"
+    },
+    "Badges": {
+      "Invalid": "無効な SVG",
+      "Original": "元"
+    },
+    "Placeholders": {
+      "Input": "SVG コードを貼り付け"
+    }
+  }
+}

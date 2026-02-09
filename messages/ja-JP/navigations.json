@@ -1,0 +1,219 @@
+{
+  "Navigation": {
+    "headers": [
+      {
+        "title": "ホーム",
+        "href": "/"
+      },
+      {
+        "title": "ツール",
+        "href": "/tools",
+        "slug": "tools"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/",
+        "external": true
+      }
+    ],
+    "sections": [
+      {
+        "title": "開発ツール",
+        "slug": "tools",
+        "categories": [
+          {
+            "title": "エンコード・デコード",
+            "items": [
+              {
+                "title": "Base64 エンコード",
+                "href": "/base64",
+                "icon": "square-code",
+                "intl": "Base64Page"
+              },
+              {
+                "title": "URL エンコード",
+                "href": "/url-encoding",
+                "icon": "link-2",
+                "intl": "URLEncodingPage"
+              },
+              {
+                "title": "文字エスケープ",
+                "href": "/character-escape",
+                "icon": "ampersand",
+                "intl": "CharacterEscapePage",
+                "keywords": ["Unicode", "CSS", "HTML", "エスケープシーケンス"]
+              }
+            ]
+          },
+          {
+            "title": "ジェネレーター",
+            "items": [
+              {
+                "title": "パスワード生成",
+                "href": "/password-generator",
+                "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
+                "keywords": ["ランダム"]
+              },
+              {
+                "title": "QR コード生成",
+                "href": "/qr-code",
+                "icon": "qr-code",
+                "intl": "QRCodePage"
+              },
+              {
+                "title": "ダミーテキスト生成",
+                "href": "/lorem-ipsum",
+                "icon": "letter-text",
+                "intl": "LoremIpsumPage",
+                "keywords": ["ダミーデータ", "テスト文章", "段落文章"]
+              },
+              {
+                "title": "ハッシュ計算",
+                "href": "/hash-generator",
+                "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
+                "keywords": [
+                  "Adler32",
+                  "BLAKE",
+                  "CRC32C",
+                  "CRC64",
+                  "Keccak",
+                  "MD4",
+                  "MD5",
+                  "RIPEMD160",
+                  "SHA",
+                  "SM3",
+                  "Whirlpool",
+                  "XXHash"
+                ]
+              },
+              {
+                "title": "UUID 生成",
+                "href": "/uuid-generator",
+                "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
+                "keywords": ["GUID", "Unique ID"]
+              }
+            ]
+          },
+          {
+            "title": "テキスト・文字",
+            "items": [
+              {
+                "title": "コード整形",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
+                "keywords": ["コードフォーマット", "コード整形"]
+              },
+              {
+                "title": "コード圧縮",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "intl": "CodeMinifierPage",
+                "keywords": ["コード最小化", "Minify"]
+              },
+              {
+                "title": "テキスト比較",
+                "href": "/text-compare",
+                "icon": "file-diff",
+                "intl": "TextComparePage",
+                "keywords": ["テキスト差分", "diff"]
+              },
+              {
+                "title": "文字数カウント",
+                "href": "/character-count",
+                "icon": "square-sigma",
+                "intl": "CharacterCountPage",
+                "keywords": ["文字数", "ワードカウント"]
+              }
+            ]
+          },
+          {
+            "title": "変換・計算",
+            "items": [
+              {
+                "title": "カラー変換",
+                "href": "/color-converter",
+                "icon": "palette",
+                "intl": "ColorConverterPage",
+                "keywords": [
+                  "色変換",
+                  "Hex",
+                  "RBG",
+                  "HSL",
+                  "HWB",
+                  "LCH",
+                  "CMYK"
+                ]
+              },
+              {
+                "title": "データ形式変換",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "intl": "DataFormatConverterPage",
+                "keywords": [
+                  "データ形式",
+                  "構造化データ",
+                  "JSON",
+                  "YAML",
+                  "YML",
+                  "XML",
+                  "CSV"
+                ]
+              },
+              {
+                "title": "ケース変換",
+                "href": "/case-converter",
+                "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
+                "keywords": ["キャメルケース", "スネークケース"]
+              },
+              {
+                "title": "タイムスタンプ変換",
+                "href": "/timestamp-converter",
+                "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
+                "keywords": ["日時フォーマット", "Timestamp", "Unix"]
+              },
+              {
+                "title": "時間間隔計算",
+                "href": "/time-interval",
+                "icon": "hourglass",
+                "intl": "TimeIntervalPage",
+                "keywords": ["経過時間", "日数計算", "時間差"]
+              }
+            ]
+          },
+          {
+            "title": "Web 開発",
+            "items": [
+              {
+                "title": "SVG 最適化",
+                "href": "/svg-optimizer",
+                "icon": "layers",
+                "intl": "SvgOptimizerPage",
+                "keywords": ["SVG圧縮", "SVGクリーンアップ", "SVGフォーマット"]
+              },
+              {
+                "title": "キーボードイベント",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
+                "intl": "KeyboardEventPage",
+                "keywords": ["キーボード", "keydown", "keyup", "keypress"]
+              },
+              {
+                "title": "User-Agent 解析",
+                "href": "/user-agent",
+                "icon": "compass",
+                "intl": "UserAgentPage",
+                "keywords": ["ブラウザ判定", "ブラウザ情報", "UA情報"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
