@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "Error al cargar la página",
+      "Description": "Se produjo un error al cargar esta página."
+    },
+    "Back": "Volver",
+    "Home": "Ir al inicio"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "Página no encontrada",
+      "Description": "Parece que esta página no existe."
+    },
+    "Back": "Volver",
+    "Home": "Ir al inicio"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF - Kit de herramientas de código abierto para desarrolladores",
+      "Description": "Una colección ligera y de código abierto de herramientas prácticas para el desarrollo."
+    },
+    "Hero": {
+      "Announcement": "Publicado como código abierto en GitHub",
+      "Title": "Herramientas siempre a mano",
+      "Description": "Una colección ligera y de código abierto de herramientas prácticas para el desarrollo.",
+      "GetStarted": "Comenzar",
+      "GitHub": "Ver en GitHub"
+    },
+    "Tools": {
+      "Title": "Herramientas Dev"
+    },
+    "Features": {
+      "Title": "Pensado para desarrolladores exigentes",
+      "Description": "Utilidades simples y fiables para el trabajo diario de desarrollo, siempre listas cuando las necesites.",
+      "Badge": "Por qué elegirnos",
+      "Items": [
+        {
+          "Title": "Gratis y sin límites",
+          "Description": "Todas las herramientas disponibles sin restricciones.",
+          "Icon": "crown"
+        },
+        {
+          "Title": "Código abierto",
+          "Description": "Código abierto en GitHub. Revisa el código, contribuye o despliega tu propia instancia.",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "Respetuoso con la privacidad",
+          "Description": "Todas las herramientas se ejecutan directamente en tu navegador, sin procesamiento en servidor.",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "Resultados predecibles",
+          "Description": "Los resultados se basan en reglas definidas, no en modelos de lenguaje de IA generativa.",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "Diseño práctico",
+          "Description": "Utilidades centradas en tareas comunes de desarrollo, diseñadas para ser fáciles de usar.",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "Varios idiomas",
+          "Description": "Compatible con múltiples idiomas para desarrolladores de todo el mundo.",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "Listo cuando lo necesites",
+      "Description": "Todo funciona como esperas, directamente en tu navegador.",
+      "GetStarted": "Comenzar",
+      "GitHub": "GitHub"
+    }
+  }
+}
