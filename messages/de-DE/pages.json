@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "Seitenfehler",
+      "Description": "Beim Laden dieser Seite ist ein Fehler aufgetreten."
+    },
+    "Back": "Zurück",
+    "Home": "Zur Startseite"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "Seite nicht gefunden",
+      "Description": "Diese Seite scheint nicht zu existieren."
+    },
+    "Back": "Zurück",
+    "Home": "Zur Startseite"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF – Open-Source-Entwickler-Toolkit",
+      "Description": "Eine leichtgewichtige, quelloffene Sammlung praktischer Entwickler-Tools."
+    },
+    "Hero": {
+      "Announcement": "Jetzt als Open Source auf GitHub verfügbar",
+      "Title": "Werkzeuge, griffbereit",
+      "Description": "Eine leichtgewichtige, quelloffene Sammlung praktischer Entwickler-Tools.",
+      "GetStarted": "Loslegen",
+      "GitHub": "Auf GitHub ansehen"
+    },
+    "Tools": {
+      "Title": "Entwickler-Tools"
+    },
+    "Features": {
+      "Title": "Für Entwickler, die Wert auf Qualität legen.",
+      "Description": "Einfache und zuverlässige Werkzeuge für den Entwickleralltag – immer bereit, wenn du sie brauchst.",
+      "Badge": "Warum dieses Tool",
+      "Items": [
+        {
+          "Title": "Kostenlos & unbegrenzt",
+          "Description": "Alle Tools sind kostenlos und ohne Einschränkungen nutzbar.",
+          "Icon": "crown"
+        },
+        {
+          "Title": "Open Source",
+          "Description": "Quellcode auf GitHub einsehbar. Beiträge, Reviews und Self-Hosting sind willkommen.",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "Datenschutzfreundlich",
+          "Description": "Alle Tools laufen direkt im Browser – keine serverseitige Verarbeitung.",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "Vorhersagbare Ergebnisse",
+          "Description": "Ergebnisse basieren auf klaren Regeln, nicht auf generativen KI-Sprachmodellen.",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "Praktisch konzipiert",
+          "Description": "Fokussierte Werkzeuge für gängige Entwickleraufgaben, einfach zu bedienen.",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "Mehrsprachig",
+          "Description": "Unterstützt mehrere Sprachen für Entwickler weltweit.",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "Bereit, wenn du es brauchst.",
+      "Description": "Alles funktioniert wie erwartet, direkt im Browser.",
+      "GetStarted": "Loslegen",
+      "GitHub": "GitHub"
+    }
+  }
+}

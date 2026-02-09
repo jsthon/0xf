@@ -1,0 +1,249 @@
+{
+  "Navigation": {
+    "headers": [
+      {
+        "title": "Startseite",
+        "href": "/"
+      },
+      {
+        "title": "Tools",
+        "href": "/tools",
+        "slug": "tools"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/",
+        "external": true
+      }
+    ],
+    "sections": [
+      {
+        "title": "Entwickler-Tools",
+        "slug": "tools",
+        "categories": [
+          {
+            "title": "Kodierung & Dekodierung",
+            "items": [
+              {
+                "title": "Base64-Kodierung",
+                "href": "/base64",
+                "icon": "square-code",
+                "intl": "Base64Page"
+              },
+              {
+                "title": "URL-Kodierung",
+                "href": "/url-encoding",
+                "icon": "link-2",
+                "intl": "URLEncodingPage"
+              },
+              {
+                "title": "Zeichen-Escaping",
+                "href": "/character-escape",
+                "icon": "ampersand",
+                "intl": "CharacterEscapePage",
+                "keywords": [
+                  "Unicode",
+                  "Code Point",
+                  "CSS Escape",
+                  "HTML Entity",
+                  "Sonderzeichen"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Generatoren",
+            "items": [
+              {
+                "title": "Passwort-Generator",
+                "href": "/password-generator",
+                "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
+                "keywords": ["Zufall", "Random"]
+              },
+              {
+                "title": "QR-Code",
+                "href": "/qr-code",
+                "icon": "qr-code",
+                "intl": "QRCodePage"
+              },
+              {
+                "title": "Lorem Ipsum",
+                "href": "/lorem-ipsum",
+                "icon": "letter-text",
+                "intl": "LoremIpsumPage",
+                "keywords": [
+                  "Lorem Ipsum",
+                  "Blindtext",
+                  "Platzhaltertext",
+                  "Testdaten"
+                ]
+              },
+              {
+                "title": "Hash-Generator",
+                "href": "/hash-generator",
+                "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
+                "keywords": [
+                  "Adler32",
+                  "BLAKE",
+                  "CRC32C",
+                  "CRC64",
+                  "Keccak",
+                  "MD4",
+                  "MD5",
+                  "RIPEMD160",
+                  "SHA",
+                  "SM3",
+                  "Whirlpool",
+                  "XXHash",
+                  "Prüfsumme"
+                ]
+              },
+              {
+                "title": "UUID-Generator",
+                "href": "/uuid-generator",
+                "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
+                "keywords": ["GUID", "Unique ID"]
+              }
+            ]
+          },
+          {
+            "title": "Text & Zeichen",
+            "items": [
+              {
+                "title": "Code-Formatierung",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
+                "keywords": ["Code Beautifier", "Code verschönern"]
+              },
+              {
+                "title": "Code-Minifizierung",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "intl": "CodeMinifierPage",
+                "keywords": ["Code komprimieren"]
+              },
+              {
+                "title": "Textvergleich",
+                "href": "/text-compare",
+                "icon": "file-diff",
+                "intl": "TextComparePage",
+                "keywords": ["Diff", "Unterschiede"]
+              },
+              {
+                "title": "Zeichenzähler",
+                "href": "/character-count",
+                "icon": "square-sigma",
+                "intl": "CharacterCountPage",
+                "keywords": ["Wortzähler", "Buchstabenzähler"]
+              }
+            ]
+          },
+          {
+            "title": "Konverter & Rechner",
+            "items": [
+              {
+                "title": "Farbkonverter",
+                "href": "/color-converter",
+                "icon": "palette",
+                "intl": "ColorConverterPage",
+                "keywords": [
+                  "Farbwähler",
+                  "Hex",
+                  "RBG",
+                  "HSL",
+                  "HWB",
+                  "LCH",
+                  "CMYK"
+                ]
+              },
+              {
+                "title": "Datenformat-Konverter",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "intl": "DataFormatConverterPage",
+                "keywords": [
+                  "Datenformat",
+                  "Strukturierte Daten",
+                  "JSON",
+                  "YAML",
+                  "YML",
+                  "XML",
+                  "CSV"
+                ]
+              },
+              {
+                "title": "Groß-/Kleinschreibung",
+                "href": "/case-converter",
+                "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
+                "keywords": [
+                  "Großbuchstaben",
+                  "Kleinbuchstaben",
+                  "Camel Case",
+                  "Snake Case"
+                ]
+              },
+              {
+                "title": "Zeitstempel-Konverter",
+                "href": "/timestamp-converter",
+                "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
+                "keywords": ["Datum Uhrzeit", "Unix-Zeit", "Datumsformat"]
+              },
+              {
+                "title": "Zeitintervall",
+                "href": "/time-interval",
+                "icon": "hourglass",
+                "intl": "TimeIntervalPage",
+                "keywords": [
+                  "Zeitdifferenz",
+                  "Zeitdauer",
+                  "Zeitberechnung",
+                  "Zeitspanne"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Webentwicklung",
+            "items": [
+              {
+                "title": "SVG-Optimierer",
+                "href": "/svg-optimizer",
+                "icon": "layers",
+                "intl": "SvgOptimizerPage",
+                "keywords": [
+                  "SVG komprimieren",
+                  "SVG bereinigen",
+                  "SVG Minifier"
+                ]
+              },
+              {
+                "title": "Tastatur-Events",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
+                "intl": "KeyboardEventPage",
+                "keywords": ["Tastaturereignis", "keydown", "keyup", "keypress"]
+              },
+              {
+                "title": "User-Agent-Parser",
+                "href": "/user-agent",
+                "icon": "compass",
+                "intl": "UserAgentPage",
+                "keywords": [
+                  "Browsererkennung",
+                  "UserAgent Parser",
+                  "UA-Informationen"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
