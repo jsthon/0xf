@@ -1,0 +1,66 @@
+{
+  "MobileNav": {
+    "Menu": "メニュー",
+    "ToggleMenu": "メニュー切替"
+  },
+  "Footer": {
+    "Text": "<url>{name}</url> が開発者のために構築。ソースコードは <github>GitHub</github> で公開中。"
+  },
+  "Sidebar": {
+    "ToggleSidebar": "サイドバー切替"
+  },
+  "AsideBlock": {
+    "Title": "{name} の GitHub リポジトリを見る",
+    "Description": [
+      "ソースコードはすべて公開されています。",
+      "コードレビュー、コントリビュート、セルフホスティングも歓迎です。"
+    ],
+    "Button": "GitHub を見る"
+  },
+  "LocaleSwitcher": {
+    "Locale": "{locale, select, en_US {English} ja_JP {日本語} zh_CN {简体中文} zh_TW {繁體中文} other {不明}}"
+  },
+  "ThemeSwitcher": {
+    "Theme": "テーマ",
+    "SystemTheme": "システム",
+    "LightTheme": "ライト",
+    "DarkTheme": "ダーク"
+  },
+  "CommandMenu": {
+    "Search": "検索...",
+    "CommandPlaceholder": "キーワードを入力...",
+    "Empty": "結果が見つかりません",
+    "LinksHeading": "リンク"
+  },
+  "CopyButton": {
+    "Copy": "コピー",
+    "Error": "コピー失敗"
+  },
+  "ColorPicker": {
+    "SelectColor": "色を選択"
+  },
+  "PasswordInput": {
+    "Show": "パスワードを表示",
+    "Hide": "パスワードを隠す"
+  },
+  "TimezoneSelect": {
+    "Placeholder": "タイムゾーンを選択",
+    "Empty": "タイムゾーンが見つかりません"
+  },
+  "DateTimePicker": {
+    "SelectDate": "日付を選択"
+  },
+  "FileUpload": {
+    "PrimaryText": "ファイルを選択またはドラッグ＆ドロップ",
+    "SecondaryText": "ファイル形式の制限なし",
+    "Remove": "削除",
+    "Messages": {
+      "InvalidFiles": "有効なファイルが選択されていません"
+    }
+  },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ 行変更なし"
+    }
+  }
+}

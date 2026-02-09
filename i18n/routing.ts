@@ -1,7 +1,8 @@
 import { defineRouting } from "next-intl/routing";
 
 export const prefixes = {
-  "en-US": "/en-us",
+  "en-US": "/en",
+  "ja-JP": "/ja",
   "zh-CN": "/zh-cn",
   "zh-TW": "/zh-tw",
 };
@@ -9,7 +10,7 @@ export const prefixes = {
 export const routing = defineRouting({
   // A list of all locales that are supported
   // Don't forget to update the proxy.ts
-  locales: ["en-US", "zh-CN", "zh-TW"],
+  locales: ["en-US", "ja-JP", "zh-CN", "zh-TW"],
 
   // Used when no locale matches
   defaultLocale: "en-US",

@@ -1,0 +1,77 @@
+{
+  "ErrorPage": {
+    "Meta": {
+      "Title": "エラーが発生しました",
+      "Description": "このページの読み込み中にエラーが発生しました。"
+    },
+    "Back": "戻る",
+    "Home": "ホームへ"
+  },
+  "NotFoundPage": {
+    "Meta": {
+      "Title": "ページが見つかりません",
+      "Description": "このページは存在しないようです。"
+    },
+    "Back": "戻る",
+    "Home": "ホームへ"
+  },
+  "HomePage": {
+    "Meta": {
+      "Title": "0xF - 実用的なオープンソース開発ツール集",
+      "Description": "軽量でオープンソースな開発ツール集。"
+    },
+    "Hero": {
+      "Announcement": "GitHub でソースコードを公開中",
+      "Title": "実用的で、すぐ手になじむ",
+      "Description": "軽量でオープンソースな開発ツール集。",
+      "GetStarted": "はじめる",
+      "GitHub": "GitHub リポジトリ"
+    },
+    "Tools": {
+      "Title": "開発ツール"
+    },
+    "Features": {
+      "Title": "開発に必要なものが、すぐ手に届く。",
+      "Description": "シンプルで信頼できる開発ツール。すぐに使えて、いつでも頼れる。",
+      "Badge": "選ばれる理由",
+      "Items": [
+        {
+          "Title": "無料・無制限",
+          "Description": "すべてのツールを制限なく無料でご利用いただけます。",
+          "Icon": "crown"
+        },
+        {
+          "Title": "オープンソース",
+          "Description": "コードは GitHub で公開。レビュー、コントリビュート、セルフホスティングも自由です。",
+          "Icon": "git-pull-request-arrow"
+        },
+        {
+          "Title": "プライバシー尊重",
+          "Description": "すべてのツールはブラウザ上で動作し、バックエンドでデータを処理しません。",
+          "Icon": "hat-glasses"
+        },
+        {
+          "Title": "結果が予測可能",
+          "Description": "明確なルールに基づいた結果を返します。生成 AI に依存しません。",
+          "Icon": "bot-off"
+        },
+        {
+          "Title": "実用第一",
+          "Description": "よくある開発タスクに特化し、シンプルで使いやすい設計です。",
+          "Icon": "rocket"
+        },
+        {
+          "Title": "多言語対応",
+          "Description": "複数の言語に対応し、世界中の開発者に向けて提供しています。",
+          "Icon": "languages"
+        }
+      ]
+    },
+    "Ready": {
+      "Title": "必要な時に、ちょうどいい。",
+      "Description": "考えるまでもなく、ブラウザを開くだけ。",
+      "GetStarted": "はじめる",
+      "GitHub": "GitHub"
+    }
+  }
+}
