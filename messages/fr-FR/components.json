@@ -1,0 +1,66 @@
+{
+  "MobileNav": {
+    "Menu": "Menu",
+    "ToggleMenu": "Afficher le menu"
+  },
+  "Footer": {
+    "Text": "Créé par <url>{name}</url> pour les développeurs. Open source sur <github>GitHub</github>."
+  },
+  "Sidebar": {
+    "ToggleSidebar": "Afficher la barre latérale"
+  },
+  "AsideBlock": {
+    "Title": "Explorer {name} sur GitHub",
+    "Description": [
+      "Open source, code source intégralement disponible.",
+      "Consultez le code, contribuez ou auto-hébergez à tout moment."
+    ],
+    "Button": "Voir sur GitHub"
+  },
+  "LocaleSwitcher": {
+    "Locale": "{locale, select, de_DE {Deutsch} en_US {English} fr_FR {Français} ja_JP {日本語} zh_CN {简体中文} zh_TW {繁體中文} other {Inconnu}}"
+  },
+  "ThemeSwitcher": {
+    "Theme": "Thème",
+    "SystemTheme": "Thème système",
+    "LightTheme": "Thème clair",
+    "DarkTheme": "Thème sombre"
+  },
+  "CommandMenu": {
+    "Search": "Rechercher...",
+    "CommandPlaceholder": "Saisir des mots-clés...",
+    "Empty": "Aucun résultat trouvé.",
+    "LinksHeading": "Liens"
+  },
+  "CopyButton": {
+    "Copy": "Copier",
+    "Error": "Échec de la copie"
+  },
+  "ColorPicker": {
+    "SelectColor": "Choisir une couleur"
+  },
+  "PasswordInput": {
+    "Show": "Afficher le mot de passe",
+    "Hide": "Masquer le mot de passe"
+  },
+  "TimezoneSelect": {
+    "Placeholder": "Sélectionner un fuseau horaire",
+    "Empty": "Aucun fuseau horaire trouvé."
+  },
+  "DateTimePicker": {
+    "SelectDate": "Sélectionner une date"
+  },
+  "FileUpload": {
+    "PrimaryText": "Sélectionnez ou glissez-déposez vos fichiers ici",
+    "SecondaryText": "Tout type de fichier",
+    "Remove": "Supprimer",
+    "Messages": {
+      "InvalidFiles": "Aucun fichier valide sélectionné"
+    }
+  },
+  "CodeMirror": {
+    "Merge": {
+      "UnchangedLines": "$ lignes inchangées"
+    }
+  }
+}
