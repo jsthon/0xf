@@ -1,0 +1,240 @@
+{
+  "Navigation": {
+    "headers": [
+      {
+        "title": "Главная",
+        "href": "/"
+      },
+      {
+        "title": "Утилиты",
+        "href": "/tools",
+        "slug": "tools"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/",
+        "external": true
+      }
+    ],
+    "sections": [
+      {
+        "title": "Dev-утилиты",
+        "slug": "tools",
+        "categories": [
+          {
+            "title": "Кодировать и декодировать",
+            "items": [
+              {
+                "title": "Base64 кодирование",
+                "href": "/base64",
+                "icon": "square-code",
+                "intl": "Base64Page"
+              },
+              {
+                "title": "URL кодирование",
+                "href": "/url-encoding",
+                "icon": "link-2",
+                "intl": "URLEncodingPage"
+              },
+              {
+                "title": "Экранирование символов",
+                "href": "/character-escape",
+                "icon": "ampersand",
+                "intl": "CharacterEscapePage",
+                "keywords": [
+                  "Unicode",
+                  "Code Point",
+                  "CSS",
+                  "HTML Entity",
+                  "Символы"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Генераторы",
+            "items": [
+              {
+                "title": "Генератор паролей",
+                "href": "/password-generator",
+                "icon": "key-round",
+                "intl": "PasswordGeneratorPage",
+                "keywords": ["Случайный"]
+              },
+              {
+                "title": "QR-код",
+                "href": "/qr-code",
+                "icon": "qr-code",
+                "intl": "QRCodePage"
+              },
+              {
+                "title": "Генератор текста",
+                "href": "/lorem-ipsum",
+                "icon": "letter-text",
+                "intl": "LoremIpsumPage",
+                "keywords": [
+                  "Lorem Ipsum",
+                  "Тестовый текст",
+                  "Заглушка",
+                  "Тестовые данные"
+                ]
+              },
+              {
+                "title": "Генератор хешей",
+                "href": "/hash-generator",
+                "icon": "square-asterisk",
+                "intl": "HashGeneratorPage",
+                "keywords": [
+                  "Adler32",
+                  "BLAKE",
+                  "CRC32C",
+                  "CRC64",
+                  "Keccak",
+                  "MD4",
+                  "MD5",
+                  "RIPEMD160",
+                  "SHA",
+                  "SM3",
+                  "Whirlpool",
+                  "XXHash"
+                ]
+              },
+              {
+                "title": "Генератор UUID",
+                "href": "/uuid-generator",
+                "icon": "shield-user",
+                "intl": "UUIDGeneratorPage",
+                "keywords": ["GUID", "Уникальный ID"]
+              }
+            ]
+          },
+          {
+            "title": "Текст и символы",
+            "items": [
+              {
+                "title": "Форматирование кода",
+                "href": "/code-formatter",
+                "icon": "file-spreadsheet",
+                "intl": "CodeFormatterPage",
+                "keywords": ["Красивый код", "Форматирование"]
+              },
+              {
+                "title": "Минификация кода",
+                "href": "/code-minifier",
+                "icon": "file-minus",
+                "intl": "CodeMinifierPage",
+                "keywords": ["Сжатие кода"]
+              },
+              {
+                "title": "Сравнение текста",
+                "href": "/text-compare",
+                "icon": "file-diff",
+                "intl": "TextComparePage",
+                "keywords": ["Различия", "Diff"]
+              },
+              {
+                "title": "Подсчёт символов",
+                "href": "/character-count",
+                "icon": "square-sigma",
+                "intl": "CharacterCountPage",
+                "keywords": ["Счётчик слов", "Количество букв"]
+              }
+            ]
+          },
+          {
+            "title": "Конвертация и расчёты",
+            "items": [
+              {
+                "title": "Конвертер цветов",
+                "href": "/color-converter",
+                "icon": "palette",
+                "intl": "ColorConverterPage",
+                "keywords": [
+                  "Палитра",
+                  "Hex",
+                  "RGB",
+                  "HSL",
+                  "HWB",
+                  "LCH",
+                  "CMYK"
+                ]
+              },
+              {
+                "title": "Структуры данных",
+                "href": "/data-format-converter",
+                "icon": "braces",
+                "intl": "DataFormatConverterPage",
+                "keywords": [
+                  "Формат данных",
+                  "Структурированные данные",
+                  "JSON",
+                  "YAML",
+                  "YML",
+                  "XML",
+                  "CSV"
+                ]
+              },
+              {
+                "title": "Конвертер регистра",
+                "href": "/case-converter",
+                "icon": "case-sensitive",
+                "intl": "CaseConverterPage",
+                "keywords": [
+                  "CamelCase",
+                  "snake_case",
+                  "Верхний регистр",
+                  "Нижний регистр"
+                ]
+              },
+              {
+                "title": "Временные метки",
+                "href": "/timestamp-converter",
+                "icon": "calendar-clock",
+                "intl": "TimestampConverterPage",
+                "keywords": ["Дата и время", "Unix Time", "Timestamp"]
+              },
+              {
+                "title": "Временной интервал",
+                "href": "/time-interval",
+                "icon": "hourglass",
+                "intl": "TimeIntervalPage",
+                "keywords": [
+                  "Расчёт времени",
+                  "Разница во времени",
+                  "Продолжительность",
+                  "ETA"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Веб-разработка",
+            "items": [
+              {
+                "title": "Оптимизация SVG",
+                "href": "/svg-optimizer",
+                "icon": "layers",
+                "intl": "SvgOptimizerPage",
+                "keywords": ["Сжатие SVG", "Очистка SVG", "Минификация SVG"]
+              },
+              {
+                "title": "События клавиатуры",
+                "href": "/keyboard-event",
+                "icon": "keyboard",
+                "intl": "KeyboardEventPage",
+                "keywords": ["keydown", "keyup", "keypress", "Клавиши"]
+              },
+              {
+                "title": "Парсер User-Agent",
+                "href": "/user-agent",
+                "icon": "compass",
+                "intl": "UserAgentPage",
+                "keywords": ["Определение браузера", "UserAgent", "UA"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
