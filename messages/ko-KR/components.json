@@ -1,13 +1,13 @@
 {
   "MobileNav": {
     "Menu": "메뉴",
-    "ToggleMenu": "메뉴 전환"
+    "ToggleMenu": "메뉴 토글"
   },
   "Footer": {
     "Text": "<url>{name}</url>이 개발자를 위해 만들었으며, <github>GitHub</github>에서 오픈 소스로 공개되어 있습니다."
   },
   "Sidebar": {
-    "ToggleSidebar": "사이드바 전환"
+    "ToggleSidebar": "사이드바 토글"
   },
   "AsideBlock": {
     "Title": "GitHub에서 {name} 살펴보기",
@@ -57,7 +57,7 @@
   },
   "CodeMirror": {
     "Merge": {
-      "UnchangedLines": "변경 없는 $ 줄"
+      "UnchangedLines": "변경되지 않은 $줄"
     }
   }
 }
