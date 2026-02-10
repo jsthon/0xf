@@ -10,9 +10,9 @@
     "ToggleSidebar": "サイドバー切替"
   },
   "AsideBlock": {
-    "Title": "{name} の GitHub リポジトリを見る",
+    "Title": "{name} の GitHub を見る",
     "Description": [
-      "ソースコードはすべて公開されています。",
+      "本プロジェクトは完全にオープンソースで、ソースコードを公開しています。",
       "コードレビュー、コントリビュート、セルフホスティングも歓迎です。"
     ],
     "Button": "GitHub を見る"

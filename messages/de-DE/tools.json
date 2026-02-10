@@ -102,7 +102,7 @@
   },
   "CharacterEscapePage": {
     "Meta": {
-      "Title": "Zeichen-Escaping",
+      "Title": "Zeichen-Escape",
       "Description": "Text als Unicode-Codepunkte, Escape-Sequenzen, CSS-Escapes oder HTML-Entitäten kodieren und dekodieren."
     },
     "Controls": {

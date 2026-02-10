@@ -10,10 +10,10 @@
     "ToggleSidebar": "切換側欄"
   },
   "AsideBlock": {
-    "Title": "探索 {name} 的 GitHub 倉庫",
+    "Title": "探索 {name} 的 GitHub",
     "Description": [
-      "程式碼已開源，完整原始碼公開可見。",
-      "歡迎檢視程式碼、參與貢獻，或自行部署使用。"
+      "本專案已完全開源，原始碼公開可見。",
+      "歡迎檢視程式碼、參與貢獻，或自行部署實例。"
     ],
     "Button": "瀏覽 GitHub"
   },

@@ -25,7 +25,7 @@
             "title": "Codificación y decodificación",
             "items": [
               {
-                "title": "Base64",
+                "title": "Codificación Base64",
                 "href": "/base64",
                 "icon": "square-code",
                 "intl": "Base64Page"
@@ -152,7 +152,7 @@
                 "keywords": [
                   "Selector de color",
                   "Hex",
-                  "RBG",
+                  "RGB",
                   "HSL",
                   "HWB",
                   "LCH",
