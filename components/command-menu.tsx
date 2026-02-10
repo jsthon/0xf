@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { type DialogProps } from "@radix-ui/react-dialog";
 import { Monitor, Moon, SearchIcon, Sun } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -20,13 +19,14 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import { Dialog } from "@/components/ui/dialog";
 import { Icon } from "@/components/icons";
 
 function getSearchValue(item: NavItem) {
   return [item.title, item.href, ...(item.keywords || [])].join(" ");
 }
 
-export function CommandMenu({ ...props }: DialogProps) {
+export function CommandMenu({ ...props }: React.ComponentProps<typeof Dialog>) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
