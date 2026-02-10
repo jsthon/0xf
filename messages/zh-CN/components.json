@@ -10,9 +10,9 @@
     "ToggleSidebar": "切换侧栏"
   },
   "AsideBlock": {
-    "Title": "探索 {name} 的 GitHub 仓库",
+    "Title": "探索 {name} 的 GitHub",
     "Description": [
-      "代码已开源，完整源码可见。",
+      "本项目已完全开源，源代码公开可见。",
       "欢迎审阅代码、参与贡献，或自行部署实例。"
     ],
     "Button": "浏览 GitHub"

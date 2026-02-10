@@ -1,18 +1,18 @@
 {
   "MobileNav": {
     "Menu": "메뉴",
-    "ToggleMenu": "메뉴 전환"
+    "ToggleMenu": "메뉴 토글"
   },
   "Footer": {
     "Text": "<url>{name}</url>이 개발자를 위해 만들었으며, <github>GitHub</github>에서 오픈 소스로 공개되어 있습니다."
   },
   "Sidebar": {
-    "ToggleSidebar": "사이드바 전환"
+    "ToggleSidebar": "사이드바 토글"
   },
   "AsideBlock": {
-    "Title": "GitHub에서 {name} 살펴보기",
+    "Title": "GitHub에서 {name} 보기",
     "Description": [
-      "오픈 소스로 전체 소스 코드를 확인할 수 있습니다.",
+      "이 프로젝트는 완전히 오픈 소스이며, 소스 코드가 공개되어 있습니다.",
       "코드 리뷰, 기여, 또는 직접 배포가 가능합니다."
     ],
     "Button": "GitHub에서 보기"
@@ -57,7 +57,7 @@
   },
   "CodeMirror": {
     "Merge": {
-      "UnchangedLines": "변경 없는 $ 줄"
+      "UnchangedLines": "변경되지 않은 $줄"
     }
   }
 }
