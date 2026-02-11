@@ -14,7 +14,7 @@ export const localePrefixes: Record<string, string> = {
   "ko-KR": "/ko",
   "pt-PT": "/pt",
   "ru-RU": "/ru",
-  "zh-CN": "/zh-cn",
+  "zh-CN": "/zh",
   "zh-TW": "/zh-tw",
 };
 
