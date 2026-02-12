@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/providers";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -49,7 +48,6 @@ export default async function LocaleLayout({
           >
             {children}
             <Toaster />
-            <TailwindIndicator />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
