@@ -6,6 +6,7 @@ import { fontMono, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@/components/analytics";
 import { ThemeProvider } from "@/components/providers";
 
 export function generateStaticParams() {
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
           >
             {children}
             <Toaster />
+            <Analytics />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
