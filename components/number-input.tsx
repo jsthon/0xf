@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 import {
   NumericFormat,
   NumericFormatProps,
@@ -124,6 +125,8 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
       }
     };
 
+    const t = useTranslations("NumberInput");
+
     return (
       <div className={cn("flex items-center", className)}>
         <NumericFormat
@@ -151,6 +154,8 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             size="icon"
             onClick={handleIncrement}
             disabled={value !== undefined && value >= max}
+            tabIndex={-1}
+            aria-label={t("Increment")}
           >
             <ChevronUp className="size-3.5" />
           </Button>
@@ -160,6 +165,8 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             size="icon"
             onClick={handleDecrement}
             disabled={value !== undefined && value <= min}
+            tabIndex={-1}
+            aria-label={t("Decrement")}
           >
             <ChevronDown className="size-3.5" />
           </Button>

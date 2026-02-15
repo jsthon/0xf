@@ -23,9 +23,16 @@ export function LocaleSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="max-md:has-[>svg]:px-2">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="max-md:has-[>svg]:px-2"
+          aria-labelledby="current-locale"
+        >
           <Globe />
-          <span className="hidden md:inline-flex">{getLocaleName(locale)}</span>
+          <span id="current-locale" className="hidden md:inline-flex">
+            {getLocaleName(locale)}
+          </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

@@ -102,7 +102,7 @@ export default function HomePage({
         <div className="outline-border grid grid-cols-2 bg-[repeating-linear-gradient(315deg,var(--muted)_0,var(--muted)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed outline -outline-offset-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <div className="bg-card flex items-center gap-2 border-r border-b p-4 text-base leading-tight font-semibold md:gap-4 md:px-6 md:py-5 md:text-lg">
             <CodeIcon className="size-6" />
-            {t("Tools.Title")}
+            <h2>{t("Tools.Title")}</h2>
           </div>
           <div className="border-b sm:col-span-2 lg:col-span-3 xl:col-span-4"></div>
 
