@@ -69,10 +69,13 @@ export function CommandMenu({ ...props }: React.ComponentProps<typeof Dialog>) {
           "sm:text-muted-foreground dark:border-input sm:dark:bg-input/30 relative justify-start font-normal has-[>svg]:px-2 sm:w-40 sm:border sm:has-[>svg]:px-2.5 lg:w-48"
         )}
         onClick={() => setOpen(true)}
+        aria-labelledby="command-menu-search"
         {...props}
       >
         <SearchIcon />
-        <span className="hidden sm:inline-flex">{t("Search")}</span>
+        <span id="command-menu-search" className="hidden sm:inline-flex">
+          {t("Search")}
+        </span>
         <kbd className="bg-background dark:bg-card pointer-events-none absolute top-1/2 right-[5px] hidden h-5 -translate-y-1/2 items-center gap-1 rounded-sm border px-1.5 font-sans text-[10px] font-medium select-none md:flex">
           /
         </kbd>
