@@ -33,6 +33,10 @@
     "Copy": "Копировать",
     "Error": "Не удалось скопировать"
   },
+  "NumberInput": {
+    "Increment": "Увеличить значение",
+    "Decrement": "Уменьшить значение"
+  },
   "ColorPicker": {
     "SelectColor": "Выбрать цвет"
   },

@@ -33,6 +33,10 @@
     "Copy": "コピー",
     "Error": "コピー失敗"
   },
+  "NumberInput": {
+    "Increment": "値を増やす",
+    "Decrement": "値を減らす"
+  },
   "ColorPicker": {
     "SelectColor": "色を選択"
   },

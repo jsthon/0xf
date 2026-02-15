@@ -33,6 +33,10 @@
     "Copy": "복사",
     "Error": "복사 실패"
   },
+  "NumberInput": {
+    "Increment": "값 증가",
+    "Decrement": "값 감소"
+  },
   "ColorPicker": {
     "SelectColor": "색상 선택"
   },

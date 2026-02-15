@@ -33,6 +33,10 @@
     "Copy": "复制",
     "Error": "复制失败"
   },
+  "NumberInput": {
+    "Increment": "增加数值",
+    "Decrement": "减少数值"
+  },
   "ColorPicker": {
     "SelectColor": "选择颜色"
   },

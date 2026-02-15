@@ -33,6 +33,10 @@
     "Copy": "Kopieren",
     "Error": "Kopieren fehlgeschlagen"
   },
+  "NumberInput": {
+    "Increment": "Wert erhöhen",
+    "Decrement": "Wert verringern"
+  },
   "ColorPicker": {
     "SelectColor": "Farbe wählen"
   },

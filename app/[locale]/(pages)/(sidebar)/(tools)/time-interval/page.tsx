@@ -219,6 +219,7 @@ const IntervalEditor = ({
               ""
             )}
             onValueChange={(value) => updateTimeField(field, value ?? 0)}
+            aria-label={t(`Formats.${field}`)}
           />
         ))}
       </div>
@@ -237,6 +238,7 @@ const IntervalEditor = ({
       suffix={t(`Units.${format}`, { count: value }).replace(String(value), "")}
       decimalScale={DECIMAL_PLACES}
       onValueChange={(value) => handleSingleUnitChange(value ?? 0)}
+      aria-label={t(`Formats.${format}`)}
     />
   );
 };
