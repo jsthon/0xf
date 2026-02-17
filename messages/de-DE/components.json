@@ -10,12 +10,12 @@
     "ToggleSidebar": "Seitenleiste umschalten"
   },
   "AsideBlock": {
-    "Title": "{name} auf GitHub entdecken",
+    "Title": "{name} auf Product Hunt",
     "Description": [
-      "Open Source – der vollständige Quellcode ist einsehbar.",
-      "Code überprüfen, beitragen oder selbst hosten."
+      "Wir haben {name} kürzlich auf Product Hunt veröffentlicht.",
+      "Wenn es dir geholfen hat, würde uns ein Upvote freuen – so können mehr Entwickler es entdecken."
     ],
-    "Button": "Auf GitHub ansehen"
+    "Button": "Auf Product Hunt ansehen"
   },
   "ThemeSwitcher": {
     "Theme": "Design",

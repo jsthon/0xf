@@ -64,7 +64,7 @@ export default function HomePage({
         <div className="my-12 flex flex-col items-center gap-4 md:my-16 lg:my-20 lg:gap-6">
           <Badge variant="secondary" className="bg-transparent" asChild>
             <Link
-              href={siteConfig.links.github}
+              href={siteConfig.links.productHunt}
               target="_blank"
               rel="noreferrer"
             >

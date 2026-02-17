@@ -10,12 +10,12 @@
     "ToggleSidebar": "사이드바 토글"
   },
   "AsideBlock": {
-    "Title": "GitHub에서 {name} 보기",
+    "Title": "{name}이 Product Hunt에 출시되었습니다",
     "Description": [
-      "이 프로젝트는 완전히 오픈 소스이며, 소스 코드가 공개되어 있습니다.",
-      "코드 리뷰, 기여, 또는 직접 배포가 가능합니다."
+      "최근 {name}을 Product Hunt에 출시했습니다.",
+      "유용하셨다면 응원 부탁드립니다. 더 많은 개발자에게 알릴 수 있어요."
     ],
-    "Button": "GitHub에서 보기"
+    "Button": "Product Hunt에서 보기"
   },
   "ThemeSwitcher": {
     "Theme": "테마",

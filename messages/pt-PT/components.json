@@ -10,12 +10,12 @@
     "ToggleSidebar": "Alternar barra lateral"
   },
   "AsideBlock": {
-    "Title": "Explorar {name} no GitHub",
+    "Title": "{name} no Product Hunt",
     "Description": [
-      "Código aberto, com o código-fonte completo disponível.",
-      "Reveja o código, contribua ou aloje a sua própria instância."
+      "Lançámos recentemente {name} no Product Hunt.",
+      "Se achou útil, um upvote ajudaria mais programadores a descobri-lo."
     ],
-    "Button": "Ver no GitHub"
+    "Button": "Ver no Product Hunt"
   },
   "ThemeSwitcher": {
     "Theme": "Tema",

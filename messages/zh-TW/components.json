@@ -10,12 +10,12 @@
     "ToggleSidebar": "切換側欄"
   },
   "AsideBlock": {
-    "Title": "探索 {name} 的 GitHub",
+    "Title": "{name} 登上 Product Hunt",
     "Description": [
-      "本專案已完全開源，原始碼公開可見。",
-      "歡迎檢視程式碼、參與貢獻，或自行部署實例。"
+      "我們最近在 Product Hunt 上發布了本專案。",
+      "如果你覺得好用，歡迎前往支持我們，讓更多開發者知道它。"
     ],
-    "Button": "瀏覽 GitHub"
+    "Button": "前往 Product Hunt"
   },
   "ThemeSwitcher": {
     "Theme": "主題",

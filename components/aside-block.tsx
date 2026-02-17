@@ -23,14 +23,14 @@ export function AsideBlock({ className }: React.ComponentProps<"div">) {
       </div>
       {descriptions.map((desc, index) => (
         <div key={index} className="text-muted-foreground">
-          {desc}
+          {desc.replace("{name}", siteConfig.name)}
         </div>
       ))}
       <Button size="sm" className="mt-2 w-fit">
         {t("Button")}
       </Button>
       <Link
-        href={siteConfig.links.github}
+        href={siteConfig.links.productHunt}
         target="_blank"
         rel="noreferrer"
         className="absolute inset-0"

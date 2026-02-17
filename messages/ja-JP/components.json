@@ -10,12 +10,12 @@
     "ToggleSidebar": "サイドバー切替"
   },
   "AsideBlock": {
-    "Title": "{name} の GitHub を見る",
+    "Title": "{name} が Product Hunt に登場",
     "Description": [
-      "本プロジェクトは完全にオープンソースで、ソースコードを公開しています。",
-      "コードレビュー、コントリビュート、セルフホスティングも歓迎です。"
+      "{name} を Product Hunt で公開しました。",
+      "役に立ったと思ったら、ぜひ応援をお願いします。より多くの開発者に届きます。"
     ],
-    "Button": "GitHub を見る"
+    "Button": "Product Hunt で見る"
   },
   "ThemeSwitcher": {
     "Theme": "テーマ",
