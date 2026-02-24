@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Download, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
+import panzoom, { type PanZoom } from "panzoom";
 import {
   optimize,
   type Config,
@@ -84,6 +85,8 @@ type OptionName = (typeof OPTIONS_CONFIG)[number]["name"];
 
 export default function SvgOptimizerPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const svgContainerRef = useRef<HTMLDivElement>(null);
+  const panzoomInstanceRef = useRef<PanZoom | null>(null);
   const [inputSvg, setInputSvg] = useState("");
   const [isOriginal, setIsOriginal] = useState(false);
   const [floatPrecision, setFloatPrecision] = useState(3);
@@ -161,6 +164,61 @@ export default function SvgOptimizerPage() {
   const displaySize = isOriginal ? inputSize : outputSize;
   const showSizeRatio = !isOriginal && outputSize > 0 && inputSize > 0;
 
+  useEffect(() => {
+    const container = svgContainerRef.current;
+    if (!container) return;
+
+    if (!displaySvg) {
+      container.innerHTML = "";
+      return;
+    }
+
+    // dispose previous panzoom instance
+    if (panzoomInstanceRef.current) {
+      panzoomInstanceRef.current.dispose();
+      panzoomInstanceRef.current = null;
+    }
+
+    // set svg content
+    container.innerHTML = displaySvg;
+    const svgElement = container.querySelector("svg");
+    if (!svgElement) return;
+
+    // fill svg to container
+    svgElement.style.width = "100%";
+    svgElement.style.height = "100%";
+    svgElement.style.maxWidth = "none";
+    svgElement.style.maxHeight = "none";
+
+    // init panzoom
+    panzoomInstanceRef.current = panzoom(svgElement, {
+      maxZoom: 10,
+      minZoom: 0.1,
+      smoothScroll: false,
+    });
+
+    // prevent browser back/forward navigation on horizontal swipe
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+    };
+    // auto-focus container on mouse enter to capture wheel events
+    const handleMouseEnter = () => {
+      container.focus();
+    };
+    container.addEventListener("wheel", handleWheel, { passive: false });
+    container.addEventListener("mouseenter", handleMouseEnter);
+
+    // dispose panzoom instance on unmount
+    return () => {
+      container.removeEventListener("wheel", handleWheel);
+      container.removeEventListener("mouseenter", handleMouseEnter);
+      if (panzoomInstanceRef.current) {
+        panzoomInstanceRef.current.dispose();
+        panzoomInstanceRef.current = null;
+      }
+    };
+  }, [displaySvg]);
+
   return (
     <>
       <div className="flex flex-col gap-8">
@@ -227,9 +285,7 @@ export default function SvgOptimizerPage() {
                 {showSizeRatio && (
                   <Badge variant="secondary">{sizeRatio.toFixed(0)}%</Badge>
                 )}
-                {isOriginal && (
-                  <Badge variant="secondary">{t("Badges.Original")}</Badge>
-                )}
+                {isOriginal && <Badge>{t("Badges.Original")}</Badge>}
               </div>
             </div>
             {displaySvg && (
@@ -257,21 +313,22 @@ export default function SvgOptimizerPage() {
               </div>
             )}
           </div>
-          <TabsContent value="preview">
+          <TabsContent
+            value="preview"
+            className="data-[state=inactive]:hidden"
+            forceMount
+          >
             <div
-              className="border-input h-100 overflow-hidden rounded-md border shadow-xs"
+              className="border-input h-80 overflow-hidden rounded-md border shadow-xs lg:h-120"
               style={{
                 background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'%3E%3Cpath d='M1 2V0h1v1H0v1z' fill='%23999' fill-opacity='.1'/%3E%3C/svg%3E") 0 0/16px 16px`,
               }}
             >
-              {displaySvg && (
-                <iframe
-                  title="SVG Preview"
-                  className="h-full w-full"
-                  sandbox=""
-                  src={`data:image/svg+xml;utf8,${encodeURIComponent(displaySvg)}`}
-                />
-              )}
+              <div
+                ref={svgContainerRef}
+                tabIndex={-1}
+                className="h-full w-full overflow-hidden outline-none"
+              />
             </div>
           </TabsContent>
           <TabsContent value="code">
