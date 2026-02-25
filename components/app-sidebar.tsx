@@ -22,6 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { Icon } from "@/components/icons";
 import { SiteLogo } from "@/components/site-logo";
@@ -31,6 +32,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
   const contentRef = useRef<HTMLDivElement>(null);
   const activeRef = useRef<HTMLAnchorElement>(null);
+  const { setOpenMobile } = useSidebar();
 
   useEffect(() => {
     if (!pathname) return;
@@ -113,6 +115,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                               href={item.href}
                               target={item.external ? "_blank" : undefined}
                               rel={item.external ? "noreferrer" : undefined}
+                              onClick={() => setOpenMobile(false)}
                             >
                               <Icon name={item.icon || "circle"} />
                               {item.title}
