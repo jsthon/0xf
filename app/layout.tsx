@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
-import { localePrefixes } from "@/i18n/locales";
 
 export const metadata: Metadata = {
   title: {
@@ -11,9 +10,6 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
-  alternates: {
-    languages: localePrefixes,
-  },
   icons: {
     icon: [
       {
