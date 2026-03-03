@@ -40,7 +40,7 @@ export default function TimestampConverterPage() {
     setOutputTimezone(getUserTimezone());
   }, []);
 
-  // Update current date every second
+  // Update current date every 40ms (~25 FPS)
   useEffect(() => {
     if (inputText) return;
 

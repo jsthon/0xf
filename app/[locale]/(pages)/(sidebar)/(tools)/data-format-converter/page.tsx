@@ -327,7 +327,13 @@ export default function DataFormatConverterPage() {
         return parser.parse(text);
       }
       case "csv": {
-        const result = Papa.parse(text, { header: true });
+        const result = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+        });
+        if (result.errors.length > 0) {
+          throw new Error(result.errors[0].message);
+        }
         return result.data;
       }
       default:

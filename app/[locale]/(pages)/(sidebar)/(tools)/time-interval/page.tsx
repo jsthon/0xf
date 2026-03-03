@@ -10,6 +10,13 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { DateTimePicker } from "@/components/datetime-picker";
 import { NumberInput } from "@/components/number-input";
 
+import {
+  addTimeInterval,
+  calculateTimeInterval,
+  MS_PER_UNIT,
+  type TimeInterval,
+} from "./time-interval";
+
 // Display formats
 const DISPLAY_FORMATS = [
   "auto",
@@ -21,26 +28,6 @@ const DISPLAY_FORMATS = [
 ] as const;
 type DisplayFormat = (typeof DISPLAY_FORMATS)[number];
 type UnitFormat = Exclude<DisplayFormat, "auto">;
-
-// Time interval with all units
-interface TimeInterval {
-  years: number;
-  months: number;
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-  totalMilliseconds: number;
-}
-
-// Time units in milliseconds
-const MS_PER_UNIT = {
-  days: 24 * 60 * 60 * 1000,
-  hours: 60 * 60 * 1000,
-  minutes: 60 * 1000,
-  seconds: 1000,
-  milliseconds: 1,
-} as const;
 
 // Date input field configuration for auto format
 const TIME_FIELD_MAX_VALUES = {
@@ -58,88 +45,6 @@ const AUTO_FORMAT_FIELDS = Object.keys(TIME_FIELD_MAX_VALUES) as Array<
 
 // Number of decimal places for display
 const DECIMAL_PLACES = 4;
-
-// Calculate time interval between two dates
-const calculateTimeInterval = (
-  startDate: Date,
-  endDate: Date
-): TimeInterval => {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
-
-  // ensure calculation from earlier to later date
-  const [earlier, later] = start <= end ? [start, end] : [end, start];
-
-  // calculate years and months using calendar arithmetic
-  let years = later.getFullYear() - earlier.getFullYear();
-  let months = later.getMonth() - earlier.getMonth();
-
-  if (months < 0) {
-    years--;
-    months += 12;
-  }
-
-  // calculate remaining time after years/months
-  let tempDate = new Date(earlier);
-  tempDate.setFullYear(earlier.getFullYear() + years);
-  tempDate.setMonth(earlier.getMonth() + months);
-
-  // adjust if calculation went past target date
-  if (tempDate > later) {
-    if (months > 0) {
-      months--;
-    } else {
-      years--;
-      months = 11;
-    }
-    // recalculate from original date to avoid month overflow issues
-    tempDate = new Date(earlier);
-    tempDate.setFullYear(earlier.getFullYear() + years);
-    tempDate.setMonth(earlier.getMonth() + months);
-  }
-
-  // calculate remaining time components
-  const remainingMs = later.getTime() - tempDate.getTime();
-  const days = Math.floor(remainingMs / MS_PER_UNIT.days);
-  const hours = Math.floor(
-    (remainingMs % MS_PER_UNIT.days) / MS_PER_UNIT.hours
-  );
-  const minutes = Math.floor(
-    (remainingMs % MS_PER_UNIT.hours) / MS_PER_UNIT.minutes
-  );
-  const seconds = Math.floor(
-    (remainingMs % MS_PER_UNIT.minutes) / MS_PER_UNIT.seconds
-  );
-
-  return {
-    years,
-    months,
-    days,
-    hours,
-    minutes,
-    seconds,
-    totalMilliseconds: later.getTime() - earlier.getTime(),
-  };
-};
-
-// Add time interval to base date (only forward)
-const addTimeInterval = (baseDate: Date, interval: TimeInterval): Date => {
-  const result = new Date(baseDate);
-
-  // add calendar units first (years, months)
-  result.setFullYear(result.getFullYear() + interval.years);
-  result.setMonth(result.getMonth() + interval.months);
-
-  // add time units (days, hours, minutes, seconds)
-  const timeMs =
-    interval.days * MS_PER_UNIT.days +
-    interval.hours * MS_PER_UNIT.hours +
-    interval.minutes * MS_PER_UNIT.minutes +
-    interval.seconds * MS_PER_UNIT.seconds;
-
-  result.setTime(result.getTime() + timeMs);
-  return result;
-};
 
 // Convert interval to display value for specific format
 const getIntervalSingleUnitValue = (
@@ -232,7 +137,7 @@ const IntervalEditor = ({
     <NumberInput
       key={format}
       id={`${format}-input`}
-      className="w-fit"
+      className="lg:w-1/2 lg:pr-4"
       value={value}
       min={0}
       suffix={t(`units.${format}`, { count: value }).replace(String(value), "")}

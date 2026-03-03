@@ -49,6 +49,10 @@ const AUTHENTICATION_LABEL_KEYS = {
 type AuthenticationType = (typeof AUTHENTICATION_TYPES)[number];
 type WiFiDataValue<K extends keyof WiFiData> = WiFiData[K];
 
+function escapeWifiValue(value: string): string {
+  return value.replace(/([\\;,:"])/g, "\\$1");
+}
+
 export default function QRCodePage() {
   const [fgColor, setFgColor] = useState("#000000");
   const [bgColor, setBgColor] = useState("#ffffff");
@@ -72,29 +76,29 @@ export default function QRCodePage() {
       case "wifi": {
         let str = `WIFI:`;
         if (wifiData.type) {
-          str += `T:${wifiData.type};`;
+          str += `T:${escapeWifiValue(wifiData.type)};`;
         }
         if (wifiData.ssid) {
-          str += `S:${wifiData.ssid};`;
+          str += `S:${escapeWifiValue(wifiData.ssid)};`;
         }
         if (wifiData.type !== "nopass" && wifiData.password) {
-          str += `P:${wifiData.password};`;
+          str += `P:${escapeWifiValue(wifiData.password)};`;
         }
         if (wifiData.hidden) {
           str += "H:true;";
         }
         if (wifiData.type === "WPA2-EAP") {
           if (wifiData.eap_method) {
-            str += `E:${wifiData.eap_method};`;
+            str += `E:${escapeWifiValue(wifiData.eap_method)};`;
           }
           if (wifiData.anonymous_identity) {
-            str += `A:${wifiData.anonymous_identity};`;
+            str += `A:${escapeWifiValue(wifiData.anonymous_identity)};`;
           }
           if (wifiData.identity) {
-            str += `I:${wifiData.identity};`;
+            str += `I:${escapeWifiValue(wifiData.identity)};`;
           }
           if (wifiData.phase2_method) {
-            str += `PH2:${wifiData.phase2_method};`;
+            str += `PH2:${escapeWifiValue(wifiData.phase2_method)};`;
           }
         }
         return str + ";";
