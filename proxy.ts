@@ -6,15 +6,9 @@ export default createMiddleware(routing);
 
 export const config = {
   matcher: [
-    // Enable a redirect to a matching locale at the root
-    "/",
-
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
-    "/(de|en|es|fr|ja|ko|pt|ru|zh|zh-tw)/:path*",
-
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
+    // Match all pathnames except for
+    // - … if they start with `/_next` or `/_vercel`
+    // - … the ones containing a dot (e.g. `favicon.ico`)
     "/((?!_next|_vercel|.*\\..*).*)",
   ],
 };

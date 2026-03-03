@@ -3,7 +3,7 @@ export const defaultLocale = "en-US";
 // Steps to add a new locale:
 // 1. Add to localePrefixes
 // 2. Add to localeNames
-// 3. Add matching regex to proxy.ts
+// 3. Add translation files to `/messages/{locale}/`
 
 export const localePrefixes: Record<string, string> = {
   "de-DE": "/de",
