@@ -40,8 +40,7 @@
                 "title": "文字エスケープ",
                 "href": "/character-escape",
                 "icon": "ampersand",
-                "intl": "CharacterEscapePage",
-                "keywords": ["Unicode", "CSS", "HTML", "エスケープシーケンス"]
+                "intl": "CharacterEscapePage"
               }
             ]
           },
@@ -52,8 +51,7 @@
                 "title": "パスワード生成",
                 "href": "/password-generator",
                 "icon": "key-round",
-                "intl": "PasswordGeneratorPage",
-                "keywords": ["ランダム"]
+                "intl": "PasswordGeneratorPage"
               },
               {
                 "title": "QR コード生成",
@@ -65,35 +63,19 @@
                 "title": "ダミーテキスト生成",
                 "href": "/lorem-ipsum",
                 "icon": "letter-text",
-                "intl": "LoremIpsumPage",
-                "keywords": ["ダミーデータ", "テスト文章", "段落文章"]
+                "intl": "LoremIpsumPage"
               },
               {
                 "title": "ハッシュ計算",
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
-                "intl": "HashGeneratorPage",
-                "keywords": [
-                  "Adler32",
-                  "BLAKE",
-                  "CRC32C",
-                  "CRC64",
-                  "Keccak",
-                  "MD4",
-                  "MD5",
-                  "RIPEMD160",
-                  "SHA",
-                  "SM3",
-                  "Whirlpool",
-                  "XXHash"
-                ]
+                "intl": "HashGeneratorPage"
               },
               {
                 "title": "UUID 生成",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
-                "intl": "UUIDGeneratorPage",
-                "keywords": ["GUID", "Unique ID"]
+                "intl": "UUIDGeneratorPage"
               }
             ]
           },
@@ -104,29 +86,25 @@
                 "title": "コード整形",
                 "href": "/code-formatter",
                 "icon": "file-spreadsheet",
-                "intl": "CodeFormatterPage",
-                "keywords": ["コードフォーマット", "コード整形"]
+                "intl": "CodeFormatterPage"
               },
               {
                 "title": "コード圧縮",
                 "href": "/code-minifier",
                 "icon": "file-minus",
-                "intl": "CodeMinifierPage",
-                "keywords": ["コード最小化", "Minify"]
+                "intl": "CodeMinifierPage"
               },
               {
                 "title": "テキスト比較",
                 "href": "/text-compare",
                 "icon": "file-diff",
-                "intl": "TextComparePage",
-                "keywords": ["テキスト差分", "diff"]
+                "intl": "TextComparePage"
               },
               {
                 "title": "文字数カウント",
                 "href": "/character-count",
                 "icon": "square-sigma",
-                "intl": "CharacterCountPage",
-                "keywords": ["文字数", "ワードカウント"]
+                "intl": "CharacterCountPage"
               }
             ]
           },
@@ -137,52 +115,31 @@
                 "title": "カラー変換",
                 "href": "/color-converter",
                 "icon": "palette",
-                "intl": "ColorConverterPage",
-                "keywords": [
-                  "色変換",
-                  "Hex",
-                  "RGB",
-                  "HSL",
-                  "HWB",
-                  "LCH",
-                  "CMYK"
-                ]
+                "intl": "ColorConverterPage"
               },
               {
                 "title": "データ形式変換",
                 "href": "/data-format-converter",
                 "icon": "braces",
-                "intl": "DataFormatConverterPage",
-                "keywords": [
-                  "データ形式",
-                  "構造化データ",
-                  "JSON",
-                  "YAML",
-                  "YML",
-                  "XML",
-                  "CSV"
-                ]
+                "intl": "DataFormatConverterPage"
               },
               {
                 "title": "ケース変換",
                 "href": "/case-converter",
                 "icon": "case-sensitive",
-                "intl": "CaseConverterPage",
-                "keywords": ["キャメルケース", "スネークケース"]
+                "intl": "CaseConverterPage"
               },
               {
                 "title": "タイムスタンプ変換",
                 "href": "/timestamp-converter",
                 "icon": "calendar-clock",
-                "intl": "TimestampConverterPage",
-                "keywords": ["日時フォーマット", "Timestamp", "Unix"]
+                "intl": "TimestampConverterPage"
               },
               {
                 "title": "時間間隔計算",
                 "href": "/time-interval",
                 "icon": "hourglass",
-                "intl": "TimeIntervalPage",
-                "keywords": ["経過時間", "日数計算", "時間差"]
+                "intl": "TimeIntervalPage"
               }
             ]
           },
@@ -193,22 +150,19 @@
                 "title": "SVG 最適化",
                 "href": "/svg-optimizer",
                 "icon": "layers",
-                "intl": "SvgOptimizerPage",
-                "keywords": ["SVG圧縮", "SVGクリーンアップ", "SVGフォーマット"]
+                "intl": "SvgOptimizerPage"
               },
               {
                 "title": "キーボードイベント",
                 "href": "/keyboard-event",
                 "icon": "keyboard",
-                "intl": "KeyboardEventPage",
-                "keywords": ["キーボード", "keydown", "keyup", "keypress"]
+                "intl": "KeyboardEventPage"
               },
               {
                 "title": "User-Agent 解析",
                 "href": "/user-agent",
                 "icon": "compass",
-                "intl": "UserAgentPage",
-                "keywords": ["ブラウザ判定", "ブラウザ情報", "UA情報"]
+                "intl": "UserAgentPage"
               }
             ]
           }

@@ -23,7 +23,7 @@ import { Dialog } from "@/components/ui/dialog";
 import { Icon } from "@/components/icons";
 
 function getSearchValue(item: NavItem) {
-  return [item.title, item.href, ...(item.keywords || [])].join(" ");
+  return [item.title, item.href].join(" ");
 }
 
 export function CommandMenu({ ...props }: React.ComponentProps<typeof Dialog>) {

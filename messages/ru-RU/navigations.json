@@ -40,14 +40,7 @@
                 "title": "Экранирование символов",
                 "href": "/character-escape",
                 "icon": "ampersand",
-                "intl": "CharacterEscapePage",
-                "keywords": [
-                  "Unicode",
-                  "Code Point",
-                  "CSS",
-                  "HTML Entity",
-                  "Символы"
-                ]
+                "intl": "CharacterEscapePage"
               }
             ]
           },
@@ -58,8 +51,7 @@
                 "title": "Генератор паролей",
                 "href": "/password-generator",
                 "icon": "key-round",
-                "intl": "PasswordGeneratorPage",
-                "keywords": ["Случайный"]
+                "intl": "PasswordGeneratorPage"
               },
               {
                 "title": "QR-код",
@@ -71,40 +63,19 @@
                 "title": "Генератор текста",
                 "href": "/lorem-ipsum",
                 "icon": "letter-text",
-                "intl": "LoremIpsumPage",
-                "keywords": [
-                  "Lorem Ipsum",
-                  "Тестовый текст",
-                  "Заглушка",
-                  "Тестовые данные"
-                ]
+                "intl": "LoremIpsumPage"
               },
               {
                 "title": "Генератор хешей",
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
-                "intl": "HashGeneratorPage",
-                "keywords": [
-                  "Adler32",
-                  "BLAKE",
-                  "CRC32C",
-                  "CRC64",
-                  "Keccak",
-                  "MD4",
-                  "MD5",
-                  "RIPEMD160",
-                  "SHA",
-                  "SM3",
-                  "Whirlpool",
-                  "XXHash"
-                ]
+                "intl": "HashGeneratorPage"
               },
               {
                 "title": "Генератор UUID",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
-                "intl": "UUIDGeneratorPage",
-                "keywords": ["GUID", "Уникальный ID"]
+                "intl": "UUIDGeneratorPage"
               }
             ]
           },
@@ -115,29 +86,25 @@
                 "title": "Форматирование кода",
                 "href": "/code-formatter",
                 "icon": "file-spreadsheet",
-                "intl": "CodeFormatterPage",
-                "keywords": ["Красивый код", "Форматирование"]
+                "intl": "CodeFormatterPage"
               },
               {
                 "title": "Минификация кода",
                 "href": "/code-minifier",
                 "icon": "file-minus",
-                "intl": "CodeMinifierPage",
-                "keywords": ["Сжатие кода"]
+                "intl": "CodeMinifierPage"
               },
               {
                 "title": "Сравнение текста",
                 "href": "/text-compare",
                 "icon": "file-diff",
-                "intl": "TextComparePage",
-                "keywords": ["Различия", "Diff"]
+                "intl": "TextComparePage"
               },
               {
                 "title": "Подсчёт символов",
                 "href": "/character-count",
                 "icon": "square-sigma",
-                "intl": "CharacterCountPage",
-                "keywords": ["Счётчик слов", "Количество букв"]
+                "intl": "CharacterCountPage"
               }
             ]
           },
@@ -148,62 +115,31 @@
                 "title": "Конвертер цветов",
                 "href": "/color-converter",
                 "icon": "palette",
-                "intl": "ColorConverterPage",
-                "keywords": [
-                  "Палитра",
-                  "Hex",
-                  "RGB",
-                  "HSL",
-                  "HWB",
-                  "LCH",
-                  "CMYK"
-                ]
+                "intl": "ColorConverterPage"
               },
               {
                 "title": "Структуры данных",
                 "href": "/data-format-converter",
                 "icon": "braces",
-                "intl": "DataFormatConverterPage",
-                "keywords": [
-                  "Формат данных",
-                  "Структурированные данные",
-                  "JSON",
-                  "YAML",
-                  "YML",
-                  "XML",
-                  "CSV"
-                ]
+                "intl": "DataFormatConverterPage"
               },
               {
                 "title": "Конвертер регистра",
                 "href": "/case-converter",
                 "icon": "case-sensitive",
-                "intl": "CaseConverterPage",
-                "keywords": [
-                  "CamelCase",
-                  "snake_case",
-                  "Верхний регистр",
-                  "Нижний регистр"
-                ]
+                "intl": "CaseConverterPage"
               },
               {
                 "title": "Временные метки",
                 "href": "/timestamp-converter",
                 "icon": "calendar-clock",
-                "intl": "TimestampConverterPage",
-                "keywords": ["Дата и время", "Unix Time", "Timestamp"]
+                "intl": "TimestampConverterPage"
               },
               {
                 "title": "Временной интервал",
                 "href": "/time-interval",
                 "icon": "hourglass",
-                "intl": "TimeIntervalPage",
-                "keywords": [
-                  "Расчёт времени",
-                  "Разница во времени",
-                  "Продолжительность",
-                  "ETA"
-                ]
+                "intl": "TimeIntervalPage"
               }
             ]
           },
@@ -214,22 +150,19 @@
                 "title": "Оптимизация SVG",
                 "href": "/svg-optimizer",
                 "icon": "layers",
-                "intl": "SvgOptimizerPage",
-                "keywords": ["Сжатие SVG", "Очистка SVG", "Минификация SVG"]
+                "intl": "SvgOptimizerPage"
               },
               {
                 "title": "События клавиатуры",
                 "href": "/keyboard-event",
                 "icon": "keyboard",
-                "intl": "KeyboardEventPage",
-                "keywords": ["keydown", "keyup", "keypress", "Клавиши"]
+                "intl": "KeyboardEventPage"
               },
               {
                 "title": "Парсер User-Agent",
                 "href": "/user-agent",
                 "icon": "compass",
-                "intl": "UserAgentPage",
-                "keywords": ["Определение браузера", "UserAgent", "UA"]
+                "intl": "UserAgentPage"
               }
             ]
           }

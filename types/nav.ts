@@ -7,7 +7,6 @@ export interface NavItem {
   external?: boolean;
   icon?: IconKey;
   intl?: string;
-  keywords?: string[];
 }
 
 export interface NavCategory {

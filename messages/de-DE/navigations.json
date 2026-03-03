@@ -40,14 +40,7 @@
                 "title": "Zeichen-Escape",
                 "href": "/character-escape",
                 "icon": "ampersand",
-                "intl": "CharacterEscapePage",
-                "keywords": [
-                  "Unicode",
-                  "Code Point",
-                  "CSS Escape",
-                  "HTML Entity",
-                  "Sonderzeichen"
-                ]
+                "intl": "CharacterEscapePage"
               }
             ]
           },
@@ -58,8 +51,7 @@
                 "title": "Passwort-Generator",
                 "href": "/password-generator",
                 "icon": "key-round",
-                "intl": "PasswordGeneratorPage",
-                "keywords": ["Zufall", "Random"]
+                "intl": "PasswordGeneratorPage"
               },
               {
                 "title": "QR-Code",
@@ -71,41 +63,19 @@
                 "title": "Lorem Ipsum",
                 "href": "/lorem-ipsum",
                 "icon": "letter-text",
-                "intl": "LoremIpsumPage",
-                "keywords": [
-                  "Lorem Ipsum",
-                  "Blindtext",
-                  "Platzhaltertext",
-                  "Testdaten"
-                ]
+                "intl": "LoremIpsumPage"
               },
               {
                 "title": "Hash-Generator",
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
-                "intl": "HashGeneratorPage",
-                "keywords": [
-                  "Adler32",
-                  "BLAKE",
-                  "CRC32C",
-                  "CRC64",
-                  "Keccak",
-                  "MD4",
-                  "MD5",
-                  "RIPEMD160",
-                  "SHA",
-                  "SM3",
-                  "Whirlpool",
-                  "XXHash",
-                  "Prüfsumme"
-                ]
+                "intl": "HashGeneratorPage"
               },
               {
                 "title": "UUID-Generator",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
-                "intl": "UUIDGeneratorPage",
-                "keywords": ["GUID", "Unique ID"]
+                "intl": "UUIDGeneratorPage"
               }
             ]
           },
@@ -116,29 +86,25 @@
                 "title": "Code-Formatierung",
                 "href": "/code-formatter",
                 "icon": "file-spreadsheet",
-                "intl": "CodeFormatterPage",
-                "keywords": ["Code Beautifier", "Code verschönern"]
+                "intl": "CodeFormatterPage"
               },
               {
                 "title": "Code-Minifizierung",
                 "href": "/code-minifier",
                 "icon": "file-minus",
-                "intl": "CodeMinifierPage",
-                "keywords": ["Code komprimieren"]
+                "intl": "CodeMinifierPage"
               },
               {
                 "title": "Textvergleich",
                 "href": "/text-compare",
                 "icon": "file-diff",
-                "intl": "TextComparePage",
-                "keywords": ["Diff", "Unterschiede"]
+                "intl": "TextComparePage"
               },
               {
                 "title": "Zeichenzähler",
                 "href": "/character-count",
                 "icon": "square-sigma",
-                "intl": "CharacterCountPage",
-                "keywords": ["Wortzähler", "Buchstabenzähler"]
+                "intl": "CharacterCountPage"
               }
             ]
           },
@@ -149,62 +115,31 @@
                 "title": "Farbkonverter",
                 "href": "/color-converter",
                 "icon": "palette",
-                "intl": "ColorConverterPage",
-                "keywords": [
-                  "Farbwähler",
-                  "Hex",
-                  "RGB",
-                  "HSL",
-                  "HWB",
-                  "LCH",
-                  "CMYK"
-                ]
+                "intl": "ColorConverterPage"
               },
               {
                 "title": "Datenformat-Konverter",
                 "href": "/data-format-converter",
                 "icon": "braces",
-                "intl": "DataFormatConverterPage",
-                "keywords": [
-                  "Datenformat",
-                  "Strukturierte Daten",
-                  "JSON",
-                  "YAML",
-                  "YML",
-                  "XML",
-                  "CSV"
-                ]
+                "intl": "DataFormatConverterPage"
               },
               {
                 "title": "Groß-/Kleinschreibung",
                 "href": "/case-converter",
                 "icon": "case-sensitive",
-                "intl": "CaseConverterPage",
-                "keywords": [
-                  "Großbuchstaben",
-                  "Kleinbuchstaben",
-                  "Camel Case",
-                  "Snake Case"
-                ]
+                "intl": "CaseConverterPage"
               },
               {
                 "title": "Zeitstempel-Konverter",
                 "href": "/timestamp-converter",
                 "icon": "calendar-clock",
-                "intl": "TimestampConverterPage",
-                "keywords": ["Datum Uhrzeit", "Unix-Zeit", "Datumsformat"]
+                "intl": "TimestampConverterPage"
               },
               {
                 "title": "Zeitintervall",
                 "href": "/time-interval",
                 "icon": "hourglass",
-                "intl": "TimeIntervalPage",
-                "keywords": [
-                  "Zeitdifferenz",
-                  "Zeitdauer",
-                  "Zeitberechnung",
-                  "Zeitspanne"
-                ]
+                "intl": "TimeIntervalPage"
               }
             ]
           },
@@ -215,30 +150,19 @@
                 "title": "SVG-Optimierer",
                 "href": "/svg-optimizer",
                 "icon": "layers",
-                "intl": "SvgOptimizerPage",
-                "keywords": [
-                  "SVG komprimieren",
-                  "SVG bereinigen",
-                  "SVG Minifier"
-                ]
+                "intl": "SvgOptimizerPage"
               },
               {
                 "title": "Tastatur-Events",
                 "href": "/keyboard-event",
                 "icon": "keyboard",
-                "intl": "KeyboardEventPage",
-                "keywords": ["Tastaturereignis", "keydown", "keyup", "keypress"]
+                "intl": "KeyboardEventPage"
               },
               {
                 "title": "User-Agent-Parser",
                 "href": "/user-agent",
                 "icon": "compass",
-                "intl": "UserAgentPage",
-                "keywords": [
-                  "Browsererkennung",
-                  "UserAgent Parser",
-                  "UA-Informationen"
-                ]
+                "intl": "UserAgentPage"
               }
             ]
           }

@@ -40,8 +40,7 @@
                 "title": "字符转义",
                 "href": "/character-escape",
                 "icon": "ampersand",
-                "intl": "CharacterEscapePage",
-                "keywords": ["Unicode", "CSS", "HTML"]
+                "intl": "CharacterEscapePage"
               }
             ]
           },
@@ -52,8 +51,7 @@
                 "title": "密码生成",
                 "href": "/password-generator",
                 "icon": "key-round",
-                "intl": "PasswordGeneratorPage",
-                "keywords": ["随机"]
+                "intl": "PasswordGeneratorPage"
               },
               {
                 "title": "二维码生成",
@@ -65,35 +63,19 @@
                 "title": "随机文章生成",
                 "href": "/lorem-ipsum",
                 "icon": "letter-text",
-                "intl": "LoremIpsumPage",
-                "keywords": ["模拟数据", "测试文本", "段落句子填充"]
+                "intl": "LoremIpsumPage"
               },
               {
                 "title": "哈希计算",
                 "href": "/hash-generator",
                 "icon": "square-asterisk",
-                "intl": "HashGeneratorPage",
-                "keywords": [
-                  "Adler32",
-                  "BLAKE",
-                  "CRC32C",
-                  "CRC64",
-                  "Keccak",
-                  "MD4",
-                  "MD5",
-                  "RIPEMD160",
-                  "SHA",
-                  "SM3",
-                  "Whirlpool",
-                  "XXHash"
-                ]
+                "intl": "HashGeneratorPage"
               },
               {
                 "title": "UUID 生成",
                 "href": "/uuid-generator",
                 "icon": "shield-user",
-                "intl": "UUIDGeneratorPage",
-                "keywords": ["GUID", "Unique ID"]
+                "intl": "UUIDGeneratorPage"
               }
             ]
           },
@@ -104,29 +86,25 @@
                 "title": "代码格式化",
                 "href": "/code-formatter",
                 "icon": "file-spreadsheet",
-                "intl": "CodeFormatterPage",
-                "keywords": ["代码格式化", "代码美化"]
+                "intl": "CodeFormatterPage"
               },
               {
                 "title": "代码压缩",
                 "href": "/code-minifier",
                 "icon": "file-minus",
-                "intl": "CodeMinifierPage",
-                "keywords": ["代码精简"]
+                "intl": "CodeMinifierPage"
               },
               {
                 "title": "文本对比",
                 "href": "/text-compare",
                 "icon": "file-diff",
-                "intl": "TextComparePage",
-                "keywords": ["文本比较", "文本差异"]
+                "intl": "TextComparePage"
               },
               {
                 "title": "字符统计",
                 "href": "/character-count",
                 "icon": "square-sigma",
-                "intl": "CharacterCountPage",
-                "keywords": ["字数统计", "计数统计"]
+                "intl": "CharacterCountPage"
               }
             ]
           },
@@ -137,52 +115,31 @@
                 "title": "颜色转换",
                 "href": "/color-converter",
                 "icon": "palette",
-                "intl": "ColorConverterPage",
-                "keywords": [
-                  "颜色格式",
-                  "Hex",
-                  "RGB",
-                  "HSL",
-                  "HWB",
-                  "LCH",
-                  "CMYK"
-                ]
+                "intl": "ColorConverterPage"
               },
               {
                 "title": "结构化数据转换",
                 "href": "/data-format-converter",
                 "icon": "braces",
-                "intl": "DataFormatConverterPage",
-                "keywords": [
-                  "数据格式",
-                  "结构化数据",
-                  "JSON",
-                  "YAML",
-                  "YML",
-                  "XML",
-                  "CSV"
-                ]
+                "intl": "DataFormatConverterPage"
               },
               {
                 "title": "文本大小写转换",
                 "href": "/case-converter",
                 "icon": "case-sensitive",
-                "intl": "CaseConverterPage",
-                "keywords": ["驼峰命名", "蛇形命名"]
+                "intl": "CaseConverterPage"
               },
               {
                 "title": "时间戳转换",
                 "href": "/timestamp-converter",
                 "icon": "calendar-clock",
-                "intl": "TimestampConverterPage",
-                "keywords": ["日期时间格式", "Timestamp", "Unix"]
+                "intl": "TimestampConverterPage"
               },
               {
                 "title": "时间间隔计算",
                 "href": "/time-interval",
                 "icon": "hourglass",
-                "intl": "TimeIntervalPage",
-                "keywords": ["预计时间", "未来时间", "时间差"]
+                "intl": "TimeIntervalPage"
               }
             ]
           },
@@ -193,22 +150,19 @@
                 "title": "SVG 优化",
                 "href": "/svg-optimizer",
                 "icon": "layers",
-                "intl": "SvgOptimizerPage",
-                "keywords": ["SVG压缩", "SVG清理", "SVG格式化"]
+                "intl": "SvgOptimizerPage"
               },
               {
                 "title": "键盘事件属性",
                 "href": "/keyboard-event",
                 "icon": "keyboard",
-                "intl": "KeyboardEventPage",
-                "keywords": ["键盘按键", "keydown", "keyup", "keypress"]
+                "intl": "KeyboardEventPage"
               },
               {
                 "title": "User-Agent 解析",
                 "href": "/user-agent",
                 "icon": "compass",
-                "intl": "UserAgentPage",
-                "keywords": ["浏览器检测", "浏览器指纹", "UA信息"]
+                "intl": "UserAgentPage"
               }
             ]
           }
