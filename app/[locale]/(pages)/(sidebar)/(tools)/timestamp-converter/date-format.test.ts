@@ -10,7 +10,7 @@ describe("date-format", () => {
 
   describe("stringifyWithTimezone helper", () => {
     it("produces different outputs with different timezones", () => {
-      const isoFormat = getFormat("ISO8601");
+      const isoFormat = getFormat("iso8601");
 
       const utcOutput = isoFormat.stringify(testDate, "UTC");
       expect(utcOutput).toContain("14:30:45");
@@ -24,7 +24,7 @@ describe("date-format", () => {
   });
 
   describe("Javascript", () => {
-    const format = getFormat("Javascript");
+    const format = getFormat("javascript");
 
     it("stringify", () => {
       expect(format.stringify(testDate)).toBe(testDate.toString());
@@ -55,7 +55,7 @@ describe("date-format", () => {
   });
 
   describe("ISO8601", () => {
-    const format = getFormat("ISO8601");
+    const format = getFormat("iso8601");
 
     it("stringify", () => {
       const output = format.stringify(testDate);
@@ -102,7 +102,7 @@ describe("date-format", () => {
   });
 
   describe("ISO9075", () => {
-    const format = getFormat("ISO9075");
+    const format = getFormat("iso9075");
 
     it("stringify", () => {
       const output = format.stringify(testDate);
@@ -138,7 +138,7 @@ describe("date-format", () => {
   });
 
   describe("RFC3339", () => {
-    const format = getFormat("RFC3339");
+    const format = getFormat("rfc3339");
 
     it("stringify", () => {
       const output = format.stringify(testDate);
@@ -185,7 +185,7 @@ describe("date-format", () => {
   });
 
   describe("RFC7231", () => {
-    const format = getFormat("RFC7231");
+    const format = getFormat("rfc7231");
 
     it("stringify", () => {
       const output = format.stringify(testDate);
@@ -227,7 +227,7 @@ describe("date-format", () => {
   });
 
   describe("TimestampSeconds", () => {
-    const format = getFormat("TimestampSeconds");
+    const format = getFormat("timestampSeconds");
     const timestampSec = Math.floor(testDate.getTime() / 1000);
 
     it("stringify", () => {
@@ -270,7 +270,7 @@ describe("date-format", () => {
   });
 
   describe("TimestampMilliseconds", () => {
-    const format = getFormat("TimestampMilliseconds");
+    const format = getFormat("timestampMilliseconds");
     const timestampMs = testDate.getTime();
 
     it("stringify", () => {

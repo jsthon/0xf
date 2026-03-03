@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "메뉴",
-    "ToggleMenu": "메뉴 토글"
+    "menu": "메뉴",
+    "toggle": "메뉴 토글"
   },
-  "Footer": {
-    "Text": "<url>{name}</url>이 개발자를 위해 만들었으며, <github>GitHub</github>에서 오픈 소스로 공개되어 있습니다."
+  "SiteFooter": {
+    "text": "<url>{name}</url>이 개발자를 위해 만들었으며, <github>GitHub</github>에서 오픈 소스로 공개되어 있습니다."
   },
   "Sidebar": {
-    "ToggleSidebar": "사이드바 토글"
+    "toggle": "사이드바 토글"
   },
   "AsideBlock": {
-    "Title": "GitHub에서 {name} 보기",
-    "Description": [
+    "title": "GitHub에서 {name} 보기",
+    "description": [
       "이 프로젝트는 완전히 오픈 소스이며, 소스 코드가 공개되어 있습니다.",
       "코드 리뷰, 기여, 또는 직접 배포가 가능합니다."
     ],
-    "Button": "GitHub에서 보기"
+    "button": "GitHub에서 보기"
   },
   "ThemeSwitcher": {
-    "Theme": "테마",
-    "SystemTheme": "시스템 테마",
-    "LightTheme": "라이트 테마",
-    "DarkTheme": "다크 테마"
+    "theme": "테마",
+    "system": "시스템 테마",
+    "light": "라이트 테마",
+    "dark": "다크 테마"
   },
   "CommandMenu": {
-    "Search": "검색...",
-    "CommandPlaceholder": "키워드 입력...",
-    "Empty": "결과를 찾을 수 없습니다.",
-    "LinksHeading": "링크"
+    "search": "검색...",
+    "placeholder": "키워드 입력...",
+    "empty": "결과를 찾을 수 없습니다.",
+    "links": "링크"
   },
   "CopyButton": {
-    "Copy": "복사",
-    "Error": "복사 실패"
+    "copy": "복사",
+    "error": "복사 실패"
   },
   "NumberInput": {
-    "Increment": "값 증가",
-    "Decrement": "값 감소"
+    "increment": "값 증가",
+    "decrement": "값 감소"
   },
   "ColorPicker": {
-    "SelectColor": "색상 선택"
+    "selectColor": "색상 선택"
   },
   "PasswordInput": {
-    "Show": "비밀번호 표시",
-    "Hide": "비밀번호 숨기기"
+    "show": "비밀번호 표시",
+    "hide": "비밀번호 숨기기"
   },
   "TimezoneSelect": {
-    "Placeholder": "시간대 선택",
-    "Empty": "시간대를 찾을 수 없습니다."
+    "placeholder": "시간대 선택",
+    "empty": "시간대를 찾을 수 없습니다."
   },
   "DateTimePicker": {
-    "SelectDate": "날짜 선택"
+    "selectDate": "날짜 선택"
   },
   "FileUpload": {
-    "PrimaryText": "파일을 선택하거나 드래그하여 놓으세요",
-    "SecondaryText": "모든 파일 형식",
-    "Remove": "삭제",
-    "Messages": {
-      "InvalidFiles": "유효한 파일이 선택되지 않았습니다"
+    "primaryText": "파일을 선택하거나 드래그하여 놓으세요",
+    "secondaryText": "모든 파일 형식",
+    "remove": "삭제",
+    "messages": {
+      "invalidFiles": "유효한 파일이 선택되지 않았습니다"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "변경되지 않은 $줄"
+    "merge": {
+      "unchangedLines": "변경되지 않은 $줄"
     }
   }
 }

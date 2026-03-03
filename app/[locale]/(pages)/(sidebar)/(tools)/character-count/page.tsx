@@ -17,11 +17,11 @@ export default function CharacterCountPage() {
 
   // map character types to translation labels
   const countLabels = {
-    whitespace: t("Labels.Whitespace"),
-    latin: t("Labels.LatinScript"),
-    nonLatin: t("Labels.NonLatinScript"),
-    digit: t("Labels.Digits"),
-    symbols: t("Labels.Symbols"),
+    whitespace: t("labels.whitespace"),
+    latin: t("labels.latinScript"),
+    nonLatin: t("labels.nonLatinScript"),
+    digit: t("labels.digits"),
+    symbols: t("labels.symbols"),
   };
 
   return (
@@ -30,7 +30,7 @@ export default function CharacterCountPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <Label htmlFor="text" className="text-lg">
-              {t("Labels.Text")}
+              {t("labels.text")}
             </Label>
             <CopyButton
               value={text}
@@ -43,28 +43,28 @@ export default function CharacterCountPage() {
             className="h-64"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder={t("Placeholders.Input")}
+            placeholder={t("placeholders.input")}
             autoComplete="off"
           />
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           <div className="flex flex-col items-center gap-1">
-            <h2 className="text-base font-medium">{t("Labels.Total")}</h2>
+            <h2 className="text-base font-medium">{t("labels.total")}</h2>
             <span className="text-lg font-medium">
               {result.total.toLocaleString()}
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <h2 className="text-base font-medium">{t("Labels.Words")}</h2>
+            <h2 className="text-base font-medium">{t("labels.words")}</h2>
             <span className="text-lg font-medium">
               {result.words.toLocaleString()}
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <h2 className="text-base font-medium">{t("Labels.Lines")}</h2>
+            <h2 className="text-base font-medium">{t("labels.lines")}</h2>
             <span className="text-lg font-medium">
               {result.lines.toLocaleString()}
             </span>

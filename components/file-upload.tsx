@@ -47,7 +47,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       if (acceptedFiles.length === 0) {
-        setInternalErrors(t("Messages.InvalidFiles"));
+        setInternalErrors(t("messages.invalidFiles"));
         return;
       }
 
@@ -138,12 +138,12 @@ const FileUpload: React.FC<FileUploadProps> = ({
         <input {...getInputProps()} />
         <UploadIcon className="text-muted-foreground size-6" />
         <p className="text-foreground text-sm">
-          {primaryText || t("PrimaryText")}
+          {primaryText || t("primaryText")}
         </p>
 
         {secondaryText !== null && (
           <p className="text-muted-foreground text-xs">
-            {secondaryText || t("SecondaryText")}
+            {secondaryText || t("secondaryText")}
           </p>
         )}
       </div>
@@ -191,7 +191,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
             onClick={() => removeFile(file)}
           >
             <Trash2 className="size-4" />
-            <span className="sr-only">{t("Remove")}</span>
+            <span className="sr-only">{t("remove")}</span>
           </Button>
         </div>
       ))}

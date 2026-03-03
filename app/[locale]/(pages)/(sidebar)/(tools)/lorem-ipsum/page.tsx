@@ -92,7 +92,7 @@ export default function LoremIpsumPage() {
       return result.trim();
     } catch (error) {
       console.error("Lorem Ipsum generation error:", error);
-      return t("Messages.GenerateError");
+      return t("messages.generateError");
     }
   }, [options, t]);
 
@@ -106,7 +106,7 @@ export default function LoremIpsumPage() {
     try {
       setText(generateText());
     } catch (error) {
-      setText(t("Messages.GenerateError"));
+      setText(t("messages.generateError"));
       console.error("Lorem Ipsum generation error:", error);
     }
   }, [generateText, t]);
@@ -179,7 +179,7 @@ export default function LoremIpsumPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <Label htmlFor="text" className="text-lg">
-              {t("Labels.Text")}
+              {t("labels.text")}
             </Label>
             <div className="flex items-center gap-2">
               <Tooltip>
@@ -190,11 +190,11 @@ export default function LoremIpsumPage() {
                     onClick={handleGenerate}
                   >
                     <RefreshCw className="size-4" />
-                    <span className="sr-only">{t("Labels.Regenerate")}</span>
+                    <span className="sr-only">{t("labels.regenerate")}</span>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{t("Labels.Regenerate")}</p>
+                  <p>{t("labels.regenerate")}</p>
                 </TooltipContent>
               </Tooltip>
               <CopyButton
@@ -221,7 +221,7 @@ export default function LoremIpsumPage() {
               onCheckedChange={handleStartWithLoremToggle}
             />
             <Label htmlFor="start-with-lorem" className="text-base">
-              {t("Labels.StartWithLorem")}
+              {t("labels.startWithLorem")}
             </Label>
           </div>
 
@@ -232,7 +232,7 @@ export default function LoremIpsumPage() {
               onCheckedChange={handleRandomRangeToggle}
             />
             <Label htmlFor="random-range" className="text-base">
-              {t("Labels.RandomRange")}
+              {t("labels.randomRange")}
             </Label>
           </div>
 
@@ -243,7 +243,7 @@ export default function LoremIpsumPage() {
               onCheckedChange={handleDisplayPTagsToggle}
             />
             <Label htmlFor="display-p-tags" className="text-base">
-              {t("Labels.DisplayPTags")}
+              {t("labels.displayPTags")}
             </Label>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function LoremIpsumPage() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <div className="text-base font-medium">
-                {t("Labels.Paragraphs")}
+                {t("labels.paragraphs")}
               </div>
               <span className="text-base font-medium">
                 {options.randomRange
@@ -277,7 +277,7 @@ export default function LoremIpsumPage() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <div className="text-base font-medium">
-                {t("Labels.Sentences")}
+                {t("labels.sentences")}
               </div>
               <span className="text-base font-medium">
                 {options.randomRange
@@ -301,7 +301,7 @@ export default function LoremIpsumPage() {
 
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <div className="text-base font-medium">{t("Labels.Words")}</div>
+              <div className="text-base font-medium">{t("labels.words")}</div>
               <span className="text-base font-medium">
                 {options.randomRange
                   ? `${options.wordsPerSentenceRange[0]} - ${options.wordsPerSentenceRange[1]}`

@@ -65,9 +65,9 @@ export function TimezoneSelect({
       </PopoverTrigger>
       <PopoverContent className="p-0" align="start" collisionPadding={16}>
         <Command>
-          <CommandInput placeholder={t("Placeholder")} className="h-9" />
+          <CommandInput placeholder={t("placeholder")} className="h-9" />
           <CommandList>
-            <CommandEmpty>{t("Empty")}</CommandEmpty>
+            <CommandEmpty>{t("empty")}</CommandEmpty>
             <CommandGroup>
               {timezones.map((timezone) => (
                 <CommandItem

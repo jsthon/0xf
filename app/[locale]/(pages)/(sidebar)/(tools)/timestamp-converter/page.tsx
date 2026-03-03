@@ -54,7 +54,7 @@ export default function TimestampConverterPage() {
   // Get input format key for badge
   const getInputFormatKey = useMemo(() => {
     if (!inputText) {
-      return "CurrentTime";
+      return "currentTime";
     }
 
     return dateFormats[
@@ -118,10 +118,10 @@ export default function TimestampConverterPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 md:gap-4">
             <Label htmlFor="date-input" className="text-lg">
-              {t("Labels.Input")}
+              {t("labels.input")}
             </Label>
             {getInputFormatKey && (
-              <Badge>{t(`DateFormats.${getInputFormatKey}`)}</Badge>
+              <Badge>{t(`dateFormats.${getInputFormatKey}`)}</Badge>
             )}
           </div>
 
@@ -129,32 +129,32 @@ export default function TimestampConverterPage() {
             id="date-input"
             className="font-mono"
             value={inputText}
-            placeholder={t("Placeholders.Input")}
+            placeholder={t("placeholders.input")}
             onChange={(e) => handleInputChange(e.target.value)}
             autoComplete="off"
           />
 
           <div className="grid gap-4 md:grid-cols-2">
             <div className="flex flex-col gap-2">
-              <Label htmlFor="input-format">{t("Labels.InputFormat")}</Label>
+              <Label htmlFor="input-format">{t("labels.inputFormat")}</Label>
 
               <Select
                 value={String(inputFormatIndex)}
                 onValueChange={(value) => setInputFormatIndex(Number(value))}
               >
                 <SelectTrigger id="input-format" className="w-full">
-                  <SelectValue placeholder={t("Labels.InputFormat")} />
+                  <SelectValue placeholder={t("labels.inputFormat")} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem
                     key="auto-detect"
                     value={String(AUTO_DETECT_VALUE)}
                   >
-                    {t("Labels.AutoDetect")}
+                    {t("labels.autoDetect")}
                   </SelectItem>
                   {dateFormats.map((format, index) => (
                     <SelectItem key={format.key} value={String(index)}>
-                      {t(`DateFormats.${format.key}`)}
+                      {t(`dateFormats.${format.key}`)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -163,7 +163,7 @@ export default function TimestampConverterPage() {
 
             <div className="flex flex-col gap-2">
               <Label htmlFor="output-timezone">
-                {t("Labels.OutputTimezone")}
+                {t("labels.outputTimezone")}
               </Label>
               <TimezoneSelect
                 id="output-timezone"
@@ -176,7 +176,7 @@ export default function TimestampConverterPage() {
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 md:gap-4">
-            <div className="text-lg font-medium">{t("Labels.Output")}</div>
+            <div className="text-lg font-medium">{t("labels.output")}</div>
             <Badge variant="outline">{outputTimezone}</Badge>
           </div>
 
@@ -190,7 +190,7 @@ export default function TimestampConverterPage() {
                 )}
               >
                 <Label htmlFor={`date-${index}`}>
-                  {t(`DateFormats.${format.key}`)}
+                  {t(`dateFormats.${format.key}`)}
                 </Label>
 
                 <div className="relative">
@@ -198,7 +198,7 @@ export default function TimestampConverterPage() {
                     id={`date-${index}`}
                     className="pr-9 font-mono"
                     value={toDateString(format.stringify, getTargetDate())}
-                    placeholder={inputText && t("Placeholders.Invalid")}
+                    placeholder={inputText && t("placeholders.invalid")}
                     readOnly
                   />
 

@@ -1,442 +1,442 @@
 {
   "ToolsPage": {
-    "Meta": {
-      "Title": "Dev Tools",
-      "Description": "A lightweight toolkit for everyday development tasks."
+    "meta": {
+      "title": "Dev Tools",
+      "description": "A lightweight toolkit for everyday development tasks."
     }
   },
   "Base64Page": {
-    "Meta": {
-      "Title": "Base64 Encode Decode",
-      "Description": "Encode and decode Base64 with auto-detection and URL-safe support."
+    "meta": {
+      "title": "Base64 Encode Decode",
+      "description": "Encode and decode Base64 with auto-detection and URL-safe support."
     },
-    "Controls": {
-      "AutoDetect": "Auto Detect",
-      "Decode": "Decode",
-      "Encode": "Encode",
-      "UrlSafe": "URL Safe"
+    "controls": {
+      "autoDetect": "Auto Detect",
+      "decode": "Decode",
+      "encode": "Encode",
+      "urlSafe": "URL Safe"
     },
-    "Labels": {
-      "Input": "Input",
-      "Output": "Output",
-      "Upload": "Upload",
-      "Download": "Download"
+    "labels": {
+      "input": "Input",
+      "output": "Output",
+      "upload": "Upload",
+      "download": "Download"
     },
-    "Badges": {
-      "Base64": "Base64",
-      "UrlSafe": "URL Safe"
+    "badges": {
+      "base64": "Base64",
+      "urlSafe": "URL Safe"
     },
-    "Tooltips": {
-      "AutoDetect": "Auto-detect whether the input is plain text or Base64",
-      "UrlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
+    "tooltips": {
+      "autoDetect": "Auto-detect whether the input is plain text or Base64",
+      "urlSafe": "Replace +/ with -_ and remove = padding for safe use in URLs"
     },
-    "Messages": {
-      "Encode": {
-        "Failed": "Failed to encode text"
+    "messages": {
+      "encode": {
+        "failed": "Failed to encode text"
       },
-      "Decode": {
-        "Invalid": "Invalid Base64 string",
-        "StandardChars": "Disable URL Safe to decode + or / characters",
-        "UrlSafeChars": "Enable URL Safe to decode - or _ characters"
+      "decode": {
+        "invalid": "Invalid Base64 string",
+        "standardChars": "Disable URL Safe to decode + or / characters",
+        "urlSafeChars": "Enable URL Safe to decode - or _ characters"
       },
-      "Upload": {
-        "Failed": "Failed to load file",
-        "Limit": "File size must be less than 20MB"
+      "upload": {
+        "failed": "Failed to load file",
+        "limit": "File size must be less than 20MB"
       },
-      "Download": {
-        "Failed": "Failed to download file",
-        "Empty": "Cannot download empty file"
+      "download": {
+        "failed": "Failed to download file",
+        "empty": "Cannot download empty file"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Enter text to auto detect...",
-        "Encode": "Enter text to encode...",
-        "Decode": "Enter Base64 to decode..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Enter text to auto detect...",
+        "encode": "Enter text to encode...",
+        "decode": "Enter Base64 to decode..."
       },
-      "Output": {
-        "AutoDetect": "Base64 encoded or decoded...",
-        "Encode": "Encoded Base64 output...",
-        "Decode": "Decoded text output..."
+      "output": {
+        "autoDetect": "Base64 encoded or decoded...",
+        "encode": "Encoded Base64 output...",
+        "decode": "Decoded text output..."
       }
     }
   },
   "URLEncodingPage": {
-    "Meta": {
-      "Title": "URL Encode Decode",
-      "Description": "Encode text to URL format or decode URL encoded text."
+    "meta": {
+      "title": "URL Encode Decode",
+      "description": "Encode text to URL format or decode URL encoded text."
     },
-    "Controls": {
-      "AutoDetect": "Auto Detect",
-      "Decode": "Decode",
-      "Encode": "Encode"
+    "controls": {
+      "autoDetect": "Auto Detect",
+      "decode": "Decode",
+      "encode": "Encode"
     },
-    "Labels": {
-      "Input": "Input",
-      "Output": "Output",
-      "URLEncoded": "URL Encoded"
+    "labels": {
+      "input": "Input",
+      "output": "Output",
+      "urlEncoded": "URL Encoded"
     },
-    "Tooltips": {
-      "AutoDetect": "Automatically detect if input is URL encoded or plain text"
+    "tooltips": {
+      "autoDetect": "Automatically detect if input is URL encoded or plain text"
     },
-    "Messages": {
-      "Decode": {
-        "Invalid": "Invalid URL encoded string"
+    "messages": {
+      "decode": {
+        "invalid": "Invalid URL encoded string"
       },
-      "Encode": {
-        "Failed": "Failed to encode text"
+      "encode": {
+        "failed": "Failed to encode text"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Enter text to auto detect...",
-        "Encode": "Enter text to encode...",
-        "Decode": "Enter encoded text..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Enter text to auto detect...",
+        "encode": "Enter text to encode...",
+        "decode": "Enter encoded text..."
       },
-      "Output": {
-        "AutoDetect": "URL encoded or decoded...",
-        "Encode": "Encoded URL output...",
-        "Decode": "Decoded text output..."
+      "output": {
+        "autoDetect": "URL encoded or decoded...",
+        "encode": "Encoded URL output...",
+        "decode": "Decoded text output..."
       }
     }
   },
   "CharacterEscapePage": {
-    "Meta": {
-      "Title": "Character Escape",
-      "Description": "Encode and decode text as Unicode code points, escapes, CSS escapes, or HTML entities."
+    "meta": {
+      "title": "Character Escape",
+      "description": "Encode and decode text as Unicode code points, escapes, CSS escapes, or HTML entities."
     },
-    "Controls": {
-      "AutoDetect": "Auto Detect",
-      "Decode": "Decode",
-      "Encode": "Encode",
-      "CodePoint": "Code Point U+0000",
-      "EscapeSequence": "Unicode Escape \\u0000",
-      "CssEscape": "CSS Escape \\0000",
-      "HtmlCode": "HTML Code &#00;",
-      "HtmlEntity": "HTML Entity &name;"
+    "controls": {
+      "autoDetect": "Auto Detect",
+      "decode": "Decode",
+      "encode": "Encode",
+      "codePoint": "Code Point U+0000",
+      "escapeSequence": "Unicode Escape \\u0000",
+      "cssEscape": "CSS Escape \\0000",
+      "htmlCode": "HTML Code &#00;",
+      "htmlEntity": "HTML Entity &name;"
     },
-    "Labels": {
-      "Input": "Input",
-      "Output": "Output",
-      "CodePoint": "Code Point",
-      "EscapeSequence": "Unicode Escape",
-      "CssEscape": "CSS Escape",
-      "HtmlCode": "HTML Code",
-      "HtmlEntity": "HTML Entity"
+    "labels": {
+      "input": "Input",
+      "output": "Output",
+      "codePoint": "Code Point",
+      "escapeSequence": "Unicode Escape",
+      "cssEscape": "CSS Escape",
+      "htmlCode": "HTML Code",
+      "htmlEntity": "HTML Entity"
     },
-    "Tooltips": {
-      "AutoDetect": "Automatically detect if input is encoded or plain text"
+    "tooltips": {
+      "autoDetect": "Automatically detect if input is encoded or plain text"
     },
-    "Messages": {
-      "Decode": {
-        "InvalidEncoding": "Invalid encoding format",
-        "InvalidCodePoint": "Invalid Code Point format",
-        "InvalidEscapeSequence": "Invalid Unicode Escape format",
-        "InvalidCssEscape": "Invalid CSS Escape format",
-        "InvalidHtmlCode": "Invalid HTML Code format",
-        "InvalidHtmlEntity": "Invalid HTML Entity format"
+    "messages": {
+      "decode": {
+        "invalidEncoding": "Invalid encoding format",
+        "invalidCodePoint": "Invalid Code Point format",
+        "invalidEscapeSequence": "Invalid Unicode Escape format",
+        "invalidCssEscape": "Invalid CSS Escape format",
+        "invalidHtmlCode": "Invalid HTML Code format",
+        "invalidHtmlEntity": "Invalid HTML Entity format"
       },
-      "Encode": {
-        "Failed": "Failed to encode text"
+      "encode": {
+        "failed": "Failed to encode text"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Enter text to auto detect...",
-        "Encode": "Enter text to encode...",
-        "Decode": "Enter encoded text..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Enter text to auto detect...",
+        "encode": "Enter text to encode...",
+        "decode": "Enter encoded text..."
       },
-      "Output": {
-        "AutoDetect": "Encoded or decoded result...",
-        "Encode": "Encoded result output...",
-        "Decode": "Decoded text output..."
+      "output": {
+        "autoDetect": "Encoded or decoded result...",
+        "encode": "Encoded result output...",
+        "decode": "Decoded text output..."
       }
     }
   },
   "PasswordGeneratorPage": {
-    "Meta": {
-      "Title": "Password Generator",
-      "Description": "Generate secure passwords with custom length and character options."
+    "meta": {
+      "title": "Password Generator",
+      "description": "Generate secure passwords with custom length and character options."
     },
-    "Labels": {
-      "Password": "Password",
-      "Regenerate": "Regenerate",
-      "CharacterLength": "Character Length",
-      "CharacterTypes": "Character Types"
+    "labels": {
+      "password": "Password",
+      "regenerate": "Regenerate",
+      "characterLength": "Character Length",
+      "characterTypes": "Character Types"
     },
-    "Messages": {
-      "GenerateError": "Failed to generate password",
-      "SelectCharType": "At least one character type must be selected"
+    "messages": {
+      "generateError": "Failed to generate password",
+      "selectCharType": "At least one character type must be selected"
     }
   },
   "LoremIpsumPage": {
-    "Meta": {
-      "Title": "Lorem Ipsum Generator",
-      "Description": "Generate random Lorem Ipsum paragraphs with customizable options."
+    "meta": {
+      "title": "Lorem Ipsum Generator",
+      "description": "Generate random Lorem Ipsum paragraphs with customizable options."
     },
-    "Labels": {
-      "Text": "Generated Text",
-      "Regenerate": "Regenerate",
-      "StartWithLorem": "Start with 'Lorem ipsum'",
-      "RandomRange": "Random Range",
-      "DisplayPTags": "Display '<p>' tags",
-      "Paragraphs": "Paragraphs",
-      "Sentences": "Sentences per Paragraph",
-      "Words": "Words per Sentence"
+    "labels": {
+      "text": "Generated Text",
+      "regenerate": "Regenerate",
+      "startWithLorem": "Start with 'Lorem ipsum'",
+      "randomRange": "Random Range",
+      "displayPTags": "Display '<p>' tags",
+      "paragraphs": "Paragraphs",
+      "sentences": "Sentences per Paragraph",
+      "words": "Words per Sentence"
     },
-    "Messages": {
-      "GenerateError": "Error generating Lorem Ipsum text"
+    "messages": {
+      "generateError": "Error generating Lorem Ipsum text"
     }
   },
   "HashGeneratorPage": {
-    "Meta": {
-      "Title": "Hash Generator",
-      "Description": "Generate hash digests for text or files with common algorithms like MD5, SHA1, SHA256, SHA512, and SHA3."
+    "meta": {
+      "title": "Hash Generator",
+      "description": "Generate hash digests for text or files with common algorithms like MD5, SHA1, SHA256, SHA512, and SHA3."
     },
-    "Labels": {
-      "Input": "Input",
-      "Output": "Output",
-      "Algorithm": "Hash Algorithms",
-      "DigestEncoding": "Digest Encoding"
+    "labels": {
+      "input": "Input",
+      "output": "Output",
+      "algorithm": "Hash Algorithms",
+      "digestEncoding": "Digest Encoding"
     },
-    "Placeholders": {
-      "Input": "Enter text to hash..."
+    "placeholders": {
+      "input": "Enter text to hash..."
     },
-    "Messages": {
-      "LocalProcessing": "Files processed locally only",
-      "GenerationFailed": "Failed to generate hash"
+    "messages": {
+      "localProcessing": "Files processed locally only",
+      "generationFailed": "Failed to generate hash"
     },
-    "InputType": {
-      "Text": "Text",
-      "File": "File"
+    "inputType": {
+      "text": "Text",
+      "file": "File"
     },
-    "DigestEncoding": {
-      "HexLower": "Hex (lower case)",
-      "HexUpper": "Hex (upper case)",
-      "Base64": "Base64"
+    "digestEncoding": {
+      "hexLower": "Hex (lower case)",
+      "hexUpper": "Hex (upper case)",
+      "base64": "Base64"
     }
   },
   "CharacterCountPage": {
-    "Meta": {
-      "Title": "Character Count",
-      "Description": "Analyze and count different character types in text."
+    "meta": {
+      "title": "Character Count",
+      "description": "Analyze and count different character types in text."
     },
-    "Labels": {
-      "Text": "Input Text",
-      "Total": "Total Characters",
-      "Words": "Words",
-      "Lines": "Lines",
-      "Whitespace": "Whitespace",
-      "LatinScript": "Latin Script",
-      "NonLatinScript": "Non-Latin Scripts",
-      "Digits": "Digits",
-      "Symbols": "Symbols"
+    "labels": {
+      "text": "Input Text",
+      "total": "Total Characters",
+      "words": "Words",
+      "lines": "Lines",
+      "whitespace": "Whitespace",
+      "latinScript": "Latin Script",
+      "nonLatinScript": "Non-Latin Scripts",
+      "digits": "Digits",
+      "symbols": "Symbols"
     },
-    "Placeholders": {
-      "Input": "Enter text to analyze..."
+    "placeholders": {
+      "input": "Enter text to analyze..."
     }
   },
   "TextComparePage": {
-    "Meta": {
-      "Title": "Text Compare",
-      "Description": "Compare text and highlight differences."
+    "meta": {
+      "title": "Text Compare",
+      "description": "Compare text and highlight differences."
     },
-    "Controls": {
-      "UnifiedView": "Unified View",
-      "CollapseUnchanged": "Collapse Unchanged"
+    "controls": {
+      "unifiedView": "Unified View",
+      "collapseUnchanged": "Collapse Unchanged"
     }
   },
   "CodeFormatterPage": {
-    "Meta": {
-      "Title": "Code Formatter",
-      "Description": "Format code with support for multiple languages and common options."
+    "meta": {
+      "title": "Code Formatter",
+      "description": "Format code with support for multiple languages and common options."
     },
-    "Controls": {
-      "Language": "Select language",
-      "FormatCode": "Format Code",
-      "Upload": "Upload",
-      "Download": "Download",
-      "PrintWidth": "Print Width:",
-      "TabWidth": "Tab Width:",
-      "UseTabs": {
-        "Label": "Indent:",
-        "Space": "Space",
-        "Tab": "Tab"
+    "controls": {
+      "language": "Select language",
+      "formatCode": "Format Code",
+      "upload": "Upload",
+      "download": "Download",
+      "printWidth": "Print Width:",
+      "tabWidth": "Tab Width:",
+      "useTabs": {
+        "label": "Indent:",
+        "space": "Space",
+        "tab": "Tab"
       },
-      "SingleQuote": {
-        "Label": "Quotes:",
-        "Double": "Double",
-        "Single": "Single"
+      "singleQuote": {
+        "label": "Quotes:",
+        "double": "Double",
+        "single": "Single"
       },
-      "Semi": {
-        "Label": "Semicolons:",
-        "On": "On",
-        "Off": "Off"
+      "semi": {
+        "label": "Semicolons:",
+        "on": "On",
+        "off": "Off"
       }
     },
-    "Tooltips": {
-      "PrintWidth": "Specify the line length that the printer will wrap on",
-      "TabWidth": "Specify the number of spaces per indentation level",
-      "UseTabs": "Indent lines with tabs or spaces",
-      "SingleQuote": "Use single quotes or double quotes",
-      "Semicolons": "Print semicolons at the ends of statements"
+    "tooltips": {
+      "printWidth": "Specify the line length that the printer will wrap on",
+      "tabWidth": "Specify the number of spaces per indentation level",
+      "useTabs": "Indent lines with tabs or spaces",
+      "singleQuote": "Use single quotes or double quotes",
+      "semicolons": "Print semicolons at the ends of statements"
     },
-    "Messages": {
-      "LanguageRequired": "Please select code language",
-      "FormatSuccess": "Format successful",
-      "FormatFailed": "Format failed. Check syntax.",
-      "UploadFailed": "Failed to load file",
-      "DownloadEmpty": "No content to download",
-      "DownloadFailed": "Failed to download file"
+    "messages": {
+      "languageRequired": "Please select code language",
+      "formatSuccess": "Format successful",
+      "formatFailed": "Format failed. Check syntax.",
+      "uploadFailed": "Failed to load file",
+      "downloadEmpty": "No content to download",
+      "downloadFailed": "Failed to download file"
     }
   },
   "CodeMinifierPage": {
-    "Meta": {
-      "Title": "Code Minifier",
-      "Description": "Minify code with support for multiple languages and common options."
+    "meta": {
+      "title": "Code Minifier",
+      "description": "Minify code with support for multiple languages and common options."
     },
-    "Controls": {
-      "Language": "Select language",
-      "MinifyCode": "Minify Code",
-      "Upload": "Upload",
-      "Download": "Download"
+    "controls": {
+      "language": "Select language",
+      "minifyCode": "Minify Code",
+      "upload": "Upload",
+      "download": "Download"
     },
-    "Messages": {
-      "LanguageRequired": "Please select code language",
-      "MinifySuccess": "Minify successful",
-      "MinifyFailed": "Minify failed. Check syntax.",
-      "UploadFailed": "Failed to load file",
-      "DownloadEmpty": "No content to download",
-      "DownloadFailed": "Failed to download file"
+    "messages": {
+      "languageRequired": "Please select code language",
+      "minifySuccess": "Minify successful",
+      "minifyFailed": "Minify failed. Check syntax.",
+      "uploadFailed": "Failed to load file",
+      "downloadEmpty": "No content to download",
+      "downloadFailed": "Failed to download file"
     }
   },
   "UUIDGeneratorPage": {
-    "Meta": {
-      "Title": "UUID Generator",
-      "Description": "Generate UUIDs in multiple versions and formats."
+    "meta": {
+      "title": "UUID Generator",
+      "description": "Generate UUIDs in multiple versions and formats."
     },
-    "Labels": {
-      "Generated": "Generated UUIDs",
-      "Regenerate": "Regenerate",
-      "Version": "UUID Version",
-      "Quantity": "Quantity",
-      "Format": "Format",
-      "Uppercase": "Uppercase",
-      "Hyphens": "Hyphens",
-      "Braces": "Braces",
-      "Quotes": "Quotes",
-      "Commas": "Commas",
-      "Namespace": "Namespace",
-      "Name": "Name"
+    "labels": {
+      "generated": "Generated UUIDs",
+      "regenerate": "Regenerate",
+      "version": "UUID Version",
+      "quantity": "Quantity",
+      "format": "Format",
+      "uppercase": "Uppercase",
+      "hyphens": "Hyphens",
+      "braces": "Braces",
+      "quotes": "Quotes",
+      "commas": "Commas",
+      "namespace": "Namespace",
+      "name": "Name"
     },
-    "Versions": {
+    "versions": {
       "v1": "V1 (Timestamp)",
       "v3": "V3 (MD5)",
       "v4": "V4 (Random)",
       "v5": "V5 (SHA-1)",
       "nil": "NIL"
     },
-    "Tooltips": {
-      "Hyphens": "Add standard separators between UUID parts",
-      "Uppercase": "Convert hex values to uppercase",
-      "Braces": "Wrap UUID in curly braces",
-      "Quotes": "Wrap UUID in double quotes",
-      "Commas": "Add comma at the end of each UUID"
+    "tooltips": {
+      "hyphens": "Add standard separators between UUID parts",
+      "uppercase": "Convert hex values to uppercase",
+      "braces": "Wrap UUID in curly braces",
+      "quotes": "Wrap UUID in double quotes",
+      "commas": "Add comma at the end of each UUID"
     },
-    "Messages": {
-      "GenerateError": "Error generating UUID",
-      "NamespaceRequired": "Namespace and name are required",
-      "NamespaceHint": "Select a predefined namespace or enter your custom UUID",
-      "InvalidNamespace": "The namespace must be a valid UUID"
+    "messages": {
+      "generateError": "Error generating UUID",
+      "namespaceRequired": "Namespace and name are required",
+      "namespaceHint": "Select a predefined namespace or enter your custom UUID",
+      "invalidNamespace": "The namespace must be a valid UUID"
     }
   },
   "QRCodePage": {
-    "Meta": {
-      "Title": "QR Code Generator",
-      "Description": "Generate QR codes for text or WiFi credentials."
+    "meta": {
+      "title": "QR Code Generator",
+      "description": "Generate QR codes for text or WiFi credentials."
     },
-    "Labels": {
-      "Generated": "Generated Image",
-      "Download": "Download",
-      "ForegroundColor": "Foreground Color",
-      "BackgroundColor": "Background Color",
-      "InputText": "Input Text"
+    "labels": {
+      "generated": "Generated Image",
+      "download": "Download",
+      "foregroundColor": "Foreground Color",
+      "backgroundColor": "Background Color",
+      "inputText": "Input Text"
     },
-    "Tabs": {
-      "Text": "Text",
-      "WiFi": "WiFi"
+    "tabs": {
+      "text": "Text",
+      "wiFi": "WiFi"
     },
-    "WiFi": {
-      "Title": "WiFi Credentials",
-      "SSID": "Network Name",
-      "Type": "Authentication Type",
-      "Password": "Password",
-      "Hidden": "Hidden SSID",
-      "EAPMethod": "EAP Method",
-      "Identity": "Identity",
-      "AnonymousIdentity": "Anonymous Identity",
-      "Phase2Method": "Phase 2 Method",
-      "AuthenticationType": {
-        "WPA": "WPA/WPA2",
-        "WEP": "WEP",
-        "WPA2-EAP": "WPA2-EAP",
+    "wiFi": {
+      "title": "WiFi Credentials",
+      "ssid": "Network Name",
+      "type": "Authentication Type",
+      "password": "Password",
+      "hidden": "Hidden SSID",
+      "eapMethod": "EAP Method",
+      "identity": "Identity",
+      "anonymousIdentity": "Anonymous Identity",
+      "phase2Method": "Phase 2 Method",
+      "authenticationType": {
+        "wpa": "WPA/WPA2",
+        "wep": "WEP",
+        "wpa2Eap": "wpa2Eap",
         "nopass": "No Password"
       }
     },
-    "Placeholders": {
-      "InputText": "Enter text to encode in QR code..."
+    "placeholders": {
+      "inputText": "Enter text to encode in QR code..."
     }
   },
   "ColorConverterPage": {
-    "Meta": {
-      "Title": "Color Converter",
-      "Description": "Convert colors between HEX, RGB, HSL, HWB, LCH and CMYK formats."
+    "meta": {
+      "title": "Color Converter",
+      "description": "Convert colors between HEX, RGB, HSL, HWB, LCH and CMYK formats."
     },
-    "Labels": {
-      "Input": "Input Color",
-      "Output": "Converted Colors"
+    "labels": {
+      "input": "Input Color",
+      "output": "Converted Colors"
     },
-    "Placeholders": {
-      "Input": "Enter color value..."
+    "placeholders": {
+      "input": "Enter color value..."
     }
   },
   "TimestampConverterPage": {
-    "Meta": {
-      "Title": "Timestamp Converter",
-      "Description": "Convert between UNIX timestamps, ISO8601, RFC3339, JavaScript Date, and other formats."
+    "meta": {
+      "title": "Timestamp Converter",
+      "description": "Convert between UNIX timestamps, ISO8601, RFC3339, JavaScript Date, and other formats."
     },
-    "Labels": {
-      "Input": "Input Date",
-      "Output": "Output Date",
-      "InputFormat": "Input Format",
-      "AutoDetect": "Auto Detect",
-      "OutputTimezone": "Output Timezone"
+    "labels": {
+      "input": "Input Date",
+      "output": "Output Date",
+      "inputFormat": "Input Format",
+      "autoDetect": "Auto Detect",
+      "outputTimezone": "Output Timezone"
     },
-    "DateFormats": {
-      "CurrentTime": "Current Time",
-      "Javascript": "JavaScript Date",
-      "ISO8601": "ISO 8601",
-      "ISO9075": "ISO 9075",
-      "RFC3339": "RFC 3339",
-      "RFC7231": "RFC 7231",
-      "TimestampSeconds": "Timestamp (seconds)",
-      "TimestampMilliseconds": "Timestamp (milliseconds)"
+    "dateFormats": {
+      "currentTime": "Current Time",
+      "javascript": "JavaScript Date",
+      "iso8601": "ISO 8601",
+      "iso9075": "ISO 9075",
+      "rfc3339": "RFC 3339",
+      "rfc7231": "RFC 7231",
+      "timestampSeconds": "Timestamp (seconds)",
+      "timestampMilliseconds": "Timestamp (milliseconds)"
     },
-    "Placeholders": {
-      "Input": "Enter date time text...",
-      "Invalid": "Invalid Format"
+    "placeholders": {
+      "input": "Enter date time text...",
+      "invalid": "Invalid Format"
     }
   },
   "CaseConverterPage": {
-    "Meta": {
-      "Title": "Text Case Converter",
-      "Description": "Convert text between camel case, Pascal case, snake case, and other naming styles."
+    "meta": {
+      "title": "Text Case Converter",
+      "description": "Convert text between camel case, Pascal case, snake case, and other naming styles."
     },
-    "Labels": {
-      "Input": "Input Text",
-      "Output": "Converted Text"
+    "labels": {
+      "input": "Input Text",
+      "output": "Converted Text"
     },
-    "Formats": {
+    "formats": {
       "camel": "Camel Case",
       "pascal": "Pascal Case",
       "capital": "Capital Case",
@@ -455,7 +455,7 @@
       "upperFirst": "Upper First",
       "sponge": "Sponge Case"
     },
-    "Tooltips": {
+    "tooltips": {
       "camel": "First word lowercase, others capitalized, no separators.",
       "pascal": "All words capitalized, no separators.",
       "capital": "All words capitalized, space separated.",
@@ -474,7 +474,7 @@
       "upperFirst": "First letter uppercase, rest unchanged.",
       "sponge": "Random mix of uppercase and lowercase, preserves separators."
     },
-    "Badges": {
+    "badges": {
       "camel": "camelCase",
       "pascal": "PascalCase",
       "capital": "Capital Case",
@@ -493,71 +493,71 @@
       "upperFirst": "UpperFirst",
       "sponge": "SpOnGe CaSe"
     },
-    "Placeholders": {
-      "Input": "Enter text to convert..."
+    "placeholders": {
+      "input": "Enter text to convert..."
     }
   },
   "DataFormatConverterPage": {
-    "Meta": {
-      "Title": "Data Format Converter",
-      "Description": "Convert between JSON, YAML, XML, and CSV with automatic format detection."
+    "meta": {
+      "title": "Data Format Converter",
+      "description": "Convert between JSON, YAML, XML, and CSV with automatic format detection."
     },
-    "Labels": {
-      "Input": "Input",
-      "Output": "Output",
-      "InputFormat": "Input Format",
-      "AutoDetect": "Auto Detect",
-      "ConvertFormat": "Convert Format",
-      "Upload": "Upload",
-      "Download": "Download"
+    "labels": {
+      "input": "Input",
+      "output": "Output",
+      "inputFormat": "Input Format",
+      "autoDetect": "Auto Detect",
+      "convertFormat": "Convert Format",
+      "upload": "Upload",
+      "download": "Download"
     },
-    "Messages": {
-      "ConvertSuccess": "Convert successful",
-      "ConvertFailed": "Convert failed. Check syntax.",
-      "UnknownFormat": "Unable to detect input format.",
-      "UploadFailed": "Failed to load file.",
-      "DownloadEmpty": "No content to download.",
-      "DownloadFailed": "Failed to download file."
+    "messages": {
+      "convertSuccess": "Convert successful",
+      "convertFailed": "Convert failed. Check syntax.",
+      "unknownFormat": "Unable to detect input format.",
+      "uploadFailed": "Failed to load file.",
+      "downloadEmpty": "No content to download.",
+      "downloadFailed": "Failed to download file."
     }
   },
   "UserAgentPage": {
-    "Meta": {
-      "Title": "User-Agent Parser",
-      "Description": "Parse User-Agent strings to display browser, OS, device, and engine details."
+    "meta": {
+      "title": "User-Agent Parser",
+      "description": "Parse User-Agent strings to display browser, OS, device, and engine details."
     },
-    "Labels": {
-      "Input": "Input Text",
-      "Output": "Parsed Result",
-      "BrowserName": "Browser Name",
-      "BrowserVersion": "Browser Version",
-      "EngineName": "Rendering Engine",
-      "EngineVersion": "Engine Version",
-      "DeviceType": "Device Type",
-      "DeviceVendor": "Device Vendor",
-      "DeviceModel": "Device Model",
-      "CPUArchitecture": "CPU Architecture",
-      "OSName": "Operating System",
-      "OSVersion": "OS Version",
-      "IsBot": "Bot Detection",
-      "ChromiumBased": "Chromium-based"
+    "labels": {
+      "input": "Input Text",
+      "output": "Parsed Result",
+      "browserName": "Browser Name",
+      "browserVersion": "Browser Version",
+      "engineName": "Rendering Engine",
+      "engineVersion": "Engine Version",
+      "deviceType": "Device Type",
+      "deviceVendor": "Device Vendor",
+      "deviceModel": "Device Model",
+      "cpuArchitecture": "CPU Architecture",
+      "osName": "Operating System",
+      "osVersion": "OS Version",
+      "isBot": "Bot Detection",
+      "chromiumBased": "Chromium-based"
     },
-    "Values": {
-      "Yes": "Yes",
-      "No": "No"
+    "values": {
+      "yes": "Yes",
+      "no": "No"
     },
-    "Placeholders": {
-      "Input": "Enter User-Agent string..."
+    "placeholders": {
+      "input": "Enter User-Agent string..."
     }
   },
   "KeyboardEventPage": {
-    "Meta": {
-      "Title": "Keyboard Event Properties",
-      "Description": "Inspect KeyboardEvent properties like key, code, and modifier keys for debugging."
+    "meta": {
+      "title": "Keyboard Event Properties",
+      "description": "Inspect KeyboardEvent properties like key, code, and modifier keys for debugging."
     },
-    "Placeholders": {
-      "Input": "Press any key or type text to trigger a KeyboardEvent..."
+    "placeholders": {
+      "input": "Press any key or type text to trigger a KeyboardEvent..."
     },
-    "Tooltips": {
+    "tooltips": {
       "keydown": "Fired when any key is pressed.",
       "keypress": "[Deprecated] Fired when a key that produces a character is pressed.",
       "keyup": "Fired when any key is released.",
@@ -576,20 +576,20 @@
     }
   },
   "TimeIntervalPage": {
-    "Meta": {
-      "Title": "Time Interval Calculator",
-      "Description": "Calculate the time interval between two dates and times with flexible display options."
+    "meta": {
+      "title": "Time Interval Calculator",
+      "description": "Calculate the time interval between two dates and times with flexible display options."
     },
-    "Labels": {
-      "Format": "Display Format",
-      "Start": "Start Time",
-      "End": "End Time",
-      "Interval": "Time Interval"
+    "labels": {
+      "format": "Display Format",
+      "start": "Start Time",
+      "end": "End Time",
+      "interval": "Time Interval"
     },
-    "Placeholders": {
-      "Interval": "Please select the start and end time"
+    "placeholders": {
+      "interval": "Please select the start and end time"
     },
-    "Formats": {
+    "formats": {
       "auto": "Auto",
       "years": "Years",
       "months": "Months",
@@ -599,7 +599,7 @@
       "seconds": "Seconds",
       "milliseconds": "Milliseconds"
     },
-    "Units": {
+    "units": {
       "years": "{count, plural, =1 {1 year} other {{count} years}}",
       "months": "{count, plural, =1 {1 month} other {{count} months}}",
       "days": "{count, plural, =1 {1 day} other {{count} days}}",
@@ -610,19 +610,19 @@
     }
   },
   "SvgOptimizerPage": {
-    "Meta": {
-      "Title": "SVG Optimizer",
-      "Description": "Clean and compress SVG files by removing redundant elements and attributes."
+    "meta": {
+      "title": "SVG Optimizer",
+      "description": "Clean and compress SVG files by removing redundant elements and attributes."
     },
-    "Labels": {
-      "Input": "Input",
-      "Preview": "Preview",
-      "Code": "Code",
-      "Upload": "Upload",
-      "Download": "Download",
-      "ShowOriginal": "Show original"
+    "labels": {
+      "input": "Input",
+      "preview": "Preview",
+      "code": "Code",
+      "upload": "Upload",
+      "download": "Download",
+      "showOriginal": "Show original"
     },
-    "Options": {
+    "options": {
       "floatPrecision": "Number Precision",
       "pretty": "Prettify markup",
       "removeXMLNS": "Remove xmlns",
@@ -668,12 +668,12 @@
       "removeTitle": "Remove title",
       "removeDesc": "Remove desc"
     },
-    "Badges": {
-      "Invalid": "Invalid SVG",
-      "Original": "Original"
+    "badges": {
+      "invalid": "Invalid SVG",
+      "original": "Original"
     },
-    "Placeholders": {
-      "Input": "Paste SVG code"
+    "placeholders": {
+      "input": "Paste SVG code"
     }
   }
 }

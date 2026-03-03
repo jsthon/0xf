@@ -26,7 +26,7 @@ export function ThemeSelector({ className }: { className?: string }) {
     >
       <SunIcon className="hidden [html.dark_&]:block" />
       <MoonIcon className="hidden [html.light_&]:block" />
-      <span className="sr-only">{t("Theme")}</span>
+      <span className="sr-only">{t("theme")}</span>
     </Button>
   );
 }

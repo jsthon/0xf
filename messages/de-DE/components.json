@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "Menü",
-    "ToggleMenu": "Menü umschalten"
+    "menu": "Menü",
+    "toggle": "Menü umschalten"
   },
-  "Footer": {
-    "Text": "Erstellt von <url>{name}</url> für Entwickler. Open Source auf <github>GitHub</github>."
+  "SiteFooter": {
+    "text": "Erstellt von <url>{name}</url> für Entwickler. Open Source auf <github>GitHub</github>."
   },
   "Sidebar": {
-    "ToggleSidebar": "Seitenleiste umschalten"
+    "toggle": "Seitenleiste umschalten"
   },
   "AsideBlock": {
-    "Title": "{name} auf GitHub entdecken",
-    "Description": [
+    "title": "{name} auf GitHub entdecken",
+    "description": [
       "Open Source – der vollständige Quellcode ist einsehbar.",
       "Code überprüfen, beitragen oder selbst hosten."
     ],
-    "Button": "Auf GitHub ansehen"
+    "button": "Auf GitHub ansehen"
   },
   "ThemeSwitcher": {
-    "Theme": "Design",
-    "SystemTheme": "Systemdesign",
-    "LightTheme": "Helles Design",
-    "DarkTheme": "Dunkles Design"
+    "theme": "Design",
+    "system": "Systemdesign",
+    "light": "Helles Design",
+    "dark": "Dunkles Design"
   },
   "CommandMenu": {
-    "Search": "Suchen...",
-    "CommandPlaceholder": "Suchbegriff eingeben...",
-    "Empty": "Keine Ergebnisse gefunden.",
-    "LinksHeading": "Links"
+    "search": "Suchen...",
+    "placeholder": "Suchbegriff eingeben...",
+    "empty": "Keine Ergebnisse gefunden.",
+    "links": "Links"
   },
   "CopyButton": {
-    "Copy": "Kopieren",
-    "Error": "Kopieren fehlgeschlagen"
+    "copy": "Kopieren",
+    "error": "Kopieren fehlgeschlagen"
   },
   "NumberInput": {
-    "Increment": "Wert erhöhen",
-    "Decrement": "Wert verringern"
+    "increment": "Wert erhöhen",
+    "decrement": "Wert verringern"
   },
   "ColorPicker": {
-    "SelectColor": "Farbe wählen"
+    "selectColor": "Farbe wählen"
   },
   "PasswordInput": {
-    "Show": "Passwort anzeigen",
-    "Hide": "Passwort verbergen"
+    "show": "Passwort anzeigen",
+    "hide": "Passwort verbergen"
   },
   "TimezoneSelect": {
-    "Placeholder": "Zeitzone wählen",
-    "Empty": "Keine Zeitzone gefunden."
+    "placeholder": "Zeitzone wählen",
+    "empty": "Keine Zeitzone gefunden."
   },
   "DateTimePicker": {
-    "SelectDate": "Datum wählen"
+    "selectDate": "Datum wählen"
   },
   "FileUpload": {
-    "PrimaryText": "Dateien auswählen oder hierher ziehen",
-    "SecondaryText": "Beliebiger Dateityp",
-    "Remove": "Entfernen",
-    "Messages": {
-      "InvalidFiles": "Keine gültigen Dateien ausgewählt"
+    "primaryText": "Dateien auswählen oder hierher ziehen",
+    "secondaryText": "Beliebiger Dateityp",
+    "remove": "Entfernen",
+    "messages": {
+      "invalidFiles": "Keine gültigen Dateien ausgewählt"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "$ unveränderte Zeilen"
+    "merge": {
+      "unchangedLines": "$ unveränderte Zeilen"
     }
   }
 }

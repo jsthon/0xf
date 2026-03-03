@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export function AsideBlock({ className }: React.ComponentProps<"div">) {
   const t = useTranslations("AsideBlock");
-  const descriptions = t.raw("Description") as string[];
+  const descriptions = t.raw("description") as string[];
 
   return (
     <div
@@ -19,7 +19,7 @@ export function AsideBlock({ className }: React.ComponentProps<"div">) {
       )}
     >
       <div className="text-base leading-tight font-semibold text-balance group-hover:underline">
-        {t("Title", { name: siteConfig.name })}
+        {t("title", { name: siteConfig.name })}
       </div>
       {descriptions.map((desc, index) => (
         <div key={index} className="text-muted-foreground">
@@ -27,7 +27,7 @@ export function AsideBlock({ className }: React.ComponentProps<"div">) {
         </div>
       ))}
       <Button size="sm" className="mt-2 w-fit">
-        {t("Button")}
+        {t("button")}
       </Button>
       <Link
         href={siteConfig.links.github}
@@ -35,7 +35,7 @@ export function AsideBlock({ className }: React.ComponentProps<"div">) {
         rel="noreferrer"
         className="absolute inset-0"
       >
-        <span className="sr-only">{t("Button")}</span>
+        <span className="sr-only">{t("button")}</span>
       </Link>
     </div>
   );

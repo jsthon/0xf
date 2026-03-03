@@ -24,7 +24,7 @@ export function CodeMirrorTranslations() {
 
   const phrases = {
     // @codemirror/merge
-    "$ unchanged lines": t("Merge.UnchangedLines"),
+    "$ unchanged lines": t("merge.unchangedLines"),
   };
 
   return EditorState.phrases.of(phrases);

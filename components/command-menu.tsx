@@ -74,7 +74,7 @@ export function CommandMenu({ ...props }: React.ComponentProps<typeof Dialog>) {
       >
         <SearchIcon />
         <span id="command-menu-search" className="hidden sm:inline-flex">
-          {t("Search")}
+          {t("search")}
         </span>
         <kbd className="bg-background dark:bg-card pointer-events-none absolute top-1/2 right-[5px] hidden h-5 -translate-y-1/2 items-center gap-1 rounded-sm border px-1.5 font-sans text-[10px] font-medium select-none md:flex">
           /
@@ -82,15 +82,15 @@ export function CommandMenu({ ...props }: React.ComponentProps<typeof Dialog>) {
       </Button>
       <CommandDialog
         className="top-[15%] translate-y-0"
-        title={t("Search")}
+        title={t("search")}
         open={open}
         onOpenChange={setOpen}
       >
-        <CommandInput placeholder={t("CommandPlaceholder")} />
+        <CommandInput placeholder={t("placeholder")} />
         <CommandList className="max-h-[350px]">
-          <CommandEmpty>{t("Empty")}</CommandEmpty>
+          <CommandEmpty>{t("empty")}</CommandEmpty>
 
-          <CommandGroup heading={t("LinksHeading")}>
+          <CommandGroup heading={t("links")}>
             {headers
               .filter((item) => !item.disabled && !item.external)
               .map((item) => (
@@ -129,18 +129,18 @@ export function CommandMenu({ ...props }: React.ComponentProps<typeof Dialog>) {
           ))}
 
           <CommandSeparator />
-          <CommandGroup heading={tTheme("Theme")}>
+          <CommandGroup heading={tTheme("theme")}>
             <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
               <Monitor />
-              {tTheme("SystemTheme")}
+              {tTheme("system")}
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
               <Sun />
-              {tTheme("LightTheme")}
+              {tTheme("light")}
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
               <Moon />
-              {tTheme("DarkTheme")}
+              {tTheme("dark")}
             </CommandItem>
           </CommandGroup>
         </CommandList>

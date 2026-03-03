@@ -47,7 +47,7 @@ export default function CharacterEscapePage() {
         if (isAutoDetect) {
           // auto-detect encoding
           decoded = decodeCharacters(text);
-          setOutputText(decoded || t("Messages.Decode.InvalidEncoding"));
+          setOutputText(decoded || t("messages.decode.invalidEncoding"));
         } else {
           // use specific encoding selected by user
           decoded = decodeCharacters(text, encoding);
@@ -56,22 +56,22 @@ export default function CharacterEscapePage() {
           if (!decoded) {
             switch (encoding) {
               case EscapeType.CodePoint:
-                setOutputText(t("Messages.Decode.InvalidCodePoint"));
+                setOutputText(t("messages.decode.invalidCodePoint"));
                 break;
               case EscapeType.EscapeSequence:
-                setOutputText(t("Messages.Decode.InvalidEscapeSequence"));
+                setOutputText(t("messages.decode.invalidEscapeSequence"));
                 break;
               case EscapeType.CssEscape:
-                setOutputText(t("Messages.Decode.InvalidCssEscape"));
+                setOutputText(t("messages.decode.invalidCssEscape"));
                 break;
               case EscapeType.HtmlCode:
-                setOutputText(t("Messages.Decode.InvalidHtmlCode"));
+                setOutputText(t("messages.decode.invalidHtmlCode"));
                 break;
               case EscapeType.HtmlEntity:
-                setOutputText(t("Messages.Decode.InvalidHtmlEntity"));
+                setOutputText(t("messages.decode.invalidHtmlEntity"));
                 break;
               default:
-                setOutputText(t("Messages.Decode.InvalidEncoding"));
+                setOutputText(t("messages.decode.invalidEncoding"));
             }
           } else {
             setOutputText(decoded);
@@ -79,7 +79,7 @@ export default function CharacterEscapePage() {
         }
       } else {
         const encoded = encodeCharacters(text, encoding);
-        setOutputText(encoded || t("Messages.Encode.Failed"));
+        setOutputText(encoded || t("messages.encode.failed"));
       }
     },
     [isAutoDetect, charEncoding, t]
@@ -139,33 +139,33 @@ export default function CharacterEscapePage() {
   // get encoding badges for display
   const getEncodingBadges = (encoding: EscapeType) => {
     let labelKey:
-      | "CodePoint"
-      | "EscapeSequence"
-      | "CssEscape"
-      | "HtmlCode"
-      | "HtmlEntity"
+      | "codePoint"
+      | "escapeSequence"
+      | "cssEscape"
+      | "htmlCode"
+      | "htmlEntity"
       | null = null;
     let formatExample: string = "";
 
     switch (encoding) {
       case EscapeType.CodePoint:
-        labelKey = "CodePoint";
+        labelKey = "codePoint";
         formatExample = "U+0000";
         break;
       case EscapeType.EscapeSequence:
-        labelKey = "EscapeSequence";
+        labelKey = "escapeSequence";
         formatExample = "\\u0000";
         break;
       case EscapeType.CssEscape:
-        labelKey = "CssEscape";
+        labelKey = "cssEscape";
         formatExample = "\\0000";
         break;
       case EscapeType.HtmlCode:
-        labelKey = "HtmlCode";
+        labelKey = "htmlCode";
         formatExample = "&#00;";
         break;
       case EscapeType.HtmlEntity:
-        labelKey = "HtmlEntity";
+        labelKey = "htmlEntity";
         formatExample = "&name;";
         break;
       default:
@@ -174,7 +174,7 @@ export default function CharacterEscapePage() {
 
     return (
       <>
-        {labelKey && <Badge>{t(`Labels.${labelKey}`)}</Badge>}
+        {labelKey && <Badge>{t(`labels.${labelKey}`)}</Badge>}
         <Badge variant="secondary">{formatExample}</Badge>
       </>
     );
@@ -191,10 +191,10 @@ export default function CharacterEscapePage() {
               onCheckedChange={handleAutoDetectToggle}
             />
             <TooltipTrigger asChild>
-              <Label htmlFor="auto-detect">{t("Controls.AutoDetect")}</Label>
+              <Label htmlFor="auto-detect">{t("controls.autoDetect")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Tooltips.AutoDetect")}</p>
+              <p>{t("tooltips.autoDetect")}</p>
             </TooltipContent>
           </div>
         </Tooltip>
@@ -203,7 +203,7 @@ export default function CharacterEscapePage() {
             htmlFor="decode-mode"
             className={!isDecodeMode ? "" : "text-muted-foreground opacity-70"}
           >
-            {t("Controls.Encode")}
+            {t("controls.encode")}
           </Label>
           <Switch
             id="decode-mode"
@@ -214,7 +214,7 @@ export default function CharacterEscapePage() {
             htmlFor="decode-mode"
             className={isDecodeMode ? "" : "text-muted-foreground opacity-70"}
           >
-            {t("Controls.Decode")}
+            {t("controls.decode")}
           </Label>
         </div>
       </div>
@@ -226,7 +226,7 @@ export default function CharacterEscapePage() {
       >
         <div className="flex items-center gap-2">
           <RadioGroupItem value={EscapeType.CodePoint} id="format-codepoint" />
-          <Label htmlFor="format-codepoint">{t("Controls.CodePoint")}</Label>
+          <Label htmlFor="format-codepoint">{t("controls.codePoint")}</Label>
         </div>
         <div className="flex items-center gap-2">
           <RadioGroupItem
@@ -234,23 +234,23 @@ export default function CharacterEscapePage() {
             id="format-escapesequence"
           />
           <Label htmlFor="format-escapesequence">
-            {t("Controls.EscapeSequence")}
+            {t("controls.escapeSequence")}
           </Label>
         </div>
         <div className="flex items-center gap-2">
           <RadioGroupItem value={EscapeType.CssEscape} id="format-cssescape" />
-          <Label htmlFor="format-cssescape">{t("Controls.CssEscape")}</Label>
+          <Label htmlFor="format-cssescape">{t("controls.cssEscape")}</Label>
         </div>
         <div className="flex items-center gap-2">
           <RadioGroupItem value={EscapeType.HtmlCode} id="format-htmlcode" />
-          <Label htmlFor="format-htmlcode">{t("Controls.HtmlCode")}</Label>
+          <Label htmlFor="format-htmlcode">{t("controls.htmlCode")}</Label>
         </div>
         <div className="flex items-center gap-2">
           <RadioGroupItem
             value={EscapeType.HtmlEntity}
             id="format-htmlentity"
           />
-          <Label htmlFor="format-htmlentity">{t("Controls.HtmlEntity")}</Label>
+          <Label htmlFor="format-htmlentity">{t("controls.htmlEntity")}</Label>
         </div>
       </RadioGroup>
 
@@ -259,7 +259,7 @@ export default function CharacterEscapePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="input" className="text-lg">
-                {t("Labels.Input")}
+                {t("labels.input")}
               </Label>
               {(!isAutoDetect || inputText) && isDecodeMode && (
                 <div className="flex items-center gap-2">
@@ -280,10 +280,10 @@ export default function CharacterEscapePage() {
             onChange={handleInputChange}
             placeholder={
               isAutoDetect
-                ? t("Placeholders.Input.AutoDetect")
+                ? t("placeholders.input.autoDetect")
                 : isDecodeMode
-                  ? t("Placeholders.Input.Decode")
-                  : t("Placeholders.Input.Encode")
+                  ? t("placeholders.input.decode")
+                  : t("placeholders.input.encode")
             }
             {...plainTypingProps}
           />
@@ -292,7 +292,7 @@ export default function CharacterEscapePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="output" className="text-lg">
-                {t("Labels.Output")}
+                {t("labels.output")}
               </Label>
               {(!isAutoDetect || inputText) && !isDecodeMode && (
                 <div className="flex items-center gap-2">
@@ -313,10 +313,10 @@ export default function CharacterEscapePage() {
             readOnly
             placeholder={
               isAutoDetect
-                ? t("Placeholders.Output.AutoDetect")
+                ? t("placeholders.output.autoDetect")
                 : isDecodeMode
-                  ? t("Placeholders.Output.Decode")
-                  : t("Placeholders.Output.Encode")
+                  ? t("placeholders.output.decode")
+                  : t("placeholders.output.encode")
             }
           />
         </div>

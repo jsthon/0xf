@@ -36,7 +36,7 @@ export function ColorPicker({
             backgroundColor: hexColor,
           }}
         >
-          <span className="sr-only">{t("SelectColor")}</span>
+          <span className="sr-only">{t("selectColor")}</span>
         </button>
       </PopoverTrigger>
       <PopoverContent

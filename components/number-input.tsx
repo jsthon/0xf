@@ -155,7 +155,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             onClick={handleIncrement}
             disabled={value !== undefined && value >= max}
             tabIndex={-1}
-            aria-label={t("Increment")}
+            aria-label={t("increment")}
           >
             <ChevronUp className="size-3.5" />
           </Button>
@@ -166,7 +166,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             onClick={handleDecrement}
             disabled={value !== undefined && value <= min}
             tabIndex={-1}
-            aria-label={t("Decrement")}
+            aria-label={t("decrement")}
           >
             <ChevronDown className="size-3.5" />
           </Button>

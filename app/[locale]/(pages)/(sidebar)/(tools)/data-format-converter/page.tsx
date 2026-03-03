@@ -207,7 +207,7 @@ export default function DataFormatConverterPage() {
       const content = event.target?.result as string;
       setInputContent(content);
     };
-    reader.onerror = () => toast.error(t("Messages.UploadFailed"));
+    reader.onerror = () => toast.error(t("messages.uploadFailed"));
     reader.readAsText(file);
 
     // reset input to allow re-uploading the same file
@@ -218,7 +218,7 @@ export default function DataFormatConverterPage() {
   const handleDownload = () => {
     const content = getOutputContent();
     if (!content) {
-      toast.error(t("Messages.DownloadEmpty"));
+      toast.error(t("messages.downloadEmpty"));
       return;
     }
 
@@ -230,7 +230,7 @@ export default function DataFormatConverterPage() {
       const blob = new Blob([content], { type: "text/plain" });
       saveBlobAsFile(blob, filename);
     } catch {
-      toast.error(t("Messages.DownloadFailed"));
+      toast.error(t("messages.downloadFailed"));
     }
   };
 
@@ -363,7 +363,7 @@ export default function DataFormatConverterPage() {
     if (!outputEditorViewRef.current) return;
 
     if (!currentInputFormat) {
-      toast.error(t("Messages.UnknownFormat"));
+      toast.error(t("messages.unknownFormat"));
       return;
     }
 
@@ -384,9 +384,9 @@ export default function DataFormatConverterPage() {
         },
         userEvent: "input",
       });
-      toast.success(t("Messages.ConvertSuccess"));
+      toast.success(t("messages.convertSuccess"));
     } catch {
-      toast.error(t("Messages.ConvertFailed"));
+      toast.error(t("messages.convertFailed"));
     }
   };
 
@@ -394,7 +394,7 @@ export default function DataFormatConverterPage() {
     <>
       <div className="flex items-center gap-4 md:gap-x-6">
         <div className="flex items-center gap-2">
-          <Label htmlFor="input-format">{t("Labels.InputFormat")}</Label>
+          <Label htmlFor="input-format">{t("labels.inputFormat")}</Label>
           <Select
             value={selectedInputFormat || "auto"}
             onValueChange={(value) =>
@@ -404,10 +404,10 @@ export default function DataFormatConverterPage() {
             }
           >
             <SelectTrigger id="input-format" className="w-40">
-              <SelectValue placeholder={t("Labels.InputFormat")} />
+              <SelectValue placeholder={t("labels.inputFormat")} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="auto">{t("Labels.AutoDetect")}</SelectItem>
+              <SelectItem value="auto">{t("labels.autoDetect")}</SelectItem>
               {inputFormats.map((format) => (
                 <SelectItem key={format} value={format}>
                   {format.toUpperCase()}
@@ -419,7 +419,7 @@ export default function DataFormatConverterPage() {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button>{t("Labels.ConvertFormat")}</Button>
+            <Button>{t("labels.convertFormat")}</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             {inputFormats
@@ -440,7 +440,7 @@ export default function DataFormatConverterPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
-              <div className="text-lg font-medium">{t("Labels.Input")}</div>
+              <div className="text-lg font-medium">{t("labels.input")}</div>
               {currentInputFormat && (
                 <Badge variant="outline">
                   {currentInputFormat.toUpperCase()}
@@ -463,11 +463,11 @@ export default function DataFormatConverterPage() {
                     onClick={() => fileInputRef.current?.click()}
                   >
                     <Upload className="size-4" />
-                    <span className="sr-only">{t("Labels.Upload")}</span>
+                    <span className="sr-only">{t("labels.upload")}</span>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{t("Labels.Upload")}</p>
+                  <p>{t("labels.upload")}</p>
                 </TooltipContent>
               </Tooltip>
               <CopyButton
@@ -486,7 +486,7 @@ export default function DataFormatConverterPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
-              <div className="text-lg font-medium">{t("Labels.Output")}</div>
+              <div className="text-lg font-medium">{t("labels.output")}</div>
               {outputFormat && (
                 <Badge variant="outline">{outputFormat.toUpperCase()}</Badge>
               )}
@@ -500,11 +500,11 @@ export default function DataFormatConverterPage() {
                     onClick={handleDownload}
                   >
                     <Download className="size-4" />
-                    <span className="sr-only">{t("Labels.Download")}</span>
+                    <span className="sr-only">{t("labels.download")}</span>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{t("Labels.Download")}</p>
+                  <p>{t("labels.download")}</p>
                 </TooltipContent>
               </Tooltip>
               <CopyButton

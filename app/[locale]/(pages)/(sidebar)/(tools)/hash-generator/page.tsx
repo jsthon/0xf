@@ -197,7 +197,7 @@ export default function HashGeneratorPage() {
     <>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Input")}</div>
+          <div className="text-lg font-medium">{t("labels.input")}</div>
           <RadioGroup
             className="flex flex-wrap gap-6"
             value={inputType}
@@ -210,17 +210,17 @@ export default function HashGeneratorPage() {
           >
             <div className="flex items-center gap-2">
               <RadioGroupItem value="text" id="input-text" />
-              <Label htmlFor="input-text">{t("InputType.Text")}</Label>
+              <Label htmlFor="input-text">{t("inputType.text")}</Label>
             </div>
             <div className="flex items-center gap-2">
               <RadioGroupItem value="file" id="input-file" />
-              <Label htmlFor="input-file">{t("InputType.File")}</Label>
+              <Label htmlFor="input-file">{t("inputType.file")}</Label>
             </div>
           </RadioGroup>
 
           {inputType === "text" ? (
             <Textarea
-              placeholder={t("Placeholders.Input")}
+              placeholder={t("placeholders.input")}
               value={inputText}
               onChange={handleInputChange}
               className="h-32"
@@ -230,14 +230,14 @@ export default function HashGeneratorPage() {
             <FileUpload
               className="h-32"
               onFilesUploaded={handleFileUploaded}
-              secondaryText={t("Messages.LocalProcessing")}
+              secondaryText={t("messages.localProcessing")}
             />
           )}
         </div>
 
         <div className="flex flex-col gap-4">
           <div className="text-lg font-medium">
-            {t("Labels.DigestEncoding")}
+            {t("labels.digestEncoding")}
           </div>
           <RadioGroup
             value={encoding}
@@ -248,9 +248,9 @@ export default function HashGeneratorPage() {
               <div key={enc} className="flex items-center gap-2">
                 <RadioGroupItem value={enc} id={enc} />
                 <Label htmlFor={enc}>
-                  {enc === "hexLower" && t("DigestEncoding.HexLower")}
-                  {enc === "hexUpper" && t("DigestEncoding.HexUpper")}
-                  {enc === "base64" && t("DigestEncoding.Base64")}
+                  {enc === "hexLower" && t("digestEncoding.hexLower")}
+                  {enc === "hexUpper" && t("digestEncoding.hexUpper")}
+                  {enc === "base64" && t("digestEncoding.base64")}
                 </Label>
               </div>
             ))}
@@ -258,7 +258,7 @@ export default function HashGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Algorithm")}</div>
+          <div className="text-lg font-medium">{t("labels.algorithm")}</div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {HASH_ALGORITHMS.map((algorithm) => (
               <div key={algorithm} className="flex items-center gap-2">
@@ -279,7 +279,7 @@ export default function HashGeneratorPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Output")}</div>
+          <div className="text-lg font-medium">{t("labels.output")}</div>
           {selectedAlgorithms.map((algorithm) => (
             <div key={algorithm} className="flex items-center gap-2">
               <div className="w-24 flex-shrink-0 md:w-32">

@@ -1,77 +1,77 @@
 {
   "ErrorPage": {
-    "Meta": {
-      "Title": "Page load error",
-      "Description": "An error occurred while loading this page."
+    "meta": {
+      "title": "Page load error",
+      "description": "An error occurred while loading this page."
     },
-    "Back": "Go back",
-    "Home": "Back to home"
+    "back": "Go back",
+    "home": "Back to home"
   },
   "NotFoundPage": {
-    "Meta": {
-      "Title": "Page not found",
-      "Description": "Looks like this page doesn't exist."
+    "meta": {
+      "title": "Page not found",
+      "description": "Looks like this page doesn't exist."
     },
-    "Back": "Go back",
-    "Home": "Back to home"
+    "back": "Go back",
+    "home": "Back to home"
   },
   "HomePage": {
-    "Meta": {
-      "Title": "0xF - Open-source developer toolkit",
-      "Description": "A lightweight, open-source developer toolkit for practical development tasks."
+    "meta": {
+      "title": "0xF - Open-source developer toolkit",
+      "description": "A lightweight, open-source developer toolkit for practical development tasks."
     },
-    "Hero": {
-      "Announcement": "Released as open source on GitHub",
-      "Title": "Utilities, Right at Hand",
-      "Description": "A lightweight, open-source developer toolkit for practical development tasks.",
-      "GetStarted": "Get Started",
-      "GitHub": "View on GitHub"
+    "hero": {
+      "announcement": "Released as open source on GitHub",
+      "title": "Utilities, Right at Hand",
+      "description": "A lightweight, open-source developer toolkit for practical development tasks.",
+      "getStarted": "Get Started",
+      "gitHub": "View on GitHub"
     },
-    "Tools": {
-      "Title": "Dev Tools"
+    "tools": {
+      "title": "Dev Tools"
     },
-    "Features": {
-      "Title": "Built for Developers Who Care",
-      "Description": "Simple and reliable utilities for everyday development work, always ready when you need them.",
-      "Badge": "Why Choose Us",
-      "Items": [
+    "features": {
+      "title": "Built for Developers Who Care",
+      "description": "Simple and reliable utilities for everyday development work, always ready when you need them.",
+      "badge": "Why Choose Us",
+      "items": [
         {
-          "Title": "Free and Unlimited",
-          "Description": "All tools are available with no limits.",
-          "Icon": "crown"
+          "title": "Free and Unlimited",
+          "description": "All tools are available with no limits.",
+          "icon": "crown"
         },
         {
-          "Title": "Open Source",
-          "Description": "Open source on GitHub. Review the code, contribute, or self-host.",
-          "Icon": "git-pull-request-arrow"
+          "title": "Open Source",
+          "description": "Open source on GitHub. Review the code, contribute, or self-host.",
+          "icon": "git-pull-request-arrow"
         },
         {
-          "Title": "Privacy-Friendly",
-          "Description": "All tools run directly in your browser, with no backend processing involved.",
-          "Icon": "hat-glasses"
+          "title": "Privacy-Friendly",
+          "description": "All tools run directly in your browser, with no backend processing involved.",
+          "icon": "hat-glasses"
         },
         {
-          "Title": "Predictable Results",
-          "Description": "Results are based on defined rules, rather than generative AI language models.",
-          "Icon": "bot-off"
+          "title": "Predictable Results",
+          "description": "Results are based on defined rules, rather than generative AI language models.",
+          "icon": "bot-off"
         },
         {
-          "Title": "Practical by Design",
-          "Description": "Focused utilities for common development tasks, designed to be easy to use.",
-          "Icon": "rocket"
+          "title": "Practical by Design",
+          "description": "Focused utilities for common development tasks, designed to be easy to use.",
+          "icon": "rocket"
         },
         {
-          "Title": "Multiple Languages",
-          "Description": "Supports multiple languages for developers around the world.",
-          "Icon": "languages"
+          "title": "Multiple Languages",
+          "description": "Supports multiple languages for developers around the world.",
+          "icon": "languages"
         }
       ]
     },
-    "Ready": {
-      "Title": "Ready when you need it",
-      "Description": "Everything works as expected, right in your browser.",
-      "GetStarted": "Get Started",
-      "GitHub": "GitHub"
+    "ready": {
+      "title": "Ready when you need it",
+      "description": "Everything works as expected, right in your browser.",
+      "getStarted": "Get Started",
+      "gitHub": "GitHub"
     }
   }
 }

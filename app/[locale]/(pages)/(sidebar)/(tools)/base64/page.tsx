@@ -54,20 +54,20 @@ export default function Base64Page() {
       if (decode) {
         if (!autoDetect) {
           if (urlSafe && hasStandardChars(text)) {
-            setOutputText(t("Messages.Decode.StandardChars"));
+            setOutputText(t("messages.decode.standardChars"));
             return;
           }
           if (!urlSafe && hasUrlSafeChars(text)) {
-            setOutputText(t("Messages.Decode.UrlSafeChars"));
+            setOutputText(t("messages.decode.urlSafeChars"));
             return;
           }
         }
 
         const decoded = base64ToText(text);
-        setOutputText(decoded || t("Messages.Decode.Invalid"));
+        setOutputText(decoded || t("messages.decode.invalid"));
       } else {
         const encoded = textToBase64(text, urlSafe);
-        setOutputText(encoded || t("Messages.Encode.Failed"));
+        setOutputText(encoded || t("messages.encode.failed"));
       }
     },
     [t]
@@ -129,7 +129,7 @@ export default function Base64Page() {
     if (!file) return;
 
     if (file.size > MAX_FILE_SIZE) {
-      toast.error(t("Messages.Upload.Limit"));
+      toast.error(t("messages.upload.limit"));
       return;
     }
 
@@ -150,7 +150,7 @@ export default function Base64Page() {
         // decode mode: convert base64 to text
         setInputText(textContent);
         setOutputText(
-          base64ToText(textContent) || t("Messages.Decode.Invalid")
+          base64ToText(textContent) || t("messages.decode.invalid")
         );
       } else {
         // encode mode: convert file to base64
@@ -161,7 +161,7 @@ export default function Base64Page() {
         );
       }
     } catch {
-      toast.error(t("Messages.Upload.Failed"));
+      toast.error(t("messages.upload.failed"));
     }
   };
 
@@ -170,7 +170,7 @@ export default function Base64Page() {
     // Verify we have content to download
     const content = isDecodeMode ? inputText : outputText;
     if (!content) {
-      toast.error(t("Messages.Download.Empty"));
+      toast.error(t("messages.download.empty"));
       return;
     }
 
@@ -191,7 +191,7 @@ export default function Base64Page() {
 
       saveBlobAsFile(blob, filename);
     } catch {
-      toast.error(t("Messages.Download.Failed"));
+      toast.error(t("messages.download.failed"));
     }
   };
 
@@ -206,10 +206,10 @@ export default function Base64Page() {
               onCheckedChange={handleAutoDetectToggle}
             />
             <TooltipTrigger asChild>
-              <Label htmlFor="auto-detect">{t("Controls.AutoDetect")}</Label>
+              <Label htmlFor="auto-detect">{t("controls.autoDetect")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Tooltips.AutoDetect")}</p>
+              <p>{t("tooltips.autoDetect")}</p>
             </TooltipContent>
           </div>
         </Tooltip>
@@ -218,7 +218,7 @@ export default function Base64Page() {
             htmlFor="decode-mode"
             className={!isDecodeMode ? "" : "text-muted-foreground opacity-70"}
           >
-            {t("Controls.Encode")}
+            {t("controls.encode")}
           </Label>
           <Switch
             id="decode-mode"
@@ -229,7 +229,7 @@ export default function Base64Page() {
             htmlFor="decode-mode"
             className={isDecodeMode ? "" : "text-muted-foreground opacity-70"}
           >
-            {t("Controls.Decode")}
+            {t("controls.decode")}
           </Label>
         </div>
         <Tooltip>
@@ -240,10 +240,10 @@ export default function Base64Page() {
               onCheckedChange={handleUrlSafeToggle}
             />
             <TooltipTrigger asChild>
-              <Label htmlFor="url-safe">{t("Controls.UrlSafe")}</Label>
+              <Label htmlFor="url-safe">{t("controls.urlSafe")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Tooltips.UrlSafe")}</p>
+              <p>{t("tooltips.urlSafe")}</p>
             </TooltipContent>
           </div>
         </Tooltip>
@@ -254,13 +254,13 @@ export default function Base64Page() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="input" className="text-lg">
-                {t("Labels.Input")}
+                {t("labels.input")}
               </Label>
               {(!isAutoDetect || inputText) && isDecodeMode && (
                 <div className="flex items-center gap-2">
-                  <Badge>{t("Badges.Base64")}</Badge>
+                  <Badge>{t("badges.base64")}</Badge>
                   {isUrlSafe && (
-                    <Badge variant="secondary">{t("Badges.UrlSafe")}</Badge>
+                    <Badge variant="secondary">{t("badges.urlSafe")}</Badge>
                   )}
                 </div>
               )}
@@ -281,11 +281,11 @@ export default function Base64Page() {
                     onClick={() => fileInputRef.current?.click()}
                   >
                     <Upload className="size-4" />
-                    <span className="sr-only">{t("Labels.Upload")}</span>
+                    <span className="sr-only">{t("labels.upload")}</span>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{t("Labels.Upload")}</p>
+                  <p>{t("labels.upload")}</p>
                 </TooltipContent>
               </Tooltip>
               <CopyButton
@@ -302,10 +302,10 @@ export default function Base64Page() {
             onChange={handleInputChange}
             placeholder={
               isAutoDetect
-                ? t("Placeholders.Input.AutoDetect")
+                ? t("placeholders.input.autoDetect")
                 : isDecodeMode
-                  ? t("Placeholders.Input.Decode")
-                  : t("Placeholders.Input.Encode")
+                  ? t("placeholders.input.decode")
+                  : t("placeholders.input.encode")
             }
             {...plainTypingProps}
           />
@@ -315,13 +315,13 @@ export default function Base64Page() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="output" className="text-lg">
-                {t("Labels.Output")}
+                {t("labels.output")}
               </Label>
               {(!isAutoDetect || inputText) && !isDecodeMode && (
                 <div className="flex items-center gap-2">
-                  <Badge>{t("Badges.Base64")}</Badge>
+                  <Badge>{t("badges.base64")}</Badge>
                   {isUrlSafe && (
-                    <Badge variant="secondary">{t("Badges.UrlSafe")}</Badge>
+                    <Badge variant="secondary">{t("badges.urlSafe")}</Badge>
                   )}
                 </div>
               )}
@@ -335,11 +335,11 @@ export default function Base64Page() {
                     onClick={handleDownload}
                   >
                     <Download className="size-4" />
-                    <span className="sr-only">{t("Labels.Download")}</span>
+                    <span className="sr-only">{t("labels.download")}</span>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{t("Labels.Download")}</p>
+                  <p>{t("labels.download")}</p>
                 </TooltipContent>
               </Tooltip>
               <CopyButton
@@ -356,10 +356,10 @@ export default function Base64Page() {
             readOnly
             placeholder={
               isAutoDetect
-                ? t("Placeholders.Output.AutoDetect")
+                ? t("placeholders.output.autoDetect")
                 : isDecodeMode
-                  ? t("Placeholders.Output.Decode")
-                  : t("Placeholders.Output.Encode")
+                  ? t("placeholders.output.decode")
+                  : t("placeholders.output.encode")
             }
           />
         </div>

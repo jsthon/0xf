@@ -26,20 +26,20 @@ export default function LocaleError({
           <TriangleAlertIcon className="size-6" />
         </p>
         <h1 className="text-primary mt-4 text-2xl font-semibold md:text-3xl">
-          {t("Meta.Title")}
+          {t("meta.title")}
         </h1>
         <p className="text-muted-foreground mt-4 text-balance">
-          {t("Meta.Description")}
+          {t("meta.description")}
         </p>
 
         <div className="mt-6 flex items-center justify-center gap-4">
           <Button onClick={() => router.back()} variant="secondary">
             <ChevronLeftIcon className="size-4" />
-            <span>{t("Back")}</span>
+            <span>{t("back")}</span>
           </Button>
 
           <Button asChild>
-            <Link href="/">{t("Home")}</Link>
+            <Link href="/">{t("home")}</Link>
           </Button>
         </div>
       </div>

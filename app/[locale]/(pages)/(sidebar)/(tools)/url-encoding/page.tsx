@@ -38,10 +38,10 @@ export default function URLEncodingPage() {
 
       if (decode) {
         const decoded = decodeFromUrl(text);
-        setOutputText(decoded || t("Messages.Decode.Invalid"));
+        setOutputText(decoded || t("messages.decode.invalid"));
       } else {
         const encoded = encodeToUrl(text);
-        setOutputText(encoded || t("Messages.Encode.Failed"));
+        setOutputText(encoded || t("messages.encode.failed"));
       }
     },
     [t]
@@ -96,10 +96,10 @@ export default function URLEncodingPage() {
               onCheckedChange={handleAutoDetectToggle}
             />
             <TooltipTrigger asChild>
-              <Label htmlFor="auto-detect">{t("Controls.AutoDetect")}</Label>
+              <Label htmlFor="auto-detect">{t("controls.autoDetect")}</Label>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Tooltips.AutoDetect")}</p>
+              <p>{t("tooltips.autoDetect")}</p>
             </TooltipContent>
           </div>
         </Tooltip>
@@ -108,7 +108,7 @@ export default function URLEncodingPage() {
             htmlFor="decode-mode"
             className={!isDecodeMode ? "" : "text-muted-foreground opacity-70"}
           >
-            {t("Controls.Encode")}
+            {t("controls.encode")}
           </Label>
           <Switch
             id="decode-mode"
@@ -119,7 +119,7 @@ export default function URLEncodingPage() {
             htmlFor="decode-mode"
             className={isDecodeMode ? "" : "text-muted-foreground opacity-70"}
           >
-            {t("Controls.Decode")}
+            {t("controls.decode")}
           </Label>
         </div>
       </div>
@@ -129,10 +129,10 @@ export default function URLEncodingPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="input" className="text-lg">
-                {t("Labels.Input")}
+                {t("labels.input")}
               </Label>
               {(!isAutoDetect || inputText) && isDecodeMode && (
-                <Badge>{t("Labels.URLEncoded")}</Badge>
+                <Badge>{t("labels.urlEncoded")}</Badge>
               )}
             </div>
             <CopyButton
@@ -148,10 +148,10 @@ export default function URLEncodingPage() {
             onChange={handleInputChange}
             placeholder={
               isAutoDetect
-                ? t("Placeholders.Input.AutoDetect")
+                ? t("placeholders.input.autoDetect")
                 : isDecodeMode
-                  ? t("Placeholders.Input.Decode")
-                  : t("Placeholders.Input.Encode")
+                  ? t("placeholders.input.decode")
+                  : t("placeholders.input.encode")
             }
             {...plainTypingProps}
           />
@@ -161,10 +161,10 @@ export default function URLEncodingPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="output" className="text-lg">
-                {t("Labels.Output")}
+                {t("labels.output")}
               </Label>
               {(!isAutoDetect || inputText) && !isDecodeMode && (
-                <Badge>{t("Labels.URLEncoded")}</Badge>
+                <Badge>{t("labels.urlEncoded")}</Badge>
               )}
             </div>
             <CopyButton
@@ -180,10 +180,10 @@ export default function URLEncodingPage() {
             readOnly
             placeholder={
               isAutoDetect
-                ? t("Placeholders.Output.AutoDetect")
+                ? t("placeholders.output.autoDetect")
                 : isDecodeMode
-                  ? t("Placeholders.Output.Decode")
-                  : t("Placeholders.Output.Encode")
+                  ? t("placeholders.output.decode")
+                  : t("placeholders.output.encode")
             }
           />
         </div>

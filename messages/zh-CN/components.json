@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "菜单",
-    "ToggleMenu": "切换菜单"
+    "menu": "菜单",
+    "toggle": "切换菜单"
   },
-  "Footer": {
-    "Text": "由 <url>{name}</url> 为开发者打造，代码在 <github>GitHub</github> 开源。"
+  "SiteFooter": {
+    "text": "由 <url>{name}</url> 为开发者打造，代码在 <github>GitHub</github> 开源。"
   },
   "Sidebar": {
-    "ToggleSidebar": "切换侧栏"
+    "toggle": "切换侧栏"
   },
   "AsideBlock": {
-    "Title": "探索 {name} 的 GitHub",
-    "Description": [
+    "title": "探索 {name} 的 GitHub",
+    "description": [
       "本项目已完全开源，源代码公开可见。",
       "欢迎审阅代码、参与贡献，或自行部署实例。"
     ],
-    "Button": "浏览 GitHub"
+    "button": "浏览 GitHub"
   },
   "ThemeSwitcher": {
-    "Theme": "主题",
-    "SystemTheme": "系统主题",
-    "LightTheme": "浅色主题",
-    "DarkTheme": "深色主题"
+    "theme": "主题",
+    "system": "系统主题",
+    "light": "浅色主题",
+    "dark": "深色主题"
   },
   "CommandMenu": {
-    "Search": "搜索...",
-    "CommandPlaceholder": "输入关键词...",
-    "Empty": "未找到结果",
-    "LinksHeading": "链接"
+    "search": "搜索...",
+    "placeholder": "输入关键词...",
+    "empty": "未找到结果",
+    "links": "链接"
   },
   "CopyButton": {
-    "Copy": "复制",
-    "Error": "复制失败"
+    "copy": "复制",
+    "error": "复制失败"
   },
   "NumberInput": {
-    "Increment": "增加数值",
-    "Decrement": "减少数值"
+    "increment": "增加数值",
+    "decrement": "减少数值"
   },
   "ColorPicker": {
-    "SelectColor": "选择颜色"
+    "selectColor": "选择颜色"
   },
   "PasswordInput": {
-    "Show": "显示密码",
-    "Hide": "隐藏密码"
+    "show": "显示密码",
+    "hide": "隐藏密码"
   },
   "TimezoneSelect": {
-    "Placeholder": "选择时区",
-    "Empty": "未找到时区"
+    "placeholder": "选择时区",
+    "empty": "未找到时区"
   },
   "DateTimePicker": {
-    "SelectDate": "选择日期"
+    "selectDate": "选择日期"
   },
   "FileUpload": {
-    "PrimaryText": "选择或拖放文件",
-    "SecondaryText": "不限文件类型",
-    "Remove": "移除",
-    "Messages": {
-      "InvalidFiles": "未选择有效文件"
+    "primaryText": "选择或拖放文件",
+    "secondaryText": "不限文件类型",
+    "remove": "移除",
+    "messages": {
+      "invalidFiles": "未选择有效文件"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "$ 行未更改"
+    "merge": {
+      "unchangedLines": "$ 行未更改"
     }
   }
 }

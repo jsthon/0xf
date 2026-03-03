@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "Menu",
-    "ToggleMenu": "Toggle menu"
+    "menu": "Menu",
+    "toggle": "Toggle menu"
   },
-  "Footer": {
-    "Text": "Made by <url>{name}</url> for developers. Open source on <github>GitHub</github>."
+  "SiteFooter": {
+    "text": "Made by <url>{name}</url> for developers. Open source on <github>GitHub</github>."
   },
   "Sidebar": {
-    "ToggleSidebar": "Toggle sidebar"
+    "toggle": "Toggle sidebar"
   },
   "AsideBlock": {
-    "Title": "Explore {name} on GitHub",
-    "Description": [
+    "title": "Explore {name} on GitHub",
+    "description": [
       "Open source, with the full code available.",
       "Review the code, contribute, or self-host anytime."
     ],
-    "Button": "View on GitHub"
+    "button": "View on GitHub"
   },
   "ThemeSwitcher": {
-    "Theme": "Theme",
-    "SystemTheme": "System Theme",
-    "LightTheme": "Light Theme",
-    "DarkTheme": "Dark Theme"
+    "theme": "Theme",
+    "system": "System Theme",
+    "light": "Light Theme",
+    "dark": "Dark Theme"
   },
   "CommandMenu": {
-    "Search": "Search...",
-    "CommandPlaceholder": "Type keywords...",
-    "Empty": "No results found.",
-    "LinksHeading": "Links"
+    "search": "Search...",
+    "placeholder": "Type keywords...",
+    "empty": "No results found.",
+    "links": "Links"
   },
   "CopyButton": {
-    "Copy": "Copy",
-    "Error": "Copy failed"
+    "copy": "Copy",
+    "error": "Copy failed"
   },
   "NumberInput": {
-    "Increment": "Increase Value",
-    "Decrement": "Decrease Value"
+    "increment": "Increase Value",
+    "decrement": "Decrease Value"
   },
   "ColorPicker": {
-    "SelectColor": "Select color"
+    "selectColor": "Select color"
   },
   "PasswordInput": {
-    "Show": "Show password",
-    "Hide": "Hide password"
+    "show": "Show password",
+    "hide": "Hide password"
   },
   "TimezoneSelect": {
-    "Placeholder": "Select timezone",
-    "Empty": "No timezone found."
+    "placeholder": "Select timezone",
+    "empty": "No timezone found."
   },
   "DateTimePicker": {
-    "SelectDate": "Select date"
+    "selectDate": "Select date"
   },
   "FileUpload": {
-    "PrimaryText": "Select or drag and drop your files here",
-    "SecondaryText": "Any file type",
-    "Remove": "Remove",
-    "Messages": {
-      "InvalidFiles": "No valid files were selected"
+    "primaryText": "Select or drag and drop your files here",
+    "secondaryText": "Any file type",
+    "remove": "Remove",
+    "messages": {
+      "invalidFiles": "No valid files were selected"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "$ unchanged lines"
+    "merge": {
+      "unchangedLines": "$ unchanged lines"
     }
   }
 }

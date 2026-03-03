@@ -99,7 +99,7 @@ export default function TextComparePage() {
             checked={isUnifiedView}
             onCheckedChange={setIsUnifiedView}
           />
-          <Label htmlFor="unified-view">{t("Controls.UnifiedView")}</Label>
+          <Label htmlFor="unified-view">{t("controls.unifiedView")}</Label>
         </div>
 
         <div className="flex items-center gap-2">
@@ -109,7 +109,7 @@ export default function TextComparePage() {
             onCheckedChange={setIsCollapseUnchanged}
           />
           <Label htmlFor="collapse-unchanged">
-            {t("Controls.CollapseUnchanged")}
+            {t("controls.collapseUnchanged")}
           </Label>
         </div>
       </div>

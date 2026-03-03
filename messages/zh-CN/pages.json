@@ -1,77 +1,77 @@
 {
   "ErrorPage": {
-    "Meta": {
-      "Title": "页面出错",
-      "Description": "加载此页面时发生错误。"
+    "meta": {
+      "title": "页面出错",
+      "description": "加载此页面时发生错误。"
     },
-    "Back": "返回",
-    "Home": "进入首页"
+    "back": "返回",
+    "home": "进入首页"
   },
   "NotFoundPage": {
-    "Meta": {
-      "Title": "页面未找到",
-      "Description": "这个页面似乎不存在。"
+    "meta": {
+      "title": "页面未找到",
+      "description": "这个页面似乎不存在。"
     },
-    "Back": "返回",
-    "Home": "进入首页"
+    "back": "返回",
+    "home": "进入首页"
   },
   "HomePage": {
-    "Meta": {
-      "Title": "0xF - 开源实用的开发工具集",
-      "Description": "轻量、开源的开发实用工具集合。"
+    "meta": {
+      "title": "0xF - 开源实用的开发工具集",
+      "description": "轻量、开源的开发实用工具集合。"
     },
-    "Hero": {
-      "Announcement": "现已在 GitHub 开源代码",
-      "Title": "实用，顺手即用",
-      "Description": "轻量、开源的开发实用工具集合。",
-      "GetStarted": "开始使用",
-      "GitHub": "GitHub 仓库"
+    "hero": {
+      "announcement": "现已在 GitHub 开源代码",
+      "title": "实用，顺手即用",
+      "description": "轻量、开源的开发实用工具集合。",
+      "getStarted": "开始使用",
+      "gitHub": "GitHub 仓库"
     },
-    "Tools": {
-      "Title": "开发工具"
+    "tools": {
+      "title": "开发工具"
     },
-    "Features": {
-      "Title": "代码所需，触手可及。",
-      "Description": "简约、可靠的开发实用工具，开箱即用、随用即得。",
-      "Badge": "为什么选择它",
-      "Items": [
+    "features": {
+      "title": "代码所需，触手可及。",
+      "description": "简约、可靠的开发实用工具，开箱即用、随用即得。",
+      "badge": "为什么选择它",
+      "items": [
         {
-          "Title": "免费无限制",
-          "Description": "所有工具均可免费使用，没有任何限制。",
-          "Icon": "crown"
+          "title": "免费无限制",
+          "description": "所有工具均可免费使用，没有任何限制。",
+          "icon": "crown"
         },
         {
-          "Title": "开源透明",
-          "Description": "代码开源并托管在 GitHub，欢迎审查、贡献代码，也可自行部署。",
-          "Icon": "git-pull-request-arrow"
+          "title": "开源透明",
+          "description": "代码开源并托管在 GitHub，欢迎审查、贡献代码，也可自行部署。",
+          "icon": "git-pull-request-arrow"
         },
         {
-          "Title": "尊重隐私",
-          "Description": "所有工具均在浏览器中直接运行，没有后端服务处理数据。",
-          "Icon": "hat-glasses"
+          "title": "尊重隐私",
+          "description": "所有工具均在浏览器中直接运行，没有后端服务处理数据。",
+          "icon": "hat-glasses"
         },
         {
-          "Title": "结果可预期",
-          "Description": "结果遵循明确规则，而非依赖生成式 AI 语言模型。",
-          "Icon": "bot-off"
+          "title": "结果可预期",
+          "description": "结果遵循明确规则，而非依赖生成式 AI 语言模型。",
+          "icon": "bot-off"
         },
         {
-          "Title": "实用至上",
-          "Description": "专注于常见开发任务，交互设计简单易用。",
-          "Icon": "rocket"
+          "title": "实用至上",
+          "description": "专注于常见开发任务，交互设计简单易用。",
+          "icon": "rocket"
         },
         {
-          "Title": "多语言支持",
-          "Description": "支持多种语言，面向全球开发者。",
-          "Icon": "languages"
+          "title": "多语言支持",
+          "description": "支持多种语言，面向全球开发者。",
+          "icon": "languages"
         }
       ]
     },
-    "Ready": {
-      "Title": "需要的时候，刚刚好。",
-      "Description": "无需多想，打开浏览器就行。",
-      "GetStarted": "开始使用",
-      "GitHub": "GitHub"
+    "ready": {
+      "title": "需要的时候，刚刚好。",
+      "description": "无需多想，打开浏览器就行。",
+      "getStarted": "开始使用",
+      "gitHub": "GitHub"
     }
   }
 }

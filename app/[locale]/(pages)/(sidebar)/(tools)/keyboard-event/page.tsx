@@ -97,7 +97,7 @@ export default function KeyboardEventPage() {
       <div className="flex flex-col gap-8">
         <Textarea
           className="h-16"
-          placeholder={t("Placeholders.Input")}
+          placeholder={t("placeholders.input")}
           autoComplete="off"
         />
 
@@ -110,7 +110,7 @@ export default function KeyboardEventPage() {
                   <TooltipTrigger asChild>
                     <span>keydown</span>
                   </TooltipTrigger>
-                  <TooltipContent>{t("Tooltips.keydown")}</TooltipContent>
+                  <TooltipContent>{t("tooltips.keydown")}</TooltipContent>
                 </Tooltip>
               </TableHead>
               <TableHead>
@@ -118,7 +118,7 @@ export default function KeyboardEventPage() {
                   <TooltipTrigger asChild>
                     <span className="line-through">keypress</span>
                   </TooltipTrigger>
-                  <TooltipContent>{t("Tooltips.keypress")}</TooltipContent>
+                  <TooltipContent>{t("tooltips.keypress")}</TooltipContent>
                 </Tooltip>
               </TableHead>
               <TableHead>
@@ -126,7 +126,7 @@ export default function KeyboardEventPage() {
                   <TooltipTrigger asChild>
                     <span>keyup</span>
                   </TooltipTrigger>
-                  <TooltipContent>{t("Tooltips.keyup")}</TooltipContent>
+                  <TooltipContent>{t("tooltips.keyup")}</TooltipContent>
                 </Tooltip>
               </TableHead>
             </TableRow>
@@ -145,7 +145,7 @@ export default function KeyboardEventPage() {
                       >{`e.${prop.name}`}</span>
                     </TooltipTrigger>
                     <TooltipContent>
-                      {t(`Tooltips.${prop.name}`)}
+                      {t(`tooltips.${prop.name}`)}
                     </TooltipContent>
                   </Tooltip>
                 </TableCell>

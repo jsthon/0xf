@@ -1,77 +1,77 @@
 {
   "ErrorPage": {
-    "Meta": {
-      "Title": "エラーが発生しました",
-      "Description": "このページの読み込み中にエラーが発生しました。"
+    "meta": {
+      "title": "エラーが発生しました",
+      "description": "このページの読み込み中にエラーが発生しました。"
     },
-    "Back": "戻る",
-    "Home": "ホームへ"
+    "back": "戻る",
+    "home": "ホームへ"
   },
   "NotFoundPage": {
-    "Meta": {
-      "Title": "ページが見つかりません",
-      "Description": "このページは存在しないようです。"
+    "meta": {
+      "title": "ページが見つかりません",
+      "description": "このページは存在しないようです。"
     },
-    "Back": "戻る",
-    "Home": "ホームへ"
+    "back": "戻る",
+    "home": "ホームへ"
   },
   "HomePage": {
-    "Meta": {
-      "Title": "0xF - 実用的なオープンソース開発ツール集",
-      "Description": "軽量でオープンソースな開発ツール集。"
+    "meta": {
+      "title": "0xF - 実用的なオープンソース開発ツール集",
+      "description": "軽量でオープンソースな開発ツール集。"
     },
-    "Hero": {
-      "Announcement": "GitHub でソースコードを公開中",
-      "Title": "実用的で、すぐ手になじむ",
-      "Description": "軽量でオープンソースな開発ツール集。",
-      "GetStarted": "はじめる",
-      "GitHub": "GitHub リポジトリ"
+    "hero": {
+      "announcement": "GitHub でソースコードを公開中",
+      "title": "実用的で、すぐ手になじむ",
+      "description": "軽量でオープンソースな開発ツール集。",
+      "getStarted": "はじめる",
+      "gitHub": "GitHub リポジトリ"
     },
-    "Tools": {
-      "Title": "開発ツール"
+    "tools": {
+      "title": "開発ツール"
     },
-    "Features": {
-      "Title": "開発に必要なものが、すぐ手に届く。",
-      "Description": "シンプルで信頼できる開発ツール。すぐに使えて、いつでも頼れる。",
-      "Badge": "選ばれる理由",
-      "Items": [
+    "features": {
+      "title": "開発に必要なものが、すぐ手に届く。",
+      "description": "シンプルで信頼できる開発ツール。すぐに使えて、いつでも頼れる。",
+      "badge": "選ばれる理由",
+      "items": [
         {
-          "Title": "無料・無制限",
-          "Description": "すべてのツールを制限なく無料でご利用いただけます。",
-          "Icon": "crown"
+          "title": "無料・無制限",
+          "description": "すべてのツールを制限なく無料でご利用いただけます。",
+          "icon": "crown"
         },
         {
-          "Title": "オープンソース",
-          "Description": "コードは GitHub で公開。レビュー、コントリビュート、セルフホスティングも自由です。",
-          "Icon": "git-pull-request-arrow"
+          "title": "オープンソース",
+          "description": "コードは GitHub で公開。レビュー、コントリビュート、セルフホスティングも自由です。",
+          "icon": "git-pull-request-arrow"
         },
         {
-          "Title": "プライバシー尊重",
-          "Description": "すべてのツールはブラウザ上で動作し、バックエンドでデータを処理しません。",
-          "Icon": "hat-glasses"
+          "title": "プライバシー尊重",
+          "description": "すべてのツールはブラウザ上で動作し、バックエンドでデータを処理しません。",
+          "icon": "hat-glasses"
         },
         {
-          "Title": "結果が予測可能",
-          "Description": "明確なルールに基づいた結果を返します。生成 AI に依存しません。",
-          "Icon": "bot-off"
+          "title": "結果が予測可能",
+          "description": "明確なルールに基づいた結果を返します。生成 AI に依存しません。",
+          "icon": "bot-off"
         },
         {
-          "Title": "実用第一",
-          "Description": "よくある開発タスクに特化し、シンプルで使いやすい設計です。",
-          "Icon": "rocket"
+          "title": "実用第一",
+          "description": "よくある開発タスクに特化し、シンプルで使いやすい設計です。",
+          "icon": "rocket"
         },
         {
-          "Title": "多言語対応",
-          "Description": "複数の言語に対応し、世界中の開発者に向けて提供しています。",
-          "Icon": "languages"
+          "title": "多言語対応",
+          "description": "複数の言語に対応し、世界中の開発者に向けて提供しています。",
+          "icon": "languages"
         }
       ]
     },
-    "Ready": {
-      "Title": "必要な時に、ちょうどいい。",
-      "Description": "考えるまでもなく、ブラウザを開くだけ。",
-      "GetStarted": "はじめる",
-      "GitHub": "GitHub"
+    "ready": {
+      "title": "必要な時に、ちょうどいい。",
+      "description": "考えるまでもなく、ブラウザを開くだけ。",
+      "getStarted": "はじめる",
+      "gitHub": "GitHub"
     }
   }
 }

@@ -1,442 +1,442 @@
 {
   "ToolsPage": {
-    "Meta": {
-      "Title": "开发工具",
-      "Description": "轻量、高效的日常开发工具集。"
+    "meta": {
+      "title": "开发工具",
+      "description": "轻量、高效的日常开发工具集。"
     }
   },
   "Base64Page": {
-    "Meta": {
-      "Title": "Base64 编码解码",
-      "Description": "Base64 编码与解码，自动识别输入并支持 URL 安全模式。"
+    "meta": {
+      "title": "Base64 编码解码",
+      "description": "Base64 编码与解码，自动识别输入并支持 URL 安全模式。"
     },
-    "Controls": {
-      "AutoDetect": "自动识别",
-      "Decode": "解码",
-      "Encode": "编码",
-      "UrlSafe": "URL 安全"
+    "controls": {
+      "autoDetect": "自动识别",
+      "decode": "解码",
+      "encode": "编码",
+      "urlSafe": "URL 安全"
     },
-    "Labels": {
-      "Input": "输入",
-      "Output": "结果",
-      "Upload": "上传",
-      "Download": "下载"
+    "labels": {
+      "input": "输入",
+      "output": "结果",
+      "upload": "上传",
+      "download": "下载"
     },
-    "Badges": {
-      "Base64": "Base64",
-      "UrlSafe": "URL 安全"
+    "badges": {
+      "base64": "Base64",
+      "urlSafe": "URL 安全"
     },
-    "Tooltips": {
-      "AutoDetect": "自动识别输入是纯文本还是 Base64",
-      "UrlSafe": "将 +/ 替换为 -_ 并移除 = 填充符以便在 URL 中安全使用"
+    "tooltips": {
+      "autoDetect": "自动识别输入是纯文本还是 Base64",
+      "urlSafe": "将 +/ 替换为 -_ 并移除 = 填充符以便在 URL 中安全使用"
     },
-    "Messages": {
-      "Encode": {
-        "Failed": "编码失败"
+    "messages": {
+      "encode": {
+        "failed": "编码失败"
       },
-      "Decode": {
-        "Invalid": "无效的 Base64 内容",
-        "StandardChars": "需关闭 URL 安全才能解码 + 或 / 字符",
-        "UrlSafeChars": "需开启 URL 安全才能解码 - 或 _ 字符"
+      "decode": {
+        "invalid": "无效的 Base64 内容",
+        "standardChars": "需关闭 URL 安全才能解码 + 或 / 字符",
+        "urlSafeChars": "需开启 URL 安全才能解码 - 或 _ 字符"
       },
-      "Upload": {
-        "Failed": "文件加载失败",
-        "Limit": "文件大小不能超过 20MB"
+      "upload": {
+        "failed": "文件加载失败",
+        "limit": "文件大小不能超过 20MB"
       },
-      "Download": {
-        "Failed": "文件下载失败",
-        "Empty": "不能下载空文件"
+      "download": {
+        "failed": "文件下载失败",
+        "empty": "不能下载空文件"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "输入文本将自动识别",
-        "Encode": "输入要编码的文本",
-        "Decode": "输入要解码的 Base64"
+    "placeholders": {
+      "input": {
+        "autoDetect": "输入文本将自动识别",
+        "encode": "输入要编码的文本",
+        "decode": "输入要解码的 Base64"
       },
-      "Output": {
-        "AutoDetect": "Base64 编码或解码内容",
-        "Encode": "编码后的 Base64 内容",
-        "Decode": "解码后的文本内容"
+      "output": {
+        "autoDetect": "Base64 编码或解码内容",
+        "encode": "编码后的 Base64 内容",
+        "decode": "解码后的文本内容"
       }
     }
   },
   "URLEncodingPage": {
-    "Meta": {
-      "Title": "URL 编码解码",
-      "Description": "URL 编码和 URL 解码工具。"
+    "meta": {
+      "title": "URL 编码解码",
+      "description": "URL 编码和 URL 解码工具。"
     },
-    "Controls": {
-      "AutoDetect": "自动识别",
-      "Decode": "解码",
-      "Encode": "编码"
+    "controls": {
+      "autoDetect": "自动识别",
+      "decode": "解码",
+      "encode": "编码"
     },
-    "Labels": {
-      "Input": "输入",
-      "Output": "结果",
-      "URLEncoded": "URL 编码"
+    "labels": {
+      "input": "输入",
+      "output": "结果",
+      "urlEncoded": "URL 编码"
     },
-    "Tooltips": {
-      "AutoDetect": "自动识别输入的纯文本还是 URL 编码"
+    "tooltips": {
+      "autoDetect": "自动识别输入的纯文本还是 URL 编码"
     },
-    "Messages": {
-      "Decode": {
-        "Invalid": "无效的 URL 编码内容"
+    "messages": {
+      "decode": {
+        "invalid": "无效的 URL 编码内容"
       },
-      "Encode": {
-        "Failed": "编码失败"
+      "encode": {
+        "failed": "编码失败"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "输入文本将自动识别",
-        "Encode": "输入要编码的文本",
-        "Decode": "输入要解码的 URL 编码文本"
+    "placeholders": {
+      "input": {
+        "autoDetect": "输入文本将自动识别",
+        "encode": "输入要编码的文本",
+        "decode": "输入要解码的 URL 编码文本"
       },
-      "Output": {
-        "AutoDetect": "URL 编码或解码文本",
-        "Encode": "编码后的 URL 编码文本",
-        "Decode": "解码后的文本内容"
+      "output": {
+        "autoDetect": "URL 编码或解码文本",
+        "encode": "编码后的 URL 编码文本",
+        "decode": "解码后的文本内容"
       }
     }
   },
   "CharacterEscapePage": {
-    "Meta": {
-      "Title": "字符转义",
-      "Description": "Unicode 码点、Unicode 转义、CSS 转义或 HTML 实体的编码和解码。"
+    "meta": {
+      "title": "字符转义",
+      "description": "Unicode 码点、Unicode 转义、CSS 转义或 HTML 实体的编码和解码。"
     },
-    "Controls": {
-      "AutoDetect": "自动识别",
-      "Decode": "解码",
-      "Encode": "编码",
-      "CodePoint": "Unicode 码点 U+0000",
-      "EscapeSequence": "Unicode 转义 \\u0000",
-      "CssEscape": "CSS 转义 \\0000",
-      "HtmlCode": "HTML 转义 &#00;",
-      "HtmlEntity": "HTML 实体 &name;"
+    "controls": {
+      "autoDetect": "自动识别",
+      "decode": "解码",
+      "encode": "编码",
+      "codePoint": "Unicode 码点 U+0000",
+      "escapeSequence": "Unicode 转义 \\u0000",
+      "cssEscape": "CSS 转义 \\0000",
+      "htmlCode": "HTML 转义 &#00;",
+      "htmlEntity": "HTML 实体 &name;"
     },
-    "Labels": {
-      "Input": "输入",
-      "Output": "结果",
-      "CodePoint": "Unicode 码点",
-      "EscapeSequence": "Unicode 转义",
-      "CssEscape": "CSS 转义",
-      "HtmlCode": "HTML 转义",
-      "HtmlEntity": "HTML 实体"
+    "labels": {
+      "input": "输入",
+      "output": "结果",
+      "codePoint": "Unicode 码点",
+      "escapeSequence": "Unicode 转义",
+      "cssEscape": "CSS 转义",
+      "htmlCode": "HTML 转义",
+      "htmlEntity": "HTML 实体"
     },
-    "Tooltips": {
-      "AutoDetect": "自动识别输入内容是否已编码"
+    "tooltips": {
+      "autoDetect": "自动识别输入内容是否已编码"
     },
-    "Messages": {
-      "Decode": {
-        "InvalidEncoding": "无效的编码格式",
-        "InvalidCodePoint": "无效的 Unicode 码点格式",
-        "InvalidEscapeSequence": "无效的 Unicode 转义格式",
-        "InvalidCssEscape": "无效的 CSS 转义格式",
-        "InvalidHtmlCode": "无效的 HTML 转义格式",
-        "InvalidHtmlEntity": "无效的 HTML 实体格式"
+    "messages": {
+      "decode": {
+        "invalidEncoding": "无效的编码格式",
+        "invalidCodePoint": "无效的 Unicode 码点格式",
+        "invalidEscapeSequence": "无效的 Unicode 转义格式",
+        "invalidCssEscape": "无效的 CSS 转义格式",
+        "invalidHtmlCode": "无效的 HTML 转义格式",
+        "invalidHtmlEntity": "无效的 HTML 实体格式"
       },
-      "Encode": {
-        "Failed": "编码失败"
+      "encode": {
+        "failed": "编码失败"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "输入文本将自动识别",
-        "Encode": "输入要编码的文本",
-        "Decode": "输入要解码的内容"
+    "placeholders": {
+      "input": {
+        "autoDetect": "输入文本将自动识别",
+        "encode": "输入要编码的文本",
+        "decode": "输入要解码的内容"
       },
-      "Output": {
-        "AutoDetect": "编码或解码内容",
-        "Encode": "编码后的内容",
-        "Decode": "解码后的文本"
+      "output": {
+        "autoDetect": "编码或解码内容",
+        "encode": "编码后的内容",
+        "decode": "解码后的文本"
       }
     }
   },
   "PasswordGeneratorPage": {
-    "Meta": {
-      "Title": "密码生成",
-      "Description": "生成安全的随机密码，可自定义长度和字符类型。"
+    "meta": {
+      "title": "密码生成",
+      "description": "生成安全的随机密码，可自定义长度和字符类型。"
     },
-    "Labels": {
-      "Password": "密码",
-      "Regenerate": "刷新",
-      "CharacterLength": "字符长度",
-      "CharacterTypes": "字符类型"
+    "labels": {
+      "password": "密码",
+      "regenerate": "刷新",
+      "characterLength": "字符长度",
+      "characterTypes": "字符类型"
     },
-    "Messages": {
-      "GenerateError": "生成密码失败",
-      "SelectCharType": "至少需要选择一种字符类型"
+    "messages": {
+      "generateError": "生成密码失败",
+      "selectCharType": "至少需要选择一种字符类型"
     }
   },
   "LoremIpsumPage": {
-    "Meta": {
-      "Title": "随机文章生成",
-      "Description": "生成可自定义选项的 Lorem Ipsum 随机文本段落。"
+    "meta": {
+      "title": "随机文章生成",
+      "description": "生成可自定义选项的 Lorem Ipsum 随机文本段落。"
     },
-    "Labels": {
-      "Text": "生成文本",
-      "Regenerate": "刷新",
-      "StartWithLorem": "以 'Lorem ipsum' 开头",
-      "RandomRange": "随机范围",
-      "DisplayPTags": "显示 '<p>' 标签",
-      "Paragraphs": "段落数",
-      "Sentences": "每段句子数",
-      "Words": "每句词数"
+    "labels": {
+      "text": "生成文本",
+      "regenerate": "刷新",
+      "startWithLorem": "以 'Lorem ipsum' 开头",
+      "randomRange": "随机范围",
+      "displayPTags": "显示 '<p>' 标签",
+      "paragraphs": "段落数",
+      "sentences": "每段句子数",
+      "words": "每句词数"
     },
-    "Messages": {
-      "GenerateError": "生成随机文本时出错"
+    "messages": {
+      "generateError": "生成随机文本时出错"
     }
   },
   "HashGeneratorPage": {
-    "Meta": {
-      "Title": "哈希计算",
-      "Description": "计算文本或文件的哈希摘要，支持 MD5、SHA1、SHA256、SHA512、SHA3 等算法。"
+    "meta": {
+      "title": "哈希计算",
+      "description": "计算文本或文件的哈希摘要，支持 MD5、SHA1、SHA256、SHA512、SHA3 等算法。"
     },
-    "Labels": {
-      "Input": "输入",
-      "Output": "结果",
-      "Algorithm": "哈希算法",
-      "DigestEncoding": "摘要编码"
+    "labels": {
+      "input": "输入",
+      "output": "结果",
+      "algorithm": "哈希算法",
+      "digestEncoding": "摘要编码"
     },
-    "Placeholders": {
-      "Input": "输入要哈希的文本"
+    "placeholders": {
+      "input": "输入要哈希的文本"
     },
-    "Messages": {
-      "LocalProcessing": "文件仅在本地处理",
-      "GenerationFailed": "生成哈希失败"
+    "messages": {
+      "localProcessing": "文件仅在本地处理",
+      "generationFailed": "生成哈希失败"
     },
-    "InputType": {
-      "Text": "文本",
-      "File": "文件"
+    "inputType": {
+      "text": "文本",
+      "file": "文件"
     },
-    "DigestEncoding": {
-      "HexLower": "十六进制（小写）",
-      "HexUpper": "十六进制（大写）",
-      "Base64": "Base64"
+    "digestEncoding": {
+      "hexLower": "十六进制（小写）",
+      "hexUpper": "十六进制（大写）",
+      "base64": "Base64"
     }
   },
   "CharacterCountPage": {
-    "Meta": {
-      "Title": "字符统计",
-      "Description": "分析并统计文本中各种类型字符的数量。"
+    "meta": {
+      "title": "字符统计",
+      "description": "分析并统计文本中各种类型字符的数量。"
     },
-    "Labels": {
-      "Text": "输入文本",
-      "Total": "总字符",
-      "Words": "单词",
-      "Lines": "行数",
-      "Whitespace": "空白字符",
-      "LatinScript": "拉丁文字",
-      "NonLatinScript": "非拉丁文字",
-      "Digits": "数字",
-      "Symbols": "符号"
+    "labels": {
+      "text": "输入文本",
+      "total": "总字符",
+      "words": "单词",
+      "lines": "行数",
+      "whitespace": "空白字符",
+      "latinScript": "拉丁文字",
+      "nonLatinScript": "非拉丁文字",
+      "digits": "数字",
+      "symbols": "符号"
     },
-    "Placeholders": {
-      "Input": "输入要统计的文本"
+    "placeholders": {
+      "input": "输入要统计的文本"
     }
   },
   "TextComparePage": {
-    "Meta": {
-      "Title": "文本对比",
-      "Description": "比较两段文本的差异并高亮显示。"
+    "meta": {
+      "title": "文本对比",
+      "description": "比较两段文本的差异并高亮显示。"
     },
-    "Controls": {
-      "UnifiedView": "合并视图",
-      "CollapseUnchanged": "折叠相同"
+    "controls": {
+      "unifiedView": "合并视图",
+      "collapseUnchanged": "折叠相同"
     }
   },
   "CodeFormatterPage": {
-    "Meta": {
-      "Title": "代码格式化",
-      "Description": "格式化代码，支持多种语言与常用选项。"
+    "meta": {
+      "title": "代码格式化",
+      "description": "格式化代码，支持多种语言与常用选项。"
     },
-    "Controls": {
-      "Language": "选择语言",
-      "FormatCode": "格式化代码",
-      "Upload": "上传",
-      "Download": "下载",
-      "PrintWidth": "最大行宽:",
-      "TabWidth": "缩进宽度:",
-      "UseTabs": {
-        "Label": "缩进:",
-        "Space": "空格",
-        "Tab": "Tab"
+    "controls": {
+      "language": "选择语言",
+      "formatCode": "格式化代码",
+      "upload": "上传",
+      "download": "下载",
+      "printWidth": "最大行宽:",
+      "tabWidth": "缩进宽度:",
+      "useTabs": {
+        "label": "缩进:",
+        "space": "空格",
+        "tab": "Tab"
       },
-      "SingleQuote": {
-        "Label": "引号:",
-        "Double": "双引号",
-        "Single": "单引号"
+      "singleQuote": {
+        "label": "引号:",
+        "double": "双引号",
+        "single": "单引号"
       },
-      "Semi": {
-        "Label": "分号:",
-        "On": "开启",
-        "Off": "关闭"
+      "semi": {
+        "label": "分号:",
+        "on": "开启",
+        "off": "关闭"
       }
     },
-    "Tooltips": {
-      "PrintWidth": "每行最多字符数，超出自动换行",
-      "TabWidth": "每级缩进的空白字符数量",
-      "UseTabs": "使用 Tab 或空格进行缩进",
-      "SingleQuote": "选择使用单引号或双引号",
-      "Semicolons": "是否在语句末尾添加分号"
+    "tooltips": {
+      "printWidth": "每行最多字符数，超出自动换行",
+      "tabWidth": "每级缩进的空白字符数量",
+      "useTabs": "使用 Tab 或空格进行缩进",
+      "singleQuote": "选择使用单引号或双引号",
+      "semicolons": "是否在语句末尾添加分号"
     },
-    "Messages": {
-      "LanguageRequired": "请选择代码语言",
-      "FormatSuccess": "格式化成功",
-      "FormatFailed": "格式化失败，请检查语法",
-      "UploadFailed": "文件加载失败",
-      "DownloadEmpty": "文件内容为空",
-      "DownloadFailed": "文件下载失败"
+    "messages": {
+      "languageRequired": "请选择代码语言",
+      "formatSuccess": "格式化成功",
+      "formatFailed": "格式化失败，请检查语法",
+      "uploadFailed": "文件加载失败",
+      "downloadEmpty": "文件内容为空",
+      "downloadFailed": "文件下载失败"
     }
   },
   "CodeMinifierPage": {
-    "Meta": {
-      "Title": "代码压缩",
-      "Description": "代码压缩与精简，支持多种语言与常用选项。"
+    "meta": {
+      "title": "代码压缩",
+      "description": "代码压缩与精简，支持多种语言与常用选项。"
     },
-    "Controls": {
-      "Language": "选择语言",
-      "MinifyCode": "压缩代码",
-      "Upload": "上传",
-      "Download": "下载"
+    "controls": {
+      "language": "选择语言",
+      "minifyCode": "压缩代码",
+      "upload": "上传",
+      "download": "下载"
     },
-    "Messages": {
-      "LanguageRequired": "请选择代码语言",
-      "MinifySuccess": "压缩成功",
-      "MinifyFailed": "压缩失败，请检查语法",
-      "UploadFailed": "文件加载失败",
-      "DownloadEmpty": "文件内容为空",
-      "DownloadFailed": "文件下载失败"
+    "messages": {
+      "languageRequired": "请选择代码语言",
+      "minifySuccess": "压缩成功",
+      "minifyFailed": "压缩失败，请检查语法",
+      "uploadFailed": "文件加载失败",
+      "downloadEmpty": "文件内容为空",
+      "downloadFailed": "文件下载失败"
     }
   },
   "UUIDGeneratorPage": {
-    "Meta": {
-      "Title": "UUID 生成",
-      "Description": "生成多种版本的 UUID 唯一标识符。"
+    "meta": {
+      "title": "UUID 生成",
+      "description": "生成多种版本的 UUID 唯一标识符。"
     },
-    "Labels": {
-      "Generated": "UUID 结果",
-      "Regenerate": "刷新",
-      "Version": "UUID 版本",
-      "Quantity": "数量",
-      "Format": "格式",
-      "Uppercase": "大写",
-      "Hyphens": "连字符",
-      "Braces": "花括号",
-      "Quotes": "引号",
-      "Commas": "逗号",
-      "Namespace": "命名空间",
-      "Name": "名称"
+    "labels": {
+      "generated": "UUID 结果",
+      "regenerate": "刷新",
+      "version": "UUID 版本",
+      "quantity": "数量",
+      "format": "格式",
+      "uppercase": "大写",
+      "hyphens": "连字符",
+      "braces": "花括号",
+      "quotes": "引号",
+      "commas": "逗号",
+      "namespace": "命名空间",
+      "name": "名称"
     },
-    "Versions": {
+    "versions": {
       "v1": "V1 (时间戳)",
       "v3": "V3 (MD5)",
       "v4": "V4 (随机)",
       "v5": "V5 (SHA-1)",
       "nil": "NIL"
     },
-    "Tooltips": {
-      "Hyphens": "在 UUID 各部分之间添加标准分隔符",
-      "Uppercase": "将十六进制值转换为大写",
-      "Braces": "用花括号包裹 UUID",
-      "Quotes": "用双引号包裹 UUID",
-      "Commas": "在每个 UUID 末尾添加逗号"
+    "tooltips": {
+      "hyphens": "在 UUID 各部分之间添加标准分隔符",
+      "uppercase": "将十六进制值转换为大写",
+      "braces": "用花括号包裹 UUID",
+      "quotes": "用双引号包裹 UUID",
+      "commas": "在每个 UUID 末尾添加逗号"
     },
-    "Messages": {
-      "GenerateError": "UUID 生成出错",
-      "NamespaceRequired": "需要提供命名空间和名称",
-      "NamespaceHint": "选择预设命名空间或输入自定义 UUID",
-      "InvalidNamespace": "命名空间必须是有效的 UUID"
+    "messages": {
+      "generateError": "UUID 生成出错",
+      "namespaceRequired": "需要提供命名空间和名称",
+      "namespaceHint": "选择预设命名空间或输入自定义 UUID",
+      "invalidNamespace": "命名空间必须是有效的 UUID"
     }
   },
   "QRCodePage": {
-    "Meta": {
-      "Title": "二维码生成",
-      "Description": "生成文本或 WiFi 配置的二维码。"
+    "meta": {
+      "title": "二维码生成",
+      "description": "生成文本或 WiFi 配置的二维码。"
     },
-    "Labels": {
-      "Generated": "生成图像",
-      "Download": "下载",
-      "ForegroundColor": "前景色",
-      "BackgroundColor": "背景色",
-      "InputText": "输入文本"
+    "labels": {
+      "generated": "生成图像",
+      "download": "下载",
+      "foregroundColor": "前景色",
+      "backgroundColor": "背景色",
+      "inputText": "输入文本"
     },
-    "Tabs": {
-      "Text": "文本",
-      "WiFi": "WiFi"
+    "tabs": {
+      "text": "文本",
+      "wiFi": "WiFi"
     },
-    "WiFi": {
-      "Title": "WiFi 配置",
-      "SSID": "网络名称",
-      "Type": "认证类型",
-      "Password": "密码",
-      "Hidden": "隐藏网络名称",
-      "EAPMethod": "EAP方法",
-      "Identity": "身份或用户名",
-      "AnonymousIdentity": "匿名身份",
-      "Phase2Method": "阶段2认证方法",
-      "AuthenticationType": {
-        "WPA": "WPA/WPA2",
-        "WEP": "WEP",
-        "WPA2-EAP": "WPA2-EAP",
+    "wiFi": {
+      "title": "WiFi 配置",
+      "ssid": "网络名称",
+      "type": "认证类型",
+      "password": "密码",
+      "hidden": "隐藏网络名称",
+      "eapMethod": "EAP方法",
+      "identity": "身份或用户名",
+      "anonymousIdentity": "匿名身份",
+      "phase2Method": "阶段2认证方法",
+      "authenticationType": {
+        "wpa": "WPA/WPA2",
+        "wep": "WEP",
+        "wpa2Eap": "wpa2Eap",
         "nopass": "无密码"
       }
     },
-    "Placeholders": {
-      "InputText": "输入要转为二维码的内容"
+    "placeholders": {
+      "inputText": "输入要转为二维码的内容"
     }
   },
   "ColorConverterPage": {
-    "Meta": {
-      "Title": "颜色转换",
-      "Description": "在 HEX、RGB、HSL、HWB、LCH、CMYK 等颜色格式之间转换。"
+    "meta": {
+      "title": "颜色转换",
+      "description": "在 HEX、RGB、HSL、HWB、LCH、CMYK 等颜色格式之间转换。"
     },
-    "Labels": {
-      "Input": "输入颜色",
-      "Output": "转换结果"
+    "labels": {
+      "input": "输入颜色",
+      "output": "转换结果"
     },
-    "Placeholders": {
-      "Input": "输入颜色值"
+    "placeholders": {
+      "input": "输入颜色值"
     }
   },
   "TimestampConverterPage": {
-    "Meta": {
-      "Title": "时间戳转换",
-      "Description": "转换 UNIX 时间戳、ISO8601、RFC3339、JavaScript Date 等时间日期格式。"
+    "meta": {
+      "title": "时间戳转换",
+      "description": "转换 UNIX 时间戳、ISO8601、RFC3339、JavaScript Date 等时间日期格式。"
     },
-    "Labels": {
-      "Input": "输入时间",
-      "Output": "输出时间",
-      "InputFormat": "输入格式",
-      "AutoDetect": "自动识别",
-      "OutputTimezone": "输出时区"
+    "labels": {
+      "input": "输入时间",
+      "output": "输出时间",
+      "inputFormat": "输入格式",
+      "autoDetect": "自动识别",
+      "outputTimezone": "输出时区"
     },
-    "DateFormats": {
-      "CurrentTime": "当前时间",
-      "Javascript": "JavaScript Date",
-      "ISO8601": "ISO 8601",
-      "ISO9075": "ISO 9075",
-      "RFC3339": "RFC 3339",
-      "RFC7231": "RFC 7231",
-      "TimestampSeconds": "Timestamp（秒）",
-      "TimestampMilliseconds": "Timestamp（毫秒）"
+    "dateFormats": {
+      "currentTime": "当前时间",
+      "javascript": "JavaScript Date",
+      "iso8601": "ISO 8601",
+      "iso9075": "ISO 9075",
+      "rfc3339": "RFC 3339",
+      "rfc7231": "RFC 7231",
+      "timestampSeconds": "Timestamp（秒）",
+      "timestampMilliseconds": "Timestamp（毫秒）"
     },
-    "Placeholders": {
-      "Input": "输入日期时间文本",
-      "Invalid": "无效格式"
+    "placeholders": {
+      "input": "输入日期时间文本",
+      "invalid": "无效格式"
     }
   },
   "CaseConverterPage": {
-    "Meta": {
-      "Title": "文本大小写转换",
-      "Description": "转换文本命名格式，支持驼峰、帕斯卡、下划线及大小写等。"
+    "meta": {
+      "title": "文本大小写转换",
+      "description": "转换文本命名格式，支持驼峰、帕斯卡、下划线及大小写等。"
     },
-    "Labels": {
-      "Input": "输入文本",
-      "Output": "转换结果"
+    "labels": {
+      "input": "输入文本",
+      "output": "转换结果"
     },
-    "Formats": {
+    "formats": {
       "camel": "驼峰命名",
       "pascal": "帕斯卡命名",
       "capital": "首字母大写",
@@ -455,7 +455,7 @@
       "upperFirst": "首字母大写",
       "sponge": "乱序格式"
     },
-    "Tooltips": {
+    "tooltips": {
       "camel": "首个单词全小写，其它单词首字母大写，无分隔符。",
       "pascal": "所有单词首字母大写，无分隔符。",
       "capital": "所有单词首字母大写，空格分隔单词。",
@@ -474,7 +474,7 @@
       "upperFirst": "首字母大写，其余保持不变。",
       "sponge": "随机大小写混合，分隔符不变。"
     },
-    "Badges": {
+    "badges": {
       "camel": "camelCase",
       "pascal": "PascalCase",
       "capital": "Capital Case",
@@ -493,71 +493,71 @@
       "upperFirst": "UpperFirst",
       "sponge": "SpOnGe CaSe"
     },
-    "Placeholders": {
-      "Input": "输入要转换的文本"
+    "placeholders": {
+      "input": "输入要转换的文本"
     }
   },
   "DataFormatConverterPage": {
-    "Meta": {
-      "Title": "结构化数据转换",
-      "Description": "在 JSON、YAML、XML、CSV 等格式之间转换，自动识别格式。"
+    "meta": {
+      "title": "结构化数据转换",
+      "description": "在 JSON、YAML、XML、CSV 等格式之间转换，自动识别格式。"
     },
-    "Labels": {
-      "Input": "输入",
-      "Output": "输出",
-      "InputFormat": "输入格式",
-      "AutoDetect": "自动识别",
-      "ConvertFormat": "转换格式",
-      "Upload": "上传",
-      "Download": "下载"
+    "labels": {
+      "input": "输入",
+      "output": "输出",
+      "inputFormat": "输入格式",
+      "autoDetect": "自动识别",
+      "convertFormat": "转换格式",
+      "upload": "上传",
+      "download": "下载"
     },
-    "Messages": {
-      "ConvertSuccess": "转换成功",
-      "ConvertFailed": "转换失败，请检查语法",
-      "UnknownFormat": "无法识别输入格式",
-      "UploadFailed": "文件加载失败",
-      "DownloadEmpty": "文件内容为空",
-      "DownloadFailed": "文件下载失败"
+    "messages": {
+      "convertSuccess": "转换成功",
+      "convertFailed": "转换失败，请检查语法",
+      "unknownFormat": "无法识别输入格式",
+      "uploadFailed": "文件加载失败",
+      "downloadEmpty": "文件内容为空",
+      "downloadFailed": "文件下载失败"
     }
   },
   "UserAgentPage": {
-    "Meta": {
-      "Title": "User-Agent 解析",
-      "Description": "解析 User-Agent 字符串，显示浏览器、系统、设备与渲染引擎等信息。"
+    "meta": {
+      "title": "User-Agent 解析",
+      "description": "解析 User-Agent 字符串，显示浏览器、系统、设备与渲染引擎等信息。"
     },
-    "Labels": {
-      "Input": "输入文本",
-      "Output": "解析结果",
-      "BrowserName": "浏览器名称",
-      "BrowserVersion": "浏览器版本",
-      "EngineName": "渲染引擎名称",
-      "EngineVersion": "渲染引擎版本",
-      "DeviceType": "设备类型",
-      "DeviceVendor": "设备厂商",
-      "DeviceModel": "设备型号",
-      "CPUArchitecture": "CPU 架构",
-      "OSName": "操作系统名称",
-      "OSVersion": "操作系统版本",
-      "IsBot": "识别为机器人",
-      "ChromiumBased": "Chromium 内核"
+    "labels": {
+      "input": "输入文本",
+      "output": "解析结果",
+      "browserName": "浏览器名称",
+      "browserVersion": "浏览器版本",
+      "engineName": "渲染引擎名称",
+      "engineVersion": "渲染引擎版本",
+      "deviceType": "设备类型",
+      "deviceVendor": "设备厂商",
+      "deviceModel": "设备型号",
+      "cpuArchitecture": "CPU 架构",
+      "osName": "操作系统名称",
+      "osVersion": "操作系统版本",
+      "isBot": "识别为机器人",
+      "chromiumBased": "Chromium 内核"
     },
-    "Values": {
-      "Yes": "是",
-      "No": "否"
+    "values": {
+      "yes": "是",
+      "no": "否"
     },
-    "Placeholders": {
-      "Input": "输入 User-Agent 字符串"
+    "placeholders": {
+      "input": "输入 User-Agent 字符串"
     }
   },
   "KeyboardEventPage": {
-    "Meta": {
-      "Title": "键盘事件属性",
-      "Description": "查看 KeyboardEvent 键盘事件的 key、code 等属性，支持实时显示与调试。"
+    "meta": {
+      "title": "键盘事件属性",
+      "description": "查看 KeyboardEvent 键盘事件的 key、code 等属性，支持实时显示与调试。"
     },
-    "Placeholders": {
-      "Input": "按任意键或输入文本触发键盘事件"
+    "placeholders": {
+      "input": "按任意键或输入文本触发键盘事件"
     },
-    "Tooltips": {
+    "tooltips": {
       "keydown": "按下任意按键时触发。",
       "keypress": "[已弃用] 按下会生成字符的按键时触发。",
       "keyup": "释放任意按键时触发。",
@@ -576,20 +576,20 @@
     }
   },
   "TimeIntervalPage": {
-    "Meta": {
-      "Title": "时间间隔计算",
-      "Description": "计算两个日期时间之间的间隔，支持多种显示格式。"
+    "meta": {
+      "title": "时间间隔计算",
+      "description": "计算两个日期时间之间的间隔，支持多种显示格式。"
     },
-    "Labels": {
-      "Format": "显示格式",
-      "Start": "开始时间",
-      "End": "结束时间",
-      "Interval": "时间间隔"
+    "labels": {
+      "format": "显示格式",
+      "start": "开始时间",
+      "end": "结束时间",
+      "interval": "时间间隔"
     },
-    "Placeholders": {
-      "Interval": "请选择开始和结束时间"
+    "placeholders": {
+      "interval": "请选择开始和结束时间"
     },
-    "Formats": {
+    "formats": {
       "auto": "自动",
       "years": "年",
       "months": "月",
@@ -599,7 +599,7 @@
       "seconds": "秒",
       "milliseconds": "毫秒"
     },
-    "Units": {
+    "units": {
       "years": "{count, plural, other {{count} 年}}",
       "months": "{count, plural, other {{count} 月}}",
       "days": "{count, plural, other {{count} 天}}",
@@ -610,19 +610,19 @@
     }
   },
   "SvgOptimizerPage": {
-    "Meta": {
-      "Title": "SVG 优化",
-      "Description": "清理并压缩 SVG 文件，移除冗余元素与属性。"
+    "meta": {
+      "title": "SVG 优化",
+      "description": "清理并压缩 SVG 文件，移除冗余元素与属性。"
     },
-    "Labels": {
-      "Input": "输入",
-      "Preview": "预览",
-      "Code": "代码",
-      "Upload": "上传",
-      "Download": "下载",
-      "ShowOriginal": "显示原始"
+    "labels": {
+      "input": "输入",
+      "preview": "预览",
+      "code": "代码",
+      "upload": "上传",
+      "download": "下载",
+      "showOriginal": "显示原始"
     },
-    "Options": {
+    "options": {
       "floatPrecision": "数值精度",
       "pretty": "代码格式化",
       "removeXMLNS": "移除 xmlns",
@@ -668,12 +668,12 @@
       "removeTitle": "移除 title",
       "removeDesc": "移除 desc"
     },
-    "Badges": {
-      "Invalid": "无效 SVG",
-      "Original": "原始"
+    "badges": {
+      "invalid": "无效 SVG",
+      "original": "原始"
     },
-    "Placeholders": {
-      "Input": "输入 SVG 代码"
+    "placeholders": {
+      "input": "输入 SVG 代码"
     }
   }
 }

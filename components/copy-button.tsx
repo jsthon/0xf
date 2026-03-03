@@ -59,11 +59,11 @@ export function CopyButton({
           {...props}
         >
           {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
-          <span className="sr-only">{t("Copy")}</span>
+          <span className="sr-only">{t("copy")}</span>
         </Button>
       </TooltipTrigger>
       <TooltipContent>
-        <p>{t("Copy")}</p>
+        <p>{t("copy")}</p>
       </TooltipContent>
     </Tooltip>
   );
@@ -84,7 +84,7 @@ export function CopyButton({
 
       setHasCopied(true);
     } catch {
-      toast.error(t("Error"));
+      toast.error(t("error"));
     }
   };
 

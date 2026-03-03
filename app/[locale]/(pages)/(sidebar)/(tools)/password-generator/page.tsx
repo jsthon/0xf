@@ -61,7 +61,7 @@ export default function PasswordGeneratorPage() {
         !options.includeNumbers &&
         !options.includeSymbols
       ) {
-        return t("Messages.SelectCharType");
+        return t("messages.selectCharType");
       }
 
       // build character set based on options
@@ -110,7 +110,7 @@ export default function PasswordGeneratorPage() {
         const newPassword = generatePassword(newOptions);
         setPassword(newPassword);
       } catch (error) {
-        setPassword(t("Messages.GenerateError"));
+        setPassword(t("messages.generateError"));
         console.error("Password generation error:", error);
       }
     },
@@ -123,7 +123,7 @@ export default function PasswordGeneratorPage() {
       const newPassword = generatePassword(options);
       setPassword(newPassword);
     } catch (error) {
-      setPassword(t("Messages.GenerateError"));
+      setPassword(t("messages.generateError"));
       console.error("Password generation error:", error);
     }
   }, [options, generatePassword, t]);
@@ -194,7 +194,7 @@ export default function PasswordGeneratorPage() {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <Label htmlFor="password" className="text-lg">
-              {t("Labels.Password")}
+              {t("labels.password")}
             </Label>
             <Textarea
               id="password"
@@ -210,7 +210,7 @@ export default function PasswordGeneratorPage() {
               {(hasCopied, handleCopy) => (
                 <Button className="flex-1" onClick={handleCopy}>
                   {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
-                  {tCopy("Copy")}
+                  {tCopy("copy")}
                 </Button>
               )}
             </CopyButton>
@@ -220,7 +220,7 @@ export default function PasswordGeneratorPage() {
               onClick={handleGeneratePassword}
             >
               <RefreshCw className="size-4" />
-              {t("Labels.Regenerate")}
+              {t("labels.regenerate")}
             </Button>
           </div>
         </div>
@@ -228,7 +228,7 @@ export default function PasswordGeneratorPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <Label htmlFor="character-length" className="text-lg">
-              {t("Labels.CharacterLength")}
+              {t("labels.characterLength")}
             </Label>
 
             <NumberInput
@@ -251,7 +251,7 @@ export default function PasswordGeneratorPage() {
 
         <div className="flex flex-col gap-4">
           <div className="text-lg font-medium">
-            {t("Labels.CharacterTypes")}
+            {t("labels.characterTypes")}
           </div>
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
             <div className="flex items-center gap-2">

@@ -14,13 +14,13 @@ import {
 } from "date-fns";
 
 export type DateFormatKey =
-  | "Javascript"
-  | "ISO8601"
-  | "ISO9075"
-  | "RFC3339"
-  | "RFC7231"
-  | "TimestampSeconds"
-  | "TimestampMilliseconds";
+  | "javascript"
+  | "iso8601"
+  | "iso9075"
+  | "rfc3339"
+  | "rfc7231"
+  | "timestampSeconds"
+  | "timestampMilliseconds";
 
 export interface DateFormat {
   key: DateFormatKey;
@@ -42,21 +42,21 @@ function stringifyWithTimezone(
 
 export const dateFormats: DateFormat[] = [
   {
-    key: "Javascript",
+    key: "javascript",
     stringify: (date, timezone) =>
       timezone ? new TZDate(date, timezone).toString() : date.toString(),
     parse: (text) => new Date(text),
     match: (text) => !isNaN(new Date(text).getTime()),
   },
   {
-    key: "ISO8601",
+    key: "iso8601",
     stringify: (date, timezone) =>
       stringifyWithTimezone(date, formatISO, timezone),
     parse: parseISO,
     match: (text) => isValid(parseISO(text)),
   },
   {
-    key: "ISO9075",
+    key: "iso9075",
     stringify: (date, timezone) =>
       stringifyWithTimezone(date, formatISO9075, timezone),
     parse: parseISO,
@@ -66,7 +66,7 @@ export const dateFormats: DateFormat[] = [
       ),
   },
   {
-    key: "RFC3339",
+    key: "rfc3339",
     stringify: (date, timezone) =>
       stringifyWithTimezone(date, formatRFC3339, timezone, {
         fractionDigits: 3,
@@ -78,7 +78,7 @@ export const dateFormats: DateFormat[] = [
       ),
   },
   {
-    key: "RFC7231",
+    key: "rfc7231",
     stringify: (date, timezone) =>
       stringifyWithTimezone(date, formatRFC7231, timezone),
     parse: (text) => new Date(text),
@@ -86,7 +86,7 @@ export const dateFormats: DateFormat[] = [
       isValid(parse(text, "EEE, dd MMM yyyy HH:mm:ss 'GMT'", new Date())),
   },
   {
-    key: "TimestampSeconds",
+    key: "timestampSeconds",
     stringify: (date) => String(getUnixTime(date)),
     parse: (text) => fromUnixTime(Number(text)),
     match: (text) => {
@@ -96,7 +96,7 @@ export const dateFormats: DateFormat[] = [
     },
   },
   {
-    key: "TimestampMilliseconds",
+    key: "timestampMilliseconds",
     stringify: (date) => String(getTime(date)),
     parse: (text) => new Date(Number(text)),
     match: (text) => {

@@ -32,10 +32,10 @@ export default function ToolsPage({
           >
             <div className="flex flex-col gap-2">
               <h2 className="flex text-base leading-snug font-medium group-hover:underline">
-                {tRoot(`${item.intl}.Meta.Title`)}
+                {tRoot(`${item.intl}.meta.title`)}
               </h2>
               <p className="text-muted-foreground text-sm text-balance">
-                {tRoot(`${item.intl}.Meta.Description`)}
+                {tRoot(`${item.intl}.meta.description`)}
               </p>
             </div>
           </Link>

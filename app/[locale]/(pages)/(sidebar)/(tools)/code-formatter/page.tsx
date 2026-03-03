@@ -154,7 +154,7 @@ export default function CodeFormatterPage() {
       const content = event.target?.result as string;
       setEditorContent(content);
     };
-    reader.onerror = () => toast.error(t("Messages.UploadFailed"));
+    reader.onerror = () => toast.error(t("messages.uploadFailed"));
     reader.readAsText(file);
 
     // reset input to allow re-uploading the same file
@@ -165,7 +165,7 @@ export default function CodeFormatterPage() {
   const handleDownload = () => {
     const content = getEditorContent();
     if (!content) {
-      toast.error(t("Messages.DownloadEmpty"));
+      toast.error(t("messages.downloadEmpty"));
       return;
     }
 
@@ -175,7 +175,7 @@ export default function CodeFormatterPage() {
       const blob = new Blob([content], { type: "text/plain" });
       saveBlobAsFile(blob, filename);
     } catch {
-      toast.error(t("Messages.DownloadFailed"));
+      toast.error(t("messages.downloadFailed"));
     }
   };
 
@@ -217,7 +217,7 @@ export default function CodeFormatterPage() {
     if (!editorViewRef.current) return;
 
     if (!languageConfig?.format) {
-      toast.error(t("Messages.LanguageRequired"));
+      toast.error(t("messages.languageRequired"));
       return;
     }
 
@@ -237,9 +237,9 @@ export default function CodeFormatterPage() {
         },
         userEvent: "input",
       });
-      toast.success(t("Messages.FormatSuccess"));
+      toast.success(t("messages.formatSuccess"));
     } catch {
-      toast.error(t("Messages.FormatFailed"));
+      toast.error(t("messages.formatFailed"));
     }
   };
 
@@ -304,11 +304,11 @@ export default function CodeFormatterPage() {
           <div className="flex items-center gap-4 md:gap-x-6">
             <Select value={language} onValueChange={setLanguage}>
               <SelectTrigger className="min-w-40 md:min-w-50">
-                <SelectValue placeholder={t("Controls.Language")} />
+                <SelectValue placeholder={t("controls.language")} />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel>{t("Controls.Language")}</SelectLabel>
+                  <SelectLabel>{t("controls.language")}</SelectLabel>
                   {languages.map((lang) => (
                     <SelectItem key={lang.value} value={lang.value}>
                       {lang.label}
@@ -318,7 +318,7 @@ export default function CodeFormatterPage() {
               </SelectContent>
             </Select>
 
-            <Button onClick={handleFormat}>{t("Controls.FormatCode")}</Button>
+            <Button onClick={handleFormat}>{t("controls.formatCode")}</Button>
           </div>
 
           <div className="flex items-center gap-2">
@@ -337,22 +337,22 @@ export default function CodeFormatterPage() {
                   onClick={() => fileInputRef.current?.click()}
                 >
                   <Upload className="size-4" />
-                  <span className="sr-only">{t("Controls.Upload")}</span>
+                  <span className="sr-only">{t("controls.upload")}</span>
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{t("Controls.Upload")}</p>
+                <p>{t("controls.upload")}</p>
               </TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button variant="outline" size="icon" onClick={handleDownload}>
                   <Download className="size-4" />
-                  <span className="sr-only">{t("Controls.Download")}</span>
+                  <span className="sr-only">{t("controls.download")}</span>
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{t("Controls.Download")}</p>
+                <p>{t("controls.download")}</p>
               </TooltipContent>
             </Tooltip>
             <CopyButton
@@ -373,11 +373,11 @@ export default function CodeFormatterPage() {
                       className="text-xs font-normal"
                       htmlFor="print-width"
                     >
-                      {t("Controls.PrintWidth")}
+                      {t("controls.printWidth")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Tooltips.PrintWidth")}</p>
+                    <p>{t("tooltips.printWidth")}</p>
                   </TooltipContent>
                   <Input
                     id="print-width"
@@ -397,11 +397,11 @@ export default function CodeFormatterPage() {
                 <div className="flex items-center gap-2">
                   <TooltipTrigger asChild>
                     <Label className="text-xs font-normal" htmlFor="tab-width">
-                      {t("Controls.TabWidth")}
+                      {t("controls.tabWidth")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Tooltips.TabWidth")}</p>
+                    <p>{t("tooltips.tabWidth")}</p>
                   </TooltipContent>
                   <Input
                     id="tab-width"
@@ -425,21 +425,21 @@ export default function CodeFormatterPage() {
                   <SelectTrigger className="min-w-36 text-xs data-[size=default]:h-7">
                     <TooltipTrigger asChild>
                       <span className="text-muted-foreground">
-                        {t("Controls.UseTabs.Label")}
+                        {t("controls.useTabs.label")}
                       </span>
                     </TooltipTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Tooltips.UseTabs")}</p>
+                    <p>{t("tooltips.useTabs")}</p>
                   </TooltipContent>
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem className="text-xs" value="space">
-                        {t("Controls.UseTabs.Space")}
+                        {t("controls.useTabs.space")}
                       </SelectItem>
                       <SelectItem className="text-xs" value="tab">
-                        {t("Controls.UseTabs.Tab")}
+                        {t("controls.useTabs.tab")}
                       </SelectItem>
                     </SelectGroup>
                   </SelectContent>
@@ -456,21 +456,21 @@ export default function CodeFormatterPage() {
                   <SelectTrigger className="min-w-36 text-xs data-[size=default]:h-7">
                     <TooltipTrigger asChild>
                       <span className="text-muted-foreground">
-                        {t("Controls.SingleQuote.Label")}
+                        {t("controls.singleQuote.label")}
                       </span>
                     </TooltipTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Tooltips.SingleQuote")}</p>
+                    <p>{t("tooltips.singleQuote")}</p>
                   </TooltipContent>
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem className="text-xs" value="double">
-                        {t("Controls.SingleQuote.Double")}
+                        {t("controls.singleQuote.double")}
                       </SelectItem>
                       <SelectItem className="text-xs" value="single">
-                        {t("Controls.SingleQuote.Single")}
+                        {t("controls.singleQuote.single")}
                       </SelectItem>
                     </SelectGroup>
                   </SelectContent>
@@ -487,21 +487,21 @@ export default function CodeFormatterPage() {
                   <SelectTrigger className="min-w-36 text-xs data-[size=default]:h-7">
                     <TooltipTrigger asChild>
                       <span className="text-muted-foreground">
-                        {t("Controls.Semi.Label")}
+                        {t("controls.semi.label")}
                       </span>
                     </TooltipTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <TooltipContent side="bottom">
-                    <p>{t("Tooltips.Semicolons")}</p>
+                    <p>{t("tooltips.semicolons")}</p>
                   </TooltipContent>
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem className="text-xs" value="on">
-                        {t("Controls.Semi.On")}
+                        {t("controls.semi.on")}
                       </SelectItem>
                       <SelectItem className="text-xs" value="off">
-                        {t("Controls.Semi.Off")}
+                        {t("controls.semi.off")}
                       </SelectItem>
                     </SelectGroup>
                   </SelectContent>

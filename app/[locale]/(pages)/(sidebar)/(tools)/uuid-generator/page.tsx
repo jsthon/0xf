@@ -59,12 +59,12 @@ export default function UUIDGeneratorPage() {
     // check if namespace is required and valid
     if (RequiresNamespace(options.version)) {
       if (!options.namespace || !options.name) {
-        setUUIDs([t("Messages.NamespaceRequired")]);
+        setUUIDs([t("messages.namespaceRequired")]);
         return;
       }
 
       if (!ValidateUUID(options.namespace)) {
-        setUUIDs([t("Messages.InvalidNamespace")]);
+        setUUIDs([t("messages.invalidNamespace")]);
         return;
       }
     }
@@ -74,7 +74,7 @@ export default function UUIDGeneratorPage() {
     if (generatedUUIDs.length > 0) {
       setUUIDs(generatedUUIDs);
     } else {
-      setUUIDs([t("Messages.GenerateError")]);
+      setUUIDs([t("messages.generateError")]);
     }
   }, [options, t]);
 
@@ -147,7 +147,7 @@ export default function UUIDGeneratorPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <Label htmlFor="uuids" className="text-lg">
-              {t("Labels.Generated")}
+              {t("labels.generated")}
             </Label>
             <div className="flex items-center gap-2">
               <Tooltip>
@@ -158,11 +158,11 @@ export default function UUIDGeneratorPage() {
                     onClick={handleGenerate}
                   >
                     <RefreshCw className="size-4" />
-                    <span className="sr-only">{t("Labels.Regenerate")}</span>
+                    <span className="sr-only">{t("labels.regenerate")}</span>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{t("Labels.Regenerate")}</p>
+                  <p>{t("labels.regenerate")}</p>
                 </TooltipContent>
               </Tooltip>
               <CopyButton
@@ -182,7 +182,7 @@ export default function UUIDGeneratorPage() {
 
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
-            <div className="text-lg font-medium">{t("Labels.Version")}</div>
+            <div className="text-lg font-medium">{t("labels.version")}</div>
             <RadioGroup
               className="flex flex-wrap gap-6"
               value={options.version}
@@ -191,7 +191,7 @@ export default function UUIDGeneratorPage() {
               {UUID_VERSIONS.map((version) => (
                 <div key={version} className="flex items-center gap-2">
                   <RadioGroupItem value={version} id={version} />
-                  <Label htmlFor={version}>{t(`Versions.${version}`)}</Label>
+                  <Label htmlFor={version}>{t(`versions.${version}`)}</Label>
                 </div>
               ))}
             </RadioGroup>
@@ -199,7 +199,7 @@ export default function UUIDGeneratorPage() {
 
           <div className="flex flex-col gap-4">
             <Label htmlFor="quantity" className="text-lg">
-              {t("Labels.Quantity")}
+              {t("labels.quantity")}
             </Label>
             <NumberInput
               id="quantity"
@@ -212,7 +212,7 @@ export default function UUIDGeneratorPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="text-lg font-medium">{t("Labels.Format")}</div>
+            <div className="text-lg font-medium">{t("labels.format")}</div>
             <div className="flex flex-wrap items-center gap-4 md:gap-6">
               <Tooltip>
                 <div className="flex items-center gap-2">
@@ -223,11 +223,11 @@ export default function UUIDGeneratorPage() {
                   />
                   <TooltipTrigger asChild>
                     <Label htmlFor="hyphens" className="text-base">
-                      {t("Labels.Hyphens")}
+                      {t("labels.hyphens")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Tooltips.Hyphens")}</p>
+                    <p>{t("tooltips.hyphens")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -241,11 +241,11 @@ export default function UUIDGeneratorPage() {
                   />
                   <TooltipTrigger asChild>
                     <Label htmlFor="uppercase" className="text-base">
-                      {t("Labels.Uppercase")}
+                      {t("labels.uppercase")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Tooltips.Uppercase")}</p>
+                    <p>{t("tooltips.uppercase")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -259,11 +259,11 @@ export default function UUIDGeneratorPage() {
                   />
                   <TooltipTrigger asChild>
                     <Label htmlFor="braces" className="text-base">
-                      {t("Labels.Braces")}
+                      {t("labels.braces")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Tooltips.Braces")}</p>
+                    <p>{t("tooltips.braces")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -277,11 +277,11 @@ export default function UUIDGeneratorPage() {
                   />
                   <TooltipTrigger asChild>
                     <Label htmlFor="quotes" className="text-base">
-                      {t("Labels.Quotes")}
+                      {t("labels.quotes")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Tooltips.Quotes")}</p>
+                    <p>{t("tooltips.quotes")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -295,11 +295,11 @@ export default function UUIDGeneratorPage() {
                   />
                   <TooltipTrigger asChild>
                     <Label htmlFor="commas" className="text-base">
-                      {t("Labels.Commas")}
+                      {t("labels.commas")}
                     </Label>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Tooltips.Commas")}</p>
+                    <p>{t("tooltips.commas")}</p>
                   </TooltipContent>
                 </div>
               </Tooltip>
@@ -310,7 +310,7 @@ export default function UUIDGeneratorPage() {
             <>
               <div className="flex flex-col gap-4">
                 <Label htmlFor="namespace" className="text-lg">
-                  {t("Labels.Namespace")}
+                  {t("labels.namespace")}
                 </Label>
                 <Input
                   id="namespace"
@@ -333,13 +333,13 @@ export default function UUIDGeneratorPage() {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-xs">
-                  {t("Messages.NamespaceHint")}
+                  {t("messages.namespaceHint")}
                 </p>
               </div>
 
               <div className="flex flex-col gap-4">
                 <Label htmlFor="name" className="text-lg">
-                  {t("Labels.Name")}
+                  {t("labels.name")}
                 </Label>
                 <Input
                   id="name"

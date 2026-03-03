@@ -67,7 +67,7 @@ export default function ColorConverterPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 md:gap-4">
             <Label htmlFor="color-input" className="text-lg">
-              {t("Labels.Input")}
+              {t("labels.input")}
             </Label>
             {inputColorFormat && (
               <Badge>{inputColorFormat.toUpperCase()}</Badge>
@@ -84,7 +84,7 @@ export default function ColorConverterPage() {
               id="color-input"
               className="px-9 font-mono"
               value={inputColorText}
-              placeholder={t("Placeholders.Input")}
+              placeholder={t("placeholders.input")}
               onChange={(e) => handleInputChange(e.target.value)}
               {...plainTypingProps}
             />
@@ -100,7 +100,7 @@ export default function ColorConverterPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Output")}</div>
+          <div className="text-lg font-medium">{t("labels.output")}</div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {COLOR_FORMATS.map((format) => (

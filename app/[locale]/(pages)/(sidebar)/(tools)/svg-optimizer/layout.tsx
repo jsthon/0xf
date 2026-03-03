@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PageIntro } from "@/components/page-intro";
 
-const META_NAMESPACE = "SvgOptimizerPage.Meta";
+const META_NAMESPACE = "SvgOptimizerPage.meta";
 
 export async function generateMetadata({
   params,
@@ -19,8 +19,8 @@ export async function generateMetadata({
   });
 
   return {
-    title: t("Title"),
-    description: t("Description"),
+    title: t("title"),
+    description: t("description"),
   };
 }
 
@@ -40,7 +40,7 @@ export default function SvgOptimizerLayout({
 
   return (
     <>
-      <PageIntro title={t("Title")} description={t("Description")} />
+      <PageIntro title={t("title")} description={t("description")} />
       {children}
     </>
   );

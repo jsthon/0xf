@@ -1,442 +1,442 @@
 {
   "ToolsPage": {
-    "Meta": {
-      "Title": "Инструменты разработчика",
-      "Description": "Лёгкий набор инструментов для повседневной разработки."
+    "meta": {
+      "title": "Инструменты разработчика",
+      "description": "Лёгкий набор инструментов для повседневной разработки."
     }
   },
   "Base64Page": {
-    "Meta": {
-      "Title": "Base64 кодирование и декодирование",
-      "Description": "Base64 кодирование и декодирование с автоопределением и поддержкой URL-safe."
+    "meta": {
+      "title": "Base64 кодирование и декодирование",
+      "description": "Base64 кодирование и декодирование с автоопределением и поддержкой URL-safe."
     },
-    "Controls": {
-      "AutoDetect": "Автоопределение",
-      "Decode": "Декодировать",
-      "Encode": "Кодировать",
-      "UrlSafe": "URL Safe"
+    "controls": {
+      "autoDetect": "Автоопределение",
+      "decode": "Декодировать",
+      "encode": "Кодировать",
+      "urlSafe": "URL Safe"
     },
-    "Labels": {
-      "Input": "Ввод",
-      "Output": "Результат",
-      "Upload": "Загрузить",
-      "Download": "Скачать"
+    "labels": {
+      "input": "Ввод",
+      "output": "Результат",
+      "upload": "Загрузить",
+      "download": "Скачать"
     },
-    "Badges": {
-      "Base64": "Base64",
-      "UrlSafe": "URL Safe"
+    "badges": {
+      "base64": "Base64",
+      "urlSafe": "URL Safe"
     },
-    "Tooltips": {
-      "AutoDetect": "Автоматически определить, является ли ввод текстом или Base64",
-      "UrlSafe": "Заменить +/ на -_ и убрать = для безопасного использования в URL"
+    "tooltips": {
+      "autoDetect": "Автоматически определить, является ли ввод текстом или Base64",
+      "urlSafe": "Заменить +/ на -_ и убрать = для безопасного использования в URL"
     },
-    "Messages": {
-      "Encode": {
-        "Failed": "Не удалось закодировать текст"
+    "messages": {
+      "encode": {
+        "failed": "Не удалось закодировать текст"
       },
-      "Decode": {
-        "Invalid": "Недопустимая строка Base64",
-        "StandardChars": "Отключите URL Safe для декодирования символов + или /",
-        "UrlSafeChars": "Включите URL Safe для декодирования символов - или _"
+      "decode": {
+        "invalid": "Недопустимая строка Base64",
+        "standardChars": "Отключите URL Safe для декодирования символов + или /",
+        "urlSafeChars": "Включите URL Safe для декодирования символов - или _"
       },
-      "Upload": {
-        "Failed": "Не удалось загрузить файл",
-        "Limit": "Размер файла не должен превышать 20 МБ"
+      "upload": {
+        "failed": "Не удалось загрузить файл",
+        "limit": "Размер файла не должен превышать 20 МБ"
       },
-      "Download": {
-        "Failed": "Не удалось скачать файл",
-        "Empty": "Невозможно скачать пустой файл"
+      "download": {
+        "failed": "Не удалось скачать файл",
+        "empty": "Невозможно скачать пустой файл"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Введите текст для автоопределения...",
-        "Encode": "Введите текст для кодирования...",
-        "Decode": "Введите Base64 для декодирования..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Введите текст для автоопределения...",
+        "encode": "Введите текст для кодирования...",
+        "decode": "Введите Base64 для декодирования..."
       },
-      "Output": {
-        "AutoDetect": "Base64 кодирование или декодирование...",
-        "Encode": "Закодированный Base64...",
-        "Decode": "Декодированный текст..."
+      "output": {
+        "autoDetect": "Base64 кодирование или декодирование...",
+        "encode": "Закодированный Base64...",
+        "decode": "Декодированный текст..."
       }
     }
   },
   "URLEncodingPage": {
-    "Meta": {
-      "Title": "URL кодирование и декодирование",
-      "Description": "URL кодирование и декодирование текста."
+    "meta": {
+      "title": "URL кодирование и декодирование",
+      "description": "URL кодирование и декодирование текста."
     },
-    "Controls": {
-      "AutoDetect": "Автоопределение",
-      "Decode": "Декодировать",
-      "Encode": "Кодировать"
+    "controls": {
+      "autoDetect": "Автоопределение",
+      "decode": "Декодировать",
+      "encode": "Кодировать"
     },
-    "Labels": {
-      "Input": "Ввод",
-      "Output": "Результат",
-      "URLEncoded": "URL кодирование"
+    "labels": {
+      "input": "Ввод",
+      "output": "Результат",
+      "urlEncoded": "URL кодирование"
     },
-    "Tooltips": {
-      "AutoDetect": "Автоматически определить, является ли ввод URL-кодированным или обычным текстом"
+    "tooltips": {
+      "autoDetect": "Автоматически определить, является ли ввод URL-кодированным или обычным текстом"
     },
-    "Messages": {
-      "Decode": {
-        "Invalid": "Недопустимая URL-кодированная строка"
+    "messages": {
+      "decode": {
+        "invalid": "Недопустимая URL-кодированная строка"
       },
-      "Encode": {
-        "Failed": "Не удалось закодировать текст"
+      "encode": {
+        "failed": "Не удалось закодировать текст"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Введите текст для автоопределения...",
-        "Encode": "Введите текст для кодирования...",
-        "Decode": "Введите URL-кодированный текст..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Введите текст для автоопределения...",
+        "encode": "Введите текст для кодирования...",
+        "decode": "Введите URL-кодированный текст..."
       },
-      "Output": {
-        "AutoDetect": "URL кодирование или декодирование...",
-        "Encode": "Закодированный URL...",
-        "Decode": "Декодированный текст..."
+      "output": {
+        "autoDetect": "URL кодирование или декодирование...",
+        "encode": "Закодированный URL...",
+        "decode": "Декодированный текст..."
       }
     }
   },
   "CharacterEscapePage": {
-    "Meta": {
-      "Title": "Экранирование символов",
-      "Description": "Кодирование и декодирование Unicode code point, Unicode escape, CSS escape и HTML entity."
+    "meta": {
+      "title": "Экранирование символов",
+      "description": "Кодирование и декодирование Unicode code point, Unicode escape, CSS escape и HTML entity."
     },
-    "Controls": {
-      "AutoDetect": "Автоопределение",
-      "Decode": "Декодировать",
-      "Encode": "Кодировать",
-      "CodePoint": "Code Point U+0000",
-      "EscapeSequence": "Unicode Escape \\u0000",
-      "CssEscape": "CSS Escape \\0000",
-      "HtmlCode": "HTML Code &#00;",
-      "HtmlEntity": "HTML Entity &name;"
+    "controls": {
+      "autoDetect": "Автоопределение",
+      "decode": "Декодировать",
+      "encode": "Кодировать",
+      "codePoint": "Code Point U+0000",
+      "escapeSequence": "Unicode Escape \\u0000",
+      "cssEscape": "CSS Escape \\0000",
+      "htmlCode": "HTML Code &#00;",
+      "htmlEntity": "HTML Entity &name;"
     },
-    "Labels": {
-      "Input": "Ввод",
-      "Output": "Результат",
-      "CodePoint": "Code Point",
-      "EscapeSequence": "Unicode Escape",
-      "CssEscape": "CSS Escape",
-      "HtmlCode": "HTML Code",
-      "HtmlEntity": "HTML Entity"
+    "labels": {
+      "input": "Ввод",
+      "output": "Результат",
+      "codePoint": "Code Point",
+      "escapeSequence": "Unicode Escape",
+      "cssEscape": "CSS Escape",
+      "htmlCode": "HTML Code",
+      "htmlEntity": "HTML Entity"
     },
-    "Tooltips": {
-      "AutoDetect": "Автоматически определить, закодирован ли ввод или это обычный текст"
+    "tooltips": {
+      "autoDetect": "Автоматически определить, закодирован ли ввод или это обычный текст"
     },
-    "Messages": {
-      "Decode": {
-        "InvalidEncoding": "Недопустимый формат кодировки",
-        "InvalidCodePoint": "Недопустимый формат Code Point",
-        "InvalidEscapeSequence": "Недопустимый формат Unicode Escape",
-        "InvalidCssEscape": "Недопустимый формат CSS Escape",
-        "InvalidHtmlCode": "Недопустимый формат HTML Code",
-        "InvalidHtmlEntity": "Недопустимый формат HTML Entity"
+    "messages": {
+      "decode": {
+        "invalidEncoding": "Недопустимый формат кодировки",
+        "invalidCodePoint": "Недопустимый формат Code Point",
+        "invalidEscapeSequence": "Недопустимый формат Unicode Escape",
+        "invalidCssEscape": "Недопустимый формат CSS Escape",
+        "invalidHtmlCode": "Недопустимый формат HTML Code",
+        "invalidHtmlEntity": "Недопустимый формат HTML Entity"
       },
-      "Encode": {
-        "Failed": "Не удалось закодировать текст"
+      "encode": {
+        "failed": "Не удалось закодировать текст"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Введите текст для автоопределения...",
-        "Encode": "Введите текст для кодирования...",
-        "Decode": "Введите закодированный текст..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Введите текст для автоопределения...",
+        "encode": "Введите текст для кодирования...",
+        "decode": "Введите закодированный текст..."
       },
-      "Output": {
-        "AutoDetect": "Кодирование или декодирование...",
-        "Encode": "Закодированный результат...",
-        "Decode": "Декодированный текст..."
+      "output": {
+        "autoDetect": "Кодирование или декодирование...",
+        "encode": "Закодированный результат...",
+        "decode": "Декодированный текст..."
       }
     }
   },
   "PasswordGeneratorPage": {
-    "Meta": {
-      "Title": "Генератор паролей",
-      "Description": "Генерация надёжных паролей с настраиваемой длиной и типами символов."
+    "meta": {
+      "title": "Генератор паролей",
+      "description": "Генерация надёжных паролей с настраиваемой длиной и типами символов."
     },
-    "Labels": {
-      "Password": "Пароль",
-      "Regenerate": "Обновить",
-      "CharacterLength": "Длина",
-      "CharacterTypes": "Типы символов"
+    "labels": {
+      "password": "Пароль",
+      "regenerate": "Обновить",
+      "characterLength": "Длина",
+      "characterTypes": "Типы символов"
     },
-    "Messages": {
-      "GenerateError": "Не удалось сгенерировать пароль",
-      "SelectCharType": "Необходимо выбрать хотя бы один тип символов"
+    "messages": {
+      "generateError": "Не удалось сгенерировать пароль",
+      "selectCharType": "Необходимо выбрать хотя бы один тип символов"
     }
   },
   "LoremIpsumPage": {
-    "Meta": {
-      "Title": "Генератор текста Lorem Ipsum",
-      "Description": "Генерация случайных абзацев Lorem Ipsum с настраиваемыми параметрами."
+    "meta": {
+      "title": "Генератор текста Lorem Ipsum",
+      "description": "Генерация случайных абзацев Lorem Ipsum с настраиваемыми параметрами."
     },
-    "Labels": {
-      "Text": "Сгенерированный текст",
-      "Regenerate": "Обновить",
-      "StartWithLorem": "Начинать с 'Lorem ipsum'",
-      "RandomRange": "Случайный диапазон",
-      "DisplayPTags": "Показывать теги '<p>'",
-      "Paragraphs": "Абзацы",
-      "Sentences": "Предложений в абзаце",
-      "Words": "Слов в предложении"
+    "labels": {
+      "text": "Сгенерированный текст",
+      "regenerate": "Обновить",
+      "startWithLorem": "Начинать с 'Lorem ipsum'",
+      "randomRange": "Случайный диапазон",
+      "displayPTags": "Показывать теги '<p>'",
+      "paragraphs": "Абзацы",
+      "sentences": "Предложений в абзаце",
+      "words": "Слов в предложении"
     },
-    "Messages": {
-      "GenerateError": "Ошибка генерации текста Lorem Ipsum"
+    "messages": {
+      "generateError": "Ошибка генерации текста Lorem Ipsum"
     }
   },
   "HashGeneratorPage": {
-    "Meta": {
-      "Title": "Генератор хешей",
-      "Description": "Вычисление хеш-сумм для текста и файлов с помощью MD5, SHA1, SHA256, SHA512, SHA3 и других алгоритмов."
+    "meta": {
+      "title": "Генератор хешей",
+      "description": "Вычисление хеш-сумм для текста и файлов с помощью MD5, SHA1, SHA256, SHA512, SHA3 и других алгоритмов."
     },
-    "Labels": {
-      "Input": "Ввод",
-      "Output": "Результат",
-      "Algorithm": "Алгоритмы хеширования",
-      "DigestEncoding": "Кодировка дайджеста"
+    "labels": {
+      "input": "Ввод",
+      "output": "Результат",
+      "algorithm": "Алгоритмы хеширования",
+      "digestEncoding": "Кодировка дайджеста"
     },
-    "Placeholders": {
-      "Input": "Введите текст для хеширования..."
+    "placeholders": {
+      "input": "Введите текст для хеширования..."
     },
-    "Messages": {
-      "LocalProcessing": "Файлы обрабатываются только локально",
-      "GenerationFailed": "Не удалось вычислить хеш"
+    "messages": {
+      "localProcessing": "Файлы обрабатываются только локально",
+      "generationFailed": "Не удалось вычислить хеш"
     },
-    "InputType": {
-      "Text": "Текст",
-      "File": "Файл"
+    "inputType": {
+      "text": "Текст",
+      "file": "Файл"
     },
-    "DigestEncoding": {
-      "HexLower": "Hex (строчные)",
-      "HexUpper": "Hex (прописные)",
-      "Base64": "Base64"
+    "digestEncoding": {
+      "hexLower": "Hex (строчные)",
+      "hexUpper": "Hex (прописные)",
+      "base64": "Base64"
     }
   },
   "CharacterCountPage": {
-    "Meta": {
-      "Title": "Подсчёт символов",
-      "Description": "Анализ и подсчёт различных типов символов в тексте."
+    "meta": {
+      "title": "Подсчёт символов",
+      "description": "Анализ и подсчёт различных типов символов в тексте."
     },
-    "Labels": {
-      "Text": "Ввод текста",
-      "Total": "Всего символов",
-      "Words": "Слова",
-      "Lines": "Строки",
-      "Whitespace": "Пробелы",
-      "LatinScript": "Латиница",
-      "NonLatinScript": "Нелатинские символы",
-      "Digits": "Цифры",
-      "Symbols": "Спецсимволы"
+    "labels": {
+      "text": "Ввод текста",
+      "total": "Всего символов",
+      "words": "Слова",
+      "lines": "Строки",
+      "whitespace": "Пробелы",
+      "latinScript": "Латиница",
+      "nonLatinScript": "Нелатинские символы",
+      "digits": "Цифры",
+      "symbols": "Спецсимволы"
     },
-    "Placeholders": {
-      "Input": "Введите текст для анализа..."
+    "placeholders": {
+      "input": "Введите текст для анализа..."
     }
   },
   "TextComparePage": {
-    "Meta": {
-      "Title": "Сравнение текста",
-      "Description": "Сравнение текстов с подсветкой различий."
+    "meta": {
+      "title": "Сравнение текста",
+      "description": "Сравнение текстов с подсветкой различий."
     },
-    "Controls": {
-      "UnifiedView": "Объединённый вид",
-      "CollapseUnchanged": "Свернуть без изменений"
+    "controls": {
+      "unifiedView": "Объединённый вид",
+      "collapseUnchanged": "Свернуть без изменений"
     }
   },
   "CodeFormatterPage": {
-    "Meta": {
-      "Title": "Форматирование кода",
-      "Description": "Форматирование кода с поддержкой нескольких языков и основных настроек."
+    "meta": {
+      "title": "Форматирование кода",
+      "description": "Форматирование кода с поддержкой нескольких языков и основных настроек."
     },
-    "Controls": {
-      "Language": "Выберите язык",
-      "FormatCode": "Форматировать",
-      "Upload": "Загрузить",
-      "Download": "Скачать",
-      "PrintWidth": "Ширина строки:",
-      "TabWidth": "Ширина отступа:",
-      "UseTabs": {
-        "Label": "Отступ:",
-        "Space": "Пробел",
-        "Tab": "Tab"
+    "controls": {
+      "language": "Выберите язык",
+      "formatCode": "Форматировать",
+      "upload": "Загрузить",
+      "download": "Скачать",
+      "printWidth": "Ширина строки:",
+      "tabWidth": "Ширина отступа:",
+      "useTabs": {
+        "label": "Отступ:",
+        "space": "Пробел",
+        "tab": "Tab"
       },
-      "SingleQuote": {
-        "Label": "Кавычки:",
-        "Double": "Двойные",
-        "Single": "Одинарные"
+      "singleQuote": {
+        "label": "Кавычки:",
+        "double": "Двойные",
+        "single": "Одинарные"
       },
-      "Semi": {
-        "Label": "Точки с запятой:",
-        "On": "Вкл.",
-        "Off": "Выкл."
+      "semi": {
+        "label": "Точки с запятой:",
+        "on": "Вкл.",
+        "off": "Выкл."
       }
     },
-    "Tooltips": {
-      "PrintWidth": "Максимальная длина строки для переноса",
-      "TabWidth": "Количество пробелов на уровень отступа",
-      "UseTabs": "Использовать Tab или пробелы для отступов",
-      "SingleQuote": "Использовать одинарные или двойные кавычки",
-      "Semicolons": "Добавлять точки с запятой в конце выражений"
+    "tooltips": {
+      "printWidth": "Максимальная длина строки для переноса",
+      "tabWidth": "Количество пробелов на уровень отступа",
+      "useTabs": "Использовать Tab или пробелы для отступов",
+      "singleQuote": "Использовать одинарные или двойные кавычки",
+      "semicolons": "Добавлять точки с запятой в конце выражений"
     },
-    "Messages": {
-      "LanguageRequired": "Выберите язык кода",
-      "FormatSuccess": "Форматирование успешно",
-      "FormatFailed": "Ошибка форматирования. Проверьте синтаксис.",
-      "UploadFailed": "Не удалось загрузить файл",
-      "DownloadEmpty": "Нет содержимого для скачивания",
-      "DownloadFailed": "Не удалось скачать файл"
+    "messages": {
+      "languageRequired": "Выберите язык кода",
+      "formatSuccess": "Форматирование успешно",
+      "formatFailed": "Ошибка форматирования. Проверьте синтаксис.",
+      "uploadFailed": "Не удалось загрузить файл",
+      "downloadEmpty": "Нет содержимого для скачивания",
+      "downloadFailed": "Не удалось скачать файл"
     }
   },
   "CodeMinifierPage": {
-    "Meta": {
-      "Title": "Минификация кода",
-      "Description": "Минификация кода с поддержкой нескольких языков и основных настроек."
+    "meta": {
+      "title": "Минификация кода",
+      "description": "Минификация кода с поддержкой нескольких языков и основных настроек."
     },
-    "Controls": {
-      "Language": "Выберите язык",
-      "MinifyCode": "Минифицировать",
-      "Upload": "Загрузить",
-      "Download": "Скачать"
+    "controls": {
+      "language": "Выберите язык",
+      "minifyCode": "Минифицировать",
+      "upload": "Загрузить",
+      "download": "Скачать"
     },
-    "Messages": {
-      "LanguageRequired": "Выберите язык кода",
-      "MinifySuccess": "Минификация успешна",
-      "MinifyFailed": "Ошибка минификации. Проверьте синтаксис.",
-      "UploadFailed": "Не удалось загрузить файл",
-      "DownloadEmpty": "Нет содержимого для скачивания",
-      "DownloadFailed": "Не удалось скачать файл"
+    "messages": {
+      "languageRequired": "Выберите язык кода",
+      "minifySuccess": "Минификация успешна",
+      "minifyFailed": "Ошибка минификации. Проверьте синтаксис.",
+      "uploadFailed": "Не удалось загрузить файл",
+      "downloadEmpty": "Нет содержимого для скачивания",
+      "downloadFailed": "Не удалось скачать файл"
     }
   },
   "UUIDGeneratorPage": {
-    "Meta": {
-      "Title": "Генератор UUID",
-      "Description": "Генерация UUID разных версий и форматов."
+    "meta": {
+      "title": "Генератор UUID",
+      "description": "Генерация UUID разных версий и форматов."
     },
-    "Labels": {
-      "Generated": "Сгенерированные UUID",
-      "Regenerate": "Обновить",
-      "Version": "Версия UUID",
-      "Quantity": "Количество",
-      "Format": "Формат",
-      "Uppercase": "Верхний регистр",
-      "Hyphens": "Дефисы",
-      "Braces": "Фигурные скобки",
-      "Quotes": "Кавычки",
-      "Commas": "Запятые",
-      "Namespace": "Пространство имён",
-      "Name": "Имя"
+    "labels": {
+      "generated": "Сгенерированные UUID",
+      "regenerate": "Обновить",
+      "version": "Версия UUID",
+      "quantity": "Количество",
+      "format": "Формат",
+      "uppercase": "Верхний регистр",
+      "hyphens": "Дефисы",
+      "braces": "Фигурные скобки",
+      "quotes": "Кавычки",
+      "commas": "Запятые",
+      "namespace": "Пространство имён",
+      "name": "Имя"
     },
-    "Versions": {
+    "versions": {
       "v1": "V1 (временная метка)",
       "v3": "V3 (MD5)",
       "v4": "V4 (случайный)",
       "v5": "V5 (SHA-1)",
       "nil": "NIL"
     },
-    "Tooltips": {
-      "Hyphens": "Добавить стандартные разделители между частями UUID",
-      "Uppercase": "Преобразовать hex-значения в верхний регистр",
-      "Braces": "Обернуть UUID в фигурные скобки",
-      "Quotes": "Обернуть UUID в двойные кавычки",
-      "Commas": "Добавить запятую в конце каждого UUID"
+    "tooltips": {
+      "hyphens": "Добавить стандартные разделители между частями UUID",
+      "uppercase": "Преобразовать hex-значения в верхний регистр",
+      "braces": "Обернуть UUID в фигурные скобки",
+      "quotes": "Обернуть UUID в двойные кавычки",
+      "commas": "Добавить запятую в конце каждого UUID"
     },
-    "Messages": {
-      "GenerateError": "Ошибка генерации UUID",
-      "NamespaceRequired": "Необходимо указать пространство имён и имя",
-      "NamespaceHint": "Выберите предустановленное пространство имён или введите свой UUID",
-      "InvalidNamespace": "Пространство имён должно быть допустимым UUID"
+    "messages": {
+      "generateError": "Ошибка генерации UUID",
+      "namespaceRequired": "Необходимо указать пространство имён и имя",
+      "namespaceHint": "Выберите предустановленное пространство имён или введите свой UUID",
+      "invalidNamespace": "Пространство имён должно быть допустимым UUID"
     }
   },
   "QRCodePage": {
-    "Meta": {
-      "Title": "Генератор QR-кодов",
-      "Description": "Генерация QR-кодов для текста или параметров WiFi."
+    "meta": {
+      "title": "Генератор QR-кодов",
+      "description": "Генерация QR-кодов для текста или параметров WiFi."
     },
-    "Labels": {
-      "Generated": "Сгенерированное изображение",
-      "Download": "Скачать",
-      "ForegroundColor": "Цвет переднего плана",
-      "BackgroundColor": "Цвет фона",
-      "InputText": "Ввод текста"
+    "labels": {
+      "generated": "Сгенерированное изображение",
+      "download": "Скачать",
+      "foregroundColor": "Цвет переднего плана",
+      "backgroundColor": "Цвет фона",
+      "inputText": "Ввод текста"
     },
-    "Tabs": {
-      "Text": "Текст",
-      "WiFi": "WiFi"
+    "tabs": {
+      "text": "Текст",
+      "wiFi": "WiFi"
     },
-    "WiFi": {
-      "Title": "Параметры WiFi",
-      "SSID": "Имя сети",
-      "Type": "Тип аутентификации",
-      "Password": "Пароль",
-      "Hidden": "Скрытый SSID",
-      "EAPMethod": "Метод EAP",
-      "Identity": "Идентификатор",
-      "AnonymousIdentity": "Анонимный идентификатор",
-      "Phase2Method": "Метод фазы 2",
-      "AuthenticationType": {
-        "WPA": "WPA/WPA2",
-        "WEP": "WEP",
-        "WPA2-EAP": "WPA2-EAP",
+    "wiFi": {
+      "title": "Параметры WiFi",
+      "ssid": "Имя сети",
+      "type": "Тип аутентификации",
+      "password": "Пароль",
+      "hidden": "Скрытый SSID",
+      "eapMethod": "Метод EAP",
+      "identity": "Идентификатор",
+      "anonymousIdentity": "Анонимный идентификатор",
+      "phase2Method": "Метод фазы 2",
+      "authenticationType": {
+        "wpa": "WPA/WPA2",
+        "wep": "WEP",
+        "wpa2Eap": "wpa2Eap",
         "nopass": "Без пароля"
       }
     },
-    "Placeholders": {
-      "InputText": "Введите текст для QR-кода..."
+    "placeholders": {
+      "inputText": "Введите текст для QR-кода..."
     }
   },
   "ColorConverterPage": {
-    "Meta": {
-      "Title": "Конвертер цветов",
-      "Description": "Конвертация цветов между форматами HEX, RGB, HSL, HWB, LCH и CMYK."
+    "meta": {
+      "title": "Конвертер цветов",
+      "description": "Конвертация цветов между форматами HEX, RGB, HSL, HWB, LCH и CMYK."
     },
-    "Labels": {
-      "Input": "Ввод цвета",
-      "Output": "Результат конвертации"
+    "labels": {
+      "input": "Ввод цвета",
+      "output": "Результат конвертации"
     },
-    "Placeholders": {
-      "Input": "Введите значение цвета..."
+    "placeholders": {
+      "input": "Введите значение цвета..."
     }
   },
   "TimestampConverterPage": {
-    "Meta": {
-      "Title": "Конвертер временных меток",
-      "Description": "Конвертация UNIX timestamp, ISO8601, RFC3339, JavaScript Date и других форматов даты и времени."
+    "meta": {
+      "title": "Конвертер временных меток",
+      "description": "Конвертация UNIX timestamp, ISO8601, RFC3339, JavaScript Date и других форматов даты и времени."
     },
-    "Labels": {
-      "Input": "Входная дата",
-      "Output": "Результат",
-      "InputFormat": "Входной формат",
-      "AutoDetect": "Автоопределение",
-      "OutputTimezone": "Часовой пояс"
+    "labels": {
+      "input": "Входная дата",
+      "output": "Результат",
+      "inputFormat": "Входной формат",
+      "autoDetect": "Автоопределение",
+      "outputTimezone": "Часовой пояс"
     },
-    "DateFormats": {
-      "CurrentTime": "Текущее время",
-      "Javascript": "JavaScript Date",
-      "ISO8601": "ISO 8601",
-      "ISO9075": "ISO 9075",
-      "RFC3339": "RFC 3339",
-      "RFC7231": "RFC 7231",
-      "TimestampSeconds": "Timestamp (секунды)",
-      "TimestampMilliseconds": "Timestamp (миллисекунды)"
+    "dateFormats": {
+      "currentTime": "Текущее время",
+      "javascript": "JavaScript Date",
+      "iso8601": "ISO 8601",
+      "iso9075": "ISO 9075",
+      "rfc3339": "RFC 3339",
+      "rfc7231": "RFC 7231",
+      "timestampSeconds": "Timestamp (секунды)",
+      "timestampMilliseconds": "Timestamp (миллисекунды)"
     },
-    "Placeholders": {
-      "Input": "Введите дату и время...",
-      "Invalid": "Недопустимый формат"
+    "placeholders": {
+      "input": "Введите дату и время...",
+      "invalid": "Недопустимый формат"
     }
   },
   "CaseConverterPage": {
-    "Meta": {
-      "Title": "Конвертер регистра текста",
-      "Description": "Конвертация текста между camelCase, PascalCase, snake_case и другими стилями именования."
+    "meta": {
+      "title": "Конвертер регистра текста",
+      "description": "Конвертация текста между camelCase, PascalCase, snake_case и другими стилями именования."
     },
-    "Labels": {
-      "Input": "Ввод текста",
-      "Output": "Результат"
+    "labels": {
+      "input": "Ввод текста",
+      "output": "Результат"
     },
-    "Formats": {
+    "formats": {
       "camel": "Camel Case",
       "pascal": "Pascal Case",
       "capital": "Capital Case",
@@ -455,7 +455,7 @@
       "upperFirst": "Upper First",
       "sponge": "Sponge Case"
     },
-    "Tooltips": {
+    "tooltips": {
       "camel": "Первое слово строчное, остальные с заглавной, без разделителей.",
       "pascal": "Все слова с заглавной, без разделителей.",
       "capital": "Все слова с заглавной, разделены пробелами.",
@@ -474,7 +474,7 @@
       "upperFirst": "Первая буква заглавная, остальное без изменений.",
       "sponge": "Случайное чередование регистров, разделители сохраняются."
     },
-    "Badges": {
+    "badges": {
       "camel": "camelCase",
       "pascal": "PascalCase",
       "capital": "Capital Case",
@@ -493,71 +493,71 @@
       "upperFirst": "UpperFirst",
       "sponge": "SpOnGe CaSe"
     },
-    "Placeholders": {
-      "Input": "Введите текст для конвертации..."
+    "placeholders": {
+      "input": "Введите текст для конвертации..."
     }
   },
   "DataFormatConverterPage": {
-    "Meta": {
-      "Title": "Конвертер структур данных",
-      "Description": "Конвертация между JSON, YAML, XML и CSV с автоопределением формата."
+    "meta": {
+      "title": "Конвертер структур данных",
+      "description": "Конвертация между JSON, YAML, XML и CSV с автоопределением формата."
     },
-    "Labels": {
-      "Input": "Ввод",
-      "Output": "Результат",
-      "InputFormat": "Входной формат",
-      "AutoDetect": "Автоопределение",
-      "ConvertFormat": "Формат конвертации",
-      "Upload": "Загрузить",
-      "Download": "Скачать"
+    "labels": {
+      "input": "Ввод",
+      "output": "Результат",
+      "inputFormat": "Входной формат",
+      "autoDetect": "Автоопределение",
+      "convertFormat": "Формат конвертации",
+      "upload": "Загрузить",
+      "download": "Скачать"
     },
-    "Messages": {
-      "ConvertSuccess": "Конвертация успешна",
-      "ConvertFailed": "Ошибка конвертации. Проверьте синтаксис.",
-      "UnknownFormat": "Не удалось определить формат ввода.",
-      "UploadFailed": "Не удалось загрузить файл.",
-      "DownloadEmpty": "Нет содержимого для скачивания.",
-      "DownloadFailed": "Не удалось скачать файл."
+    "messages": {
+      "convertSuccess": "Конвертация успешна",
+      "convertFailed": "Ошибка конвертации. Проверьте синтаксис.",
+      "unknownFormat": "Не удалось определить формат ввода.",
+      "uploadFailed": "Не удалось загрузить файл.",
+      "downloadEmpty": "Нет содержимого для скачивания.",
+      "downloadFailed": "Не удалось скачать файл."
     }
   },
   "UserAgentPage": {
-    "Meta": {
-      "Title": "Парсер User-Agent",
-      "Description": "Разбор строк User-Agent: браузер, ОС, устройство и движок."
+    "meta": {
+      "title": "Парсер User-Agent",
+      "description": "Разбор строк User-Agent: браузер, ОС, устройство и движок."
     },
-    "Labels": {
-      "Input": "Ввод текста",
-      "Output": "Результат разбора",
-      "BrowserName": "Браузер",
-      "BrowserVersion": "Версия браузера",
-      "EngineName": "Движок рендеринга",
-      "EngineVersion": "Версия движка",
-      "DeviceType": "Тип устройства",
-      "DeviceVendor": "Производитель",
-      "DeviceModel": "Модель устройства",
-      "CPUArchitecture": "Архитектура CPU",
-      "OSName": "Операционная система",
-      "OSVersion": "Версия ОС",
-      "IsBot": "Обнаружение бота",
-      "ChromiumBased": "На базе Chromium"
+    "labels": {
+      "input": "Ввод текста",
+      "output": "Результат разбора",
+      "browserName": "Браузер",
+      "browserVersion": "Версия браузера",
+      "engineName": "Движок рендеринга",
+      "engineVersion": "Версия движка",
+      "deviceType": "Тип устройства",
+      "deviceVendor": "Производитель",
+      "deviceModel": "Модель устройства",
+      "cpuArchitecture": "Архитектура CPU",
+      "osName": "Операционная система",
+      "osVersion": "Версия ОС",
+      "isBot": "Обнаружение бота",
+      "chromiumBased": "На базе Chromium"
     },
-    "Values": {
-      "Yes": "Да",
-      "No": "Нет"
+    "values": {
+      "yes": "Да",
+      "no": "Нет"
     },
-    "Placeholders": {
-      "Input": "Введите строку User-Agent..."
+    "placeholders": {
+      "input": "Введите строку User-Agent..."
     }
   },
   "KeyboardEventPage": {
-    "Meta": {
-      "Title": "Свойства событий клавиатуры",
-      "Description": "Просмотр свойств KeyboardEvent: key, code, клавиши-модификаторы и другие."
+    "meta": {
+      "title": "Свойства событий клавиатуры",
+      "description": "Просмотр свойств KeyboardEvent: key, code, клавиши-модификаторы и другие."
     },
-    "Placeholders": {
-      "Input": "Нажмите любую клавишу или введите текст..."
+    "placeholders": {
+      "input": "Нажмите любую клавишу или введите текст..."
     },
-    "Tooltips": {
+    "tooltips": {
       "keydown": "Срабатывает при нажатии любой клавиши.",
       "keypress": "[Устарело] Срабатывает при нажатии клавиши, генерирующей символ.",
       "keyup": "Срабатывает при отпускании любой клавиши.",
@@ -576,20 +576,20 @@
     }
   },
   "TimeIntervalPage": {
-    "Meta": {
-      "Title": "Калькулятор временного интервала",
-      "Description": "Расчёт временного интервала между двумя датами с гибкими настройками отображения."
+    "meta": {
+      "title": "Калькулятор временного интервала",
+      "description": "Расчёт временного интервала между двумя датами с гибкими настройками отображения."
     },
-    "Labels": {
-      "Format": "Формат отображения",
-      "Start": "Начало",
-      "End": "Конец",
-      "Interval": "Временной интервал"
+    "labels": {
+      "format": "Формат отображения",
+      "start": "Начало",
+      "end": "Конец",
+      "interval": "Временной интервал"
     },
-    "Placeholders": {
-      "Interval": "Выберите начальное и конечное время"
+    "placeholders": {
+      "interval": "Выберите начальное и конечное время"
     },
-    "Formats": {
+    "formats": {
       "auto": "Авто",
       "years": "Годы",
       "months": "Месяцы",
@@ -599,7 +599,7 @@
       "seconds": "Секунды",
       "milliseconds": "Миллисекунды"
     },
-    "Units": {
+    "units": {
       "years": "{count, plural, =1 {1 год} few {{count} года} many {{count} лет} other {{count} лет}}",
       "months": "{count, plural, =1 {1 месяц} few {{count} месяца} many {{count} месяцев} other {{count} месяцев}}",
       "days": "{count, plural, =1 {1 день} few {{count} дня} many {{count} дней} other {{count} дней}}",
@@ -610,19 +610,19 @@
     }
   },
   "SvgOptimizerPage": {
-    "Meta": {
-      "Title": "Оптимизация SVG",
-      "Description": "Очистка и сжатие SVG-файлов с удалением избыточных элементов и атрибутов."
+    "meta": {
+      "title": "Оптимизация SVG",
+      "description": "Очистка и сжатие SVG-файлов с удалением избыточных элементов и атрибутов."
     },
-    "Labels": {
-      "Input": "Ввод",
-      "Preview": "Предпросмотр",
-      "Code": "Код",
-      "Upload": "Загрузить",
-      "Download": "Скачать",
-      "ShowOriginal": "Показать оригинал"
+    "labels": {
+      "input": "Ввод",
+      "preview": "Предпросмотр",
+      "code": "Код",
+      "upload": "Загрузить",
+      "download": "Скачать",
+      "showOriginal": "Показать оригинал"
     },
-    "Options": {
+    "options": {
       "floatPrecision": "Точность чисел",
       "pretty": "Форматировать разметку",
       "removeXMLNS": "Удалить xmlns",
@@ -668,12 +668,12 @@
       "removeTitle": "Удалить title",
       "removeDesc": "Удалить desc"
     },
-    "Badges": {
-      "Invalid": "Недопустимый SVG",
-      "Original": "Оригинал"
+    "badges": {
+      "invalid": "Недопустимый SVG",
+      "original": "Оригинал"
     },
-    "Placeholders": {
-      "Input": "Вставьте SVG-код"
+    "placeholders": {
+      "input": "Вставьте SVG-код"
     }
   }
 }

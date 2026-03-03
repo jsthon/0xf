@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PageIntro } from "@/components/page-intro";
 
-const META_NAMESPACE = "HashGeneratorPage.Meta";
+const META_NAMESPACE = "HashGeneratorPage.meta";
 
 export async function generateMetadata({
   params,
@@ -19,8 +19,8 @@ export async function generateMetadata({
   });
 
   return {
-    title: t("Title"),
-    description: t("Description"),
+    title: t("title"),
+    description: t("description"),
   };
 }
 
@@ -40,7 +40,7 @@ export default function HashGeneratorLayout({
 
   return (
     <>
-      <PageIntro title={t("Title")} description={t("Description")} />
+      <PageIntro title={t("title")} description={t("description")} />
       {children}
     </>
   );

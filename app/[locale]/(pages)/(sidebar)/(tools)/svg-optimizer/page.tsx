@@ -226,14 +226,14 @@ export default function SvgOptimizerPage() {
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="input" className="text-lg">
-                {t("Labels.Input")}
+                {t("labels.input")}
               </Label>
               <div className="flex items-center gap-2">
                 {inputSize > 0 && (
                   <Badge variant="outline">{formatBytes(inputSize)}</Badge>
                 )}
                 {inputSize > 0 && outputSize === 0 && (
-                  <Badge variant="destructive">{t("Badges.Invalid")}</Badge>
+                  <Badge variant="destructive">{t("badges.invalid")}</Badge>
                 )}
               </div>
             </div>
@@ -243,13 +243,13 @@ export default function SvgOptimizerPage() {
                 checked={isOriginal}
                 onCheckedChange={setIsOriginal}
               />
-              <Label htmlFor="original">{t("Labels.ShowOriginal")}</Label>
+              <Label htmlFor="original">{t("labels.showOriginal")}</Label>
             </div>
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <Input
               id="input"
-              placeholder={t("Placeholders.Input")}
+              placeholder={t("placeholders.input")}
               value={inputSvg}
               onChange={(e) => setInputSvg(e.target.value)}
               {...plainTypingProps}
@@ -259,7 +259,7 @@ export default function SvgOptimizerPage() {
               onClick={() => fileInputRef.current?.click()}
             >
               <Upload />
-              {t("Labels.Upload")}
+              {t("labels.upload")}
             </Button>
             <input
               ref={fileInputRef}
@@ -275,8 +275,8 @@ export default function SvgOptimizerPage() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2 md:gap-4">
               <TabsList>
-                <TabsTrigger value="preview">{t("Labels.Preview")}</TabsTrigger>
-                <TabsTrigger value="code">{t("Labels.Code")}</TabsTrigger>
+                <TabsTrigger value="preview">{t("labels.preview")}</TabsTrigger>
+                <TabsTrigger value="code">{t("labels.code")}</TabsTrigger>
               </TabsList>
               <div className="flex items-center gap-2">
                 {outputSize > 0 && (
@@ -285,7 +285,7 @@ export default function SvgOptimizerPage() {
                 {showSizeRatio && (
                   <Badge variant="secondary">{sizeRatio.toFixed(0)}%</Badge>
                 )}
-                {isOriginal && <Badge>{t("Badges.Original")}</Badge>}
+                {isOriginal && <Badge>{t("badges.original")}</Badge>}
               </div>
             </div>
             {displaySvg && (
@@ -298,11 +298,11 @@ export default function SvgOptimizerPage() {
                       onClick={handleDownload}
                     >
                       <Download className="size-4" />
-                      <span className="sr-only">{t("Labels.Download")}</span>
+                      <span className="sr-only">{t("labels.download")}</span>
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{t("Labels.Download")}</p>
+                    <p>{t("labels.download")}</p>
                   </TooltipContent>
                 </Tooltip>
                 <CopyButton
@@ -359,7 +359,7 @@ export default function SvgOptimizerPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="text-base font-medium">
-              {t("Options.floatPrecision")}
+              {t("options.floatPrecision")}
             </div>
             <span className="text-base font-medium">{floatPrecision}</span>
           </div>
@@ -384,7 +384,7 @@ export default function SvgOptimizerPage() {
                 htmlFor={`opt-${option.name}`}
                 className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
-                {t(`Options.${option.name}`)}
+                {t(`options.${option.name}`)}
               </Label>
             </div>
           ))}

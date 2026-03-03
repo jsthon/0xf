@@ -44,12 +44,12 @@ export default function SidebarLayout({
                 <SidebarTrigger className="size-8 max-md:order-1">
                   <MenuIcon className="size-5 md:hidden" />
                   <PanelLeftIcon className="max-md:hidden" />
-                  <span className="sr-only">{t("ToggleSidebar")}</span>
+                  <span className="sr-only">{t("toggle")}</span>
                 </SidebarTrigger>
               </TooltipTrigger>
               <TooltipContent className="pr-1.5">
                 <div className="flex items-center gap-2">
-                  {t("ToggleSidebar")}
+                  {t("toggle")}
                   <KbdGroup>
                     <Kbd>
                       <ModifierKey />

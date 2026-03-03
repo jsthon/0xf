@@ -214,12 +214,12 @@ const IntervalEditor = ({
             value={interval[field]}
             min={0}
             max={TIME_FIELD_MAX_VALUES[field]}
-            suffix={t(`Units.${field}`, { count: interval[field] }).replace(
+            suffix={t(`units.${field}`, { count: interval[field] }).replace(
               String(interval[field]),
               ""
             )}
             onValueChange={(value) => updateTimeField(field, value ?? 0)}
-            aria-label={t(`Formats.${field}`)}
+            aria-label={t(`formats.${field}`)}
           />
         ))}
       </div>
@@ -235,10 +235,10 @@ const IntervalEditor = ({
       className="w-fit"
       value={value}
       min={0}
-      suffix={t(`Units.${format}`, { count: value }).replace(String(value), "")}
+      suffix={t(`units.${format}`, { count: value }).replace(String(value), "")}
       decimalScale={DECIMAL_PLACES}
       onValueChange={(value) => handleSingleUnitChange(value ?? 0)}
-      aria-label={t(`Formats.${format}`)}
+      aria-label={t(`formats.${format}`)}
     />
   );
 };
@@ -252,11 +252,11 @@ const formatIntervalBadge = (
   if (format === "auto") {
     const parts = (Object.keys(interval) as Array<keyof TimeInterval>)
       .filter((unit) => unit !== "totalMilliseconds" && interval[unit] > 0)
-      .map((unit) => t(`Units.${unit}`, { count: interval[unit] }));
-    return parts.join(" ") || t("Units.seconds", { count: 0 });
+      .map((unit) => t(`units.${unit}`, { count: interval[unit] }));
+    return parts.join(" ") || t("units.seconds", { count: 0 });
   }
 
-  return t(`Units.${format}`, {
+  return t(`units.${format}`, {
     count: getIntervalSingleUnitValue(interval, format),
   });
 };
@@ -338,7 +338,7 @@ export default function TimeIntervalPage() {
     <>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Format")}</div>
+          <div className="text-lg font-medium">{t("labels.format")}</div>
           <RadioGroup
             className="flex flex-wrap gap-6"
             value={displayFormat}
@@ -347,7 +347,7 @@ export default function TimeIntervalPage() {
             {DISPLAY_FORMATS.map((format) => (
               <div key={format} className="flex items-center gap-2">
                 <RadioGroupItem value={format} id={format} />
-                <Label htmlFor={format}>{t(`Formats.${format}`)}</Label>
+                <Label htmlFor={format}>{t(`formats.${format}`)}</Label>
               </div>
             ))}
           </RadioGroup>
@@ -357,7 +357,7 @@ export default function TimeIntervalPage() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="start-time" className="text-lg">
-                {t("Labels.Start")}
+                {t("labels.start")}
               </Label>
               {startDateTime && (
                 <Badge variant="outline">{formatISO9075(startDateTime)}</Badge>
@@ -372,7 +372,7 @@ export default function TimeIntervalPage() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 md:gap-4">
               <Label htmlFor="end-time" className="text-lg">
-                {t("Labels.End")}
+                {t("labels.end")}
               </Label>
               {endDateTime && (
                 <Badge variant="outline">{formatISO9075(endDateTime)}</Badge>
@@ -388,7 +388,7 @@ export default function TimeIntervalPage() {
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 md:gap-4">
-            <div className="text-lg font-medium">{t("Labels.Interval")}</div>
+            <div className="text-lg font-medium">{t("labels.interval")}</div>
             {currentInterval && (
               <Badge variant="outline">
                 {formatIntervalBadge(currentInterval, displayFormat, t)}
@@ -410,7 +410,7 @@ export default function TimeIntervalPage() {
           ) : (
             isMounted && (
               <div className="text-muted-foreground">
-                {t("Placeholders.Interval")}
+                {t("placeholders.interval")}
               </div>
             )
           )}

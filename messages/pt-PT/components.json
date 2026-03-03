@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "Menu",
-    "ToggleMenu": "Alternar menu"
+    "menu": "Menu",
+    "toggle": "Alternar menu"
   },
-  "Footer": {
-    "Text": "Criado por <url>{name}</url> para programadores. Código aberto no <github>GitHub</github>."
+  "SiteFooter": {
+    "text": "Criado por <url>{name}</url> para programadores. Código aberto no <github>GitHub</github>."
   },
   "Sidebar": {
-    "ToggleSidebar": "Alternar barra lateral"
+    "toggle": "Alternar barra lateral"
   },
   "AsideBlock": {
-    "Title": "Explorar {name} no GitHub",
-    "Description": [
+    "title": "Explorar {name} no GitHub",
+    "description": [
       "Código aberto, com o código-fonte completo disponível.",
       "Reveja o código, contribua ou aloje a sua própria instância."
     ],
-    "Button": "Ver no GitHub"
+    "button": "Ver no GitHub"
   },
   "ThemeSwitcher": {
-    "Theme": "Tema",
-    "SystemTheme": "Tema do sistema",
-    "LightTheme": "Tema claro",
-    "DarkTheme": "Tema escuro"
+    "theme": "Tema",
+    "system": "Tema do sistema",
+    "light": "Tema claro",
+    "dark": "Tema escuro"
   },
   "CommandMenu": {
-    "Search": "Pesquisar...",
-    "CommandPlaceholder": "Escreva palavras-chave...",
-    "Empty": "Nenhum resultado encontrado.",
-    "LinksHeading": "Ligações"
+    "search": "Pesquisar...",
+    "placeholder": "Escreva palavras-chave...",
+    "empty": "Nenhum resultado encontrado.",
+    "links": "Ligações"
   },
   "CopyButton": {
-    "Copy": "Copiar",
-    "Error": "Falha ao copiar"
+    "copy": "Copiar",
+    "error": "Falha ao copiar"
   },
   "NumberInput": {
-    "Increment": "Aumentar valor",
-    "Decrement": "Diminuir valor"
+    "increment": "Aumentar valor",
+    "decrement": "Diminuir valor"
   },
   "ColorPicker": {
-    "SelectColor": "Selecionar cor"
+    "selectColor": "Selecionar cor"
   },
   "PasswordInput": {
-    "Show": "Mostrar palavra-passe",
-    "Hide": "Ocultar palavra-passe"
+    "show": "Mostrar palavra-passe",
+    "hide": "Ocultar palavra-passe"
   },
   "TimezoneSelect": {
-    "Placeholder": "Selecionar fuso horário",
-    "Empty": "Nenhum fuso horário encontrado."
+    "placeholder": "Selecionar fuso horário",
+    "empty": "Nenhum fuso horário encontrado."
   },
   "DateTimePicker": {
-    "SelectDate": "Selecionar data"
+    "selectDate": "Selecionar data"
   },
   "FileUpload": {
-    "PrimaryText": "Selecione ou arraste ficheiros para aqui",
-    "SecondaryText": "Qualquer tipo de ficheiro",
-    "Remove": "Remover",
-    "Messages": {
-      "InvalidFiles": "Nenhum ficheiro válido selecionado"
+    "primaryText": "Selecione ou arraste ficheiros para aqui",
+    "secondaryText": "Qualquer tipo de ficheiro",
+    "remove": "Remover",
+    "messages": {
+      "invalidFiles": "Nenhum ficheiro válido selecionado"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "$ linhas inalteradas"
+    "merge": {
+      "unchangedLines": "$ linhas inalteradas"
     }
   }
 }

@@ -24,14 +24,14 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({
     locale: locale as Locale,
-    namespace: "HomePage.Meta",
+    namespace: "HomePage.meta",
   });
 
   return {
     title: {
-      absolute: t("Title"),
+      absolute: t("title"),
     },
-    description: t("Description"),
+    description: t("description"),
   };
 }
 
@@ -52,11 +52,11 @@ export default function HomePage({
   const toolItems = useNavigationToolItems();
   const featureItems = (
     messages.HomePage as {
-      Features: {
-        Items: Array<{ Title: string; Description: string; Icon: IconKey }>;
+      features: {
+        items: Array<{ title: string; description: string; icon: IconKey }>;
       };
     }
-  ).Features.Items;
+  ).features.items;
 
   return (
     <>
@@ -69,21 +69,21 @@ export default function HomePage({
               rel="noreferrer"
             >
               <ZapIcon className="fill-primary" />
-              {t("Hero.Announcement")} <ArrowRightIcon />
+              {t("hero.announcement")} <ArrowRightIcon />
             </Link>
           </Badge>
 
           <h1 className="text-foreground text-center text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            {t("Hero.Title")}
+            {t("hero.title")}
           </h1>
 
           <p className="text-foreground/80 pb-2 text-center text-balance md:text-lg">
-            {t("Hero.Description")}
+            {t("hero.description")}
           </p>
 
           <div className="flex items-center justify-center gap-4">
             <Button asChild>
-              <Link href="/tools">{t("Hero.GetStarted")}</Link>
+              <Link href="/tools">{t("hero.getStarted")}</Link>
             </Button>
             <Button variant="ghost" asChild>
               <Link
@@ -91,7 +91,7 @@ export default function HomePage({
                 target="_blank"
                 rel="noreferrer"
               >
-                <CustomIcons.gitHub /> {t("Hero.GitHub")}
+                <CustomIcons.gitHub /> {t("hero.gitHub")}
               </Link>
             </Button>
           </div>
@@ -102,7 +102,7 @@ export default function HomePage({
         <div className="outline-border grid grid-cols-2 bg-[repeating-linear-gradient(315deg,var(--muted)_0,var(--muted)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed outline -outline-offset-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <div className="bg-card flex items-center gap-2 border-r border-b p-4 text-base leading-tight font-semibold md:gap-4 md:px-6 md:py-5 md:text-lg">
             <CodeIcon className="size-6" />
-            <h2>{t("Tools.Title")}</h2>
+            <h2>{t("tools.title")}</h2>
           </div>
           <div className="border-b sm:col-span-2 lg:col-span-3 xl:col-span-4"></div>
 
@@ -120,10 +120,10 @@ export default function HomePage({
                     <Icon name={item.icon || "circle"} className="size-6" />
                   </div>
                   <h3 className="flex text-sm leading-snug font-semibold group-hover:underline md:text-base">
-                    {tRoot(`${item.intl}.Meta.Title`)}
+                    {tRoot(`${item.intl}.meta.title`)}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-snug text-pretty md:text-base">
-                    {tRoot(`${item.intl}.Meta.Description`)}
+                    {tRoot(`${item.intl}.meta.description`)}
                   </p>
                 </div>
               </Link>
@@ -136,20 +136,20 @@ export default function HomePage({
         <div className="mt-12 flex flex-col gap-8 md:mt-16 md:gap-12 lg:mt-20 lg:gap-16">
           <div className="flex flex-col gap-4 text-center text-balance">
             <strong className="text-muted-foreground text-xs font-medium tracking-wide uppercase">
-              {t("Features.Badge")}
+              {t("features.badge")}
             </strong>
             <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl">
-              {t("Features.Title")}
+              {t("features.title")}
             </h2>
             <p className="text-muted-foreground md:text-lg">
-              {t("Features.Description")}
+              {t("features.description")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featureItems.map((item) => (
               <div
-                key={item.Title}
+                key={item.title}
                 className="bg-card relative flex flex-col items-start border p-8"
               >
                 <span className="bg-muted/70 absolute inset-x-0 bottom-0 h-2 w-full border-t border-dashed"></span>
@@ -158,10 +158,10 @@ export default function HomePage({
                 <span className="bg-muted/70 absolute inset-y-0 right-0 h-full w-2 border-s border-dashed"></span>
 
                 <div className="bg-muted rounded-lg p-2">
-                  <Icon name={item.Icon || "circle"} className="size-6" />
+                  <Icon name={item.icon || "circle"} className="size-6" />
                 </div>
-                <h3 className="mt-4 text-xl font-semibold">{item.Title}</h3>
-                <p className="text-foreground/80 mt-2">{item.Description}</p>
+                <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>
+                <p className="text-foreground/80 mt-2">{item.description}</p>
               </div>
             ))}
           </div>
@@ -172,17 +172,17 @@ export default function HomePage({
         <div className="my-12 flex flex-col gap-8 md:my-16 lg:my-20">
           <div className="flex flex-col gap-4 text-center text-balance">
             <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl">
-              {t("Ready.Title")}
+              {t("ready.title")}
             </h2>
             <p className="text-muted-foreground md:text-lg">
-              {t("Ready.Description")}
+              {t("ready.description")}
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             <Button size="lg" asChild>
               <Link href="/tools">
-                {t("Ready.GetStarted")}
+                {t("ready.getStarted")}
                 <ArrowRightIcon />
               </Link>
             </Button>
@@ -192,7 +192,7 @@ export default function HomePage({
                 target="_blank"
                 rel="noreferrer"
               >
-                <CustomIcons.gitHub /> {t("Ready.GitHub")}
+                <CustomIcons.gitHub /> {t("ready.gitHub")}
                 <ArrowUpRightIcon />
               </Link>
             </Button>

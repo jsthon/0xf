@@ -30,7 +30,7 @@ export function PasswordInput({
         onClick={() => setShowPassword((value) => !value)}
       >
         {showPassword ? <EyeIcon /> : <EyeClosedIcon />}
-        <span className="sr-only">{showPassword ? t("Hide") : t("Show")}</span>
+        <span className="sr-only">{showPassword ? t("hide") : t("show")}</span>
       </button>
     </div>
   );

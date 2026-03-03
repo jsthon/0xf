@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "メニュー",
-    "ToggleMenu": "メニュー切替"
+    "menu": "メニュー",
+    "toggle": "メニュー切替"
   },
-  "Footer": {
-    "Text": "<url>{name}</url> が開発者のために構築。ソースコードは <github>GitHub</github> で公開中。"
+  "SiteFooter": {
+    "text": "<url>{name}</url> が開発者のために構築。ソースコードは <github>GitHub</github> で公開中。"
   },
   "Sidebar": {
-    "ToggleSidebar": "サイドバー切替"
+    "toggle": "サイドバー切替"
   },
   "AsideBlock": {
-    "Title": "{name} の GitHub を見る",
-    "Description": [
+    "title": "{name} の GitHub を見る",
+    "description": [
       "本プロジェクトは完全にオープンソースで、ソースコードを公開しています。",
       "コードレビュー、コントリビュート、セルフホスティングも歓迎です。"
     ],
-    "Button": "GitHub を見る"
+    "button": "GitHub を見る"
   },
   "ThemeSwitcher": {
-    "Theme": "テーマ",
-    "SystemTheme": "システム",
-    "LightTheme": "ライト",
-    "DarkTheme": "ダーク"
+    "theme": "テーマ",
+    "system": "システム",
+    "light": "ライト",
+    "dark": "ダーク"
   },
   "CommandMenu": {
-    "Search": "検索...",
-    "CommandPlaceholder": "キーワードを入力...",
-    "Empty": "結果が見つかりません",
-    "LinksHeading": "リンク"
+    "search": "検索...",
+    "placeholder": "キーワードを入力...",
+    "empty": "結果が見つかりません",
+    "links": "リンク"
   },
   "CopyButton": {
-    "Copy": "コピー",
-    "Error": "コピー失敗"
+    "copy": "コピー",
+    "error": "コピー失敗"
   },
   "NumberInput": {
-    "Increment": "値を増やす",
-    "Decrement": "値を減らす"
+    "increment": "値を増やす",
+    "decrement": "値を減らす"
   },
   "ColorPicker": {
-    "SelectColor": "色を選択"
+    "selectColor": "色を選択"
   },
   "PasswordInput": {
-    "Show": "パスワードを表示",
-    "Hide": "パスワードを隠す"
+    "show": "パスワードを表示",
+    "hide": "パスワードを隠す"
   },
   "TimezoneSelect": {
-    "Placeholder": "タイムゾーンを選択",
-    "Empty": "タイムゾーンが見つかりません"
+    "placeholder": "タイムゾーンを選択",
+    "empty": "タイムゾーンが見つかりません"
   },
   "DateTimePicker": {
-    "SelectDate": "日付を選択"
+    "selectDate": "日付を選択"
   },
   "FileUpload": {
-    "PrimaryText": "ファイルを選択またはドラッグ＆ドロップ",
-    "SecondaryText": "ファイル形式の制限なし",
-    "Remove": "削除",
-    "Messages": {
-      "InvalidFiles": "有効なファイルが選択されていません"
+    "primaryText": "ファイルを選択またはドラッグ＆ドロップ",
+    "secondaryText": "ファイル形式の制限なし",
+    "remove": "削除",
+    "messages": {
+      "invalidFiles": "有効なファイルが選択されていません"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "$ 行変更なし"
+    "merge": {
+      "unchangedLines": "$ 行変更なし"
     }
   }
 }

@@ -1,442 +1,442 @@
 {
   "ToolsPage": {
-    "Meta": {
-      "Title": "Ferramentas de Desenvolvimento",
-      "Description": "Um conjunto leve de ferramentas para tarefas de desenvolvimento do dia a dia."
+    "meta": {
+      "title": "Ferramentas de Desenvolvimento",
+      "description": "Um conjunto leve de ferramentas para tarefas de desenvolvimento do dia a dia."
     }
   },
   "Base64Page": {
-    "Meta": {
-      "Title": "Codificar e Descodificar Base64",
-      "Description": "Codifique e descodifique Base64 com deteção automática e suporte a URL seguro."
+    "meta": {
+      "title": "Codificar e Descodificar Base64",
+      "description": "Codifique e descodifique Base64 com deteção automática e suporte a URL seguro."
     },
-    "Controls": {
-      "AutoDetect": "Deteção Automática",
-      "Decode": "Descodificar",
-      "Encode": "Codificar",
-      "UrlSafe": "URL Seguro"
+    "controls": {
+      "autoDetect": "Deteção Automática",
+      "decode": "Descodificar",
+      "encode": "Codificar",
+      "urlSafe": "URL Seguro"
     },
-    "Labels": {
-      "Input": "Entrada",
-      "Output": "Resultado",
-      "Upload": "Carregar",
-      "Download": "Transferir"
+    "labels": {
+      "input": "Entrada",
+      "output": "Resultado",
+      "upload": "Carregar",
+      "download": "Transferir"
     },
-    "Badges": {
-      "Base64": "Base64",
-      "UrlSafe": "URL Seguro"
+    "badges": {
+      "base64": "Base64",
+      "urlSafe": "URL Seguro"
     },
-    "Tooltips": {
-      "AutoDetect": "Detetar automaticamente se a entrada é texto simples ou Base64",
-      "UrlSafe": "Substituir +/ por -_ e remover o preenchimento = para utilização segura em URLs"
+    "tooltips": {
+      "autoDetect": "Detetar automaticamente se a entrada é texto simples ou Base64",
+      "urlSafe": "Substituir +/ por -_ e remover o preenchimento = para utilização segura em URLs"
     },
-    "Messages": {
-      "Encode": {
-        "Failed": "Falha ao codificar texto"
+    "messages": {
+      "encode": {
+        "failed": "Falha ao codificar texto"
       },
-      "Decode": {
-        "Invalid": "Cadeia Base64 inválida",
-        "StandardChars": "Desative URL Seguro para descodificar caracteres + ou /",
-        "UrlSafeChars": "Ative URL Seguro para descodificar caracteres - ou _"
+      "decode": {
+        "invalid": "Cadeia Base64 inválida",
+        "standardChars": "Desative URL Seguro para descodificar caracteres + ou /",
+        "urlSafeChars": "Ative URL Seguro para descodificar caracteres - ou _"
       },
-      "Upload": {
-        "Failed": "Falha ao carregar ficheiro",
-        "Limit": "O ficheiro deve ter menos de 20MB"
+      "upload": {
+        "failed": "Falha ao carregar ficheiro",
+        "limit": "O ficheiro deve ter menos de 20MB"
       },
-      "Download": {
-        "Failed": "Falha ao transferir ficheiro",
-        "Empty": "Não é possível transferir ficheiro vazio"
+      "download": {
+        "failed": "Falha ao transferir ficheiro",
+        "empty": "Não é possível transferir ficheiro vazio"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Escreva texto para deteção automática...",
-        "Encode": "Escreva texto para codificar...",
-        "Decode": "Escreva Base64 para descodificar..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Escreva texto para deteção automática...",
+        "encode": "Escreva texto para codificar...",
+        "decode": "Escreva Base64 para descodificar..."
       },
-      "Output": {
-        "AutoDetect": "Resultado codificado ou descodificado em Base64...",
-        "Encode": "Resultado codificado em Base64...",
-        "Decode": "Resultado do texto descodificado..."
+      "output": {
+        "autoDetect": "Resultado codificado ou descodificado em Base64...",
+        "encode": "Resultado codificado em Base64...",
+        "decode": "Resultado do texto descodificado..."
       }
     }
   },
   "URLEncodingPage": {
-    "Meta": {
-      "Title": "Codificar e Descodificar URL",
-      "Description": "Codifique texto no formato URL ou descodifique texto codificado em URL."
+    "meta": {
+      "title": "Codificar e Descodificar URL",
+      "description": "Codifique texto no formato URL ou descodifique texto codificado em URL."
     },
-    "Controls": {
-      "AutoDetect": "Deteção Automática",
-      "Decode": "Descodificar",
-      "Encode": "Codificar"
+    "controls": {
+      "autoDetect": "Deteção Automática",
+      "decode": "Descodificar",
+      "encode": "Codificar"
     },
-    "Labels": {
-      "Input": "Entrada",
-      "Output": "Resultado",
-      "URLEncoded": "Codificação URL"
+    "labels": {
+      "input": "Entrada",
+      "output": "Resultado",
+      "urlEncoded": "Codificação URL"
     },
-    "Tooltips": {
-      "AutoDetect": "Detetar automaticamente se a entrada é codificada em URL ou texto simples"
+    "tooltips": {
+      "autoDetect": "Detetar automaticamente se a entrada é codificada em URL ou texto simples"
     },
-    "Messages": {
-      "Decode": {
-        "Invalid": "Cadeia de codificação URL inválida"
+    "messages": {
+      "decode": {
+        "invalid": "Cadeia de codificação URL inválida"
       },
-      "Encode": {
-        "Failed": "Falha ao codificar texto"
+      "encode": {
+        "failed": "Falha ao codificar texto"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Escreva texto para deteção automática...",
-        "Encode": "Escreva texto para codificar...",
-        "Decode": "Escreva texto codificado..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Escreva texto para deteção automática...",
+        "encode": "Escreva texto para codificar...",
+        "decode": "Escreva texto codificado..."
       },
-      "Output": {
-        "AutoDetect": "Codificação ou descodificação URL...",
-        "Encode": "Resultado codificado em URL...",
-        "Decode": "Resultado do texto descodificado..."
+      "output": {
+        "autoDetect": "Codificação ou descodificação URL...",
+        "encode": "Resultado codificado em URL...",
+        "decode": "Resultado do texto descodificado..."
       }
     }
   },
   "CharacterEscapePage": {
-    "Meta": {
-      "Title": "Escape de Caracteres",
-      "Description": "Codifique e descodifique texto como code points Unicode, escapes, CSS escapes ou entidades HTML."
+    "meta": {
+      "title": "Escape de Caracteres",
+      "description": "Codifique e descodifique texto como code points Unicode, escapes, CSS escapes ou entidades HTML."
     },
-    "Controls": {
-      "AutoDetect": "Deteção Automática",
-      "Decode": "Descodificar",
-      "Encode": "Codificar",
-      "CodePoint": "Code Point U+0000",
-      "EscapeSequence": "Unicode Escape \\u0000",
-      "CssEscape": "CSS Escape \\0000",
-      "HtmlCode": "HTML Code &#00;",
-      "HtmlEntity": "HTML Entity &name;"
+    "controls": {
+      "autoDetect": "Deteção Automática",
+      "decode": "Descodificar",
+      "encode": "Codificar",
+      "codePoint": "Code Point U+0000",
+      "escapeSequence": "Unicode Escape \\u0000",
+      "cssEscape": "CSS Escape \\0000",
+      "htmlCode": "HTML Code &#00;",
+      "htmlEntity": "HTML Entity &name;"
     },
-    "Labels": {
-      "Input": "Entrada",
-      "Output": "Resultado",
-      "CodePoint": "Code Point",
-      "EscapeSequence": "Unicode Escape",
-      "CssEscape": "CSS Escape",
-      "HtmlCode": "HTML Code",
-      "HtmlEntity": "HTML Entity"
+    "labels": {
+      "input": "Entrada",
+      "output": "Resultado",
+      "codePoint": "Code Point",
+      "escapeSequence": "Unicode Escape",
+      "cssEscape": "CSS Escape",
+      "htmlCode": "HTML Code",
+      "htmlEntity": "HTML Entity"
     },
-    "Tooltips": {
-      "AutoDetect": "Detetar automaticamente se a entrada está codificada ou é texto simples"
+    "tooltips": {
+      "autoDetect": "Detetar automaticamente se a entrada está codificada ou é texto simples"
     },
-    "Messages": {
-      "Decode": {
-        "InvalidEncoding": "Formato de codificação inválido",
-        "InvalidCodePoint": "Formato de Code Point inválido",
-        "InvalidEscapeSequence": "Formato de Unicode Escape inválido",
-        "InvalidCssEscape": "Formato de CSS Escape inválido",
-        "InvalidHtmlCode": "Formato de HTML Code inválido",
-        "InvalidHtmlEntity": "Formato de HTML Entity inválido"
+    "messages": {
+      "decode": {
+        "invalidEncoding": "Formato de codificação inválido",
+        "invalidCodePoint": "Formato de Code Point inválido",
+        "invalidEscapeSequence": "Formato de Unicode Escape inválido",
+        "invalidCssEscape": "Formato de CSS Escape inválido",
+        "invalidHtmlCode": "Formato de HTML Code inválido",
+        "invalidHtmlEntity": "Formato de HTML Entity inválido"
       },
-      "Encode": {
-        "Failed": "Falha ao codificar texto"
+      "encode": {
+        "failed": "Falha ao codificar texto"
       }
     },
-    "Placeholders": {
-      "Input": {
-        "AutoDetect": "Escreva texto para deteção automática...",
-        "Encode": "Escreva texto para codificar...",
-        "Decode": "Escreva texto codificado..."
+    "placeholders": {
+      "input": {
+        "autoDetect": "Escreva texto para deteção automática...",
+        "encode": "Escreva texto para codificar...",
+        "decode": "Escreva texto codificado..."
       },
-      "Output": {
-        "AutoDetect": "Resultado codificado ou descodificado...",
-        "Encode": "Resultado codificado...",
-        "Decode": "Resultado do texto descodificado..."
+      "output": {
+        "autoDetect": "Resultado codificado ou descodificado...",
+        "encode": "Resultado codificado...",
+        "decode": "Resultado do texto descodificado..."
       }
     }
   },
   "PasswordGeneratorPage": {
-    "Meta": {
-      "Title": "Gerador de Palavras-passe",
-      "Description": "Gere palavras-passe seguras com comprimento e tipos de caracteres personalizáveis."
+    "meta": {
+      "title": "Gerador de Palavras-passe",
+      "description": "Gere palavras-passe seguras com comprimento e tipos de caracteres personalizáveis."
     },
-    "Labels": {
-      "Password": "Palavra-passe",
-      "Regenerate": "Gerar novamente",
-      "CharacterLength": "Comprimento",
-      "CharacterTypes": "Tipos de Caracteres"
+    "labels": {
+      "password": "Palavra-passe",
+      "regenerate": "Gerar novamente",
+      "characterLength": "Comprimento",
+      "characterTypes": "Tipos de Caracteres"
     },
-    "Messages": {
-      "GenerateError": "Falha ao gerar palavra-passe",
-      "SelectCharType": "É necessário selecionar pelo menos um tipo de caractere"
+    "messages": {
+      "generateError": "Falha ao gerar palavra-passe",
+      "selectCharType": "É necessário selecionar pelo menos um tipo de caractere"
     }
   },
   "LoremIpsumPage": {
-    "Meta": {
-      "Title": "Gerador Lorem Ipsum",
-      "Description": "Gere parágrafos aleatórios de Lorem Ipsum com opções personalizáveis."
+    "meta": {
+      "title": "Gerador Lorem Ipsum",
+      "description": "Gere parágrafos aleatórios de Lorem Ipsum com opções personalizáveis."
     },
-    "Labels": {
-      "Text": "Texto Gerado",
-      "Regenerate": "Gerar novamente",
-      "StartWithLorem": "Começar com 'Lorem ipsum'",
-      "RandomRange": "Intervalo Aleatório",
-      "DisplayPTags": "Mostrar tags '<p>'",
-      "Paragraphs": "Parágrafos",
-      "Sentences": "Frases por Parágrafo",
-      "Words": "Palavras por Frase"
+    "labels": {
+      "text": "Texto Gerado",
+      "regenerate": "Gerar novamente",
+      "startWithLorem": "Começar com 'Lorem ipsum'",
+      "randomRange": "Intervalo Aleatório",
+      "displayPTags": "Mostrar tags '<p>'",
+      "paragraphs": "Parágrafos",
+      "sentences": "Frases por Parágrafo",
+      "words": "Palavras por Frase"
     },
-    "Messages": {
-      "GenerateError": "Erro ao gerar texto Lorem Ipsum"
+    "messages": {
+      "generateError": "Erro ao gerar texto Lorem Ipsum"
     }
   },
   "HashGeneratorPage": {
-    "Meta": {
-      "Title": "Gerador de Hash",
-      "Description": "Gere resumos hash para texto ou ficheiros com algoritmos como MD5, SHA1, SHA256, SHA512 e SHA3."
+    "meta": {
+      "title": "Gerador de Hash",
+      "description": "Gere resumos hash para texto ou ficheiros com algoritmos como MD5, SHA1, SHA256, SHA512 e SHA3."
     },
-    "Labels": {
-      "Input": "Entrada",
-      "Output": "Resultado",
-      "Algorithm": "Algoritmos de Hash",
-      "DigestEncoding": "Codificação do Resumo"
+    "labels": {
+      "input": "Entrada",
+      "output": "Resultado",
+      "algorithm": "Algoritmos de Hash",
+      "digestEncoding": "Codificação do Resumo"
     },
-    "Placeholders": {
-      "Input": "Escreva texto para calcular hash..."
+    "placeholders": {
+      "input": "Escreva texto para calcular hash..."
     },
-    "Messages": {
-      "LocalProcessing": "Ficheiros processados apenas localmente",
-      "GenerationFailed": "Falha ao gerar hash"
+    "messages": {
+      "localProcessing": "Ficheiros processados apenas localmente",
+      "generationFailed": "Falha ao gerar hash"
     },
-    "InputType": {
-      "Text": "Texto",
-      "File": "Ficheiro"
+    "inputType": {
+      "text": "Texto",
+      "file": "Ficheiro"
     },
-    "DigestEncoding": {
-      "HexLower": "Hex (minúsculas)",
-      "HexUpper": "Hex (maiúsculas)",
-      "Base64": "Base64"
+    "digestEncoding": {
+      "hexLower": "Hex (minúsculas)",
+      "hexUpper": "Hex (maiúsculas)",
+      "base64": "Base64"
     }
   },
   "CharacterCountPage": {
-    "Meta": {
-      "Title": "Contagem de Caracteres",
-      "Description": "Analise e conte os diferentes tipos de caracteres num texto."
+    "meta": {
+      "title": "Contagem de Caracteres",
+      "description": "Analise e conte os diferentes tipos de caracteres num texto."
     },
-    "Labels": {
-      "Text": "Texto de Entrada",
-      "Total": "Total de Caracteres",
-      "Words": "Palavras",
-      "Lines": "Linhas",
-      "Whitespace": "Espaços em Branco",
-      "LatinScript": "Caracteres Latinos",
-      "NonLatinScript": "Caracteres Não Latinos",
-      "Digits": "Dígitos",
-      "Symbols": "Símbolos"
+    "labels": {
+      "text": "Texto de Entrada",
+      "total": "Total de Caracteres",
+      "words": "Palavras",
+      "lines": "Linhas",
+      "whitespace": "Espaços em Branco",
+      "latinScript": "Caracteres Latinos",
+      "nonLatinScript": "Caracteres Não Latinos",
+      "digits": "Dígitos",
+      "symbols": "Símbolos"
     },
-    "Placeholders": {
-      "Input": "Escreva texto para analisar..."
+    "placeholders": {
+      "input": "Escreva texto para analisar..."
     }
   },
   "TextComparePage": {
-    "Meta": {
-      "Title": "Comparar Texto",
-      "Description": "Compare textos e destaque as diferenças."
+    "meta": {
+      "title": "Comparar Texto",
+      "description": "Compare textos e destaque as diferenças."
     },
-    "Controls": {
-      "UnifiedView": "Vista Unificada",
-      "CollapseUnchanged": "Recolher Inalterados"
+    "controls": {
+      "unifiedView": "Vista Unificada",
+      "collapseUnchanged": "Recolher Inalterados"
     }
   },
   "CodeFormatterPage": {
-    "Meta": {
-      "Title": "Formatador de Código",
-      "Description": "Formate código com suporte a várias linguagens e opções comuns."
+    "meta": {
+      "title": "Formatador de Código",
+      "description": "Formate código com suporte a várias linguagens e opções comuns."
     },
-    "Controls": {
-      "Language": "Selecionar linguagem",
-      "FormatCode": "Formatar Código",
-      "Upload": "Carregar",
-      "Download": "Transferir",
-      "PrintWidth": "Largura Máxima:",
-      "TabWidth": "Largura do Tab:",
-      "UseTabs": {
-        "Label": "Indentação:",
-        "Space": "Espaço",
-        "Tab": "Tab"
+    "controls": {
+      "language": "Selecionar linguagem",
+      "formatCode": "Formatar Código",
+      "upload": "Carregar",
+      "download": "Transferir",
+      "printWidth": "Largura Máxima:",
+      "tabWidth": "Largura do Tab:",
+      "useTabs": {
+        "label": "Indentação:",
+        "space": "Espaço",
+        "tab": "Tab"
       },
-      "SingleQuote": {
-        "Label": "Aspas:",
-        "Double": "Duplas",
-        "Single": "Simples"
+      "singleQuote": {
+        "label": "Aspas:",
+        "double": "Duplas",
+        "single": "Simples"
       },
-      "Semi": {
-        "Label": "Ponto e vírgula:",
-        "On": "Ligado",
-        "Off": "Desligado"
+      "semi": {
+        "label": "Ponto e vírgula:",
+        "on": "Ligado",
+        "off": "Desligado"
       }
     },
-    "Tooltips": {
-      "PrintWidth": "Número máximo de caracteres por linha antes da quebra automática",
-      "TabWidth": "Número de espaços por nível de indentação",
-      "UseTabs": "Indentar linhas com tabs ou espaços",
-      "SingleQuote": "Usar aspas simples ou aspas duplas",
-      "Semicolons": "Adicionar ponto e vírgula no final das instruções"
+    "tooltips": {
+      "printWidth": "Número máximo de caracteres por linha antes da quebra automática",
+      "tabWidth": "Número de espaços por nível de indentação",
+      "useTabs": "Indentar linhas com tabs ou espaços",
+      "singleQuote": "Usar aspas simples ou aspas duplas",
+      "semicolons": "Adicionar ponto e vírgula no final das instruções"
     },
-    "Messages": {
-      "LanguageRequired": "Selecione a linguagem do código",
-      "FormatSuccess": "Formatação concluída",
-      "FormatFailed": "Falha na formatação. Verifique a sintaxe.",
-      "UploadFailed": "Falha ao carregar ficheiro",
-      "DownloadEmpty": "Sem conteúdo para transferir",
-      "DownloadFailed": "Falha ao transferir ficheiro"
+    "messages": {
+      "languageRequired": "Selecione a linguagem do código",
+      "formatSuccess": "Formatação concluída",
+      "formatFailed": "Falha na formatação. Verifique a sintaxe.",
+      "uploadFailed": "Falha ao carregar ficheiro",
+      "downloadEmpty": "Sem conteúdo para transferir",
+      "downloadFailed": "Falha ao transferir ficheiro"
     }
   },
   "CodeMinifierPage": {
-    "Meta": {
-      "Title": "Minificador de Código",
-      "Description": "Minifique código com suporte a várias linguagens e opções comuns."
+    "meta": {
+      "title": "Minificador de Código",
+      "description": "Minifique código com suporte a várias linguagens e opções comuns."
     },
-    "Controls": {
-      "Language": "Selecionar linguagem",
-      "MinifyCode": "Minificar Código",
-      "Upload": "Carregar",
-      "Download": "Transferir"
+    "controls": {
+      "language": "Selecionar linguagem",
+      "minifyCode": "Minificar Código",
+      "upload": "Carregar",
+      "download": "Transferir"
     },
-    "Messages": {
-      "LanguageRequired": "Selecione a linguagem do código",
-      "MinifySuccess": "Minificação concluída",
-      "MinifyFailed": "Falha na minificação. Verifique a sintaxe.",
-      "UploadFailed": "Falha ao carregar ficheiro",
-      "DownloadEmpty": "Sem conteúdo para transferir",
-      "DownloadFailed": "Falha ao transferir ficheiro"
+    "messages": {
+      "languageRequired": "Selecione a linguagem do código",
+      "minifySuccess": "Minificação concluída",
+      "minifyFailed": "Falha na minificação. Verifique a sintaxe.",
+      "uploadFailed": "Falha ao carregar ficheiro",
+      "downloadEmpty": "Sem conteúdo para transferir",
+      "downloadFailed": "Falha ao transferir ficheiro"
     }
   },
   "UUIDGeneratorPage": {
-    "Meta": {
-      "Title": "Gerador de UUID",
-      "Description": "Gere UUIDs em várias versões e formatos."
+    "meta": {
+      "title": "Gerador de UUID",
+      "description": "Gere UUIDs em várias versões e formatos."
     },
-    "Labels": {
-      "Generated": "UUIDs Gerados",
-      "Regenerate": "Gerar novamente",
-      "Version": "Versão UUID",
-      "Quantity": "Quantidade",
-      "Format": "Formato",
-      "Uppercase": "Maiúsculas",
-      "Hyphens": "Hífens",
-      "Braces": "Chavetas",
-      "Quotes": "Aspas",
-      "Commas": "Vírgulas",
-      "Namespace": "Namespace",
-      "Name": "Nome"
+    "labels": {
+      "generated": "UUIDs Gerados",
+      "regenerate": "Gerar novamente",
+      "version": "Versão UUID",
+      "quantity": "Quantidade",
+      "format": "Formato",
+      "uppercase": "Maiúsculas",
+      "hyphens": "Hífens",
+      "braces": "Chavetas",
+      "quotes": "Aspas",
+      "commas": "Vírgulas",
+      "namespace": "Namespace",
+      "name": "Nome"
     },
-    "Versions": {
+    "versions": {
       "v1": "V1 (Timestamp)",
       "v3": "V3 (MD5)",
       "v4": "V4 (Aleatório)",
       "v5": "V5 (SHA-1)",
       "nil": "NIL"
     },
-    "Tooltips": {
-      "Hyphens": "Adicionar separadores padrão entre as partes do UUID",
-      "Uppercase": "Converter valores hexadecimais para maiúsculas",
-      "Braces": "Envolver UUID em chavetas",
-      "Quotes": "Envolver UUID em aspas duplas",
-      "Commas": "Adicionar vírgula no final de cada UUID"
+    "tooltips": {
+      "hyphens": "Adicionar separadores padrão entre as partes do UUID",
+      "uppercase": "Converter valores hexadecimais para maiúsculas",
+      "braces": "Envolver UUID em chavetas",
+      "quotes": "Envolver UUID em aspas duplas",
+      "commas": "Adicionar vírgula no final de cada UUID"
     },
-    "Messages": {
-      "GenerateError": "Erro ao gerar UUID",
-      "NamespaceRequired": "Namespace e nome são obrigatórios",
-      "NamespaceHint": "Selecione um namespace predefinido ou insira o seu UUID personalizado",
-      "InvalidNamespace": "O namespace deve ser um UUID válido"
+    "messages": {
+      "generateError": "Erro ao gerar UUID",
+      "namespaceRequired": "Namespace e nome são obrigatórios",
+      "namespaceHint": "Selecione um namespace predefinido ou insira o seu UUID personalizado",
+      "invalidNamespace": "O namespace deve ser um UUID válido"
     }
   },
   "QRCodePage": {
-    "Meta": {
-      "Title": "Gerador de Código QR",
-      "Description": "Gere códigos QR para texto ou credenciais WiFi."
+    "meta": {
+      "title": "Gerador de Código QR",
+      "description": "Gere códigos QR para texto ou credenciais WiFi."
     },
-    "Labels": {
-      "Generated": "Imagem Gerada",
-      "Download": "Transferir",
-      "ForegroundColor": "Cor de Primeiro Plano",
-      "BackgroundColor": "Cor de Fundo",
-      "InputText": "Texto de Entrada"
+    "labels": {
+      "generated": "Imagem Gerada",
+      "download": "Transferir",
+      "foregroundColor": "Cor de Primeiro Plano",
+      "backgroundColor": "Cor de Fundo",
+      "inputText": "Texto de Entrada"
     },
-    "Tabs": {
-      "Text": "Texto",
-      "WiFi": "WiFi"
+    "tabs": {
+      "text": "Texto",
+      "wiFi": "WiFi"
     },
-    "WiFi": {
-      "Title": "Credenciais WiFi",
-      "SSID": "Nome da Rede",
-      "Type": "Tipo de Autenticação",
-      "Password": "Palavra-passe",
-      "Hidden": "SSID Oculto",
-      "EAPMethod": "Método EAP",
-      "Identity": "Identidade",
-      "AnonymousIdentity": "Identidade Anónima",
-      "Phase2Method": "Método Fase 2",
-      "AuthenticationType": {
-        "WPA": "WPA/WPA2",
-        "WEP": "WEP",
-        "WPA2-EAP": "WPA2-EAP",
+    "wiFi": {
+      "title": "Credenciais WiFi",
+      "ssid": "Nome da Rede",
+      "type": "Tipo de Autenticação",
+      "password": "Palavra-passe",
+      "hidden": "SSID Oculto",
+      "eapMethod": "Método EAP",
+      "identity": "Identidade",
+      "anonymousIdentity": "Identidade Anónima",
+      "phase2Method": "Método Fase 2",
+      "authenticationType": {
+        "wpa": "WPA/WPA2",
+        "wep": "WEP",
+        "wpa2Eap": "wpa2Eap",
         "nopass": "Sem Palavra-passe"
       }
     },
-    "Placeholders": {
-      "InputText": "Escreva texto para codificar em código QR..."
+    "placeholders": {
+      "inputText": "Escreva texto para codificar em código QR..."
     }
   },
   "ColorConverterPage": {
-    "Meta": {
-      "Title": "Conversor de Cores",
-      "Description": "Converta cores entre os formatos HEX, RGB, HSL, HWB, LCH e CMYK."
+    "meta": {
+      "title": "Conversor de Cores",
+      "description": "Converta cores entre os formatos HEX, RGB, HSL, HWB, LCH e CMYK."
     },
-    "Labels": {
-      "Input": "Cor de Entrada",
-      "Output": "Cores Convertidas"
+    "labels": {
+      "input": "Cor de Entrada",
+      "output": "Cores Convertidas"
     },
-    "Placeholders": {
-      "Input": "Introduza um valor de cor..."
+    "placeholders": {
+      "input": "Introduza um valor de cor..."
     }
   },
   "TimestampConverterPage": {
-    "Meta": {
-      "Title": "Conversor de Timestamp",
-      "Description": "Converta entre timestamps UNIX, ISO8601, RFC3339, JavaScript Date e outros formatos."
+    "meta": {
+      "title": "Conversor de Timestamp",
+      "description": "Converta entre timestamps UNIX, ISO8601, RFC3339, JavaScript Date e outros formatos."
     },
-    "Labels": {
-      "Input": "Data de Entrada",
-      "Output": "Data de Saída",
-      "InputFormat": "Formato de Entrada",
-      "AutoDetect": "Deteção Automática",
-      "OutputTimezone": "Fuso Horário de Saída"
+    "labels": {
+      "input": "Data de Entrada",
+      "output": "Data de Saída",
+      "inputFormat": "Formato de Entrada",
+      "autoDetect": "Deteção Automática",
+      "outputTimezone": "Fuso Horário de Saída"
     },
-    "DateFormats": {
-      "CurrentTime": "Hora Atual",
-      "Javascript": "JavaScript Date",
-      "ISO8601": "ISO 8601",
-      "ISO9075": "ISO 9075",
-      "RFC3339": "RFC 3339",
-      "RFC7231": "RFC 7231",
-      "TimestampSeconds": "Timestamp (segundos)",
-      "TimestampMilliseconds": "Timestamp (milissegundos)"
+    "dateFormats": {
+      "currentTime": "Hora Atual",
+      "javascript": "JavaScript Date",
+      "iso8601": "ISO 8601",
+      "iso9075": "ISO 9075",
+      "rfc3339": "RFC 3339",
+      "rfc7231": "RFC 7231",
+      "timestampSeconds": "Timestamp (segundos)",
+      "timestampMilliseconds": "Timestamp (milissegundos)"
     },
-    "Placeholders": {
-      "Input": "Escreva texto de data e hora...",
-      "Invalid": "Formato Inválido"
+    "placeholders": {
+      "input": "Escreva texto de data e hora...",
+      "invalid": "Formato Inválido"
     }
   },
   "CaseConverterPage": {
-    "Meta": {
-      "Title": "Conversor de Maiúsculas e Minúsculas",
-      "Description": "Converta texto entre camel case, Pascal case, snake case e outros estilos de nomenclatura."
+    "meta": {
+      "title": "Conversor de Maiúsculas e Minúsculas",
+      "description": "Converta texto entre camel case, Pascal case, snake case e outros estilos de nomenclatura."
     },
-    "Labels": {
-      "Input": "Texto de Entrada",
-      "Output": "Texto Convertido"
+    "labels": {
+      "input": "Texto de Entrada",
+      "output": "Texto Convertido"
     },
-    "Formats": {
+    "formats": {
       "camel": "Camel Case",
       "pascal": "Pascal Case",
       "capital": "Capital Case",
@@ -455,7 +455,7 @@
       "upperFirst": "Upper First",
       "sponge": "Sponge Case"
     },
-    "Tooltips": {
+    "tooltips": {
       "camel": "Primeira palavra em minúsculas, restantes com inicial maiúscula, sem separadores.",
       "pascal": "Todas as palavras com inicial maiúscula, sem separadores.",
       "capital": "Todas as palavras com inicial maiúscula, separadas por espaços.",
@@ -474,7 +474,7 @@
       "upperFirst": "Primeira letra em maiúscula, restante inalterado.",
       "sponge": "Mistura aleatória de maiúsculas e minúsculas, preserva separadores."
     },
-    "Badges": {
+    "badges": {
       "camel": "camelCase",
       "pascal": "PascalCase",
       "capital": "Capital Case",
@@ -493,71 +493,71 @@
       "upperFirst": "UpperFirst",
       "sponge": "SpOnGe CaSe"
     },
-    "Placeholders": {
-      "Input": "Escreva texto para converter..."
+    "placeholders": {
+      "input": "Escreva texto para converter..."
     }
   },
   "DataFormatConverterPage": {
-    "Meta": {
-      "Title": "Conversor de Formatos de Dados",
-      "Description": "Converta entre JSON, YAML, XML e CSV com deteção automática de formato."
+    "meta": {
+      "title": "Conversor de Formatos de Dados",
+      "description": "Converta entre JSON, YAML, XML e CSV com deteção automática de formato."
     },
-    "Labels": {
-      "Input": "Entrada",
-      "Output": "Saída",
-      "InputFormat": "Formato de Entrada",
-      "AutoDetect": "Deteção Automática",
-      "ConvertFormat": "Formato de Conversão",
-      "Upload": "Carregar",
-      "Download": "Transferir"
+    "labels": {
+      "input": "Entrada",
+      "output": "Saída",
+      "inputFormat": "Formato de Entrada",
+      "autoDetect": "Deteção Automática",
+      "convertFormat": "Formato de Conversão",
+      "upload": "Carregar",
+      "download": "Transferir"
     },
-    "Messages": {
-      "ConvertSuccess": "Conversão concluída",
-      "ConvertFailed": "Falha na conversão. Verifique a sintaxe.",
-      "UnknownFormat": "Não foi possível detetar o formato de entrada.",
-      "UploadFailed": "Falha ao carregar ficheiro.",
-      "DownloadEmpty": "Sem conteúdo para transferir.",
-      "DownloadFailed": "Falha ao transferir ficheiro."
+    "messages": {
+      "convertSuccess": "Conversão concluída",
+      "convertFailed": "Falha na conversão. Verifique a sintaxe.",
+      "unknownFormat": "Não foi possível detetar o formato de entrada.",
+      "uploadFailed": "Falha ao carregar ficheiro.",
+      "downloadEmpty": "Sem conteúdo para transferir.",
+      "downloadFailed": "Falha ao transferir ficheiro."
     }
   },
   "UserAgentPage": {
-    "Meta": {
-      "Title": "Analisador User-Agent",
-      "Description": "Analise cadeias User-Agent para apresentar detalhes do navegador, sistema operativo, dispositivo e motor de renderização."
+    "meta": {
+      "title": "Analisador User-Agent",
+      "description": "Analise cadeias User-Agent para apresentar detalhes do navegador, sistema operativo, dispositivo e motor de renderização."
     },
-    "Labels": {
-      "Input": "Texto de Entrada",
-      "Output": "Resultado da Análise",
-      "BrowserName": "Nome do Navegador",
-      "BrowserVersion": "Versão do Navegador",
-      "EngineName": "Motor de Renderização",
-      "EngineVersion": "Versão do Motor",
-      "DeviceType": "Tipo de Dispositivo",
-      "DeviceVendor": "Fabricante",
-      "DeviceModel": "Modelo do Dispositivo",
-      "CPUArchitecture": "Arquitetura do CPU",
-      "OSName": "Sistema Operativo",
-      "OSVersion": "Versão do SO",
-      "IsBot": "Deteção de Bot",
-      "ChromiumBased": "Baseado em Chromium"
+    "labels": {
+      "input": "Texto de Entrada",
+      "output": "Resultado da Análise",
+      "browserName": "Nome do Navegador",
+      "browserVersion": "Versão do Navegador",
+      "engineName": "Motor de Renderização",
+      "engineVersion": "Versão do Motor",
+      "deviceType": "Tipo de Dispositivo",
+      "deviceVendor": "Fabricante",
+      "deviceModel": "Modelo do Dispositivo",
+      "cpuArchitecture": "Arquitetura do CPU",
+      "osName": "Sistema Operativo",
+      "osVersion": "Versão do SO",
+      "isBot": "Deteção de Bot",
+      "chromiumBased": "Baseado em Chromium"
     },
-    "Values": {
-      "Yes": "Sim",
-      "No": "Não"
+    "values": {
+      "yes": "Sim",
+      "no": "Não"
     },
-    "Placeholders": {
-      "Input": "Introduza a cadeia User-Agent..."
+    "placeholders": {
+      "input": "Introduza a cadeia User-Agent..."
     }
   },
   "KeyboardEventPage": {
-    "Meta": {
-      "Title": "Propriedades de Eventos de Teclado",
-      "Description": "Inspecione propriedades do KeyboardEvent como key, code e teclas modificadoras para depuração."
+    "meta": {
+      "title": "Propriedades de Eventos de Teclado",
+      "description": "Inspecione propriedades do KeyboardEvent como key, code e teclas modificadoras para depuração."
     },
-    "Placeholders": {
-      "Input": "Prima qualquer tecla ou escreva texto para acionar um KeyboardEvent..."
+    "placeholders": {
+      "input": "Prima qualquer tecla ou escreva texto para acionar um KeyboardEvent..."
     },
-    "Tooltips": {
+    "tooltips": {
       "keydown": "Disparado quando qualquer tecla é premida.",
       "keypress": "[Descontinuado] Disparado quando uma tecla que produz um caractere é premida.",
       "keyup": "Disparado quando qualquer tecla é libertada.",
@@ -576,20 +576,20 @@
     }
   },
   "TimeIntervalPage": {
-    "Meta": {
-      "Title": "Calculadora de Intervalo de Tempo",
-      "Description": "Calcule o intervalo de tempo entre duas datas e horas com opções de visualização flexíveis."
+    "meta": {
+      "title": "Calculadora de Intervalo de Tempo",
+      "description": "Calcule o intervalo de tempo entre duas datas e horas com opções de visualização flexíveis."
     },
-    "Labels": {
-      "Format": "Formato de Visualização",
-      "Start": "Hora de Início",
-      "End": "Hora de Fim",
-      "Interval": "Intervalo de Tempo"
+    "labels": {
+      "format": "Formato de Visualização",
+      "start": "Hora de Início",
+      "end": "Hora de Fim",
+      "interval": "Intervalo de Tempo"
     },
-    "Placeholders": {
-      "Interval": "Selecione a hora de início e de fim"
+    "placeholders": {
+      "interval": "Selecione a hora de início e de fim"
     },
-    "Formats": {
+    "formats": {
       "auto": "Automático",
       "years": "Anos",
       "months": "Meses",
@@ -599,7 +599,7 @@
       "seconds": "Segundos",
       "milliseconds": "Milissegundos"
     },
-    "Units": {
+    "units": {
       "years": "{count, plural, =1 {1 ano} other {{count} anos}}",
       "months": "{count, plural, =1 {1 mês} other {{count} meses}}",
       "days": "{count, plural, =1 {1 dia} other {{count} dias}}",
@@ -610,19 +610,19 @@
     }
   },
   "SvgOptimizerPage": {
-    "Meta": {
-      "Title": "Otimizador SVG",
-      "Description": "Limpe e comprima ficheiros SVG removendo elementos e atributos redundantes."
+    "meta": {
+      "title": "Otimizador SVG",
+      "description": "Limpe e comprima ficheiros SVG removendo elementos e atributos redundantes."
     },
-    "Labels": {
-      "Input": "Entrada",
-      "Preview": "Pré-visualização",
-      "Code": "Código",
-      "Upload": "Carregar",
-      "Download": "Transferir",
-      "ShowOriginal": "Mostrar original"
+    "labels": {
+      "input": "Entrada",
+      "preview": "Pré-visualização",
+      "code": "Código",
+      "upload": "Carregar",
+      "download": "Transferir",
+      "showOriginal": "Mostrar original"
     },
-    "Options": {
+    "options": {
       "floatPrecision": "Precisão numérica",
       "pretty": "Formatar código",
       "removeXMLNS": "Remover xmlns",
@@ -668,12 +668,12 @@
       "removeTitle": "Remover title",
       "removeDesc": "Remover desc"
     },
-    "Badges": {
-      "Invalid": "SVG Inválido",
-      "Original": "Original"
+    "badges": {
+      "invalid": "SVG Inválido",
+      "original": "Original"
     },
-    "Placeholders": {
-      "Input": "Cole código SVG"
+    "placeholders": {
+      "input": "Cole código SVG"
     }
   }
 }

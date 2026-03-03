@@ -12,18 +12,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { CopyButton } from "@/components/copy-button";
 
 const USER_AGENT_FIELDS = {
-  BrowserName: (result: IResult) => result.browser.name,
-  BrowserVersion: (result: IResult) => result.browser.version,
-  EngineName: (result: IResult) => result.engine.name,
-  EngineVersion: (result: IResult) => result.engine.version,
-  DeviceType: (result: IResult) => result.device.type,
-  DeviceVendor: (result: IResult) => result.device.vendor,
-  DeviceModel: (result: IResult) => result.device.model,
-  CPUArchitecture: (result: IResult) => result.cpu.architecture,
-  OSName: (result: IResult) => result.os.name,
-  OSVersion: (result: IResult) => result.os.version,
-  IsBot: (result: IResult) => isBot(result),
-  ChromiumBased: (result: IResult) => isChromeFamily(result),
+  browserName: (result: IResult) => result.browser.name,
+  browserVersion: (result: IResult) => result.browser.version,
+  engineName: (result: IResult) => result.engine.name,
+  engineVersion: (result: IResult) => result.engine.version,
+  deviceType: (result: IResult) => result.device.type,
+  deviceVendor: (result: IResult) => result.device.vendor,
+  deviceModel: (result: IResult) => result.device.model,
+  cpuArchitecture: (result: IResult) => result.cpu.architecture,
+  osName: (result: IResult) => result.os.name,
+  osVersion: (result: IResult) => result.os.version,
+  isBot: (result: IResult) => isBot(result),
+  chromiumBased: (result: IResult) => isChromeFamily(result),
 } as const;
 
 export default function UserAgentPage() {
@@ -38,7 +38,7 @@ export default function UserAgentPage() {
     const defaultValue = "-";
     if (!userAgent) return defaultValue;
     if (typeof value === "boolean") {
-      return t(value ? "Values.Yes" : "Values.No");
+      return t(value ? "values.yes" : "values.no");
     }
     return value || defaultValue;
   };
@@ -56,7 +56,7 @@ export default function UserAgentPage() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <Label htmlFor="user-agent" className="text-lg">
-              {t("Labels.Input")}
+              {t("labels.input")}
             </Label>
 
             <CopyButton
@@ -71,13 +71,13 @@ export default function UserAgentPage() {
             className="h-40 font-mono sm:h-24"
             value={userAgent}
             onChange={(e) => setUserAgent(e.target.value)}
-            placeholder={t("Placeholders.Input")}
+            placeholder={t("placeholders.input")}
             {...plainTypingProps}
           />
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Output")}</div>
+          <div className="text-lg font-medium">{t("labels.output")}</div>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {(
@@ -87,7 +87,7 @@ export default function UserAgentPage() {
             ).map((name) => (
               <div key={name} className="flex flex-col gap-1">
                 <p className="text-muted-foreground text-sm">
-                  {t(`Labels.${name}`)}
+                  {t(`labels.${name}`)}
                 </p>
                 <p className="font-medium">
                   {formatFieldValue(USER_AGENT_FIELDS[name](parseResult))}

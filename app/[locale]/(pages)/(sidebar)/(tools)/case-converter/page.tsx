@@ -80,20 +80,20 @@ export default function CaseConverterPage() {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <Label htmlFor="text-input" className="text-lg">
-            {t("Labels.Input")}
+            {t("labels.input")}
           </Label>
 
           <Input
             id="text-input"
             value={inputText}
-            placeholder={t("Placeholders.Input")}
+            placeholder={t("placeholders.input")}
             onChange={handleInputChange}
             {...plainTypingProps}
           />
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-medium">{t("Labels.Output")}</div>
+          <div className="text-lg font-medium">{t("labels.output")}</div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {(Object.keys(CASE_FORMATS) as CaseFormat[]).map((format) => (
@@ -102,14 +102,14 @@ export default function CaseConverterPage() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Label htmlFor={`format-${format}`}>
-                        {t(`Formats.${format}`)}
+                        {t(`formats.${format}`)}
                       </Label>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>{t(`Tooltips.${format}`)}</p>
+                      <p>{t(`tooltips.${format}`)}</p>
                     </TooltipContent>
                   </Tooltip>
-                  <Badge variant="outline">{t(`Badges.${format}`)}</Badge>
+                  <Badge variant="outline">{t(`badges.${format}`)}</Badge>
                 </div>
 
                 <div className="relative">

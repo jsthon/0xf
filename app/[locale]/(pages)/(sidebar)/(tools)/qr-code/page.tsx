@@ -39,6 +39,12 @@ interface WiFiData {
 }
 
 const AUTHENTICATION_TYPES = ["WPA", "WEP", "WPA2-EAP", "nopass"] as const;
+const AUTHENTICATION_LABEL_KEYS = {
+  WPA: "wpa",
+  WEP: "wep",
+  "WPA2-EAP": "wpa2Eap",
+  nopass: "nopass",
+} as const;
 
 type AuthenticationType = (typeof AUTHENTICATION_TYPES)[number];
 type WiFiDataValue<K extends keyof WiFiData> = WiFiData[K];
@@ -142,7 +148,7 @@ export default function QRCodePage() {
       <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
         <div className="flex flex-col gap-6 md:gap-8">
           <Label htmlFor="qr-code" className="text-lg">
-            {t("Labels.Generated")}
+            {t("labels.generated")}
           </Label>
 
           <div className="flex justify-center">
@@ -166,7 +172,7 @@ export default function QRCodePage() {
                   onClick={handleCopy}
                 >
                   {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
-                  {tCopy("Copy")}
+                  {tCopy("copy")}
                 </Button>
               )}
             </CopyButton>
@@ -176,7 +182,7 @@ export default function QRCodePage() {
               onClick={downloadImage}
             >
               <Download className="size-4" />
-              {t("Labels.Download")}
+              {t("labels.download")}
             </Button>
           </div>
         </div>
@@ -188,18 +194,18 @@ export default function QRCodePage() {
             onValueChange={(value) => setInputType(value as InputType)}
           >
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="text">{t("Tabs.Text")}</TabsTrigger>
-              <TabsTrigger value="wifi">{t("Tabs.WiFi")}</TabsTrigger>
+              <TabsTrigger value="text">{t("tabs.text")}</TabsTrigger>
+              <TabsTrigger value="wifi">{t("tabs.wiFi")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="text">
               <div className="flex flex-col gap-4">
                 <Label htmlFor="input-text" className="text-lg">
-                  {t("Labels.InputText")}
+                  {t("labels.inputText")}
                 </Label>
                 <Textarea
                   id="input-text"
-                  placeholder={t("Placeholders.InputText")}
+                  placeholder={t("placeholders.inputText")}
                   value={textData}
                   onChange={(e) => setTextData(e.target.value)}
                   className="h-40"
@@ -210,10 +216,10 @@ export default function QRCodePage() {
 
             <TabsContent value="wifi">
               <div className="flex flex-col gap-4">
-                <div className="text-lg font-medium">{t("WiFi.Title")}</div>
+                <div className="text-lg font-medium">{t("wiFi.title")}</div>
 
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="wifi-ssid">{t("WiFi.SSID")}</Label>
+                  <Label htmlFor="wifi-ssid">{t("wiFi.ssid")}</Label>
                   <Input
                     id="wifi-ssid"
                     placeholder="SSID"
@@ -224,7 +230,7 @@ export default function QRCodePage() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="wifi-type">{t("WiFi.Type")}</Label>
+                  <Label htmlFor="wifi-type">{t("wiFi.type")}</Label>
                   <Select
                     value={wifiData.type}
                     onValueChange={(value) =>
@@ -237,7 +243,9 @@ export default function QRCodePage() {
                     <SelectContent>
                       {AUTHENTICATION_TYPES.map((type) => (
                         <SelectItem key={type} value={type}>
-                          {t(`WiFi.AuthenticationType.${type}`)}
+                          {t(
+                            `wiFi.authenticationType.${AUTHENTICATION_LABEL_KEYS[type]}`
+                          )}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -246,7 +254,7 @@ export default function QRCodePage() {
 
                 {wifiData.type !== "nopass" && (
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="wifi-password">{t("WiFi.Password")}</Label>
+                    <Label htmlFor="wifi-password">{t("wiFi.password")}</Label>
                     <PasswordInput
                       id="wifi-password"
                       value={wifiData.password}
@@ -265,13 +273,13 @@ export default function QRCodePage() {
                       updateWifiData("hidden", !!checked)
                     }
                   />
-                  <Label htmlFor="wifi-hidden">{t("WiFi.Hidden")}</Label>
+                  <Label htmlFor="wifi-hidden">{t("wiFi.hidden")}</Label>
                 </div>
 
                 {wifiData.type === "WPA2-EAP" && (
                   <>
                     <div className="flex flex-col gap-2">
-                      <Label htmlFor="wifi-eap">{t("WiFi.EAPMethod")}</Label>
+                      <Label htmlFor="wifi-eap">{t("wiFi.eapMethod")}</Label>
                       <Input
                         id="wifi-eap"
                         value={wifiData.eap_method || ""}
@@ -287,7 +295,7 @@ export default function QRCodePage() {
 
                     <div className="flex flex-col gap-2">
                       <Label htmlFor="wifi-identity">
-                        {t("WiFi.Identity")}
+                        {t("wiFi.identity")}
                       </Label>
                       <Input
                         id="wifi-identity"
@@ -301,7 +309,7 @@ export default function QRCodePage() {
 
                     <div className="flex flex-col gap-2">
                       <Label htmlFor="wifi-anonymous">
-                        {t("WiFi.AnonymousIdentity")}
+                        {t("wiFi.anonymousIdentity")}
                       </Label>
                       <Input
                         id="wifi-anonymous"
@@ -315,7 +323,7 @@ export default function QRCodePage() {
 
                     <div className="flex flex-col gap-2">
                       <Label htmlFor="wifi-phase2">
-                        {t("WiFi.Phase2Method")}
+                        {t("wiFi.phase2Method")}
                       </Label>
                       <Input
                         id="wifi-phase2"
@@ -338,7 +346,7 @@ export default function QRCodePage() {
           <div className="flex items-center gap-4">
             <div className="flex flex-1 flex-col gap-2">
               <Label htmlFor="foreground-color">
-                {t("Labels.ForegroundColor")}
+                {t("labels.foregroundColor")}
               </Label>
               <ColorInput
                 id="foreground-color"
@@ -349,7 +357,7 @@ export default function QRCodePage() {
             </div>
             <div className="flex flex-1 flex-col gap-2">
               <Label htmlFor="background-color">
-                {t("Labels.BackgroundColor")}
+                {t("labels.backgroundColor")}
               </Label>
               <ColorInput
                 id="background-color"

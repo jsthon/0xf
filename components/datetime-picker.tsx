@@ -100,7 +100,7 @@ export function DateTimePicker({
             disabled={disabled}
           >
             <CalendarIcon />
-            <span className="sr-only">{t("SelectDate")}</span>
+            <span className="sr-only">{t("selectDate")}</span>
           </Button>
         </PopoverTrigger>
         <PopoverContent

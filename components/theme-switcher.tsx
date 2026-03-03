@@ -22,17 +22,17 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
     {
       key: "system",
       icon: Monitor,
-      label: t("SystemTheme"),
+      label: t("system"),
     },
     {
       key: "light",
       icon: Sun,
-      label: t("LightTheme"),
+      label: t("light"),
     },
     {
       key: "dark",
       icon: Moon,
-      label: t("DarkTheme"),
+      label: t("dark"),
     },
   ];
 
@@ -43,7 +43,7 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <legend className="sr-only">{t("Theme")}</legend>
+      <legend className="sr-only">{t("theme")}</legend>
       {themes.map(({ key, icon: Icon, label }) => {
         const isActive = mounted && theme === key;
 

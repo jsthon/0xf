@@ -39,13 +39,13 @@ export function MobileNav() {
           className="px-0 text-base md:hidden"
         >
           <MenuIcon className="size-5" />
-          <span className="sr-only">{t("ToggleMenu")}</span>
+          <span className="sr-only">{t("toggle")}</span>
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
         <DrawerHeader className="sr-only">
-          <DrawerTitle>{t("Menu")}</DrawerTitle>
-          <DrawerDescription>{t("ToggleMenu")}</DrawerDescription>
+          <DrawerTitle>{t("menu")}</DrawerTitle>
+          <DrawerDescription>{t("toggle")}</DrawerDescription>
         </DrawerHeader>
         <div className="overflow-auto p-6">
           <div className="flex flex-col gap-3">

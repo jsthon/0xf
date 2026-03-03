@@ -118,7 +118,7 @@ export default function CodeMinifierPage() {
       const content = event.target?.result as string;
       setEditorContent(content);
     };
-    reader.onerror = () => toast.error(t("Messages.UploadFailed"));
+    reader.onerror = () => toast.error(t("messages.uploadFailed"));
     reader.readAsText(file);
 
     // reset input to allow re-uploading the same file
@@ -129,7 +129,7 @@ export default function CodeMinifierPage() {
   const handleDownload = () => {
     const content = getEditorContent();
     if (!content) {
-      toast.error(t("Messages.DownloadEmpty"));
+      toast.error(t("messages.downloadEmpty"));
       return;
     }
 
@@ -139,7 +139,7 @@ export default function CodeMinifierPage() {
       const blob = new Blob([content], { type: "text/plain" });
       saveBlobAsFile(blob, filename);
     } catch {
-      toast.error(t("Messages.DownloadFailed"));
+      toast.error(t("messages.downloadFailed"));
     }
   };
 
@@ -181,7 +181,7 @@ export default function CodeMinifierPage() {
     if (!editorViewRef.current) return;
 
     if (!languageConfig?.minify) {
-      toast.error(t("Messages.LanguageRequired"));
+      toast.error(t("messages.languageRequired"));
       return;
     }
 
@@ -198,9 +198,9 @@ export default function CodeMinifierPage() {
         },
         userEvent: "input",
       });
-      toast.success(t("Messages.MinifySuccess"));
+      toast.success(t("messages.minifySuccess"));
     } catch {
-      toast.error(t("Messages.MinifyFailed"));
+      toast.error(t("messages.minifyFailed"));
     }
   };
 
@@ -210,11 +210,11 @@ export default function CodeMinifierPage() {
         <div className="flex items-center gap-4 md:gap-x-6">
           <Select value={language} onValueChange={setLanguage}>
             <SelectTrigger className="w-40 md:w-50">
-              <SelectValue placeholder={t("Controls.Language")} />
+              <SelectValue placeholder={t("controls.language")} />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>{t("Controls.Language")}</SelectLabel>
+                <SelectLabel>{t("controls.language")}</SelectLabel>
                 {languages
                   .filter((lang) => lang.minify !== null)
                   .map((lang) => (
@@ -226,7 +226,7 @@ export default function CodeMinifierPage() {
             </SelectContent>
           </Select>
 
-          <Button onClick={handleMinify}>{t("Controls.MinifyCode")}</Button>
+          <Button onClick={handleMinify}>{t("controls.minifyCode")}</Button>
         </div>
 
         <div className="flex items-center gap-2">
@@ -245,22 +245,22 @@ export default function CodeMinifierPage() {
                 onClick={() => fileInputRef.current?.click()}
               >
                 <Upload className="size-4" />
-                <span className="sr-only">{t("Controls.Upload")}</span>
+                <span className="sr-only">{t("controls.upload")}</span>
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Controls.Upload")}</p>
+              <p>{t("controls.upload")}</p>
             </TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button variant="outline" size="icon" onClick={handleDownload}>
                 <Download className="size-4" />
-                <span className="sr-only">{t("Controls.Download")}</span>
+                <span className="sr-only">{t("controls.download")}</span>
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{t("Controls.Download")}</p>
+              <p>{t("controls.download")}</p>
             </TooltipContent>
           </Tooltip>
           <CopyButton

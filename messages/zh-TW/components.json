@@ -1,67 +1,67 @@
 {
   "MobileNav": {
-    "Menu": "選單",
-    "ToggleMenu": "切換選單"
+    "menu": "選單",
+    "toggle": "切換選單"
   },
-  "Footer": {
-    "Text": "由 <url>{name}</url> 為開發者打造，原始碼在 <github>GitHub</github> 開源。"
+  "SiteFooter": {
+    "text": "由 <url>{name}</url> 為開發者打造，原始碼在 <github>GitHub</github> 開源。"
   },
   "Sidebar": {
-    "ToggleSidebar": "切換側欄"
+    "toggle": "切換側欄"
   },
   "AsideBlock": {
-    "Title": "探索 {name} 的 GitHub",
-    "Description": [
+    "title": "探索 {name} 的 GitHub",
+    "description": [
       "本專案已完全開源，原始碼公開可見。",
       "歡迎檢視程式碼、參與貢獻，或自行部署實例。"
     ],
-    "Button": "瀏覽 GitHub"
+    "button": "瀏覽 GitHub"
   },
   "ThemeSwitcher": {
-    "Theme": "主題",
-    "SystemTheme": "系統主題",
-    "LightTheme": "淺色主題",
-    "DarkTheme": "深色主題"
+    "theme": "主題",
+    "system": "系統主題",
+    "light": "淺色主題",
+    "dark": "深色主題"
   },
   "CommandMenu": {
-    "Search": "搜尋...",
-    "CommandPlaceholder": "輸入關鍵字...",
-    "Empty": "找不到結果",
-    "LinksHeading": "連結"
+    "search": "搜尋...",
+    "placeholder": "輸入關鍵字...",
+    "empty": "找不到結果",
+    "links": "連結"
   },
   "CopyButton": {
-    "Copy": "複製",
-    "Error": "複製失敗"
+    "copy": "複製",
+    "error": "複製失敗"
   },
   "NumberInput": {
-    "Increment": "增加數值",
-    "Decrement": "減少數值"
+    "increment": "增加數值",
+    "decrement": "減少數值"
   },
   "ColorPicker": {
-    "SelectColor": "選擇顏色"
+    "selectColor": "選擇顏色"
   },
   "PasswordInput": {
-    "Show": "顯示密碼",
-    "Hide": "隱藏密碼"
+    "show": "顯示密碼",
+    "hide": "隱藏密碼"
   },
   "TimezoneSelect": {
-    "Placeholder": "選擇時區",
-    "Empty": "找不到時區"
+    "placeholder": "選擇時區",
+    "empty": "找不到時區"
   },
   "DateTimePicker": {
-    "SelectDate": "選擇日期"
+    "selectDate": "選擇日期"
   },
   "FileUpload": {
-    "PrimaryText": "選擇或拖曳檔案至此",
-    "SecondaryText": "不限檔案類型",
-    "Remove": "移除",
-    "Messages": {
-      "InvalidFiles": "未選擇有效檔案"
+    "primaryText": "選擇或拖曳檔案至此",
+    "secondaryText": "不限檔案類型",
+    "remove": "移除",
+    "messages": {
+      "invalidFiles": "未選擇有效檔案"
     }
   },
   "CodeMirror": {
-    "Merge": {
-      "UnchangedLines": "$ 行未變更"
+    "merge": {
+      "unchangedLines": "$ 行未變更"
     }
   }
 }

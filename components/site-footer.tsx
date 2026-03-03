@@ -6,13 +6,13 @@ import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation";
 
 export function SiteFooter() {
-  const t = useTranslations("Footer");
+  const t = useTranslations("SiteFooter");
 
   return (
     <footer className="border-t py-10 md:py-6">
       <div className="container-fluid">
         <div className="text-muted-foreground text-center text-sm leading-loose text-balance md:text-left">
-          {t.rich("Text", {
+          {t.rich("text", {
             name: siteConfig.name,
             url: (chunks) => (
               <Link
