@@ -8,7 +8,7 @@
   "Base64Page": {
     "meta": {
       "title": "Base64 エンコード・デコード",
-      "description": "Base64 のエンコードとデコード。入力を自動判別し、URL セーフモードにも対応。"
+      "description": "Base64 エンコードとデコードツール。入力内容を自動判別し、URL セーフモードにも対応。"
     },
     "controls": {
       "autoDetect": "自動判別",
@@ -64,7 +64,7 @@
   "URLEncodingPage": {
     "meta": {
       "title": "URL エンコード・デコード",
-      "description": "URL エンコードと URL デコードツール。"
+      "description": "URL エンコードとデコードのツールで、入力が URL エンコード済みかを自動判別します。"
     },
     "controls": {
       "autoDetect": "自動判別",

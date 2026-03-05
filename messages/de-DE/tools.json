@@ -7,8 +7,8 @@
   },
   "Base64Page": {
     "meta": {
-      "title": "Base64-Kodierung/-Dekodierung",
-      "description": "Base64 kodieren und dekodieren mit automatischer Erkennung und URL-sicherer Unterstützung."
+      "title": "Base64 kodieren und dekodieren",
+      "description": "Base64 kodieren und dekodieren mit automatischer Erkennung und URL-sicherem Modus."
     },
     "controls": {
       "autoDetect": "Automatisch",
@@ -63,7 +63,7 @@
   },
   "URLEncodingPage": {
     "meta": {
-      "title": "URL-Kodierung/-Dekodierung",
+      "title": "URL kodieren und dekodieren",
       "description": "Text in URL-Format kodieren oder URL-kodierten Text dekodieren."
     },
     "controls": {

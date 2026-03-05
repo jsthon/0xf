@@ -8,7 +8,7 @@
   "Base64Page": {
     "meta": {
       "title": "Encodage et décodage Base64",
-      "description": "Encodez et décodez en Base64 avec détection automatique et support URL-safe."
+      "description": "Encodez et décodez en Base64 avec détection automatique et prise en charge du mode URL-safe."
     },
     "controls": {
       "autoDetect": "Détection auto",
@@ -191,7 +191,7 @@
   "HashGeneratorPage": {
     "meta": {
       "title": "Générateur de hash",
-      "description": "Calculez les empreintes de hachage pour du texte ou des fichiers avec MD5, SHA1, SHA256, SHA512, SHA3 et d'autres algorithmes."
+      "description": "Calculez des hash pour du texte ou des fichiers avec MD5, SHA1, SHA256, SHA512 et SHA3."
     },
     "labels": {
       "input": "Entrée",

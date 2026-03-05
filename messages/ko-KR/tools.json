@@ -7,8 +7,8 @@
   },
   "Base64Page": {
     "meta": {
-      "title": "Base64 인코딩/디코딩",
-      "description": "Base64 인코딩 및 디코딩, 자동 감지 및 URL 안전 모드를 지원합니다."
+      "title": "Base64 인코딩과 디코딩",
+      "description": "Base64 인코딩 및 디코딩 도구. 입력을 자동으로 감지하고 URL 안전 모드를 지원합니다."
     },
     "controls": {
       "autoDetect": "자동 감지",
@@ -63,8 +63,8 @@
   },
   "URLEncodingPage": {
     "meta": {
-      "title": "URL 인코딩/디코딩",
-      "description": "텍스트를 URL 형식으로 인코딩하거나 URL 인코딩된 텍스트를 디코딩합니다."
+      "title": "URL 인코딩과 디코딩",
+      "description": "URL 인코딩 및 디코딩 도구로, 입력 내용이 URL 인코딩인지 자동으로 감지합니다."
     },
     "controls": {
       "autoDetect": "자동 감지",
@@ -95,7 +95,7 @@
       },
       "output": {
         "autoDetect": "URL 인코딩 또는 디코딩 결과...",
-        "encode": "인코딩된 URL 결과...",
+        "encode": "URL 인코딩 결과...",
         "decode": "디코딩된 텍스트 결과..."
       }
     }

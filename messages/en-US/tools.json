@@ -7,7 +7,7 @@
   },
   "Base64Page": {
     "meta": {
-      "title": "Base64 Encode Decode",
+      "title": "Base64 Encode and Decode",
       "description": "Encode and decode Base64 with auto-detection and URL-safe support."
     },
     "controls": {
@@ -63,7 +63,7 @@
   },
   "URLEncodingPage": {
     "meta": {
-      "title": "URL Encode Decode",
+      "title": "URL Encode and Decode",
       "description": "Encode text to URL format or decode URL encoded text."
     },
     "controls": {

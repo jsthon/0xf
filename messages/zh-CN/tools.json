@@ -7,8 +7,8 @@
   },
   "Base64Page": {
     "meta": {
-      "title": "Base64 编码解码",
-      "description": "Base64 编码与解码，自动识别输入并支持 URL 安全模式。"
+      "title": "Base64 编码与解码",
+      "description": "Base64 编码和解码工具，自动识别输入内容并支持 URL 安全模式。"
     },
     "controls": {
       "autoDetect": "自动识别",
@@ -63,8 +63,8 @@
   },
   "URLEncodingPage": {
     "meta": {
-      "title": "URL 编码解码",
-      "description": "URL 编码和 URL 解码工具。"
+      "title": "URL 编码与解码",
+      "description": "URL 编码和解码工具，自动识别输入内容是否为 URL 编码。"
     },
     "controls": {
       "autoDetect": "自动识别",

@@ -8,7 +8,7 @@
   "Base64Page": {
     "meta": {
       "title": "Codificar y decodificar Base64",
-      "description": "Codifica y decodifica Base64 con detección automática y compatibilidad URL-safe."
+      "description": "Codifica y decodifica Base64 con detección automática y soporte para modo URL-safe."
     },
     "controls": {
       "autoDetect": "Detección automática",
@@ -523,7 +523,7 @@
   "UserAgentPage": {
     "meta": {
       "title": "Analizador de User-Agent",
-      "description": "Analiza cadenas User-Agent para mostrar información del navegador, sistema operativo, dispositivo y motor de renderizado."
+      "description": "Analiza User-Agent y muestra navegador, sistema operativo, dispositivo y motor de renderizado."
     },
     "labels": {
       "input": "Texto de entrada",
