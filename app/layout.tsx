@@ -35,7 +35,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: `${siteConfig.url}/manifest.json`,
 };
 
 // Since we have a `not-found.tsx` page on the root, a layout file
